@@ -1,0 +1,8 @@
+#user_groups {
+	height: 200px;
+}
+#user_groups option {
+	font-size: 15px;
+	padding: 4px 8px;
+	margin-bottom: 1px;
+}

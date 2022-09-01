@@ -1,0 +1,105 @@
+form#resume .fieldset-group-fields {
+	margin: 0;
+	padding: 14px 20px;
+	background: #f4f4f4;
+	border-top: 1px solid #fff;
+}
+form#resume .linha-field {
+	margin-bottom: 10px;
+}
+form#resume .linha-field.ftype-fieldset {
+	display: block;
+	width: 100%;
+	margin-bottom: 30px;
+}
+form#resume .linha-field.ftype-fieldset > .linha-field-label {
+	display: block;
+}
+form#resume .linha-field.ftype-fieldset > .linha-field-label label {
+	font-size: 2.2em;
+	font-weight: 400;
+	float: left;
+}
+form#resume .linha-field.mestrado,
+form#resume .linha-field.doutorado,
+form#resume .linha-field.mba,
+form#resume .linha-field.nivel_superior,
+form#resume .linha-field.nivel_superior_status,
+form#resume .linha-field.cpf,
+form#resume .linha-field.nascimento,
+form#resume .linha-field.sexo,
+form#resume .linha-field.idioma,
+form#resume .linha-field.nivel_de_conhecimento,
+form#resume .linha-field.admissao,
+form#resume .linha-field.demissao {
+	float: left;
+	margin-right: 14px;
+}
+form#resume .linha-field.nome_do_curso,
+form#resume .linha-field.tempo_de_duracao {
+	float: left;
+	width: 50%;
+}
+form#resume .linha-field.nome_do_curso {
+	padding-right: 7px;
+}
+form#resume .linha-field.tempo_de_duracao {
+	padding-left: 7px;
+}
+form#resume .linha-field.telefone_fixo,
+form#resume .linha-field.telefone_celular {
+	float: left;
+	width: 145px;
+}
+form#resume .linha-field.telefone_fixo {
+	margin-right: 14px;
+}
+form#resume .linha-field.email {
+	float: left;
+	width: 100%;
+	padding-right: 318px;
+	margin-right: -304px;
+}
+form#resume .linha-field.logradouro {
+	float: left;
+	width: 100%;
+	padding-right: 84px;
+	margin-right: -70px;
+}
+form#resume .linha-field.numero {
+	float: left;
+	width: 70px;
+}
+form#resume .linha-field.bairro {
+	float: left;
+	width: 100%;
+	padding-right: 114px;
+	margin-right: -100px;
+}
+form#resume .linha-field.cep {
+	float: left;
+	width: 100px;
+}
+
+form#resume .linha-field.nome,
+form#resume .linha-field.nivel_de_ensino,
+form#resume .linha-field.asnl_de,
+form#resume .linha-field.nome_da_colaborador,
+form#resume .linha-field.cargo {
+	clear: both;
+}
+form#resume .linha-field.asnl_de,
+form#resume .linha-field.nivel_de_ensino,
+form#resume .linha-field.estado_cidade {
+	clear: both;
+	display: table;
+}
+
+/* Collapse oversized image and pulled images after iPad breakpoint. */
+@media (max-width: 800px) {
+}
+@media (max-width: 643px) {
+}
+@media (max-width: 490px) {
+}
+

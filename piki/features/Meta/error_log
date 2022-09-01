@@ -1,0 +1,2 @@
+[12-May-2014 18:03:39 America/Sao_Paulo] PHP Warning:  require_once(WP_PLUGIN_DIR/piki-forms/fields/fields.php): failed to open stream: No such file or directory in /home/martinno/public_html/www.ruicosta.com.br/wp-content/plugins/piki-forms/pkmeta/pkmeta.php on line 3
+[12-May-2014 18:03:39 America/Sao_Paulo] PHP Fatal error:  require_once(): Failed opening required 'WP_PLUGIN_DIR/piki-forms/fields/fields.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/martinno/public_html/www.ruicosta.com.br/wp-content/plugins/piki-forms/pkmeta/pkmeta.php on line 3

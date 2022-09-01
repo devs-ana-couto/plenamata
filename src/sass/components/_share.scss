@@ -1,0 +1,342 @@
+.pikishare {
+
+    position: relative;
+    height: 40px;
+
+    &,
+    * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    button.mobile {
+        display: none;
+    }
+
+    a {
+        margin: 0;
+    }
+
+    .title {
+
+        display: flex;
+        cursor: pointer;
+        transition: opacity .4s ease-in-out;
+
+        strong {
+            font-size: 14px;
+            line-height: 12px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            font-style: normal;
+            font-weight: normal;
+        }
+
+    }
+
+    .networks {
+
+        display: flex;
+
+        button.close {
+            display: block;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: transparent;
+            overflow: hidden;
+            text-indent: -99999px;
+            @extend .icon-close;
+            @extend .filter-white;
+        }
+
+    }
+
+    ul {
+
+        @include reset;
+        display: flex;
+
+        span {
+            @include imgrpc;
+            @extend .filter-white;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            transition: transform .3s ease-in-out;
+        }
+
+        a:hover span {
+            transform: scale(1.15);
+        }
+
+        li {
+
+            margin: 0;
+
+            &.instagram span {
+                @extend .icon-instagram;
+            }
+            &.twitter span {
+                @extend .icon-twitter;
+            }
+            &.linkedin span {
+                @extend .icon-linkedin;
+            }
+            &.facebook span {
+                @extend .icon-facebook;
+            }
+            &.whatsapp span {
+                @extend .icon-whatsapp;
+            }
+
+            &:not(:last-of-type){
+                margin-right: 10px;
+            }
+
+        }
+
+    }
+
+
+    &.style {
+
+        &--1 {
+
+            display: inline-flex;
+
+            .title {   
+                margin-right: 20px;
+            }
+
+            .networks {
+
+                button.close {
+                    display: none;
+                }
+            
+            }
+
+        }
+
+        &--2 {
+
+            display: table;
+
+            .title:after {
+                content: '';
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin-left: 7px;
+                background: url('../images/icon-share.svg') no-repeat center center;
+                @extend .filter-white;
+            }
+
+            .networks {
+
+                justify-content: flex-end;
+                position: absolute;
+                top: 0;
+                right: 0;
+                opacity: 0;
+                transform: translateX(200vw);
+                transition: 
+                    opacity .4s ease-in-out,
+                    transform 1ms ease .4s
+                ;
+
+                button.close {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    padding: 0;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-color: transparent;
+                    overflow: hidden;
+                    text-indent: -99999px;
+                    @extend .icon-close;
+                    @extend .filter-white;
+                }
+
+            }
+
+
+        }
+
+    }
+
+    &.inline {
+
+        flex-direction: row;
+        align-items: center;
+
+        .title {
+            margin: 0 16px 0 0;
+        }
+
+    }
+
+    &.align-center {
+        .networks {
+            right: initial;
+            left: 50%;
+        }
+    }
+
+    &.opened {
+    
+        .networks {
+            transition: opacity .4s ease-in-out;
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .title {
+            opacity: 0;
+        }
+
+        &.align-center .networks {
+            transform: translateX(-50%);
+        }
+    
+    }
+
+    &.color--2 {
+
+        .title {
+
+            strong {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 12px;
+                color: #1A2C31;
+            }
+
+            &:after {
+                @extend .filter-green-4;
+            }
+        
+        }
+
+        ul span,
+        .networks button.close {
+            @extend .filter-green-4;
+        }
+
+    }
+
+}
+
+.piki-social-links {
+
+    display: flex;
+
+    li {
+        margin: 0 5px;
+    }
+
+    i.icon {
+
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transition: transform .3s ease-in-out;
+
+    }
+
+    a {
+    
+        @include trans;
+        margin: 0;
+    
+        &:hover i {
+            transform: scale(1.1);
+        }
+    
+    }
+
+    &.light {
+        i.icon {
+            &-twitter {
+            }
+            &-instagram {
+            }
+            &-youtube {
+            }
+            &-facebook {
+            }
+            &-flickr {
+            }
+            &-linkedin {
+            }
+        }
+    }
+
+    &.small {
+
+        li {
+
+            margin: 0 10px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+
+        }
+
+        i {
+            width: 20px;
+            height: 20px;
+        }
+
+    }
+
+}
+
+@media( max-width: 480px ){
+
+    .pikishare.small-when-mobile {
+    
+        .title {
+            font-weight: 300;
+        }
+        
+        ul {
+
+            span {
+                width: 16px;
+                height: 16px;
+            }
+
+            li {
+
+                &.whatsapp, 
+                &.facebook,
+                &.twitter {
+                    margin-right: 16px;
+                }
+
+            }
+
+        }
+    
+    }
+    
+}

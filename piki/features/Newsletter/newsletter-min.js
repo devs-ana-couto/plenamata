@@ -1,0 +1,1 @@
+!function($){window.pikiforms_newsletter_submit=function(s,e){var i=s.parent(".newsletter-form-content").first();i.slideUp("1200",function(){i.addClass("success").html('<div class="finish-form clearfix">'+e.message+"</div>").slideDown("1200")})}}(jQuery);

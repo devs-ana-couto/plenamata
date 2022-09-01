@@ -1,0 +1,163 @@
+section.bloco-coringa {
+
+	position: relative;
+	display: block;
+	margin-top: 80px;
+
+	> span {
+		@extend .center;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 94px;
+		padding-bottom: 94px;
+		z-index: 10;
+	}
+
+	h3 {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 42px;
+		color: #FFFFFF;
+	}
+
+	header {
+
+		max-width: 465px;
+		color: #FFFFFF;
+
+		picture {
+			display: block;
+			margin-bottom: 19px;
+		}
+
+		div {
+			margin-top: 19px;
+			font-size: 20px;
+			line-height: 26px;
+		}
+
+		.baseline {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 28px;
+		}
+
+		a.button:not(.inline) {
+
+			padding-right: 12px !important;
+			
+			span:before {
+				margin-left: 10px;
+			}
+		
+		}
+	
+	}
+
+	div.blocks {
+
+		padding-left: 60px;
+		width: 100%;
+		max-width: 660px;
+
+		> div {
+			display: block;
+			width: 320px;
+			padding: 16px;
+			background: #FFFFFF;
+		}
+
+		.top {
+			display: block;
+			position: relative;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		h4 {
+			margin-top: 9px;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 23px;
+			color: #1A2C31;
+		}
+
+		em {
+
+			display: block;
+			font-style: normal;
+
+			&.tag {
+				display: table;
+				position: absolute;
+				top: 11px;
+				left: 11px;
+				height: 24px;
+				padding: 0 10px;
+				line-height: 24px;
+				background: #FFFFFF;
+				font-weight: 700;
+				font-size: 12px;
+				text-transform: uppercase;
+				color: #1A2C31;
+			}
+
+			&.author {
+
+				margin-top: 10px;
+				font-weight: 300;
+				font-size: 12px;
+				line-height: 24px;
+				color: #1A2C31;
+
+				strong {
+					font-weight: 700;
+				}
+			
+			}
+
+		}
+
+		picture,
+		img {
+			display: block;
+			width: 100%;
+		}
+	
+	}
+
+	> picture {
+
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 1;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.541667) 54.17%, #000000 100%);
+		}
+
+	}
+
+}

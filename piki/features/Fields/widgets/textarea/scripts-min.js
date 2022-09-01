@@ -1,0 +1,1 @@
+!function($){window.textarea_field_init=function(){var t=$("div.wp-editor-wrap",$(this));t.length&&t.each(function(){var t=$("textarea",$(this)).attr("id");tinyMCE.execCommand("mceAddControl",!1,t),tinyMCE.execCommand("mceAddEditor",!1,t)})},window.fieldset_field_set_callback(window.textarea_field_init)}(jQuery);

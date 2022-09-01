@@ -1,0 +1,188 @@
+.image-block-container {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    color: #1e1e1e;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.image-block-container .callout-image.selected-image {
+    position: absolute;
+    right: 25px;
+    z-index: 99;
+    top: 25px;
+}
+
+.margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.image-button {
+    margin-bottom: 30px;
+}
+
+.image-description {
+    opacity: 0.5;
+    color: #0A0A0A;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 18px;
+    text-align: center;
+}
+
+.image-icon  {
+    color: #191E23;
+    background: rgba(255, 255, 255, 0.705);
+    padding: 12px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.image-description-toggle {
+    color: rgba(25, 30, 35, 0.7);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 6px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.image-info-wrapper {
+    position: absolute;
+    bottom: 1.5em;
+    right: 1em;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.image-meta {
+    color: #191E23;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 17px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 3.5px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.wp-block[data-align=full][data-type="jeo-theme/custom-image-block-editor"] {
+    max-width: 100vw;
+}
+
+/* alignment */
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=right][aria-label~="Credited"] .block-editor-block-list__block-edit,
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=left][aria-label~="Credited"] .block-editor-block-list__block-edit,
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=left][aria-label~="Credited"] .image-block-container,
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=right][aria-label~="Credited"] .image-block-container{
+    width: 50%;
+}
+
+.credited-image-block .fas.fa-times {
+    display: none;
+}
+.credited-image-block .image-block-container {
+    position: relative;
+}
+.credited-image-block .margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.credited-image-block .image-wrapper {
+    position: relative;
+}
+.credited-image-block .image-wrapper img {
+    width: 100%;
+}
+.credited-image-block .image-button {
+    margin-bottom: 30px;
+}
+.credited-image-block .image-description {
+    opacity: 0.5;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 18px;
+    text-align: center;
+    font-family: var(--primary-font);
+    margin-top: 11px;
+}
+.credited-image-block .image-icon {
+    color: rgba(25, 30, 35, 0.7);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 6px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    width: fit-content;
+}
+.credited-image-block .image-meta {
+    display: flex;
+    flex: 1;
+    font-size: 14px;
+    letter-spacing: 0;
+    padding-right: 20px;
+    align-items: center;
+    font-family: var(--primary-font);
+    animation: scaleItUp 0.2s ease-in-out 1 alternate;
+}
+.credited-image-block .image-info-wrapper {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    transition: all 0.2s ease-in-out;
+    border-radius: 20px;
+    padding: 0 0px 0 20px;
+    margin-bottom: 8px;
+    margin-right: 5px;
+}
+.image-description-toggle {
+    color: rgba(25, 30, 35, 0.7);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 6px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    width: fit-content;
+}
+.credited-image-block.active .image-info-wrapper {
+    color: rgba(25, 30, 35, 0.70);
+    background: rgba(255, 255, 255, 0.7);
+}
+.credited-image-block.active .image-icon {
+    background: transparent;
+}
+.credited-image-block.active .image-description-toggle {
+    background: transparent;
+}
+

@@ -1,0 +1,1049 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plenamata\n"
+"POT-Creation-Date: 2022-08-24 07:13-0300\n"
+"PO-Revision-Date: 2022-08-26 17:27-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: languages\n"
+"X-Poedit-SearchPathExcluded-2: piki\n"
+"X-Poedit-SearchPathExcluded-3: src\n"
+
+#: archive-campanha.php:14 archive.php:11
+msgid "Outras campanhas"
+msgstr "Otras campañas"
+
+#: archive-campanha.php:53
+msgid "3 bons motivos para engajar"
+msgstr "3 buenas razones para tomar parte"
+
+#: archive-campanha.php:55
+msgid "Descaso do governo"
+msgstr "Negligencia gubernamental"
+
+#: archive-campanha.php:56
+msgid "Urgência para agir"
+msgstr "Urgencia de actuar"
+
+#: archive-campanha.php:57
+msgid "Salvar espécies ameaçadas"
+msgstr "Salvar las especies en peligro de extinción"
+
+#: archive-campanha.php:66
+msgid "Tem um projeto e quer ver aqui?"
+msgstr "¿Tiene un proyecto y quiere verlo aquí?"
+
+#: archive-campanha.php:67
+msgid "Envie seu projeto que nossa equipe vai analisar."
+msgstr "Envíenos su proyecto y nuestro equipo lo analizará."
+
+#: archive-campanha.php:69
+msgid "Projeto: Caminho das águas*"
+msgstr "Proyecto: Camino de las aguas*"
+
+#: archive.php:16 page-artigos.php:22
+msgid "Outras notícias"
+msgstr "Ver otras noticias"
+
+#: blocks/04-controls/block.js:15
+msgid "Example: Controls"
+msgstr "Ejemplo: Controles"
+
+#: blocks/04-controls/block.js:33
+msgid "Hello world"
+msgstr "Hola mundo"
+
+#: components/chave-modo-claro.php:3
+msgid "Modo claro"
+msgstr "Modo claro"
+
+#: components/content-single.php:20
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Siga leyendo<span class=“screen-reader-text”> “%s”</span>"
+
+#: components/content-single.php:34
+msgid "Desculpe, nós erramos"
+msgstr "Perdón, nosotros nos equivocamos"
+
+#: components/content-single.php:44
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: components/content-single.php:57
+msgid "Access project page"
+msgstr "Acceder a la página del proyecto"
+
+#: components/content-single.php:74 components/convite-hashtag.php:4
+#: page-inicio.php:113
+msgid "Compartilhe nas redes"
+msgstr "Compartir"
+
+#: components/convite-hashtag.php:2
+msgid "Só vamos conseguir parar o desmatamento e manter a floresta em pé se <strong>avançarmos juntos</strong>. Por isso, convidamos a todos a se engajar à causa, usando"
+msgstr "Solo podremos detener la deforestación y mantener el bosque en pie si <strong>avanzamos juntos</strong>. Por lo tanto, invitamos a todos a comprometerse con la causa, utilizando"
+
+#: components/destaque-campanha.php:16 components/teaser-campanha.php:50
+msgid "Conheça e participe"
+msgstr "Compartir"
+
+#: components/dropdown.php:3
+msgid "Open"
+msgstr "Abrir"
+
+#: components/historias-reais.php:9
+msgid "Histórias reais"
+msgstr "Historias reales"
+
+#: components/historias-reais.php:10
+msgid "Pessoas e organizações que estão mudando a realidade da Amazônia"
+msgstr "Personas y organizaciones que están cambiando la realidad de la Amazonia"
+
+#: components/historias-reais.php:11
+msgid "Em todos os cantos do território surgem histórias inspiradoras, de quem atua pela floresta em pé e pelo bem-estar das pessoas. Conheça algumas delas!"
+msgstr "En cada rincón del territorio hay historias inspiradoras, de quienes trabajan por el bosque en pie y por el bienestar de las personas. ¡Conoce a algunos de ellos!"
+
+#: components/historias-reais.php:36
+msgid "Ver história"
+msgstr "Ver historia"
+
+#: components/historias-reais.php:52
+msgid "Scrole para o lado e veja mais hitórias inspiradoras"
+msgstr "Desplácese hacia el lado y vea más historias inspiradoras"
+
+#: components/historias-reais.php:58
+msgid "Pródima história"
+msgstr "Próxima historia"
+
+#: components/historias-reais.php:60
+msgid "História anterior"
+msgstr "Historia previa"
+
+#: components/historias-reais.php:61 includes/common.php:212
+#: includes/posts.php:477
+msgid "Fechar"
+msgstr "Cerrar"
+
+#: components/list-partners.php:39
+msgid "Conheça o site"
+msgstr "Acceder"
+
+#: components/newsletter.php:6 components/newsletter.php:22
+msgid "Newsletter PlenaMata"
+msgstr "Boletín PlenaMata"
+
+#: components/newsletter.php:7
+msgid "ASSINE E FAÇA PARTE DO MOVIMENTO"
+msgstr "SUSCRÍBASE Y HAGA PARTE DEL MOVIMIENTO"
+
+#: components/newsletter.php:10
+msgid "árvores derrubadas em"
+msgstr "árboles talados en"
+
+#: components/newsletter.php:25
+msgid "de árvores derrubadas em"
+msgstr "de árboles talados en"
+
+#: components/newsletter.php:29 header.php:63
+msgid "Oferecido por"
+msgstr "Presentado por"
+
+#: components/no-results.php:4
+msgid "Verifique a ortografia ou tente usar palavras que possam aparecer no conteúdo que você está procurando."
+msgstr "Revisa la ortografía o intenta utilizar palabras que puedan aparecer en el contenido que buscas."
+
+#: components/relateds-materia.php:4 components/relateds.php:4
+msgid "Leia mais sobre"
+msgstr "Lea más sobre"
+
+#: components/search-box.php:5 header.php:87 includes/search.php:134
+msgid "Buscar"
+msgstr "Buscar"
+
+#: components/search-box.php:9
+msgid "Fechar busca"
+msgstr "Cerrar búsqueda"
+
+#: contents/glossario.php:17
+msgid "Palavras mais pesquisadas"
+msgstr "Palabras más buscadas"
+
+#: contents/glossario.php:43 includes/glossario.php:87
+msgid "Seções"
+msgstr "Secciones"
+
+#: contents/glossario.php:69
+msgid "Voltar"
+msgstr "Volver"
+
+#: contents/single-noticia.php:35
+msgid "Good Initiatives"
+msgstr "Buenas iniciativas"
+
+#: contents/single-noticia.php:85
+msgid "News"
+msgstr "Noticias"
+
+#: footer.php:24 includes/partners.php:22 includes/partners.php:24
+#: includes/partners.php:25 includes/partners.php:40
+msgid "Parceiros"
+msgstr "Socios"
+
+#: footer.php:31
+msgid "Declaração de Privacidade"
+msgstr "Declaración de Privacidad"
+
+#: footer.php:31
+msgid "Declaração de privacidade"
+msgstr "Declaración de privacidad"
+
+#: functions.php:47
+msgid "Main menu"
+msgstr "Menu principal"
+
+#: functions.php:84
+msgid "Small"
+msgstr "Pequeño"
+
+#: functions.php:85
+msgid "S"
+msgstr "P"
+
+#: functions.php:90
+msgid "Normal"
+msgstr "Normal"
+
+#: functions.php:91
+msgid "M"
+msgstr "M"
+
+#: functions.php:96
+msgid "Large"
+msgstr "Grande"
+
+#: functions.php:97
+msgid "L"
+msgstr "G"
+
+#: functions.php:102
+msgid "Huge"
+msgstr "Enorme"
+
+#: functions.php:103
+msgid "XL"
+msgstr "XG"
+
+#: header.php:80
+msgid "dashboard"
+msgstr "monitor"
+
+#: header.php:80 page-inicio.php:106
+msgid "Acesse nosso monitor"
+msgstr "Acceder al monitor"
+
+#: inc/template-tags.php:24 inc/template-tags.php:36
+msgid "j F Y \\a\\t G:i"
+msgstr "j F Y \\a\\t G:i"
+
+#: inc/template-tags.php:36
+msgid "Updated on"
+msgstr "Actualizado en"
+
+#: inc/template-tags.php:45
+msgid "We made a mistake. This content has been changed"
+msgstr "Cometimos un error. Este contenido ha sido cambiado"
+
+#: inc/template-tags.php:344
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Editar<span class=“screen-reader-text”>%s</span>"
+
+#: includes/campanhas.php:222 includes/campanhas.php:232
+msgid "Categorias"
+msgstr "Categorías"
+
+#: includes/campanhas.php:223
+msgid "Categoria"
+msgstr "Categoría"
+
+#: includes/campanhas.php:224
+msgid "Buscar categorias"
+msgstr "Buscar categorías"
+
+#: includes/campanhas.php:225
+msgid "Todas as Catagorias"
+msgstr "Todas las categorías"
+
+#: includes/campanhas.php:226
+msgid "Categoria mãe"
+msgstr "Categoría principal"
+
+#: includes/campanhas.php:227
+msgid "Categoria mãe:"
+msgstr "Categoría madre:"
+
+#: includes/campanhas.php:228
+msgid "Editar Categoria"
+msgstr "Editar Categoría"
+
+#: includes/campanhas.php:229
+msgid "Atualizar Categoria"
+msgstr "Actualizar Categoría"
+
+#: includes/campanhas.php:230
+msgid "Adicionar nova categoria"
+msgstr "Añadir nueva categoría"
+
+#: includes/campanhas.php:231
+msgid "Novo nome de categoria"
+msgstr "Nuevo nombre de categoría"
+
+#: includes/campanhas.php:252
+msgid "Campanha"
+msgstr "Campaña"
+
+#: includes/campanhas.php:253 includes/campanhas.php:254
+#: includes/campanhas.php:255 includes/campanhas.php:270
+msgid "Campanhas"
+msgstr "Campañas"
+
+#: includes/campanhas.php:256 includes/capas.php:588 includes/contato.php:17
+#: includes/fale-conosco.php:35 includes/historias.php:26 includes/homes.php:17
+msgid "Adicionar nova"
+msgstr "Añadir nueva"
+
+#: includes/campanhas.php:257
+msgid "Adicionar nova campanha"
+msgstr "Añadir nueva campaña"
+
+#: includes/campanhas.php:258
+msgid "Nova campanha"
+msgstr "Nueva campaña"
+
+#: includes/campanhas.php:259
+msgid "Editar campanha"
+msgstr "Editar campaña"
+
+#: includes/campanhas.php:260
+msgid "Ver campanhas"
+msgstr "Ver campaña"
+
+#: includes/campanhas.php:261
+msgid "Todas as campanhas"
+msgstr "Todas las campañas"
+
+#: includes/campanhas.php:262
+msgid "Procurar campanha"
+msgstr "Buscar campaña"
+
+#: includes/campanhas.php:263 includes/contato.php:24
+#: includes/fale-conosco.php:42
+msgid "Mensagem mãe:"
+msgstr "Mensaje principal:"
+
+#: includes/campanhas.php:264
+msgid "Nenhuma campanha encontrada."
+msgstr "No se encontraron campañas."
+
+#: includes/campanhas.php:265
+msgid "Nenhuma campanha na lixeira."
+msgstr "No hay campañas en la basura."
+
+#: includes/capas.php:584 includes/capas.php:586 includes/capas.php:587
+msgid "Capas"
+msgstr "Portadas"
+
+#: includes/capas.php:585
+msgid "Capa"
+msgstr "Portada"
+
+#: includes/capas.php:589
+msgid "Adicionar nova capa"
+msgstr "Añadir nueva portada"
+
+#: includes/capas.php:590
+msgid "Nova capa"
+msgstr "Nueva portada"
+
+#: includes/capas.php:591
+msgid "Editar capa"
+msgstr "Editar portada"
+
+#: includes/capas.php:592
+msgid "Ver capas"
+msgstr "Ver portadas"
+
+#: includes/capas.php:593
+msgid "Todas as capas"
+msgstr "Todas las portadas"
+
+#: includes/capas.php:594
+msgid "Procurar capa"
+msgstr "Buscar portada"
+
+#: includes/capas.php:595
+msgid "Capa mãe:"
+msgstr "Portada principal:"
+
+#: includes/capas.php:596
+msgid "Nenhuma capa encontrada."
+msgstr "No se encontró ninguna portada."
+
+#: includes/capas.php:597
+msgid "Nenhuma capa na lixeira."
+msgstr "No hay portada en la basura."
+
+#: includes/common.php:155
+msgid "Web stories"
+msgstr "Web stories"
+
+#: includes/common.php:1076 includes/common.php:1093
+msgid " as "
+msgstr " las "
+
+#: includes/contato.php:13 includes/contato.php:14 includes/contato.php:15
+#: includes/contato.php:16 includes/contato.php:31 page-inicio.php:187
+#: page-inicio.php:189
+msgid "Contato"
+msgstr "Contacto"
+
+#: includes/contato.php:18 includes/fale-conosco.php:36
+msgid "Adicionar nova mensagem"
+msgstr "Añadir nuevo mensaje"
+
+#: includes/contato.php:19 includes/fale-conosco.php:37
+msgid "Nova mensagem"
+msgstr "Nuevo mensaje"
+
+#: includes/contato.php:20 includes/fale-conosco.php:38
+msgid "Editar mensagem"
+msgstr "Editar mensaje"
+
+#: includes/contato.php:21 includes/fale-conosco.php:39
+msgid "Ver mensagens"
+msgstr "Ver mensajes"
+
+#: includes/contato.php:22 includes/fale-conosco.php:40
+msgid "Todas as mensagens"
+msgstr "Todas las mensajes"
+
+#: includes/contato.php:23 includes/fale-conosco.php:41
+msgid "Procurar mensagem"
+msgstr "Buscar mensaje"
+
+#: includes/contato.php:25 includes/fale-conosco.php:43
+msgid "Nenhuma mensagem encontrada."
+msgstr "No se han encontrado mensajes."
+
+#: includes/contato.php:26 includes/fale-conosco.php:44
+msgid "Nenhuma mensagem na lixeira."
+msgstr "No hay mensajes en la papelera."
+
+#: includes/fale-conosco.php:31 includes/fale-conosco.php:32
+#: includes/fale-conosco.php:33 includes/fale-conosco.php:34
+msgid "Fale conosco"
+msgstr "Hable con nosotros"
+
+#: includes/fale-conosco.php:49
+msgid "Fale Conosco"
+msgstr "Hable con Nosotros"
+
+#: includes/glossario.php:36 includes/glossario.php:37 page-inicio.php:191
+#: page-inicio.php:193
+msgid "Glossário"
+msgstr "Glosario"
+
+#: includes/glossario.php:38 includes/glossario.php:39
+#: includes/glossario.php:53
+msgid "Glossario"
+msgstr "Glosario"
+
+#: includes/glossario.php:40 includes/partners.php:26 includes/projetos.php:17
+#: includes/videos.php:26
+msgid "Adicionar novo"
+msgstr "Añadir nuevo"
+
+#: includes/glossario.php:41
+msgid "Adicionar novo verbete"
+msgstr "Añadir nueva entrada"
+
+#: includes/glossario.php:42
+msgid "Novo verbete"
+msgstr "Nueva entrada"
+
+#: includes/glossario.php:43
+msgid "Editar verbete"
+msgstr "Editar entrada"
+
+#: includes/glossario.php:44
+msgid "Ver verbetes"
+msgstr "Ver entradas"
+
+#: includes/glossario.php:45
+msgid "Todos os verbete"
+msgstr "Todas las entradas"
+
+#: includes/glossario.php:46
+msgid "Procurar verbete"
+msgstr "Buscar entrada"
+
+#: includes/glossario.php:47 includes/projetos.php:24
+msgid "Projeto pai:"
+msgstr "Proyecto padre:"
+
+#: includes/glossario.php:48
+msgid "Nenhum verbete encontrado."
+msgstr "Entradas no encontradas."
+
+#: includes/glossario.php:49
+msgid "Nenhum verbete na lixeira."
+msgstr "No hay entradas en la papelera."
+
+#: includes/glossario.php:79
+msgid "Buscar seções"
+msgstr "Buscar secciones"
+
+#: includes/glossario.php:80
+msgid "Todas as seções"
+msgstr "Todas las secciones"
+
+#: includes/glossario.php:81
+msgid "Seção mãe"
+msgstr "Sección madre"
+
+#: includes/glossario.php:82
+msgid "Seção mãe:"
+msgstr "Sección madre:"
+
+#: includes/glossario.php:83
+msgid "Editar seção"
+msgstr "Editar sección"
+
+#: includes/glossario.php:84
+msgid "Atualiar seção"
+msgstr "Actualizar sección"
+
+#: includes/glossario.php:85
+msgid "Adicionar nova seção"
+msgstr "Añadir nueva sección"
+
+#: includes/glossario.php:86
+msgid "Novo nome de seção"
+msgstr "Nuevo nombre de la sección"
+
+#: includes/glossario.php:212
+msgid "Search for a term"
+msgstr "Buscar un término"
+
+#: includes/historias.php:22
+msgid "História"
+msgstr "Historia"
+
+#: includes/historias.php:23 includes/historias.php:24
+#: includes/historias.php:25 includes/historias.php:40
+msgid "Histórias"
+msgstr "Historias"
+
+#: includes/historias.php:27
+msgid "Adicionar nova história"
+msgstr "Añadir nueva historia"
+
+#: includes/historias.php:28
+msgid "Nova história"
+msgstr "Nueva historia"
+
+#: includes/historias.php:29
+msgid "Editar história"
+msgstr "Editar historia"
+
+#: includes/historias.php:30
+msgid "Ver histórias"
+msgstr "Ver historias"
+
+#: includes/historias.php:31
+msgid "Todas as histórias"
+msgstr "Todas las historias"
+
+#: includes/historias.php:32
+msgid "Procurar história"
+msgstr "Buscar historia"
+
+#: includes/historias.php:33
+msgid "História mãe:"
+msgstr "Historia madre:"
+
+#: includes/historias.php:34
+msgid "Nenhuma história encontrada."
+msgstr "No se encontraron historias."
+
+#: includes/historias.php:35
+msgid "Nenhuma história na lixeira."
+msgstr "No hay historias en la basura."
+
+#: includes/homes.php:13 includes/homes.php:15 includes/homes.php:16
+#: includes/homes.php:31
+msgid "Homes"
+msgstr "Homes"
+
+#: includes/homes.php:14
+msgid "Home"
+msgstr "Home"
+
+#: includes/homes.php:18
+msgid "Adicionar nova home"
+msgstr "Añadir nueva home"
+
+#: includes/homes.php:19
+msgid "Nova home"
+msgstr "Nueva Home"
+
+#: includes/homes.php:20
+msgid "Editar home"
+msgstr "Editar Home"
+
+#: includes/homes.php:21
+msgid "Ver homes"
+msgstr "Ver homes"
+
+#: includes/homes.php:22
+msgid "Todas as homes"
+msgstr "Todas las homes"
+
+#: includes/homes.php:23
+msgid "Procurar home"
+msgstr "Buscar homes"
+
+#: includes/homes.php:24
+msgid "Home mãe:"
+msgstr "Home madre:"
+
+#: includes/homes.php:25
+msgid "Nenhuma home encontrada."
+msgstr "Ninguna home encontrada."
+
+#: includes/homes.php:26
+msgid "Nenhuma home na lixeira."
+msgstr "Ningúna home en la basura."
+
+#: includes/newsletter.php:46
+msgid "A API Key do Mailchimp não foi definida"
+msgstr "Clave API de Mailchimp no configurada"
+
+#: includes/newsletter.php:51
+msgid "O ID da lista do Mailchimp não foi definida"
+msgstr "ID de lista de Mailchimp no establecido"
+
+#: includes/newsletter.php:103 includes/newsletter.php:167
+msgid "Cadastre-se"
+msgstr "Registrarse"
+
+#: includes/newsletter.php:104 includes/newsletter.php:168
+msgid "Receba em 1ª mão as informações e opiniões mais relevantes"
+msgstr "Recibe de primera mano la información y opiniones más relevantes"
+
+#: includes/newsletter.php:173 includes/newsletter.php:210
+#: includes/newsletter.php:211
+msgid "Ops! Você precisa preencher o seu e-mail corretamente."
+msgstr "¡Ups! Necesitas completar tu correo electrónico correctamente."
+
+#: includes/newsletter.php:174
+msgid "Muito Obrigado por assinar nossa Newsletter!"
+msgstr "¡Muchas gracias por suscribirte a nuestra Newsletter!"
+
+#: includes/newsletter.php:178
+msgid "Assinar"
+msgstr "Suscribirse"
+
+#: includes/newsletter.php:182
+msgid "Cadastro de newsletter"
+msgstr "Suscribirse al boletín"
+
+#: includes/newsletter.php:209
+msgid "Ops! Você precisa informar seu endereço de email"
+msgstr "¡Ups! Necesita proporcionar su dirección de correo electrónico"
+
+#: includes/newsletter.php:217
+msgid "Quero receber o clipping diário de notícias sobre desmatamento"
+msgstr "Quiero recibir el recorte diario de noticias sobre deforestación"
+
+#: includes/newsletter.php:222
+msgid "Concordo em receber novidades sobre o PlenaMata e participar de pesquisas de opinião a respeito da plataforma."
+msgstr "Acepto recibir noticias sobre PlenaMata y participar en encuestas de opinión sobre la plataforma."
+
+#: includes/partners.php:23
+msgid "Parceiro"
+msgstr "Socios"
+
+#: includes/partners.php:27
+msgid "Adicionar novo parceiro"
+msgstr "Añadir nuevo socio"
+
+#: includes/partners.php:28
+msgid "Novo parceiro"
+msgstr "Nuevo socio"
+
+#: includes/partners.php:29
+msgid "Editar parceiro"
+msgstr "Editar socio"
+
+#: includes/partners.php:30
+msgid "Ver Parceiros"
+msgstr "Ver Socios"
+
+#: includes/partners.php:31
+msgid "Todos os Parceiros"
+msgstr "Todos los Socios"
+
+#: includes/partners.php:32
+msgid "Procurar parceiro"
+msgstr "Búsqueda de socio"
+
+#: includes/partners.php:33
+msgid "Parceiro pai:"
+msgstr "Socio padre:"
+
+#: includes/partners.php:34
+msgid "Nenhum parceiro encontrado."
+msgstr "Ningún socio encontrado."
+
+#: includes/partners.php:35
+msgid "Nenhum parceiro na lixeira."
+msgstr "No hay socios en la basura."
+
+#: includes/posts.php:453
+msgid "Filtrar por assunto"
+msgstr "Filtrar por tema"
+
+#: includes/posts.php:464
+msgid "Todas as regiões"
+msgstr "Todas las regiones"
+
+#: includes/posts.php:471
+msgid "Filtrar por região"
+msgstr "Filtrar por región"
+
+#: includes/posts.php:482
+msgid "Aplicar filtros"
+msgstr "Aplicar filtros"
+
+#: includes/posts.php:483
+msgid "Limpar filtros"
+msgstr "Limpiar filtros"
+
+#: includes/projetos.php:13 includes/projetos.php:15 includes/projetos.php:16
+#: includes/projetos.php:31
+msgid "Projetos"
+msgstr "Proyectos"
+
+#: includes/projetos.php:14
+msgid "Projeto"
+msgstr "Proyecto"
+
+#: includes/projetos.php:18
+msgid "Adicionar novo projeto"
+msgstr "Añadir nuevo proyecto"
+
+#: includes/projetos.php:19
+msgid "Novo projeto"
+msgstr "Nuevo proyecto"
+
+#: includes/projetos.php:20
+msgid "Editar projeto"
+msgstr "Editar proyecto"
+
+#: includes/projetos.php:21
+msgid "Ver projetos"
+msgstr "Ver proyectos"
+
+#: includes/projetos.php:22
+msgid "Todos os projeto"
+msgstr "Todos los proyectos"
+
+#: includes/projetos.php:23
+msgid "Procurar projeto"
+msgstr "Buscar proyecto"
+
+#: includes/projetos.php:25
+msgid "Nenhum projeto encontrado."
+msgstr "Ningún proyecto encontrado."
+
+#: includes/projetos.php:26
+msgid "Nenhum projeto na lixeira."
+msgstr "No hay proyectos en la basura."
+
+#: includes/search.php:103
+#, fuzzy
+#| msgid "Order by:"
+msgid "Ordenar por:"
+msgstr "Ordenar por:"
+
+#: includes/search.php:108 includes/search.php:112
+#, fuzzy
+#| msgid "Most Relevant"
+msgid "Mais relevantes"
+msgstr "Lo más relevante"
+
+#: includes/search.php:109
+#, fuzzy
+#| msgid "Most recent"
+msgid "Mais recentes"
+msgstr "Lo más reciente"
+
+#: includes/search.php:125
+msgid "Todas as editorias"
+msgstr "Todas las editoriales"
+
+#: includes/search.php:135
+msgid "Limpar"
+msgstr "Limpiar"
+
+#: includes/search.php:136
+msgid "Search"
+msgstr "Búsqueda"
+
+#: includes/search.php:144
+msgid "Todos os períodos"
+msgstr "Todos los periodos"
+
+#: includes/search.php:145
+msgid "Última hora"
+msgstr "Última hora"
+
+#: includes/search.php:146
+#, fuzzy
+#| msgid "Last 24 hours"
+msgid "Últimas 24 horas"
+msgstr "Últimas 24 horas"
+
+#: includes/search.php:147
+msgid "Última semana"
+msgstr "Última semana"
+
+#: includes/search.php:148
+msgid "Último mês"
+msgstr "Último més"
+
+#: includes/search.php:149
+msgid "Último ano"
+msgstr "Último año"
+
+#: includes/search.php:152
+msgid "Período"
+msgstr "Período"
+
+#: includes/search.php:161
+msgid "Editorial"
+msgstr "Editorial"
+
+#: includes/videos.php:22 includes/videos.php:24 includes/videos.php:25
+#: includes/videos.php:40
+msgid "Vídeos"
+msgstr "Vídeos"
+
+#: includes/videos.php:23
+msgid "Vídeo"
+msgstr "Vídeo"
+
+#: includes/videos.php:27
+msgid "Adicionar novo vídeo"
+msgstr "Añadir nuevo vídeo"
+
+#: includes/videos.php:28
+msgid "Novo vídeo"
+msgstr "Nuevo vídeo"
+
+#: includes/videos.php:29
+msgid "Editar vídeo"
+msgstr "Editar vídeo"
+
+#: includes/videos.php:30
+msgid "Ver Vídeos"
+msgstr "Ver Vídeos"
+
+#: includes/videos.php:31
+msgid "Todos os Vídeos"
+msgstr "Todos los vídeos"
+
+#: includes/videos.php:32
+msgid "Procurar vídeo"
+msgstr "Buscar vídeo"
+
+#: includes/videos.php:33
+msgid "Vídeo pai:"
+msgstr "Vídeo padre:"
+
+#: includes/videos.php:34
+msgid "Nenhum vídeo encontrado."
+msgstr "No se encontraron vídeos."
+
+#: includes/videos.php:35
+msgid "Nenhum vídeo na lixeira."
+msgstr "No hay videos en la papelera."
+
+#: page-artigos.php:10 page-inicio.php:144
+msgid "Notícias"
+msgstr "Noticias"
+
+#: page-artigos.php:23
+msgid "Filtrar"
+msgstr "Filtrar"
+
+#: page-contato.php:20
+#, php-format
+msgid "Use a hashtag %s e participe do movimento"
+msgstr "Utilice el hashtag %s y haga parte del movimiento"
+
+#: page-contato.php:21
+msgid "Acesse nossas redes e compartilhe"
+msgstr "Conozca nuestras redes"
+
+#: page-inicio.php:33
+msgid "Árvores derrubadas"
+msgstr "Árboles talados"
+
+#: page-inicio.php:40
+msgid "Área devastada"
+msgstr "Área destruida"
+
+#: page-inicio.php:48
+msgid "Desmatamento na Amazônia em"
+msgstr "Deforestación en la Amazonía en"
+
+#: page-inicio.php:60 page-inicio.php:83
+msgid "média diária"
+msgstr "promedio diario"
+
+#: page-inicio.php:64 page-inicio.php:87
+msgid "Estimativa em tempo real"
+msgstr "Estimación en tiempo real"
+
+#: page-inicio.php:69
+msgid "de árvores derrubadas"
+msgstr "de árboles talados"
+
+#: page-inicio.php:92
+msgid "Campos de futebol"
+msgstr "Campos de fútbol"
+
+#: page-inicio.php:109
+msgid "Saiba como manter a floresta em pé"
+msgstr "Descubre cómo mantener viva la Amazonía"
+
+#: page-inicio.php:125
+msgid "Conheça e participe de uma campanha"
+msgstr "Conozca y únase a una campaña"
+
+#: page-inicio.php:127
+msgid "Ver todas as campanhas"
+msgstr "Ver todas las campañas"
+
+#: page-inicio.php:145
+msgid "Fique por dentro do que está acontecendo na Amazônia"
+msgstr "Descubre cómo mantener viva la Amazonía"
+
+#: page-inicio.php:146 page-inicio.php:149
+msgid "Ver todas as notícias"
+msgstr "Ver todas las noticias"
+
+#: page-inicio.php:165
+msgid "Quem somos"
+msgstr "Quienes somos"
+
+#: page-inicio.php:183 page-inicio.php:185
+msgid "Sobre"
+msgstr "Sobre"
+
+#: search.php:9
+#, fuzzy
+#| msgid "result"
+msgid "resultado"
+msgstr "resultado"
+
+#: search.php:10
+#, fuzzy
+#| msgid "results"
+msgid "resultados"
+msgstr "resultados"
+
+#: search.php:16
+msgid "O que você está procurando?"
+msgstr "¿Qué estás buscando?"
+
+#: search.php:17
+msgid "Nenhum resultado encontrado."
+msgstr "Ningún resultado encontrado."
+
+#: search.php:18
+msgid "Por favor refaça a pesquisa."
+msgstr "Vuelva a realizar la búsqueda por favor."
+
+#: search.php:34
+msgid "Resultados da busca"
+msgstr "Resultados de la búsqueda"
+
+#~ msgid "Privacy Statement"
+#~ msgstr "Declaración de Privacidad"
+
+#~ msgid "Offered by"
+#~ msgstr "Presentado por"
+
+#~ msgid "Access our dashboard"
+#~ msgstr "Acceder al monitor"
+
+#~ msgid "Next history"
+#~ msgstr "Próxima historia"
+
+#~ msgid "Previous history"
+#~ msgstr "Historia previa"
+
+#~ msgid "Close"
+#~ msgstr "Cerrar"
+
+#~ msgid "Sections"
+#~ msgstr "Secciones"
+
+#~ msgid "Cadastrar"
+#~ msgstr "Suscribirse"
+
+#~ msgid "All editorials"
+#~ msgstr "Todas las editoriales"
+
+#~ msgid "Clear"
+#~ msgstr "Limpiar"
+
+#~ msgid "Last hour"
+#~ msgstr "Ultima hora"
+
+#~ msgid "Last week"
+#~ msgstr "La semana pasada"
+
+#~ msgid "Last month"
+#~ msgstr "El mes pasado"
+
+#~ msgid "Period"
+#~ msgstr "Período"
+
+#~ msgid "Other news"
+#~ msgstr "Otras noticias"
+
+#~ msgid "What are you looking for?"
+#~ msgstr "¿Qué estás buscando?"
+
+#~ msgid "No results found"
+#~ msgstr "No se han encontrado resultados"
+
+#~ msgid "Please do the search again."
+#~ msgstr "Por favor, haz la búsqueda de nuevo."
+
+#~ msgid "Search results"
+#~ msgstr "Resultados de la búsqueda"

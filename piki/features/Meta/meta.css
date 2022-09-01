@@ -1,0 +1,75 @@
+/**
+ * PKMeta Styling
+ */
+table.pkmeta td, table.pkmeta th { border-bottom: 1px solid #E9E9E9; }
+table.pkmeta th { text-align: right; font-weight:bold;}
+table.pkmeta th label { margin-top:5px; display:block;}
+p.pkmeta_description { color: #AAA; font-style: italic; margin: 2px 0 !important;}
+span.pkmeta_description { color: #AAA; font-style: italic;}
+table.pkmeta input, table.pkmeta textarea { font-size:12px; padding: 5px; }
+table.pkmeta input[type=text], table.pkmeta textarea { width: 97%; }
+table.pkmeta textarea.cmb_textarea_code { font-family: Consolas,Monaco,monospace; line-height: 16px; }
+table.pkmeta textarea.ptype_labels { height: 180px; }
+table.pkmeta input.cmb_text_small { width: 100px; margin-right: 15px;}
+table.pkmeta input.cmb_timepicker { width: 100px; margin-right: 15px;}
+table.pkmeta input.cmb_text_money { width: 90px; margin-right: 15px;}
+table.pkmeta input.cmb_text_medium { width: 230px; margin-right: 15px;}
+table.pkmeta input.cmb_upload_file { width: 65%; }
+table.pkmeta li { font-size:12px; margin: 1px 0 5px 0; line-height: 16px; }
+table.pkmeta ul { padding-top:5px; margin: 0; }
+table.pkmeta select { font-size:12px; margin-top: 3px;}
+table.pkmeta input:focus, table.pkmeta textarea:focus { background: #fffff8;}
+.pkmeta_title { margin: 0 0 5px 0; padding: 5px 0 0 0; font: italic 24px/35px Georgia,"Times New Roman","Bitstream Charter",Times,serif;}
+.cmb_radio_inline { padding: 4px 0 0 0;}
+.cmb_radio_inline_option {display: inline; padding-right: 18px;}
+table.pkmeta input[type="radio"] { margin: 0 5px 0 0; padding: 0;}
+table.pkmeta input[type="checkbox"] { margin: 0 5px 0 0; padding: 0;}
+table.pkmeta .mceLayout {border:1px solid #DFDFDF !important;}
+table.pkmeta .mceIframeContainer {background:#FFF;}
+table.pkmeta .meta_mce {width:97%;}
+table.pkmeta .meta_mce textarea {width:100%;}
+table.pkmeta .cmb_media_status {  margin: 10px 0 0 0;}
+table.pkmeta .cmb_media_status .img_status, table.pkmeta .cmb_media_status .embed_status {  position: relative; }
+table.pkmeta .cmb_media_status .img_status img, table.pkmeta .cmb_media_status .embed_status { border:1px solid #DFDFDF; background: #FAFAFA; max-width:350px; padding: 5px; -moz-border-radius: 2px; border-radius: 2px;}
+table.pkmeta .cmb_media_status .embed_status { float: left; max-width:800px;}
+table.pkmeta .cmb_media_status .img_status .cmb_remove_file_button, table.pkmeta .cmb_media_status .embed_status .cmb_remove_file_button { text-indent: -9999px; background: url(images/ico-delete.png); width: 16px; height: 16px; position: absolute; top: -5px; left: -5px;}
+table.pkmeta textarea { resize: none; height: 120px; }
+/* Sidebar placement adjustments */
+.inner-sidebar table.pkmeta input[type=text], #side-sortables table.pkmeta input[type=text], table.pkmeta textarea { width: 100%;  }
+.inner-sidebar table.pkmeta .cmb_media_status .img_status img, #side-sortables table.pkmeta .cmb_media_status .img_status img, .inner-sidebar table.pkmeta .cmb_media_status .embed_status img, #side-sortables table.pkmeta .cmb_media_status .embed_status img { width: 90%; }
+.postbox table.pkmeta .cmb-spinner { float: left; }
+input.ftype-boolean { float: left !important; margin-top: 2px; }
+
+
+/* Capabilities */
+
+	#pikiforms-field-caps .group-caps {
+		display: block;
+		border: #eeeeee 1px solid;
+		margin-bottom: 20px;
+	}
+	#pikiforms-field-caps .group-caps .ftype-checkboxes {
+		padding: 20px;
+	}
+	#pikiforms-field-caps .group-caps .item-check {
+		display: inline-block;
+		margin: 0 10px 10px 0;
+	}
+
+/* Posts field */
+
+	.field-item .ftype-posts .posts-list .title {
+		float: left;
+		font-size: 14px;
+		width: 72%;
+		margin: 0;
+	}
+	.field-item .ftype-posts .posts-list .actions {
+		float: right;
+		width: 22%;
+		text-align: right;
+	}
+	.field-item .ftype-posts .posts-list .actions input {
+		display: inline-block;
+		margin: 0 5px;
+	}

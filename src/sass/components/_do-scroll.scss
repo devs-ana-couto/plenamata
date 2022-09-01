@@ -1,0 +1,48 @@
+.do-scroll {
+
+    position: relative;
+
+    span {
+
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 16px;
+        height: 50px;
+        transform: translateX(-50%);
+
+        span {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 2px;
+            height: 30px;
+            background: #FFFFFF;
+            animation: monFrame 2s ease-in-out 0.2s infinite;
+            
+            &:before {
+                content: '';
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                bottom: 0;
+                left: -5px;
+                border-right: 2px solid #FFFFFF;
+                border-bottom: 2px solid #FFFFFF;
+                transform: rotate(45deg);
+            }
+        
+        }
+    
+    }
+
+}
+
+@media( max-width: 540px ){
+
+    .do-scroll span span {
+        height: 22px;
+    }
+
+}

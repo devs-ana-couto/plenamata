@@ -1,0 +1,11 @@
+.tooltip {
+
+    i {
+        display: block;
+        width: 16px;
+        height: 16px;
+        @include imgrpc;
+        //@include background-svg('icon-info');
+    }
+
+}

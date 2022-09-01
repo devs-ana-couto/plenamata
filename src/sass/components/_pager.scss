@@ -1,0 +1,126 @@
+body .piki-pager {
+
+	&.default .paginationjs-pages {
+
+		ul {
+
+			@include reset;
+
+			a {
+
+				display: block;
+				width: 30px;
+				height: 30px;
+				line-height: 22px;
+				font-weight: 700;
+				font-size: 14px;
+				border-top: 4px solid transparent;
+				border-bottom: 4px solid transparent;
+				text-decoration: none;
+				text-align: center;
+				color: #1A2C31;
+				border-radius: 0;
+				background: transparent;
+			
+				&:hover,
+				&:active {
+					border-bottom-color: #206837;
+				}
+
+			}
+
+			.active a {
+				background: #206837;
+				border-color: #206837;
+				color: #FFFFFF;
+			}
+
+			.paginationjs-prev,
+			.paginationjs-next {
+				@include imgrpc;
+				background-image: url('../images/icon-arrow-nav.svg');
+				background-repeat: no-repeat;
+				background-position: center center;
+				filter: invert(10%) sepia(18%) saturate(889%) hue-rotate(43deg) brightness(98%) contrast(88%);
+			}
+			.paginationjs-prev {
+				margin-right: 27px;
+				transform: scaleX(-1);
+			}
+			.paginationjs-next {
+				margin-left: 27px;
+			}
+
+			li.disabled:not(.paginationjs-ellipsis) {
+				opacity: 0.5;
+			}
+		
+		}
+
+	}
+
+	&.modern .button {
+
+		width: 243px;
+		height: 40px;
+		padding: 0 8px;
+		background: #0043C9;
+		box-shadow: 0px 8px 12px rgba(20, 46, 82, 0.2);
+		border-radius: 4px;
+		text-decoration: none;
+		font-size: 16px;
+		line-height: 40px;
+		text-align: center;
+		color: #FFFFFF;
+		transition: all .3s ease-in-out;
+
+		&:hover {
+			opacity: 0.8;
+		}
+		&:active {
+			box-shadow: 0 0 0 rgba(20, 46, 82, 0.2);
+			transform: translate(1px,1px);
+		}
+	
+	}
+
+}
+
+@media( max-width: 480px ){
+
+	.paginationjs-ellipsis {
+		display: none;
+	}
+	.paginationjs-page {
+
+		display: none;
+
+		&.active {
+			display: block;
+		}
+
+	}
+
+	body .piki-pager {
+
+		padding-left: 24px;
+		padding-right: 24px;
+
+		&.default {
+			
+			.paginationjs-pages ul a {
+				width: 41px;
+				height: 41px;
+				line-height: 39px;
+				font-size: 16px;
+			}
+		
+		}
+
+		&.modern .button {
+			width: 100%;
+		}
+
+	}
+
+}

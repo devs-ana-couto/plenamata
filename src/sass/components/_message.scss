@@ -1,0 +1,148 @@
+body #piki-message {
+
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  		width: 4px;
+  		border-radius: 2px;
+  		background: lighten( #E0E5EB, 30% );
+	}
+
+	button.close-button.native {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 35px;
+		height: 35px;
+		overflow: hidden;
+		text-indent: -99999px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		//@extend .icon-close;
+	}
+
+	&.fit-screen {
+
+		button.close-button.native {
+			top: 14px;
+			right: 20px;
+		}
+
+		.inner {
+
+			padding: 30px 38px 30px 24px;
+			background-color: #ffffff;
+			border-radius: 4px;
+
+			> nav {
+
+				display: flex;
+
+				button {
+
+					width: 243px;
+					height: 40px;
+					background: #0043C9;
+					box-shadow: 0px 8px 12px rgba(20, 46, 82, 0.2);
+					border-radius: 4px;
+					font-size: 16px;
+					color: #FFFFFF;
+					transition: all .3s ease-in-out;
+
+					&:hover {
+						opacity: 0.8;
+					}
+					&:active {
+						transform: translate(1px,1px);
+						box-shadow: 0 0 0 rgba(20, 46, 82, 0);
+					}
+				
+				}
+			
+			}
+		
+		}
+
+		.content {
+			padding: 0;
+			border: 0;
+		}
+
+		.center-content {
+
+			font-size: 16px;
+			line-height: 19px;
+
+			&,
+			* {
+				color: #333333;
+			}
+		
+			h2 {
+
+				margin: 24px 0 12px;
+				font-size: 18px;
+				line-height: 20px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			
+			}
+
+		}
+
+		.modal-title span {
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 29px;
+			color: #333333;
+			font-style: normal;
+		}
+
+	}
+
+	&:not(.fit-screen) {
+
+		.content {
+
+			max-width: 360px;
+			padding: 41px 24px 23px;
+			border-radius: 0;
+			text-align: center;
+
+			em {
+				display: block;
+				font-weight: 700;
+				font-size: 32px;
+				line-height: 38px;
+				color: #3B4AFF;
+				font-style: normal;
+			}
+
+			p {
+				display: block;
+				margin: 16px 0 0;
+				font-size: 20px;
+				line-height: 24px;
+				color: #333333;
+			}
+
+			button {
+				width: 100%;
+				max-width: 312px;
+				height: 48px;
+				margin: 24px auto 0;
+				line-height: 46px;
+				border: 1px solid transparent;
+				text-align: center;
+				background: #0041D9;
+				box-shadow: 0px 8px 12px rgba(20, 46, 82, 0.2);
+				border-radius: 4px;
+				font-size: 16px;
+				color: #FFFFFF;
+			}
+
+		}
+
+	}
+
+}

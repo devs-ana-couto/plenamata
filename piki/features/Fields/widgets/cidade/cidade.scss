@@ -1,0 +1,27 @@
+.linha-field.cidade {
+	
+	.field-item {
+
+		position: relative;
+
+		.preloader {
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			right: 16px;
+			width: 28px;
+			height: 28px;
+			margin-top: -14px;
+			overflow: hidden;
+			border-radius: 14px;
+			background: #ffffff url( images/ajax-loader.svg ) no-repeat;
+			background-size: cover;
+			overflow: hidden;
+			text-indent: -99999px;
+			display: none;
+		}
+
+	}
+
+}
+

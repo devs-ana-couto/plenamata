@@ -1,0 +1,9 @@
+{
+    "require": {
+        "enshrined/svg-sanitize": "^0.15.4",
+        "spatie/image-optimizer": "^1.1",
+        "stil/gd-text": "^1.1",
+        "rosell-dk/webp-convert": "^2.3",
+        "zoonman/linkedin-api-php-client": "^0.0.14"
+    }
+}

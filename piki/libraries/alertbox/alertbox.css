@@ -1,0 +1,60 @@
+/*
+** ALERT BOX
+*/
+
+	#alert-box {
+		width: 320px;
+		left: 50%;
+		top: 170px;
+		margin-left: -160px;
+		z-index: 999999;
+		display: none;
+		height: auto;
+	}
+
+	/* success */
+	div.box-message.success .content h2.box-title { color: #0c6b80; }
+	div.box-message.success .head .close-button { background-position: -1px -132px; }
+	div.box-message.success .head .close-button:hover { background-position: -41px -132px; }
+	div.box-message.success .button-box a { background-position: 0 -54px }
+	div.box-message.success .button-box span { background-position: right -81px }
+
+	div.box-message .content {
+		display: block;
+		padding: 15px; 
+	}
+	div.box-message .content h2 { 
+		margin: 0;  
+		font-size: 16px;
+		font-weight: 400;
+		color: #ff7b81;
+	}
+	div.box-message .content p.text { 
+		margin: 10px 0 0 0;  
+		font-size: 14px;
+		color: #6d6e71;
+	}
+	div.box-message .content div.button-box { 
+		background: url("images/div_cinza.gif") repeat-x;
+		padding-top: 8px;
+		margin-top: 8px;
+		text-align: center;
+	}
+
+	/* error */
+
+		div.box-message.error .head {
+			background: #000000;
+		}
+
+	/* success */
+
+		div.box-message.success .head {
+			background: #1196b9;
+		}
+
+.ui-widget-overlay { z-index: 150000; }
+.ui-datepicker-div, .ui-dialog { z-index: 150000; }
+#pikiAlert > .content {
+	font-size: 1.4em;
+}

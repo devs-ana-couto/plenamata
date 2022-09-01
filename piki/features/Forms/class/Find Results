@@ -1,0 +1,54 @@
+Searching 1562 files for "invalidcombo" (regex)
+
+/Users/thiagoborges/Sites/devel/pararemelhor/site/wp-login.php:
+   44  
+   45  	// Shake it!
+   46: 	$shake_error_codes = array( 'empty_password', 'empty_email', 'invalid_email', 'invalidcombo', 'empty_username', 'invalid_username', 'incorrect_password' );
+   47  	/**
+   48  	 * Filter the error codes array for shaking the login form.
+   ..
+  295  
+  296  	if ( !$user_data ) {
+  297: 		$errors->add('invalidcombo', __('<strong>ERROR</strong>: Invalid username or e-mail.'));
+  298  		return $errors;
+  299  	}
+
+/Users/thiagoborges/Sites/devel/pararemelhor/site/wp-content/plugins/perfil/perfil.php:
+  457  
+  458      if ( !$user_data ) {
+  459:         $errors->add('invalidcombo', __('<strong>ERROR</strong>: Invalid username or e-mail.'));
+  460          return $errors;
+  461      }
+
+3 matches across 2 files
+
+
+Searching 1562 files for "Invalid username or e-mail" (regex)
+
+/Users/thiagoborges/Sites/devel/pararemelhor/site/wp-login.php:
+  295  
+  296  	if ( !$user_data ) {
+  297: 		$errors->add('invalidcombo', __('<strong>ERROR</strong>: Invalid username or e-mail.'));
+  298  		return $errors;
+  299  	}
+
+/Users/thiagoborges/Sites/devel/pararemelhor/site/wp-content/languages/pt_BR.po:
+ 6367  
+ 6368  #: wp-login.php:297
+ 6369: msgid "<strong>ERROR</strong>: Invalid username or e-mail."
+ 6370  msgstr "<strong>ERRO</strong>: Apelido ou email inválidos."
+ 6371  
+
+/Users/thiagoborges/Sites/devel/pararemelhor/site/wp-content/plugins/perfil/perfil.php:
+  457  
+  458      if ( !$user_data ) {
+  459:         $errors->add('invalidcombo', __('<strong>ERROR</strong>: Invalid username or e-mail.'));
+  460          return $errors;
+  461      }
+
+3 matches across 3 files
+
+
+Searching 1562 files for "Nome de usuário ou email inválidos." (regex)
+
+0 matches across 0 files

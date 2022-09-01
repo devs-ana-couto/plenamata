@@ -1,0 +1,15 @@
+body.wp-admin .ftype-espaco select {
+	width: auto !important;
+}
+.ftype-espaco .field {
+	float: left;
+	margin-right: 8px;
+}
+.ftype-espaco .preloader {
+	display: none;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	text-indent: -99999px;
+	background: url( 'images/ajax-loader.gif' ) no-repeat center center;
+}

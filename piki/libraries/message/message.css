@@ -1,0 +1,199 @@
+.no-scroll {
+  overflow: hidden !important; }
+
+#piki-message {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 30px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+  opacity: 0;
+  transform: translateX(-110%);
+  transition: opacity 600ms, transform 300ms; }
+  #piki-message:before, #piki-message:after,
+  #piki-message > .content {
+    width: 100%; }
+  #piki-message:before, #piki-message:after {
+    content: '';
+    display: block;
+    flex: 1;
+    min-height: 30px; }
+  #piki-message .close-button.native {
+    position: absolute;
+    right: 53px;
+    top: 32px; }
+  #piki-message .inner {
+    display: block;
+    position: relative; }
+  #piki-message .mCSB_scrollTools {
+    width: 6px; }
+    #piki-message .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+      width: 2px; }
+    #piki-message .mCSB_scrollTools .mCSB_draggerRail {
+      opacity: 0 !important;
+      background-color: transparent !important; }
+    #piki-message .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+    #piki-message .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+      width: 6px; }
+  #piki-message .mCSB_outside > .mCSB_container {
+    margin-right: 24px; }
+  #piki-message .mCSB_outside + .mCSB_scrollTools {
+    right: -6px; }
+  #piki-message .scroller pre {
+    text-align: left !important; }
+  #piki-message .content {
+    display: block;
+    max-width: 680px;
+    padding: 50px 54px 44px; }
+    #piki-message .content header {
+      display: block;
+      position: relative;
+      padding-left: 148px; }
+      #piki-message .content header:before {
+        content: '';
+        display: block; }
+    #piki-message .content > div p {
+      margin: 0 0 21px 0;
+      font-size: 16px;
+      line-height: 20px; }
+      #piki-message .content > div p:last-child {
+        margin-bottom: 0; }
+    #piki-message .content > div a.button {
+      display: table;
+      margin: 46px auto 0; }
+  #piki-message.opened {
+    opacity: 100;
+    transform: translateX(0); }
+  #piki-message:not(.fit-screen) .content {
+    display: block;
+    max-width: 680px;
+    padding: 50px 54px 44px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(78, 78, 78, 0.25);
+    border-radius: 5px; }
+  #piki-message.fit-screen {
+    overflow-y: hidden; }
+    #piki-message.fit-screen .inner {
+      display: flex;
+      max-width: 900px;
+      flex-direction: column;
+      justify-content: center;
+      padding: 43px 33px;
+      background-color: #171717;
+      max-height: calc( 100vh - 60px ); }
+      #piki-message.fit-screen .inner > nav {
+        padding-top: 20px; }
+    #piki-message.fit-screen .modal-title {
+      display: flex;
+      font-style: italic;
+      justify-content: flex-start;
+      padding-bottom: 17px; }
+      #piki-message.fit-screen .modal-title span {
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 27px;
+        text-transform: uppercase;
+        color: #FAFAFA; }
+      #piki-message.fit-screen .modal-title strong {
+        flex: 1;
+        padding-top: 13px;
+        margin: 19px 0 0 21px;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 132%;
+        color: #1A5AEC;
+        border-top: 2px solid #FAFAFA; }
+    #piki-message.fit-screen .content {
+      position: relative;
+      max-width: 100%;
+      height: 100%;
+      max-height: 100%;
+      color: #fff;
+      padding: 48px 30px 26px 30px;
+      opacity: 0.8;
+      border: 0.5px solid #CCCCCC; }
+      #piki-message.fit-screen .content p, #piki-message.fit-screen .content ul, #piki-message.fit-screen .content li, #piki-message.fit-screen .content blockquote, #piki-message.fit-screen .content div {
+        text-align: left; }
+      #piki-message.fit-screen .content > .scroller {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        text-align: left; }
+  #piki-message button.danger {
+    background-color: red;
+    border-color: red; }
+    #piki-message button.danger:hover {
+      background-color: #931125;
+      border-color: #931125; }
+
+body.wp-admin #piki-message .scroller > nav {
+  display: flex;
+  justify-content: center; }
+  body.wp-admin #piki-message .scroller > nav button, body.wp-admin #piki-message .scroller > nav a {
+    margin: 0 5px; }
+body.wp-admin #piki-message .close-button.native {
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background: none;
+  overflow-y: hidden;
+  text-indent: -99999px;
+  cursor: pointer; }
+  body.wp-admin #piki-message .close-button.native:before, body.wp-admin #piki-message .close-button.native:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 2px;
+    top: 12px;
+    width: 25px;
+    height: 3px;
+    background: grey;
+    border-radius: 2px;
+    transition: all 0.25s; }
+  body.wp-admin #piki-message .close-button.native:before {
+    transform: rotate(45deg); }
+  body.wp-admin #piki-message .close-button.native:after {
+    transform: rotate(-45deg); }
+  body.wp-admin #piki-message .close-button.native:hover:before, body.wp-admin #piki-message .close-button.native:hover:after {
+    background-color: black; }
+body.wp-admin #piki-message.confirm .modal-title {
+  font-weight: bold;
+  margin-bottom: 14px;
+  font-size: 18px; }
+body.wp-admin #piki-message.confirm .close-button.native {
+  top: 10px;
+  right: 10px; }
+body.wp-admin #piki-message.confirm:not(.fit-screen) .content {
+  padding: 30px 34px 24px; }
+body.wp-admin #piki-message.confirm .center-content {
+  font-size: 14px; }
+body.wp-admin #piki-message.confirm .scroller {
+  text-align: center; }
+  body.wp-admin #piki-message.confirm .scroller > nav {
+    margin-top: 14px; }
+
+@media (max-width: 958px) {
+  #piki-message.fit-screen .modal-title {
+    flex-direction: column; }
+    #piki-message.fit-screen .modal-title strong {
+      margin-left: 0; } }
+@media (max-width: 768px) {
+  #piki-message.fit-screen .modal-title strong {
+    font-size: 20px;
+    line-height: 132%; } }
+
+/*# sourceMappingURL=message.css.map */

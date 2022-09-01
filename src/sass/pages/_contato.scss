@@ -1,0 +1,236 @@
+body.page-template-page-contato {
+
+    h1 {
+        font-weight: 700;
+        font-size: 58px;
+        line-height: 68px;
+        color: #1A2C31;
+    }
+
+    .content-body {
+
+        max-width: 608px;
+        margin-top: 18px;
+
+        p {
+            margin: 0;
+        }
+    
+    }
+
+    .pikishare {
+        margin-top: 28px;
+    }
+
+    form.form-contato {
+
+        width: 100%;
+        margin-top: 43px;
+
+        .linha-field.termsuse {
+            margin-top: 33px !important;
+        }
+
+        .footer-form {
+        
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            width: 100%;
+            margin-top: 0;
+        
+            .form-save-button {
+                margin-top: -28px;
+            }
+        
+        }
+    
+    }
+
+    main {
+
+        display: flex;
+
+        > div {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 27px 0 67px;
+
+            &:nth-child(1){
+
+                align-items: flex-end;
+                width: calc( 50% + 30px );
+                padding-left: 30px;
+                padding-right: 30px;
+
+                > span {
+                    display: block;
+                    width: 100%;
+                    max-width: 608px;
+                }
+            
+            }
+            &:nth-child(2){
+
+                width: calc( 50% - 30px );
+                padding-left: 105px;
+
+                > span {
+
+                    > em {
+
+                        display: block;
+                        max-width: 355px;
+                        margin-top: 34px;
+                        font-weight: 500;
+                        font-size: 28px;
+                        line-height: 33px;
+                        font-style: normal;
+                        color: #FFFFFF;
+
+                        strong {
+                            color: #F6EA63;
+                        }
+                    
+                    }
+
+                }
+            
+            }
+        
+        }
+    
+    }
+
+}
+
+@media( max-width: 1210px ){
+    body.page-contato main > div:nth-child(2) {
+        padding-left: 30px;
+    }
+}
+
+@media( max-width: 1000px ){
+
+    body.page-contato {
+    
+        main {
+
+            flex-direction: column-reverse;
+
+            > div:nth-child(1),
+            > div:nth-child(2) {
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+                align-items: center;
+                justify-content: center;
+            }
+            > div:nth-child(1) {
+            }
+            > div:nth-child(2) {
+                display: flex;
+                padding-top: 43px;
+                padding-bottom: 30px;
+            }
+        
+        }
+    
+    }
+
+}
+
+@media( max-width: 640px ){
+
+    body.page-contato {
+
+        form.form-contato {
+
+            .footer-form {
+                margin-top: 30px;
+                justify-content: center;
+            }
+
+            &.PikiForm#contato {
+
+                .linha-field.termsuse {
+
+                    .item-check label {
+                        align-items: center;
+                    }
+                
+                }
+
+                .form-save-button {
+                    width: 100%;
+                    max-width: 296px;
+                    margin-top: 0;
+                }
+            
+            }
+
+        }
+    
+    }
+
+}
+
+@media( max-width: 540px ){
+
+    body.page-contato {
+
+        h1 {
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        form {
+            margin-top: 22px;
+        }
+
+        main > div {
+
+            &:nth-child(1) {
+
+                h1,
+                .content-body > p {
+                    text-align: center;
+                }
+                
+                .content-body > p {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+
+            }
+
+            &:nth-child(2) {
+
+                text-align: center;
+
+                > span {
+                
+                    > a {
+                        display: none;
+                    }
+                
+                    em {
+                        max-width: 100%;
+                        margin-top: 0;
+                    }
+
+                    .pikishare {
+                        flex-direction: column;
+                    }
+                
+                }
+
+            }
+
+        }
+
+    }
+
+}

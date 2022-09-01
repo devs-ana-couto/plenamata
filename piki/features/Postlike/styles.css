@@ -1,0 +1,254 @@
+/* Geral */
+
+	.linha-field.ftype-boolean {
+	  *zoom: 1;
+	}
+	.linha-field.ftype-boolean:before,
+	.linha-field.ftype-boolean:after {
+	  display: table;
+	  line-height: 0;
+	  content: "";
+	}
+	.linha-field.ftype-boolean:after {
+	  clear: both;
+	}
+
+
+	form.PikiForm label span.req {
+		position: absolute;
+		left: -14px;
+		top: 2px;
+	}
+	form.PikiForm .linha-field {
+		display: block;
+	}
+	form.PikiForm .linha-field.ftype-fieldset {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	input.focus, textarea.focus, select.focus {
+		border-color: #f7d117;
+	}
+
+/* Radios e Checkboxes */
+	
+	form.PikiForm .item-radio,
+	form.PikiForm .item-radio .j-custom-radio,
+	form.PikiForm .item-radio label {
+		float: left;
+	}
+	form.PikiForm .item-radio .j-custom-radio{
+		float: left;
+		margin-right: 6px;
+	}
+	form.PikiForm .item-radio {
+		padding-top: 11px;
+		height: 30px;
+		margin-left: 16px;
+	}
+	form.PikiForm .item-radio:first-child {
+		margin-left: 0;
+	}
+	form.PikiForm .item-radio label,
+	form.PikiForm .item-check label {
+		line-height: 1.8em;
+		cursor: pointer;
+	}
+
+/* Fieldset multiplo */
+	
+
+	.ftype-fieldset.multiple .fieldset-group-fields {
+		position: relative;
+		display: block;
+		padding: 0 10px 10px;
+		background: #f8f8f8;
+		margin-bottom: 25px;
+	} 
+	.ftype-fieldset.multiple > .add-button,
+	.ftype-fieldset.multiple > .remove-button {
+		cursor: pointer;
+	    color: #FFFFFF;
+	    font-size: 1.4em;
+	    font-weight: bold;
+	    line-height: 1em;
+	    padding: .5em 1em;
+	    text-transform: uppercase;		
+	    cursor: pointer;
+	    display: block;
+		-webkit-border-radius: 9px;
+		-moz-border-radius: 9px;
+		border-radius: 9px;
+	}
+	.ftype-fieldset.multiple .add-button {
+		float: right;
+		background: #83b812;
+   	}
+	.ftype-fieldset.multiple .remove-button {
+		position: absolute;
+		right: 0;
+		bottom: -20px;
+		background: #a3a3a5;
+	}
+
+	form.PikiForm .fieldset-group-fields {
+	  *zoom: 1;
+	}
+	form.PikiForm .fieldset-group-fields:before,
+	form.PikiForm .fieldset-group-fields:after {
+	  display: table;
+	  line-height: 0;
+	  content: "";
+	}
+	form.PikiForm .fieldset-group-fields:after {
+	  clear: both;
+	}
+
+/* Form Steps */
+
+
+	form.PikiForm .form-status {
+		display: block;
+		width: 615px;
+		margin: 0 auto;
+		padding: 10px 0 3px;
+		border-bottom: 1px solid #e3e3e3;
+		background: #fff url( 'images/navegacao_form.png' ) no-repeat center 15px;
+		z-index: 300;
+	}
+	form.PikiForm .form-status .tabs {
+		padding-bottom: 15px;
+	}
+	form.PikiForm .form-status .tabs a {
+		float: left;
+		cursor: default;
+		text-align: center;
+		font-size: 1.1em;
+		font-weight: bold;
+		color: #f1f1f1;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	form.PikiForm .form-status .tabs a span {
+		display: block;
+		width: 63px;
+		height: 43px;
+		margin: 0 auto 14px;
+		overflow: hidden;
+		text-indent: -99999px;
+		background: #fff url( 'images/navegacao_form.png' ) no-repeat center -207px;
+	}
+
+	form.PikiForm .form-status .tabs a.active { color: #002f82; }
+	form.PikiForm .form-status .tabs a.active span { background-position: center -257px; }
+	form.PikiForm .form-status .tabs a.success { color: #7fd312; }
+	form.PikiForm .form-status .tabs a.success span { background-position: center -307px; }
+	form.PikiForm .form-status .tabs a.error { color: #d32d12; }
+	form.PikiForm .form-status .tabs a.error span { background-position: center -357px; }
+
+	form.PikiForm .form-status .messages {
+		display: none;
+		text-align: center;
+		color: #d32d12;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	form.PikiForm .form-step#form-finish {
+		text-align: center;
+	}
+	form.PikiForm .form-step#form-finish h2 {
+		margin: 45px 0 0 0;
+		font-weight: 700;
+		font-size: 22px;
+		font-family: 'Roboto Condensed';
+		color: #7fd312;
+		text-transform: uppercase;
+	}
+	form.PikiForm .form-step#form-finish p {
+		margin: 20px 0 0 0;
+		color: #5d5d5d;
+		font-size: 18px;
+	}
+
+
+/* Mês e Ano */
+
+	.ftype-mesano .field-item select,
+	.ftype-mesano .field-item .j-custom-select-holder {
+		float: left;
+	}
+	.ftype-mesano .field-item select.months,
+	.ftype-mesano .field-item .j-custom-select-holder.months {
+		margin-right: 15px;
+	}
+
+/* Avatar */
+
+	.ftype-avatar .j-custom-select-holder,
+	.ftype-avatar select {
+		display: none;
+	}
+	.ftype-avatar .widget {
+		position: relative;
+		width: 100%;
+		height: 229px;
+		border: #e2e3df 1px solid;
+		margin: 0;
+	}
+	.ftype-avatar .widget .mask {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+		background: url( 'fields/avatar/images/widget-mask.png' ) no-repeat center center;
+	}
+	.ftype-avatar .widget .arrow {
+		display: block;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		background: url( 'fields/avatar/images/arrows-nav.png' ) no-repeat 56px center;
+		z-index: 110;
+		cursor: pointer;
+
+		overflow: hidden;
+		text-indent: -99999px;
+
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+		filter: alpha(opacity=50);
+		-moz-opacity: 0.5;
+		-khtml-opacity: 0.5;
+		opacity: 0.5;
+  	}
+	.ftype-avatar .widget .arrow:hover {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		filter: alpha(opacity=100);
+		-moz-opacity: 1;
+		-khtml-opacity: 1;
+		opacity: 1;
+	}
+	.ftype-avatar .widget .arrow.left {
+		left: 0;
+		width: 89px;
+	}
+	.ftype-avatar .widget .arrow.right {
+		right: 0;
+		width: 84px;
+		background-position: -187px center;
+	}
+	.ftype-avatar .widget img {
+		position: absolute;
+		top: 47px;
+		left: 94px;
+		display: none;
+		z-index: 90;
+	}
+	.ftype-avatar .widget img.selected {
+		display: block;
+	}

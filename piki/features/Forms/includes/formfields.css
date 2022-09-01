@@ -1,0 +1,194 @@
+.PikiField .fields-options,
+.PikiField .wrapp-fields { 
+	float: left; 
+	padding: 10px; 
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+ }
+.PikiField .fields-options { 
+	width: 23%; 
+	margin-right: 2%; 
+}
+.PikiField .wrapp-fields { 
+	width: 75%; 
+}
+.PikiField label { 
+	cursor: default; 
+}
+.PikiField .remove-button { 
+	cursor: pointer; 
+	position: absolute; 
+}
+.PikiField > .wrapp-fields,
+.PikiField .fieldset-fields { 
+	padding: 5px 18px 18px; 
+	background: #fff; 
+	min-height: 41px; 
+}
+.PikiField > .wrapp-fields { 
+	margin-top: 10px; 
+	border: #DFDFDF 1px solid; 
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	border-radius: 3px; 
+}
+
+.PikiField .fieldset-options,
+.PikiField .field-options { 
+	overflow: hidden; 
+	margin-top: 10px; 
+}
+
+.PikiField > .wrapp-fields .fieldset-options,
+.PikiField > .wrapp-fields .field-options { 
+	border: #dfdfdf 1px solid; 
+	background: #fff; 
+}
+.PikiField .header { 
+	position: relative; 
+}
+
+/* Hedader */
+
+	.PikiField .header h3 { 
+		cursor: move;
+		margin: 0;
+		padding: 10px 10px 0;
+		height: 40px;
+	}
+	.PikiField .header h3 span {
+		float: left;
+		line-height: 30px;
+	} 
+	.PikiField .header h3 .nome {
+		font-size: 15px;
+	} 
+	.PikiField .header h3 .machine_name {
+		margin-left: 5px;
+		font-size: 12px;
+		font-weight: normal;
+	} 
+	.PikiField .header .dashicons-info { 
+		cursor: default;
+	}
+
+label.hide { display: none; }
+
+.PikiField .ftype-step > .header h3 {
+	background: #e6f0a3; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6f0a3), color-stop(50%,#d2e638), color-stop(51%,#c3d825), color-stop(100%,#dbf043)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=0 ); /* IE6-9 */
+}
+
+.PikiField .ftype-step .fieldset-options > .header h3 {
+	background: #e0e0e0; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e0e0e0 0%, #e0e0e0 50%, #d6d6d6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0e0e0), color-stop(50%,#e0e0e0), color-stop(100%,#d6d6d6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e0e0e0 0%,#e0e0e0 50%,#d6d6d6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e0e0e0 0%,#e0e0e0 50%,#d6d6d6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e0e0e0 0%,#e0e0e0 50%,#d6d6d6 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e0e0e0 0%,#e0e0e0 50%,#d6d6d6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#d6d6d6',GradientType=0 ); /* IE6-9 */
+}
+
+.PikiField .dashicons-info { 
+	margin-right: 3px;
+}
+.PikiField .remove-button { 
+	top: 13px; 
+	right: 13px; 
+}
+.PikiField .remove-button:hover {
+	color: #ff0000;
+} 
+.PikiField .header h3 .tipo { 
+	font-size: 11px; 
+}
+.PikiField .field-content { padding: 2px 10px; }
+.PikiField .linha-field { margin: 8px 0; }
+.PikiField .ftype-boolean .field-item label { display: inline-block; line-height: .8em; }
+
+.PikiField .ui-state-highlight { border: 1px dashed #ffb047; background: #fff0db; margin-top: 10px; }
+
+/* Add box */
+
+	.PikiField .add_field_box .titulo { font-weight: bold; float: none; clear: both; font-size: 13px; margin-bottom: 0; }
+	.PikiField .add_field_box select.ftype-select,
+	.PikiField .add_field_box input.ftype-text { margin: 0; width: 100%; min-width: 120px; }
+	.PikiField .add_field_box div.pikifield-new-ok { background: none; border: none; width: auto; padding: 0; }
+	.PikiField .add_field_box > div { margin-top: 6px; }
+
+
+/* Fieldset */
+
+	.PikiField .fieldset-content { padding: 0; }
+	.PikiField .fieldset-fields.blocked { background: #fef8de url( '../images/warning-icon.png' ) no-repeat center center; }
+	.PikiField .fieldset-content .footer { display: block; padding: 8px 10px; border-top: #DFDFDF 1px solid; }
+	.PikiField .fieldset-content .footer .linha-field { float: left; margin: 0 15px 0 0; }
+	.PikiField .fieldset-content .footer .linha-field.ftype-boolean { margin-top: 22px; }
+	.PikiField .fieldset-content .footer .linha-field.ftype-text label, 
+	.PikiField .fieldset-content .footer .linha-field.ftype-text input { display: inline-block; width: auto; }
+	.PikiField .fieldset-content .footer .linha-field.ftype-text label { margin-right: 6px; }
+	
+	/* Multiplo */
+	.PikiField .linha-field.ftype-crop,
+	.PikiField .linha-field.ftype-multiple {
+		clear: both;
+		padding-top: 5px;
+		margin-top: 10px !important;
+		border-top: 1px solid #dfdfdf;
+	}
+	.PikiField .linha-field.ftype-crop .field-item .field.crop,
+	.PikiField .linha-field.ftype-crop .field-item .field.ratio,
+	.PikiField .linha-field.ftype-multiple .field-item .field.multiple {
+		margin-top: 5px;
+	}
+	.PikiField .linha-field.ftype-crop .field-item .field,
+	.PikiField .linha-field.ftype-multiple .field-item .field {
+		float: left;
+		margin-right: 20px;
+	}
+	.PikiField .linha-field.ftype-crop input.ftype-text,
+	.PikiField .linha-field.ftype-multiple input.ftype-text {
+		width: 40px;
+		margin-left: 10px;
+	}
+
+	form#post #success_message,
+	form#post #edit_success_message {
+		height: 120px;
+	}
+
+/* Crop */
+
+	.linha-field.ftype-crop input.ratio {
+		width: 90px !important;
+	}
+
+.PikiField .linha-field.ftype-crop[,
+.PikiField .linha-field.ftype-multiple,
+.clearfix {
+  *zoom: 1;
+}
+.PikiField .linha-field.ftype-crop:before,
+.PikiField .linha-field.ftype-crop:after,
+.PikiField .linha-field.ftype-multiple:before,
+.PikiField .linha-field.ftype-multiple:after,
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.PikiField .linha-field.ftype-crop:after,
+.PikiField .linha-field.ftype-multiple:after,
+.clearfix:after {
+  clear: both;
+}
+

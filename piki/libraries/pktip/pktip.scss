@@ -1,0 +1,138 @@
+.pktip {
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+	width: 24px;
+	height: 24px;
+
+	> button.toggle {
+
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		padding: 0;
+		margin: 0;
+		border: 0;
+		background: transparent;
+		font-size: 8px;
+		cursor: pointer;
+		color: #fff;
+		font-weight: bold;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			transform: translate(-50%,-50%);
+		}
+
+	}
+
+	> div {
+
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		width: 180px;
+		padding: 15px 24px 15px 16px;
+		margin-top: 5px;
+		background: #FFFFFF;
+		border: 1px solid #CFE2FC;
+		box-sizing: border-box;
+		box-shadow: 0px 4px 8px rgba(20, 46, 82, 0.2);
+		border-radius: 4px;
+		transform: translateX(-50%);
+		display: none;
+		z-index: 999;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			width: 12px;
+			height: 8px;
+			transform: translate(-50%,0);
+			background: url('arrow.png') no-repeat center center;
+			background-size: contain;
+		}
+
+		p {
+			color: #5C6C7D;
+			font-weight: 300;
+			font-size: 13px;
+			line-height: 17px;
+		}
+
+		button.close {
+
+			position: absolute;
+			right: 9px;
+			top: 5px;
+			width: 16px;
+			height: 16px;
+			padding: 0;
+			border: 0;
+			background: none;
+			overflow: hidden;
+			text-indent: -99999px;
+			cursor: pointer;
+
+			&:before,
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 8px;
+				top: 2px;
+				width: 2px;
+				height: 12px;
+				background-color: #5C8FD6;
+				border-radius: 1px;
+			}
+			&:before {
+				transform: rotate(45deg);
+			}
+			&:after {
+				transform: rotate(-45deg);
+			}
+		
+		}
+	
+	}
+
+	&.align {
+
+		&-right div {
+
+			left: initial;
+			right: -5px;
+			transform: none;
+
+			&:before {
+				left: initial;
+				right: 10px;
+				transform: none;
+			}
+
+		}
+
+	}
+
+}
+
+@media( -webkit-min-device-pixel-ratio: 2 ) and ( min-resolution: 192dpi ){ 
+    .pktip > div:before {
+    	background-image: url('arrow@2x.png')
+    }
+
+}

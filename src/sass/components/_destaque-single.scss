@@ -1,0 +1,165 @@
+.destaque-single {
+
+	display: block;
+	width: 100%;
+
+	h1 {
+		color: #FFFFFF;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 56px;
+		text-align: center;
+	}
+
+	.title-editoria {
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 905px;
+		flex: 1;
+
+		.editoria {
+			
+			margin-top: 24px;
+			text-decoration: none;
+			
+			em {
+				font-size: 16px;
+				line-height: 19px;
+				color: #FFFFFF;
+				font-style: normal;
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+		}
+	
+	}
+
+	.inner {
+
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 0;
+		padding-top: 50.3660322108%;
+		color: #FFFFFF;
+
+		> div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 99;
+		}
+	
+	}
+
+	.media-wrapper {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img,
+		picture {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba( 22, 20, 20, 0.55 );
+			mix-blend-mode: multiply;
+		}
+	
+	}
+
+	.author-date {
+
+		display: flex;
+		align-items: center;
+
+		em {
+			margin-bottom: 9px;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 21px;
+			color: #FFFFFF;
+			font-style: normal;
+		}
+
+		p {
+			margin: 0;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 16px;
+		}
+
+		i {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 80px;
+			height: 80px;
+			margin-right: 15px;
+			border-radius: 50%;
+			background-color: #FFFFFF;
+
+			&:after {
+				content: '';
+				display: block;
+				width: 16px;
+				height: 16px;
+				background: url('../images/icon-user.svg') no-repeat center center;
+				@extend .filter-green-4;
+			}
+
+		}
+	
+	}
+
+	.foot {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 1367px;
+		padding: 0 59px 41px 68px;
+	}
+
+}
+
+@media( min-width: 1367px ){
+
+	.destaque-single {
+
+		.inner {
+
+			height: 688px;
+			padding-top: 0;
+
+		}
+
+	}
+
+}

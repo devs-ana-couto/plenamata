@@ -1,0 +1,139 @@
+/*
+.newsletter-form-wrapper {
+	display: block;
+	overflow: hidden;
+	background: #f8f8f8;
+	border: #f1f1f1 1px solid;
+	padding: 20px;
+}
+.newsletter-form-wrapper .newsletter-form-content {
+	display: table;
+	margin: 0 auto;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+
+}
+.newsletter-form-wrapper .form-title {
+	margin-right: 18px;
+	color: #e48f8f;
+}
+.newsletter-form-wrapper .form-title span,
+.newsletter-form-wrapper .form-title i {
+	font-size: 2.6em;
+	float: left;
+	line-height: 45px;
+}
+.newsletter-form-wrapper .form-title i {
+	margin-right: 10px;
+	line-height: 43px;
+}
+.newsletter-form-wrapper .form-title span {
+	font-weight: 400;
+}
+
+.newsletter-form-wrapper header.form-header,
+.newsletter-form-wrapper #status-message,
+form#newsletter,
+form#newsletter > .form-fields,
+form#newsletter > .footer-form,
+form#newsletter .region-default > .linha-field {
+	float: left;
+}
+form#newsletter .region-default > .linha-field.nome {
+	margin-right: 10px;
+}
+form#newsletter input.ftype-text,
+form#newsletter input.ftype-email {
+	width: 285px;
+}
+form#newsletter > .footer-form {
+	margin-top: 0;
+	margin-left: 10px;
+	position: relative;
+}
+form#newsletter > .footer-form input.form-save-button {
+	line-height: 45px;
+	background: #e48f8f;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+form#newsletter > .footer-form .status {
+	position: absolute;
+	right: 0;
+	top: 100%;
+	text-align: right;
+	z-index: 50;
+	white-space: nowrap;
+    font-size: 1.1em;
+    line-height: 25px;
+}
+
+.newsletter-form-wrapper .finish-form {
+	display: table;
+	margin: 0 auto;
+}
+.newsletter-form-wrapper .finish-form .icon,
+.newsletter-form-wrapper .finish-form .text {
+	float: left;
+	line-height: 45px;
+}
+.newsletter-form-wrapper .finish-form .icon {
+	font-size: 4em;
+	margin-right: 10px;
+	color: #82cea8;
+}
+.newsletter-form-wrapper .finish-form .text {
+	font-weight: 400;
+	font-size: 2.4em;
+	line-height: 50px;
+	letter-spacing: -0.02em;
+}
+
+@media (max-width: 800px) {
+	.newsletter-form-wrapper header.form-header, 
+	.newsletter-form-wrapper #status-message, 
+	form#newsletter, 
+	form#newsletter > .form-fields, 
+	form#newsletter > .footer-form {
+    	float: none;
+	}
+	form#newsletter > .footer-form {
+	    margin-left: 0;
+	    margin-top: 6px;
+	}
+}
+@media (max-width: 643px) {
+	.newsletter-form-wrapper .newsletter-form-content {
+		display: block;
+		width: 100%;
+	}
+	form#newsletter .region-default > .linha-field {
+		float: none;
+		width: 100%;
+	}
+	form#newsletter input.ftype-text, 
+	form#newsletter input.ftype-email {
+	    width: 100%;
+	}
+}
+@media (max-width: 490px) {
+	.newsletter-form-wrapper .finish-form .icon,
+	.newsletter-form-wrapper .finish-form .text {
+		float: none;
+		clear: both;
+		text-align: center;
+	}
+	.newsletter-form-wrapper .finish-form .icon {
+	    display: table;
+	    margin: 0 auto 10px;
+		font-size: 5em;
+	}
+	.newsletter-form-wrapper .finish-form .text {
+	    display: block;
+	    line-height: 1.2em;
+	    text-align: center;
+	}
+}
+*/

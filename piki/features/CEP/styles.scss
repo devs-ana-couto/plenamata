@@ -1,0 +1,60 @@
+.linha-field {
+
+	&.ftype-cidade {
+
+		.preloader {
+			display: none;
+			width: 18px;
+			height: 18px;
+			position: absolute;
+			right: 19px;
+			top: 24px;
+			overflow: hidden;
+			text-indent: -99999px;
+			background: url( 'images/ajax-loader.svg' ) no-repeat center center;
+			background-size: contain;
+			z-index: 20;
+		}
+
+		&.loading {
+			.preloader {
+				display: block;
+			}
+			.j-custom-select-holder .picker {
+				display: none;
+			}
+		}
+
+	}
+
+	&.ftype-cep {
+
+		.field-item {
+
+			position: relative;
+
+			&:after {
+				content: '';
+				display: block;
+				width: 18px;
+				height: 18px;
+				position: absolute;
+				right: 19px;
+				top: 24px;
+				background: url( 'images/ajax-loader.svg' ) no-repeat center center;
+				background-size: contain;
+				z-index: 20;
+				display: none;
+			}
+
+		}
+
+		&.loading:after {
+			.field-item {
+				display: block;
+			}
+		}
+
+	}
+
+}

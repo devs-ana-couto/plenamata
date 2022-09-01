@@ -1,0 +1,60 @@
+.login {
+
+
+	h1 a {
+		background: url( ../images/logo-plnmt-desc.svg ) no-repeat center center !important;
+		-webkit-background-size: auto 100% !important;
+		-moz-background-size: auto 100% !important;
+		-o-background-size: auto 100% !important;
+		background-size: auto 100% !important;
+		width: 156px;
+		height: 92px;
+	}
+
+	form {
+	
+		background: #FFFFFF;
+		box-shadow: 0px 4px 8px rgba(20, 46, 82, 0.2);
+		border-radius: 4px;
+		text-shadow: none;
+
+		label {
+			color: #333333;
+		}
+	
+	}
+
+	.button {
+
+		padding: 0 17px;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 2em;
+		line-height: 30px !important;
+		text-transform: uppercase;
+		color: #fff;
+		border: 0;
+		background: #0043C9 !important;
+		background-color: transparent;
+		text-decoration: none;
+		cursor: pointer;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		box-shadow: none;
+		-webkit-transition: all 400ms;
+	    transition: all 400ms;
+		
+		&:hover {
+			background-color: #0e3977 !important;
+			color: #ffffff !important;
+			box-shadow: none;
+		}
+
+	}
+	
+	p.indicator-hint {
+		color: #333;
+	}
+
+}

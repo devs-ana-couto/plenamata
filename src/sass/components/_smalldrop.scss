@@ -1,0 +1,90 @@
+.smalldrop {
+
+	display: table;
+	position: relative;
+
+	nav {
+
+		position: absolute;
+		opacity: 0;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: #FFFFFF;
+		transform: translateX(-200vw);
+		transition: 
+			opacity .4s ease-in-out,
+			transform 1ms linear .4s
+		;
+
+		a {
+
+			display: block;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			font-weight: 700;
+			font-size: 10px;
+			letter-spacing: 0.02em;
+			color: #263F30;
+			text-decoration: none;
+			transition: background-color .3s ease-in-out;
+
+			&:hover {
+				background-color: #C7DD8B;
+			}
+			
+			&.active {
+				display: none;
+			}
+
+		}
+	
+	}
+
+	button {
+
+		display: table;
+		position: relative;
+		width: 33px;
+		height: 20px;
+		padding: 0 14px 0 6px !important;
+		background: none;
+		border: 1px solid #FFFFFF;
+		font-weight: 700;
+		font-size: 10px;
+		line-height: 12px;
+		letter-spacing: 0.02em;
+		color: #FFFFFF;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			right: 4px;
+			top: 8px;
+			width: 6px;
+			height: 4px;
+			border-top: 4px solid #FFFFFF;
+			border-left: 3px solid transparent;
+			border-right: 3px solid transparent;
+			transition: transform .3s ease-in-out;
+		}
+
+	}
+
+	&.opened {
+
+		button:after {
+			transform: rotate(180deg) translateY(1px);
+		}
+		
+		nav {
+			transition: opacity .4s ease-in-out;
+			transform: translateX(0);
+			opacity: 1;
+		}
+	
+	}
+
+}

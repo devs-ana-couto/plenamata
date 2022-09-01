@@ -1,0 +1,25 @@
+#gototop_button { 
+	display: block;
+    width: 42px;
+    height: 42px;
+	position: fixed;
+	right: 10px;
+	bottom: -200px;
+	padding: 35px 8px 0 8px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+	background: #fff url( 'images/gototop_arrow.png' ) no-repeat center 15px;
+	z-index: 100; 
+	overflow: hidden;
+	text-indent: -99999px;
+	border: #202020 1px solid;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;        
+}
+#gototop_button.active {
+    bottom: 25px;
+}

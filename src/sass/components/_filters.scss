@@ -1,0 +1,158 @@
+form.filter {
+
+	fieldset,
+	ul {
+		@include reset;
+	}
+
+	fieldset {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.filter-item {
+
+		&.editorias > ul {
+
+			display: flex;
+
+			input {
+				display: none;
+			}
+
+			> li {
+
+				position: relative;
+
+				> label strong,
+				> button {
+
+					display: block;
+					height: 34px;
+					padding: 0 15px;
+					line-height: 32px;
+					border: 1px solid rgba( 123, 185, 179, 0.6 );
+					font-weight: 700;
+					font-size: 14px;
+					text-align: center;
+					text-transform: uppercase;
+					color: #206837;
+					background: transparent;
+					transition: all .4s ease-in-out;
+
+					&:hover {
+						background: lighten( #F4F8E8, 3% );
+					}
+
+				}
+
+				> label input:checked + strong,
+				> button.active {
+					background-color: #C7DD8B;
+					border-color: #C7DD8B;
+				}
+
+				button,
+				label {
+					cursor: pointer;
+				}
+
+				button {
+
+					position: relative;
+					padding-right: 31px;
+
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						right: 14px;
+						top: 50%;
+						width: 8px;
+						height: 5px;
+						background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI1IiB2aWV3Qm94PSIwIDAgOCA1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMSAwLjVMNC4zIDMuNUw3LjYgMC41IiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1vcGFjaXR5PSIxIi8+Cjwvc3ZnPgo=) no-repeat center center;
+						transform: translateY(-50%);
+						filter: invert(69%) sepia(23%) saturate(452%) hue-rotate(125deg) brightness(96%) contrast(89%);
+						transition: all .4s ease-in-out;
+					}
+
+				}
+
+				> ul {
+
+					position: absolute;
+					top: 100%;
+					left: 0;
+					min-width: 100%;
+					padding: 12px 0;
+					z-index: 99;
+					background: #F4F8E8;
+					box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.12);
+					opacity: 0;
+					transform: translateX(-200vw);
+					transition:
+						opacity .4s ease-in-out,
+						transform 1ms ease .4s
+					;
+
+					label {
+
+						cursor: pointer;
+
+						strong {
+							display: block;
+							padding: 6px 14px 6px 16px;
+							font-size: 14px;
+							line-height: 15px;
+							font-weight: 400;
+							color: #22271B;
+							transform: all .3s ease-in-out;
+						}
+
+						&:hover strong {
+							background: rgba(199, 221, 139, 0.2);
+						}
+
+						input:checked + strong {
+							background: #C7DD8B;
+							color: #206837;
+							cursor: default;
+						}
+
+					}
+				
+				}
+
+				&:not(:last-of-type){
+					margin-right: 10px;
+				}
+
+			}
+
+
+			li.has-child.opened {
+
+				button:after {
+					transform: rotate(180deg) translateY( calc( -50% + 5px ) );
+				}
+
+				> ul {
+
+					transition: opacity .4s ease-in-out;
+					transform: translateX(0);
+					opacity: 1;
+
+				}
+			
+			}
+
+		
+		}
+
+		&.region {
+			width: 183px;
+		}
+
+	}
+
+}

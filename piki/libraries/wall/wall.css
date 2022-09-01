@@ -1,0 +1,8 @@
+/*kill the transitions on any descendant elements of .notransition*/
+.notransition, .notransition * { 
+	-webkit-transition: width 0s !important;
+	-moz-transition: width 0s !important;
+	-o-transition: width 0s !important;
+	-ms-transition: width 0s !important;
+	transition: width 0s !important;
+} 

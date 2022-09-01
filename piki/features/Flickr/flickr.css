@@ -1,0 +1,88 @@
+.piki-flickr-gallery .item-album {
+	float: left;
+	position: relative;
+	width: 296px;
+	height: 195px;
+	margin: 0 0 30px 11px;
+	overflow: hidden;
+	border: #d8d8d8 8px solid;
+}
+.piki-flickr-gallery .item-album.left { margin-left: 0; }
+.piki-flickr-gallery .item-album .mask-link {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 263px;
+	text-align: left !important;
+	background: url("img/overlay.png") repeat-x 0 195px;
+}
+.piki-flickr-gallery .item-album .mask-link a {
+	display: block;
+	width: 206px;
+	height: 63px;
+	padding: 200px 79px 0 11px;
+	background: url("img/lupa.png") no-repeat 246px 209px;
+	color: #ffffff ;
+	font-size: 13px;
+	text-decoration: none;
+}
+.piki-flickr-gallery .item-album .mask-link a span {
+	font-size: 17px;
+	font-weight: bold;
+}
+
+/*
+** PAGER 
+*/
+
+.piki-pager {
+	margin-top: 10px;
+	width: 100%;
+	background: #fff;
+	font-family: Arial;
+	font-weight: bold;
+}
+.piki-pager .center { display: table; margin: 0 auto; }
+.piki-pager .page-info {
+	float: left;
+	color: #b5b5b5;
+	font-size: 15px;
+	display: block;
+	padding: 3px;
+	padding-right: 5px;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+}
+.piki-pager span,
+.piki-pager a {
+	float: left;
+	padding: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: block;
+	font-family: Arial;
+	color: #7a7a7a;
+	font-size: 15px;
+	line-height: 12px;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	text-decoration: none;
+}
+.piki-pager a:hover {
+	border-top: #ffffff 2px solid ;
+	border-bottom: 2px solid #7a7a7a;
+}
+
+.piki-pager .back-arrow.off,
+.piki-pager .forw-arrow.off {
+	color: #b5b5b5;
+}
+
+.piki-pager .atual {
+	color: #0c69b6;
+	border-bottom: 2px solid #0c69b6;
+}
+.piki-pager .atual:hover  {
+	color: #0c69b6; 
+}

@@ -1,0 +1,73 @@
+.five-stars-box {
+
+	display: flex;
+	align-items: center;
+
+	ul {
+
+		display: flex;
+
+		li {
+
+			margin-right: 5px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+		}
+	
+	}
+	
+	.star {
+
+		display: block;
+		width: 19px;
+		height: 17px;
+		padding: 0;
+		margin: 1px 0 1px 6px;
+		border: 0;
+		line-height: 17px;
+		overflow: hidden;
+		cursor: pointer;
+		background: transparent url( 'images/stars.png' ) no-repeat; 
+		background-size: 100%; 
+		
+		&:first-child {
+			margin-left: 0;
+		}
+		
+		&.active { 
+			background-position: 0 100%; 
+		}
+
+	}
+
+	&.locked .star {
+		cursor: default;
+	}
+
+	em {
+
+		display: none;
+		padding-left: 8px;
+		color: #617385;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 17px;
+		
+		strong {
+			font-weight: normal;
+		}
+	
+	}
+
+}
+@media (max-width: 640px) {
+	.five-stars-box .star {
+		width: 12px;
+		height: 11px;
+		line-height: 11px;
+		margin-left: 1px;
+	}
+}

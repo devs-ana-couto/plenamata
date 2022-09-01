@@ -1,0 +1,48 @@
+.bookmark-box button,
+.bookmark-box em {
+  display: inline-block; }
+.bookmark-box em {
+  display: none !important; }
+  .bookmark-box em.empty {
+    display: none; }
+.bookmark-box button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  overflow: hidden;
+  text-indent: -99999px;
+  cursor: pointer; }
+  .bookmark-box button strong {
+    display: none; }
+  .bookmark-box button > span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity .4s ease-in-out; }
+    .bookmark-box button > span:nth-of-type(1) {
+      background-image: url("images/button-off.svg");
+      opacity: 1; }
+    .bookmark-box button > span:nth-of-type(2) {
+      background-image: url("images/button-hover.svg"); }
+    .bookmark-box button > span:nth-of-type(3) {
+      background-image: url("images/button-on.svg"); }
+  .bookmark-box button:hover > span:nth-of-type(1) {
+    opacity: 0; }
+  .bookmark-box button:hover > span:nth-of-type(2) {
+    opacity: 1; }
+.bookmark-box.active button > span:nth-of-type(1) {
+  opacity: 0; }
+.bookmark-box.active button > span:nth-of-type(3) {
+  opacity: 1; }
+
+/*# sourceMappingURL=styles.css.map */

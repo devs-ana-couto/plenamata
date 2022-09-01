@@ -1,0 +1,98 @@
+div.ftype-imagewp .hide {
+	display: none;
+}
+div.ftype-imagewp .imagewp-edit-button {
+	margin-right: 10px;
+}
+div.ftype-imagewp .imagewp-media-croparea,
+div.ftype-imagewp .imagewp-media-thumbs {
+	border: 1px solid #EEEEEE;
+	padding: 10px;
+	margin-bottom: 10px;
+	background: #fff;
+}
+div.ftype-imagewp .imagewp-media-thumbs {
+	display: table;
+}
+div.ftype-imagewp .imagewp-media-thumbs.hide {
+	display: none;
+}
+div.ftype-imagewp .imagewp-media-croparea {
+	padding: 10px;
+}
+div.ftype-imagewp .imagewp-media-thumbs .thumbnail {
+	float: left;
+	position: relative;
+	display: block;
+	text-align: center;
+	width: 150px;
+	height: 150px;
+	padding: 1px;
+	margin: 0;
+	border: 1px solid #EEEEEE;
+	//background: #e7e7e7 url( 'images/preloader.gif' ) no-repeat center center;
+	background-color: #e7e7e7;
+	cursor: move;
+}
+div.ftype-imagewp .imagewp-media-thumbs .thumbnail img {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: auto;
+	max-width: 90%;
+	max-height: 90%;
+	height: auto;
+	margin: 0 auto;
+	background: #e7e7e7;
+	transform: translate( -50%, -50% );
+}
+div.ftype-imagewp .imagewp-media-thumbs .thumbnail .action {
+	position: absolute;
+	display: block;
+	width: 32px;
+	height: 32px;
+	right: 5px;
+	overflow: hidden;
+	text-indent: -99999px;
+	z-index: 100;
+	cursor: pointer;
+}
+div.ftype-imagewp .imagewp-media-thumbs .thumbnail .preview {
+	top: 5px;
+	background: url( 'images/view.png' ) no-repeat;
+}
+div.ftype-imagewp .imagewp-media-thumbs .thumbnail .remove {
+	top: 42px;
+	background: url( 'images/remove.png' ) no-repeat;
+}
+div.ftype-imagewp .imagewp-media-preview img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+div.ftype-imagewp.error .imagewp-select-button {
+	border-color: #ff0000;
+	color: #ff0000;
+}
+
+.linha-field.ftype-imagewp.no-title {
+	padding-left:  0 !important;
+	padding-right:  0 !important;
+}
+
+
+form .imagewp-media-thumbs {
+  *zoom: 1;
+}
+form .imagewp-media-thumbs:before,
+form .imagewp-media-thumbs:after,
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+form .imagewp-media-thumbs:after {
+  clear: both;
+}

@@ -1,0 +1,74 @@
+.instagram-field .item-image {
+	float: left;
+	position: relative;
+	padding: 2px;
+	margin: 0 10px 10px 0;
+	border: #d0d0d0 6px solid;
+}
+.instagram-field .item-image.reproved {
+	border-color: #ff0000;
+}
+.instagram-field .item-image.aproved {
+	border-color: #57aa8c;
+}
+.instagram-field .item-image img {
+	display: block;
+    -webkit-filter: grayscale( 100% );
+	-moz-filter: grayscale( 100% );
+	filter: grayscale( 100% );
+}
+.instagram-field .item-image.aproved img {
+    -webkit-filter: grayscale( 0 );
+	-moz-filter: grayscale( 0 );
+	filter: grayscale( 0 );
+}
+.instagram-field .item-image .actions {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+	padding: 6px;
+	z-index: 300;
+	background: rgba( 255, 255, 255, 0.7 );
+}
+.instagram-field .item-image input.image-id {
+	display: none;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 300;
+}
+.instagram-field .item-image a,
+.instagram-field .item-image input.action-button {
+	float: left;
+	display: block;
+	width: 32px;
+	height: 32px;
+	border: none;
+	background: url( 'images/buttons-sprite.png' ) no-repeat;
+	overflow: hidden;
+	text-indent: -99999px;
+	cursor: pointer;
+	outline: none;
+}
+.instagram-field .item-image.aproved input.aprovar,
+.instagram-field .item-image input.aprovar:hover {
+	background-position: 0 -57px;
+}
+.instagram-field .item-image input.reprovar {
+	background-position: -64px 0;
+	margin-left: 6px;
+}
+.instagram-field .item-image.reproved input.reprovar,
+.instagram-field .item-image input.reprovar:hover {
+	background-position: -64px -57px;
+}
+.instagram-field .item-image.aproved input.aprovar,
+.instagram-field .item-image.reproved input.reprovar {
+	cursor: default;
+}
+.instagram-field .item-image .ampliar {
+	float: right;
+	background-position: -128px 0;
+}

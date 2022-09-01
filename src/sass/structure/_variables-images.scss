@@ -1,0 +1,13 @@
+/*
+ * Variáveis de imagens
+ *    SVG e Base64
+ */
+
+// Inline images
+.icon-search { background-image: inline('icon-search.svg'); }
+.icon-instagram { background-image: inline('icon-instagram.svg'); }
+.icon-twitter { background-image: inline('icon-twitter.svg'); }
+.icon-facebook { background-image: inline('icon-facebook.svg'); }
+.icon-linkedin { background-image: inline('icon-linkedin.svg'); }
+.icon-whatsapp { background-image: inline('icon-whatsapp.svg'); }
+.icon-close { background-image: inline('icon-close.svg'); }

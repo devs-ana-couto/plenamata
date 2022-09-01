@@ -1,0 +1,79 @@
+.piki-youtube-gallery {
+	margin-right: -11px;
+}
+.piki-youtube-gallery .item-video {
+	float: left;
+	position: relative;
+	width: 296px;
+	height: 222px;
+	margin: 0 11px 30px 0;
+	overflow: hidden;
+	border: #d8d8d8 8px solid;
+}
+.piki-youtube-gallery .item-video.left { margin-left: 0; }
+.piki-youtube-gallery .item-video .mask-link {
+	display: block; position: absolute;
+	top: 0; left: -296px;
+	width: 272px; height: 198px;
+	padding: 12px 308px 12px 12px;
+	text-decoration: none;
+	background: url( "img/overlay.png" ) repeat-y;
+}
+.piki-youtube-gallery .item-video .mask-link .titulo {
+	position: relative;
+	display: block;
+	height: 165px;
+	font-size: 21px;
+	line-height: 110%;
+	font-weight: bold;
+	color: #ffffff;
+}
+.piki-youtube-gallery .item-video .mask-link .assistir {
+	position: relative;
+	display: block;
+	float: right;
+	height: 23px;
+	padding: 5px 38px 0 0;
+	background: url("img/play.png") no-repeat right center;
+	color: #ffffff ;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.piki-youtube-gallery .item-video .mask-link a span {
+	font-size: 17px;
+	font-weight: bold;
+}
+
+/*
+** PAGER 
+*/
+
+.piki-youtube-gallery .pager {
+	margin-top: 10px;
+	width: 100%;
+	background: #fff;
+	font-family: Arial;
+	font-weight: bold;
+	text-align: center;
+}
+.piki-youtube-gallery .pager a {
+	display: inline-table;
+	padding: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-family: Arial;
+	color: #7a7a7a;
+	font-size: 15px;
+	line-height: 12px;
+	text-decoration: none;
+}
+.piki-youtube-gallery .pager a:hover {
+	color: #000;
+}
+.piki-youtube-gallery .pager .prev {
+	margin-right: 10px;
+}
+.piki-youtube-gallery .pager .next {
+	margin-left: 10px;
+}

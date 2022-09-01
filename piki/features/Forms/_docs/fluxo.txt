@@ -1,0 +1,4 @@
+## POSTED ITEM ##
+
+# Inicia o processamento do formulário
+PikiForms::proccess_form( $form_key, $action );

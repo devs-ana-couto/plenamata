@@ -1,0 +1,124 @@
+.cycle-wrapper {
+	position: relative;
+	border: 12px solid #fff;
+	-webkit-box-shadow: 0px 0px 12px 0px rgba(135,135,135,0.46);
+	-moz-box-shadow: 0px 0px 12px 0px rgba(135,135,135,0.46);
+	box-shadow: 0px 0px 12px 0px rgba(135,135,135,0.46);
+}
+
+.cycle-slideshow,
+.cycle-slideshow > .slide-item {
+	position: relative;
+	width: 100%; 
+	height: auto;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+.cycle-slideshow {
+	position: relative;
+}
+
+/* Slides */
+
+	.cycle-slideshow > .slide-item img { 
+		display: block; 
+		width: 100%; 
+		height: auto; 
+	}
+	.cycle-slideshow > .slide-item > .texts {
+		position: absolute;
+		left: 2%;
+		bottom: 6%;
+		padding: 2%;
+		z-index: 250;
+		background: rgba( 255, 255, 255, 0.8 );
+	} 
+	.cycle-slideshow > .slide-item > .texts .title {
+		margin: 0;
+		font-size: 3.8em;
+		color: #ed162c;
+		font-weight: 400;
+		text-transform: uppercase;
+		line-height: 1em;
+	}
+	.cycle-slideshow > .slide-item > .texts .excerpt {
+		font-size: 1.8em;
+		color: #000000;
+		font-weight: 400;
+		margin-bottom: 0;
+	}
+
+/* Pager */
+
+	.cycle-wrapper > .pager-wrapper {
+		display: block;
+		background: #fff;
+		text-align: center;
+		padding: 10px 0;
+	}
+	.cycle-wrapper .cycle-pager {
+		display: table;
+		margin: 0 auto;
+	}
+	.cycle-wrapper .cycle-pager span,
+	.cycle-wrapper .cycle-pager a {
+		float: left;
+		margin: 0 2px;
+		width: 13px;
+		height: 13px;
+		border: 2px solid #e0d7d1;
+		-webkit-border-radius: 51%;
+		-moz-border-radius: 51%;
+		border-radius: 51%;
+		overflow: hidden;
+		text-indent: -99999px;
+		cursor: pointer;
+	}
+	.cycle-wrapper .cycle-pager .cycle-pager-active {
+		border-color: #e55e74;
+		cursor: default;
+	}
+
+/* Arrows nav */
+
+	.cycle-wrapper > .arrow-nav {
+		position: absolute;
+		display: none;
+		top: 50%;
+		width: 59px;
+		height: 59px;
+		margin-top: -61px;
+		z-index: 300;
+		background: url( images/arrows-nav.png );
+		cursor: pointer;
+		filter: alpha(opacity=0);
+		-moz-opacity: 0;
+		-khtml-opacity: 0;
+		opacity: 0;
+	    -webkit-transition: all 300ms ease-out;
+	    -moz-transition: all 300ms ease-out;
+	    -o-transition: all 300ms ease-out;
+	    transition: all 300ms ease-out;        
+	}
+	.cycle-wrapper:hover > .arrow-nav {
+		display: block;
+		filter: alpha(opacity=60);
+		-moz-opacity: 0.6;
+		-khtml-opacity: 0.6;
+		opacity: 0.6;
+	}
+	.cycle-wrapper > .arrow-nav:hover {
+		filter: alpha(opacity=95);
+		-moz-opacity: 0.95;
+		-khtml-opacity: 0.95;
+		opacity: 0.95;
+	}
+	.cycle-wrapper > .arrow-nav.cycle-prev {
+		left: 2%;
+	}
+	.cycle-wrapper > .arrow-nav.cycle-next {
+		right: 2%;
+		background-position: -60px 0;
+	}

@@ -1,0 +1,16 @@
+.youtube-field-wrapper * {
+	box-sizing: border-box;
+}
+.youtube-field-wrapper .thumbnail {
+	display: table;
+	border: 1px solid #EEEEEE;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.youtube-field-wrapper .thumbnail img {
+	width: 154px;
+	height: 154px;
+	border:  8px solid #e7e7e7;
+	object-fit: cover;
+}

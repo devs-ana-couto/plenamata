@@ -1,0 +1,25 @@
+$time-trans: 0.4s;
+
+$media-full-min: 1281px;
+$media-desktop: 1280px;
+$media-inter-max: 1279px;
+$media-inter-min: 769px;
+$media-tablet-max: 768px;
+$media-tablet-min: 481px;
+$media-phone-max: 480px;
+
+$desktop-center-width: 1120px;
+
+// Menu width
+$menu-width: 64px;
+
+// Colors
+$brasil: #F2994A;
+$inovacao: #9B51E0;
+$negocio: #FF0078;
+$cultura: #219653;
+$arquivo : #F4455A;
+$editorias: #0043C9;
+
+// Variáveis das Imagens no CSS
+@import './variables-images';

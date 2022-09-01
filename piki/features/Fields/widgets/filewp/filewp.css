@@ -1,0 +1,62 @@
+.linha-field.ftype-filewp .hide {
+  display: none; }
+.linha-field.ftype-filewp .filewp-edit-button {
+  margin-right: 10px; }
+.linha-field.ftype-filewp .filewp-media-thumbs {
+  display: block;
+  width: 151px;
+  border: 1px solid #EEEEEE;
+  margin-bottom: 10px;
+  border: 10px solid #fff;
+  display: none; }
+  .linha-field.ftype-filewp .filewp-media-thumbs .thumbnail {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    margin: 0 10px 10px 0;
+    border: 1px solid #EEEEEE;
+    background: #e7e7e7 url("images/preloader.gif") no-repeat center center;
+    cursor: move; }
+    .linha-field.ftype-filewp .filewp-media-thumbs .thumbnail img {
+      display: table-cell;
+      margin: 0 auto;
+      background: #e7e7e7; }
+    .linha-field.ftype-filewp .filewp-media-thumbs .thumbnail .action {
+      position: absolute;
+      display: block;
+      width: 32px;
+      height: 32px;
+      right: 5px;
+      overflow: hidden;
+      text-indent: -99999px;
+      z-index: 100;
+      cursor: pointer; }
+    .linha-field.ftype-filewp .filewp-media-thumbs .thumbnail .remove {
+      top: 5px;
+      background: url("images/remove.png") no-repeat; }
+.linha-field.ftype-filewp .filewp-media-preview img {
+  display: block;
+  width: 100%;
+  height: 100%; }
+.linha-field.ftype-filewp.error .filewp-select-button {
+  border-color: #ff0000;
+  color: #ff0000; }
+
+form .filewp-media-thumbs {
+  *zoom: 1; }
+
+form .filewp-media-thumbs:before,
+form .filewp-media-thumbs:after,
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: ""; }
+
+form .filewp-media-thumbs:after {
+  clear: both; }
+
+/*# sourceMappingURL=filewp.css.map */

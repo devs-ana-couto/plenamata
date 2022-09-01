@@ -1,0 +1,28 @@
+.piki-sanfona {
+  display: table;
+  margin: 0 auto; }
+  .piki-sanfona .sanfona-controls {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #fff; }
+    .piki-sanfona .sanfona-controls li {
+      float: left;
+      padding: 5px 10px;
+      border: grey 1px solid; }
+  .piki-sanfona .main-slider-wrapper,
+  .piki-sanfona .sanfona-item {
+    background: #fff;
+    display: block; }
+  .piki-sanfona .sanfona-item > button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    display: none; }
+
+@media (max-width: 768px) {
+  .piki-sanfona .sanfona-item > .trigger {
+    display: block; } }
+
+/*# sourceMappingURL=sanfona.css.map */

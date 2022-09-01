@@ -1,0 +1,140 @@
+#pklgpd-box {
+
+	padding: 32px 0;
+	color: #fff;
+	display: none;
+	transition: all 600ms;
+
+	> div {
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1280px;
+		padding: 0 40px;
+		margin: 0 auto;
+
+		> div {
+			max-width: 647px;
+			margin-right: 40px;
+		}
+	
+	}
+
+	.title {
+		font-style: normal;
+		font-size: 24px;
+		line-height: 29px;
+		font-weight: 700;
+	}
+
+	p {
+		margin: 8px 0 0;
+		font-size: 16px;
+		line-height: 19px;
+		color: #ffffff;
+	}
+
+	button.close {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		width: 40px;
+		height: 40px;
+		background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0IDEuNDEwMDZMMTIuNTkgNi4xMDM1MmUtMDVMNyA1LjU5MDA2TDEuNDEgNi4xMDM1MmUtMDVMMCAxLjQxMDA2TDUuNTkgNy4wMDAwNkwwIDEyLjU5MDFMMS40MSAxNC4wMDAxTDcgOC40MTAwNkwxMi41OSAxNC4wMDAxTDE0IDEyLjU5MDFMOC40MSA3LjAwMDA2TDE0IDEuNDEwMDZaIiBmaWxsPSIjRjJGMkYyIi8+Cjwvc3ZnPgo=) no-repeat center center;
+	}
+
+	nav {
+
+		display: flex;
+
+		button,
+		a {
+
+			height: 40px;
+			margin: 0 8px;
+			line-height: 38px;
+			text-align: center;
+			border: transparent solid 2px;
+			font-weight: 700;
+			font-size: 16px;
+			cursor: pointer;
+
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		
+		}
+		button {
+			width: 208px;
+			background-color: #005EB8;
+			color: #ffffff;
+		}
+		a {
+			padding: 0 20px;
+			border-color: #fff;
+		}
+	
+	}
+
+	&.floating {
+
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 999;
+		background: #009AFF;
+
+	}
+
+	&.hide {
+		opacity: 0;
+		transform: translateY(110%);
+	}
+
+}
+
+@media( max-width: 1024px ){
+
+	#pklgpd-box {
+
+		> div {
+			flex-direction: column;
+		}
+
+		nav {
+			margin-top: 21px;
+		}
+
+	}
+
+}
+
+@media( max-width: 520px ){
+
+	#pklgpd-box {
+
+		padding: 16px 0 25px;
+
+		> div {
+			padding: 0 24px;
+		}
+
+		nav {
+			button, 
+			a {
+				width: 50%;
+				padding: 8px 24px;
+				margin: 0 4px;
+				height: auto;
+				line-height: 19px;
+			}
+		}
+	
+	}
+
+}

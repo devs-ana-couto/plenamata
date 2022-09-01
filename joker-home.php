@@ -1,0 +1,2 @@
+// Conteúdo coringa
+Jokers::get();

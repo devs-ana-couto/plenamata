@@ -1,0 +1,99 @@
+html.lockscroll,
+body.lockscroll {
+  overflow: hidden !important; }
+
+body.lockscroll {
+  position: fixed; }
+
+.piki-modal,
+.piki-modal * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.piki-modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  overflow-y: auto; }
+  .piki-modal > .modal-scroller {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+    overflow-x: hidden;
+    overflow-y: auto; }
+  .piki-modal .modal-inner {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 935px;
+    margin: 155px auto;
+    background: #ffffff; }
+  .piki-modal .modal-close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #0071a1;
+    cursor: pointer; }
+    .piki-modal .modal-close-button strong {
+      display: none; }
+    .piki-modal .modal-close-button .icone {
+      display: block;
+      position: relative;
+      width: 15px;
+      height: 15px; }
+      .piki-modal .modal-close-button .icone:before, .piki-modal .modal-close-button .icone:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 2px;
+        margin-top: -1px;
+        border-radius: 1px;
+        background: #fff; }
+      .piki-modal .modal-close-button .icone:before {
+        transform: rotate(45deg); }
+      .piki-modal .modal-close-button .icone:after {
+        transform: rotate(135deg); }
+    .piki-modal .modal-close-button.bottom {
+      top: initial;
+      bottom: 12px; }
+  .piki-modal.keep-visible > .modal-scroller {
+    overflow-y: hidden; }
+  .piki-modal.keep-visible .modal-inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding-bottom: 30px;
+    margin: 85px auto;
+    height: calc( 100vh - 170px ); }
+  .piki-modal.keep-visible .modal-content {
+    display: flex;
+    flex: 1 1 auto;
+    overflow-x: hidden;
+    overflow-y: auto; }
+
+body.wp-admin .piki-modal > .modal-scroller {
+  padding-left: 200px; }
+
+@media (max-width: 960px) {
+  body.wp-admin .piki-modal > .modal-scroller {
+    padding: 0 20px 0 56px; } }
+@media (max-width: 782px) {
+  body.wp-admin .piki-modal > .modal-scroller {
+    padding: 0 20px; } }
+
+/*# sourceMappingURL=modal.css.map */

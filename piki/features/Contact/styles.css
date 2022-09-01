@@ -1,0 +1,139 @@
+/*
+.contact-form-wrapper {
+	display: block;
+	overflow: hidden;
+	background: #f8f8f8;
+	border: #f1f1f1 1px solid;
+	padding: 20px;
+}
+.contact-form-wrapper .contact-form-content {
+	display: table;
+	margin: 0 auto;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+
+}
+.contact-form-wrapper .form-title {
+	margin-right: 18px;
+	color: #e48f8f;
+}
+.contact-form-wrapper .form-title span,
+.contact-form-wrapper .form-title i {
+	font-size: 2.6em;
+	float: left;
+	line-height: 45px;
+}
+.contact-form-wrapper .form-title i {
+	margin-right: 10px;
+	line-height: 43px;
+}
+.contact-form-wrapper .form-title span {
+	font-weight: 400;
+}
+
+.contact-form-wrapper header.form-header,
+.contact-form-wrapper #status-message,
+form#contact,
+form#contact > .form-fields,
+form#contact > .footer-form,
+form#contact .region-default > .linha-field {
+	float: left;
+}
+form#contact .region-default > .linha-field.nome {
+	margin-right: 10px;
+}
+form#contact input.ftype-text,
+form#contact input.ftype-email {
+	width: 285px;
+}
+form#contact > .footer-form {
+	margin-top: 0;
+	margin-left: 10px;
+	position: relative;
+}
+form#contact > .footer-form input.form-save-button {
+	line-height: 45px;
+	background: #e48f8f;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+form#contact > .footer-form .status {
+	position: absolute;
+	right: 0;
+	top: 100%;
+	text-align: right;
+	z-index: 50;
+	white-space: nowrap;
+    font-size: 1.1em;
+    line-height: 25px;
+}
+
+.contact-form-wrapper .finish-form {
+	display: table;
+	margin: 0 auto;
+}
+.contact-form-wrapper .finish-form .icon,
+.contact-form-wrapper .finish-form .text {
+	float: left;
+	line-height: 45px;
+}
+.contact-form-wrapper .finish-form .icon {
+	font-size: 4em;
+	margin-right: 10px;
+	color: #82cea8;
+}
+.contact-form-wrapper .finish-form .text {
+	font-weight: 400;
+	font-size: 2.4em;
+	line-height: 50px;
+	letter-spacing: -0.02em;
+}
+
+@media (max-width: 800px) {
+	.contact-form-wrapper header.form-header, 
+	.contact-form-wrapper #status-message, 
+	form#contact, 
+	form#contact > .form-fields, 
+	form#contact > .footer-form {
+    	float: none;
+	}
+	form#contact > .footer-form {
+	    margin-left: 0;
+	    margin-top: 6px;
+	}
+}
+@media (max-width: 643px) {
+	.contact-form-wrapper .contact-form-content {
+		display: block;
+		width: 100%;
+	}
+	form#contact .region-default > .linha-field {
+		float: none;
+		width: 100%;
+	}
+	form#contact input.ftype-text, 
+	form#contact input.ftype-email {
+	    width: 100%;
+	}
+}
+@media (max-width: 490px) {
+	.contact-form-wrapper .finish-form .icon,
+	.contact-form-wrapper .finish-form .text {
+		float: none;
+		clear: both;
+		text-align: center;
+	}
+	.contact-form-wrapper .finish-form .icon {
+	    display: table;
+	    margin: 0 auto 10px;
+		font-size: 5em;
+	}
+	.contact-form-wrapper .finish-form .text {
+	    display: block;
+	    line-height: 1.2em;
+	    text-align: center;
+	}
+}
+*/

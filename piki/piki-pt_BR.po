@@ -1,0 +1,1207 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-10-01 21:20-0300\n"
+"PO-Revision-Date: 2018-10-01 21:21-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: libraries/flowplayer\n"
+
+#: features/Colors/index.php:13
+msgid "Cores"
+msgstr ""
+
+#: features/Colors/index.php:14
+msgid "Cor"
+msgstr ""
+
+#: features/Colors/index.php:15 features/Gallerys/index.php:26
+#: features/Media/index.php:28
+msgid "Adicionar nova"
+msgstr ""
+
+#: features/Colors/index.php:16
+msgid "Adicionar nova cor"
+msgstr ""
+
+#: features/Colors/index.php:17
+msgid "Editar cor"
+msgstr ""
+
+#: features/Colors/index.php:18
+msgid "Nova cor"
+msgstr ""
+
+#: features/Colors/index.php:19
+msgid "Ver cor"
+msgstr ""
+
+#: features/Colors/index.php:20
+msgid "Buscar cores"
+msgstr ""
+
+#: features/Colors/index.php:21
+msgid "Nenhuma cor encontrada"
+msgstr ""
+
+#: features/Colors/index.php:22
+msgid "Nenhuma cor na lixeira"
+msgstr ""
+
+#: features/Colors/index.php:23
+msgid "Cor mãe"
+msgstr ""
+
+#: features/Fields/admin.php:8
+msgid "Fields group"
+msgstr ""
+
+#: features/Fields/admin.php:9
+msgid "Fields groups"
+msgstr ""
+
+#: features/Fields/admin.php:13
+msgid "Title"
+msgstr ""
+
+#: features/Fields/admin.php:14
+msgid "Description"
+msgstr ""
+
+#: features/Fields/index.php:139
+msgid "Name"
+msgstr ""
+
+#: features/Fields/index.php:142
+msgid "Type a name"
+msgstr ""
+
+#: features/Fields/index.php:148
+msgid "Label within the field"
+msgstr ""
+
+#: features/Fields/index.php:161
+msgid "Type a description"
+msgstr ""
+
+#: features/Fields/index.php:167
+msgid "Enter the classname of an icon"
+msgstr ""
+
+#: features/Fields/index.php:173
+msgid "Field Notes"
+msgstr ""
+
+#: features/Fields/index.php:176
+msgid "Minimum number of characters"
+msgstr ""
+
+#: features/Fields/index.php:182
+msgid "Maximum number of characters"
+msgstr ""
+
+#: features/Fields/index.php:198
+msgid "One value per line, in the format key|Value"
+msgstr ""
+
+#: features/Fields/index.php:201
+msgid "Hide label"
+msgstr ""
+
+#: features/Fields/index.php:207
+msgid "Required"
+msgstr ""
+
+#: features/Fields/index.php:213
+msgid "Unique value"
+msgstr ""
+
+#: features/Fields/index.php:218
+msgid "Multiple"
+msgstr ""
+
+#: features/Fields/index.php:223
+msgid "Maximum items"
+msgstr ""
+
+#: features/Fields/index.php:229
+msgid "Confirm field?"
+msgstr ""
+
+#: features/Fields/index.php:247
+msgid "Mostrar apenas no front"
+msgstr ""
+
+#: features/Fields/index.php:1072
+msgid "a value"
+msgstr ""
+
+#: features/Fields/index.php:1073
+msgid "the value"
+msgstr ""
+
+#: features/Fields/index.php:1098
+msgid "Required field"
+msgstr ""
+
+#: features/Fields/index.php:1099
+msgid "Maximum of {MAXLENGTH} characters"
+msgstr ""
+
+#: features/Fields/index.php:1100
+msgid "Minimum of {MINLENGTH} characters"
+msgstr ""
+
+#: features/Fields/index.php:1101
+msgid "format: '{FORMAT}'"
+msgstr ""
+
+#: features/Fields/index.php:1102 features/Fields/index.php:1103
+msgid "Invalid value"
+msgstr ""
+
+#: features/Fields/index.php:1104
+msgid "Value already registered"
+msgstr ""
+
+#: features/Fields/index.php:1105
+msgid "Only numbers"
+msgstr ""
+
+#: features/Fields/index.php:1106
+msgid "Required selection"
+msgstr ""
+
+#: features/Fields/index.php:1107
+msgid "Value do not match"
+msgstr ""
+
+#: features/Fields/index.php:1108
+msgid "Maximum of {SIZE}"
+msgstr ""
+
+#: features/Fields/index.php:1115
+msgid "'{LABEL}' field is required"
+msgstr ""
+
+#: features/Fields/index.php:1116
+#, php-format
+msgid "{OVALOR} %s in the `{LABEL}` field must be max {MAXLENGTH} characters."
+msgstr ""
+
+#: features/Fields/index.php:1116 features/Fields/index.php:1118
+#: features/Fields/index.php:1119 features/Fields/index.php:1121
+#: features/Fields/index.php:1122 features/Fields/index.php:1123
+msgid "entered"
+msgstr ""
+
+#: features/Fields/index.php:1117
+#, php-format
+msgid "{OVALOR} %s in the `{LABEL}` field must be min {MINLENGTH} characters"
+msgstr ""
+
+#: features/Fields/index.php:1119
+#, php-format
+msgid "{OVALOR} %s in the `{LABEL}` field must have {FORMAT} format."
+msgstr ""
+
+#: features/Fields/index.php:1120 features/Fields/index.php:1122
+#, php-format
+msgid "{OVALOR} %s1 in the `{LABEL}` field is %s2"
+msgstr ""
+
+#: features/Fields/index.php:1121 features/Fields/index.php:1122
+msgid "invalid"
+msgstr ""
+
+#: features/Fields/index.php:1123
+#, php-format
+msgid "{OVALOR} %s1 in the `{LABEL}` field already %s2"
+msgstr ""
+
+#: features/Fields/index.php:1123
+msgid "registered"
+msgstr ""
+
+#: features/Fields/index.php:1124
+msgid "The `{LABEL}` field only accept numbers"
+msgstr ""
+
+#: features/Fields/index.php:1125
+msgid "Select {UMVALOR} in the `{LABEL}` field"
+msgstr ""
+
+#: features/Fields/index.php:1126
+msgid "The `{LABEL}` field value do not match"
+msgstr ""
+
+#: features/Fields/index.php:1127
+msgid "The file in the field `{LABEL}` should have a maximum of {SIZE}"
+msgstr ""
+
+#: features/Fields/index.php:1239
+#, php-format
+msgid "Confirm the %s"
+msgstr ""
+
+#: features/Flickr/scb/AdminPage.php:164
+msgid "Settings <strong>saved</strong>."
+msgstr ""
+
+#: features/Flickr/scb/AdminPage.php:176 features/Flickr/scb/AdminPage.php:186
+msgid "Save Changes"
+msgstr ""
+
+#: features/Flickr/scb/AdminPage.php:368
+msgid "Settings"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:11
+msgid "Piki Forms"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:12
+msgid "Piki Form"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:13 features/Taxonomy/admin.php:125
+msgid "Add new"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:14
+msgid "Add new Piki Form"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:15
+msgid "Edit Piki Form"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:16
+msgid "New Piki Form"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:17
+msgid "View Piki Form"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:18
+msgid "Search Piki Forms"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:19
+msgid "No Piki Form found"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:20
+msgid "No Piki Form in the trash"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:21 features/Gallerys/index.php:34
+msgid " Parent item colon"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:286
+msgid "Form title:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:287
+msgid "Whill be show on page form"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:292
+msgid "Form description:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:293
+msgid "A little description of this form"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:298 features/Forms/forms-ctype.php:436
+#: features/Taxonomy/index.php:208 features/Taxonomy/index.php:209
+msgid "Public?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:299 features/Forms/forms-ctype.php:307
+#: features/Forms/forms-ctype.php:366 features/Forms/forms-ctype.php:399
+#: features/Forms/forms-ctype.php:424 features/Forms/forms-ctype.php:437
+#: features/Forms/forms-ctype.php:444 features/Forms/forms-ctype.php:451
+#: features/Forms/forms-ctype.php:459 features/Forms/forms-ctype.php:467
+#: features/Forms/forms-ctype.php:475 features/Forms/forms-ctype.php:483
+#: features/Forms/forms-ctype.php:525 features/Forms/forms-ctype.php:542
+#: features/Forms/forms-ctype.php:550 features/Forms/forms-ctype.php:557
+msgid "Yes"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:306
+msgid "Preview?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:308
+msgid "If checked, user will preview the form content."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:313
+msgid "Callback URL after insert:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:318
+msgid "Callback URL after edit:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:323
+msgid "Callback URL after delete:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:328
+msgid "Add Classes (css):"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:329
+msgid "Aditional classes to the tag <form>."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:334
+msgid "Attributes (html):"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:335
+msgid "Aditional attributes to the tag <form>."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:340
+msgid "Success message ( insert ):"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:345
+msgid "Success message ( edit ):"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:350
+msgid "Default error message:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:355
+msgid "Errors massages types:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:359
+msgid "Tooltips"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:360
+msgid "Inline"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:361
+msgid "Modal"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:365
+msgid "Use placeholders?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:367
+msgid "If checked, the fields labels will shoing inside."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:372
+msgid "Submit button label:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:377
+msgid "Edit button label:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:391
+msgid "Post type"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:398
+msgid "Activate post type?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:400
+msgid "Enable or disable this post type"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:405
+msgid "Post type:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:406
+msgid "Just letters, a to z, and hifens(singular)"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:411 features/Taxonomy/index.php:192
+msgid "Slug:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:412
+msgid "The name of post type in URL. Ex: slug/name-of-tye-item(plural)"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:417
+msgid "Taxonomy on slug:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:418
+msgid "The taxonomy to be used on post slug"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:423 features/Taxonomy/index.php:288
+#: features/Taxonomy/index.php:289
+msgid "Disable query var?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:425 features/Taxonomy/index.php:290
+msgid "A post type cannot be loaded at /?{query_var}={single_post_slug}"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:430 features/Taxonomy/index.php:216
+msgid "Description:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:431
+msgid "A short descriptive summary of what the post type is."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:438
+msgid ""
+"Controls how the type is visible to authors (show_in_nav_menus, show_ui) and "
+"readers (exclude_from_search, publicly_queryable)."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:443
+msgid "Exclude from search?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:445
+msgid ""
+"Whether to exclude posts with this post type from front end search results."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:450
+msgid "Publicly queryable?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:452
+msgid ""
+"Whether queries can be performed on the front end as part of parse_request()."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:458 features/Taxonomy/index.php:222
+#: features/Taxonomy/index.php:223
+msgid "Show UI?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:460
+msgid ""
+"Whether to generate a default UI for managing this post type in the admin."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:466 features/Taxonomy/index.php:238
+#: features/Taxonomy/index.php:239
+msgid "Show in nav menus?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:468
+msgid "Whether post_type is available for selection in navigation menus."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:474 features/Taxonomy/index.php:230
+#: features/Taxonomy/index.php:231
+msgid "Show in menu?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:476
+msgid "Where to show the post type in the admin menu. show_ui must be true."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:482
+msgid "Show in admin bar?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:484
+msgid "Whether to make this post type available in the WordPress admin bar."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:489
+msgid "Menu position"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:490
+msgid ""
+"The position in the menu order the post type should appear. show_in_menu "
+"must be true."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:496
+msgid "Menu icon name:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:497
+#, php-format
+msgid "The name of the icon from the %s"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:502
+msgid "Menu ícon image"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:503
+msgid "The icon image to be used for this menu"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:508
+msgid "Supports:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:511
+msgid "Editor"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:512
+msgid "Autor"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:513
+msgid "Thumbnail"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:514
+msgid "Excerpt"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:515
+msgid "Trackbacks"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:516
+msgid "Revisions"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:517
+msgid "Page attributes"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:518
+msgid "Comments"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:519
+msgid "Post formats"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:524
+msgid "Has archive?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:526
+msgid ""
+"Enables post type archives. Will use $post_type as archive slug by default."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:532
+msgid "Taxonomys:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:536
+msgid "Tags"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:537
+msgid "Category"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:541
+msgid "Can export?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:543
+msgid "Can this post_type be exported."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:549
+msgid "Moderate?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:551
+msgid "Save public submissions as Draft"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:556
+msgid "Allways edit?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:558
+msgid ""
+"If check, a new post will be created on start the form, and the right fields "
+"will be saved on each submission."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:563 features/Taxonomy/index.php:302
+msgid "Labels:"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:564
+msgid ""
+"Labels for this post type. By default, post labels are used for non-"
+"hierarchical post types and page labels for hierarchical ones."
+msgstr ""
+
+#: features/Forms/forms-ctype.php:591
+msgid "Permissions"
+msgstr ""
+
+#: features/Forms/index.php:31 features/Forms/index.php:35
+msgid "slide"
+msgstr ""
+
+#: features/Forms/index.php:32
+msgid "Data successfully inserted"
+msgstr ""
+
+#: features/Forms/index.php:36
+msgid "Data edited successfully"
+msgstr ""
+
+#: features/Forms/index.php:43
+msgid "Submit"
+msgstr ""
+
+#: features/Forms/index.php:44 features/Groups/admin.php:131
+#: features/Taxonomy/admin.php:125
+msgid "Edit"
+msgstr ""
+
+#: features/Forms/index.php:47
+msgid "Form data from "
+msgstr ""
+
+#: features/Forum/piki-forum.php:32
+msgid "Tópicos"
+msgstr ""
+
+#: features/Forum/piki-forum.php:33
+msgid "Tópico"
+msgstr ""
+
+#: features/Forum/piki-forum.php:34
+msgid "Adicionar História"
+msgstr ""
+
+#: features/Forum/piki-forum.php:35
+msgid "Adicionar Novo Tópico"
+msgstr ""
+
+#: features/Forum/piki-forum.php:36
+msgid "Editar Tópico"
+msgstr ""
+
+#: features/Forum/piki-forum.php:37
+msgid "Novo Tópico"
+msgstr ""
+
+#: features/Forum/piki-forum.php:38
+msgid "Ver Tópico"
+msgstr ""
+
+#: features/Forum/piki-forum.php:39
+msgid "Buscar Tópico"
+msgstr ""
+
+#: features/Forum/piki-forum.php:40
+msgid "Nenhum tópico encontrado"
+msgstr ""
+
+#: features/Forum/piki-forum.php:41
+msgid "Nenhum tópico na lixeira"
+msgstr ""
+
+#: features/Gallerys/index.php:24
+msgid "Galerias"
+msgstr ""
+
+#: features/Gallerys/index.php:25
+msgid "Galeria"
+msgstr ""
+
+#: features/Gallerys/index.php:27
+msgid "Adicionar nova Galeria"
+msgstr ""
+
+#: features/Gallerys/index.php:28
+msgid "Editar Galeria"
+msgstr ""
+
+#: features/Gallerys/index.php:29
+msgid "Nova Galeria"
+msgstr ""
+
+#: features/Gallerys/index.php:30
+msgid "Ver Galeria"
+msgstr ""
+
+#: features/Gallerys/index.php:31
+msgid "Busacar Galerias"
+msgstr ""
+
+#: features/Gallerys/index.php:32
+msgid "Nada encontrado"
+msgstr ""
+
+#: features/Gallerys/index.php:33
+msgid "Nada encontrado na lixeira"
+msgstr ""
+
+#: features/Groups/admin.php:84
+msgid "Grupos"
+msgstr ""
+
+#: features/Groups/admin.php:131 features/Media/index.php:58
+#: features/Media/index.php:88 features/Slides/index.php:41
+msgid "Adicionar novo"
+msgstr ""
+
+#: features/Groups/index.php:179
+msgid "Nome:"
+msgstr ""
+
+#: features/Groups/index.php:180
+msgid "Nome do grupo."
+msgstr ""
+
+#: features/Groups/index.php:188
+msgid "Descrição:"
+msgstr ""
+
+#: features/Groups/index.php:189
+msgid "Descrição do grupo."
+msgstr ""
+
+#: features/Groups/index.php:196
+msgid "Usuários:"
+msgstr ""
+
+#: features/Groups/index.php:197
+msgid "Digite o nome do usuário que deseja adicionar."
+msgstr ""
+
+#: features/Instagram/index.php:71
+msgid "&laquo;"
+msgstr ""
+
+#: features/Instagram/index.php:72
+msgid "&raquo;"
+msgstr ""
+
+#: features/Media/index.php:26
+msgid "Fotos"
+msgstr ""
+
+#: features/Media/index.php:27
+msgid "Foto"
+msgstr ""
+
+#: features/Media/index.php:29
+msgid "Adicionar nova foto"
+msgstr ""
+
+#: features/Media/index.php:30
+msgid "Editar foto"
+msgstr ""
+
+#: features/Media/index.php:31
+msgid "Nova foto"
+msgstr ""
+
+#: features/Media/index.php:32
+msgid "Ver foto"
+msgstr ""
+
+#: features/Media/index.php:33
+msgid "Procurar fotos"
+msgstr ""
+
+#: features/Media/index.php:34
+msgid "Nenhuma foto encontrada"
+msgstr ""
+
+#: features/Media/index.php:35
+msgid "Nenhuma foto na lixeira"
+msgstr ""
+
+#: features/Media/index.php:37
+msgid "todas"
+msgstr ""
+
+#: features/Media/index.php:56
+msgid "Vídeos"
+msgstr ""
+
+#: features/Media/index.php:57
+msgid "Vídeo"
+msgstr ""
+
+#: features/Media/index.php:59
+msgid "Adicionar novo vídeo"
+msgstr ""
+
+#: features/Media/index.php:60
+msgid "Editar vídeo"
+msgstr ""
+
+#: features/Media/index.php:61
+msgid "Novo vídeo"
+msgstr ""
+
+#: features/Media/index.php:62
+msgid "Ver vídeo"
+msgstr ""
+
+#: features/Media/index.php:63
+msgid "Procurar vídeos"
+msgstr ""
+
+#: features/Media/index.php:64
+msgid "Nenhum vídeo encontrado"
+msgstr ""
+
+#: features/Media/index.php:65
+msgid "Nenhum vídeo na lixeira"
+msgstr ""
+
+#: features/Media/index.php:67 features/Media/index.php:97
+msgid "todos"
+msgstr ""
+
+#: features/Media/index.php:86
+msgid "Áudios"
+msgstr ""
+
+#: features/Media/index.php:87
+msgid "Áudio"
+msgstr ""
+
+#: features/Media/index.php:89
+msgid "Adicionar novo áudio"
+msgstr ""
+
+#: features/Media/index.php:90
+msgid "Editar áudio"
+msgstr ""
+
+#: features/Media/index.php:91
+msgid "Novo áudio"
+msgstr ""
+
+#: features/Media/index.php:92
+msgid "Ver áudio"
+msgstr ""
+
+#: features/Media/index.php:93
+msgid "Procurar áudios"
+msgstr ""
+
+#: features/Media/index.php:94
+msgid "Nenhum áudio encontrado"
+msgstr ""
+
+#: features/Media/index.php:95
+msgid "Nenhum áudio na lixeira"
+msgstr ""
+
+#: features/Profile/index.php:235
+msgid ""
+"You have not verified your email address, please check your email and click "
+"on verification link we sent you."
+msgstr ""
+
+#: features/Profile/index.php:370
+msgid "Invalid username"
+msgstr ""
+
+#: features/Profile/index.php:379
+msgid "Senha inválida"
+msgstr ""
+
+#: features/Profile/index.php:422
+msgid "E-mail already registered"
+msgstr ""
+
+#: features/Profile/index.php:433
+msgid "The username already exists"
+msgstr ""
+
+#: features/Profile/index.php:901
+msgid "Click to login"
+msgstr ""
+
+#: features/Profile/index.php:901
+msgid "Back to login"
+msgstr ""
+
+#: features/Profile/index.php:902
+msgid "Click to recover your password"
+msgstr ""
+
+#: features/Profile/index.php:902
+msgid "I forgot my password"
+msgstr ""
+
+#: features/Profile/index.php:915
+msgid "Entrar"
+msgstr ""
+
+#: features/Profile/index.php:934
+msgid "E-mail"
+msgstr ""
+
+#: features/Profile/index.php:943
+msgid "Senha"
+msgstr ""
+
+#: features/Profile/index.php:955
+msgid "Esqueci minha senha"
+msgstr ""
+
+#: features/Profile/index.php:956
+msgid "< Voltar"
+msgstr ""
+
+#: features/Profile/index.php:978
+msgid "Login"
+msgstr ""
+
+#: features/Profile/index.php:984 features/Profile/index.php:1184
+msgid "Recover Password"
+msgstr ""
+
+#: features/Profile/index.php:1014
+#, php-format
+msgid "New user registration on your site %s:"
+msgstr ""
+
+#: features/Profile/index.php:1015
+#, php-format
+msgid "Username: %s"
+msgstr ""
+
+#: features/Profile/index.php:1016
+#, php-format
+msgid "E-mail: %s"
+msgstr ""
+
+#: features/Profile/index.php:1041
+msgid "Seja bem vindo(a) ao "
+msgstr ""
+
+#: features/Profile/index.php:1042
+msgid "<h1>Confirme seu e-mail</h1>"
+msgstr ""
+
+#: features/Profile/index.php:1043
+msgid ""
+"<p>Confirme seu e-mail para finalizar o cadastro e comece agora mesmo a "
+"registrar as suas fornecedores no site da #Sebrae. Vamos nessa! "
+msgstr ""
+
+#: features/Profile/index.php:1044
+msgid "<a href=\""
+msgstr ""
+
+#: features/Profile/index.php:1050
+msgid "%: Informações para login"
+msgstr ""
+
+#: features/Profile/index.php:1164
+msgid "Perfil - Login"
+msgstr ""
+
+#: features/Profile/index.php:1165
+msgid "Box de login do usuário"
+msgstr ""
+
+#: features/Roles/index.php:58
+msgid "User Roles"
+msgstr ""
+
+#: features/Roles/index.php:62 features/Roles/index.php:138
+msgid "Roles"
+msgstr ""
+
+#: features/Slides/index.php:39
+msgid "Slides"
+msgstr ""
+
+#: features/Slides/index.php:40
+msgid "Slide"
+msgstr ""
+
+#: features/Slides/index.php:42
+msgid "Adicionar novo Slide"
+msgstr ""
+
+#: features/Slides/index.php:43
+msgid "Editar Slide"
+msgstr ""
+
+#: features/Slides/index.php:44
+msgid "Novo Slide"
+msgstr ""
+
+#: features/Slides/index.php:45
+msgid "Ver Slide"
+msgstr ""
+
+#: features/Slides/index.php:46
+msgid "Buscar Slides"
+msgstr ""
+
+#: features/Slides/index.php:47
+msgid "Nenhum Slide encontrado"
+msgstr ""
+
+#: features/Slides/index.php:48
+msgid "Nenhum slide na lixeira"
+msgstr ""
+
+#: features/Taxonomy/admin.php:72
+msgid "Taxonomy"
+msgstr ""
+
+#: features/Taxonomy/index.php:183
+msgid "Taxonomia:"
+msgstr ""
+
+#: features/Taxonomy/index.php:184
+msgid ""
+"The name of the taxonomy. Name should only contain lowercase letters and the "
+"underscore character, and not be more than 32 characters long (database "
+"structure restriction)."
+msgstr ""
+
+#: features/Taxonomy/index.php:193
+msgid "The name of taxonomy in URL. Ex: slug/name-of-tye-item(plural)"
+msgstr ""
+
+#: features/Taxonomy/index.php:200
+msgid "Post types:"
+msgstr ""
+
+#: features/Taxonomy/index.php:201
+msgid ""
+"Name of the object type for the taxonomy object. Object-types can be built-"
+"in Post Type or any Custom Post Type that may be registered."
+msgstr ""
+
+#: features/Taxonomy/index.php:210
+msgid "If the taxonomy should be publicly queryable."
+msgstr ""
+
+#: features/Taxonomy/index.php:217
+msgid "Include a description of the taxonomy."
+msgstr ""
+
+#: features/Taxonomy/index.php:224
+msgid "Whether to generate a default UI for managing this taxonomy."
+msgstr ""
+
+#: features/Taxonomy/index.php:232
+msgid "Where to show the taxonomy in the admin menu. show_ui must be true."
+msgstr ""
+
+#: features/Taxonomy/index.php:240
+msgid "true makes this taxonomy available for selection in navigation menus."
+msgstr ""
+
+#: features/Taxonomy/index.php:246 features/Taxonomy/index.php:247
+msgid "Show tag cloud?"
+msgstr ""
+
+#: features/Taxonomy/index.php:248
+msgid "Whether to allow the Tag Cloud widget to use this taxonomy."
+msgstr ""
+
+#: features/Taxonomy/index.php:254 features/Taxonomy/index.php:255
+msgid "Show in quick edit?"
+msgstr ""
+
+#: features/Taxonomy/index.php:256
+msgid "Whether to show the taxonomy in the quick/bulk edit panel."
+msgstr ""
+
+#: features/Taxonomy/index.php:262
+msgid "Metabox CB"
+msgstr ""
+
+#: features/Taxonomy/index.php:263
+msgid "Provide a callback function name for the meta box display."
+msgstr ""
+
+#: features/Taxonomy/index.php:268 features/Taxonomy/index.php:269
+msgid "Show admin column?"
+msgstr ""
+
+#: features/Taxonomy/index.php:270
+msgid ""
+"Whether to allow automatic creation of taxonomy columns on associated post-"
+"types table."
+msgstr ""
+
+#: features/Taxonomy/index.php:275 features/Taxonomy/index.php:276
+msgid "Hierarchical?"
+msgstr ""
+
+#: features/Taxonomy/index.php:277
+msgid ""
+"Is this taxonomy hierarchical (have descendants) like categories or not "
+"hierarchical like tags."
+msgstr ""
+
+#: features/Taxonomy/index.php:282
+msgid "Update count callback:"
+msgstr ""
+
+#: features/Taxonomy/index.php:283
+msgid ""
+"A function name that will be called when the count of an associated "
+"$object_type, such as post, is updated. Works much like a hook."
+msgstr ""
+
+#: features/Taxonomy/index.php:295 features/Taxonomy/index.php:296
+msgid "Sort?"
+msgstr ""
+
+#: features/Taxonomy/index.php:297
+msgid ""
+" Whether this taxonomy should remember the order in which terms are added to "
+"objects."
+msgstr ""
+
+#: features/Taxonomy/index.php:303
+msgid ""
+"An array of labels for this taxonomy. By default tag labels are used for non-"
+"hierarchical types and category labels for hierarchical ones."
+msgstr ""
+
+#: includes/admin-features.php:128
+msgid "No "
+msgstr ""
+
+#: libraries/jquery-ui/jquery-ui.js:8
+msgid "'"
+msgstr ""
+
+#: piki.php:345
+msgid "O método usado não é permitido neste caso"
+msgstr ""

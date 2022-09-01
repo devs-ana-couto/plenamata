@@ -1,0 +1,2826 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Piki Pack\n"
+"POT-Creation-Date: 2021-02-08 20:49-0300\n"
+"PO-Revision-Date: 2021-02-08 21:07-0300\n"
+"Last-Translator: Thiago Borges <thiago@pkiweb.com.br>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: libraries/flowplayer\n"
+
+#: features/Colors/index.php:13
+msgid "Cores"
+msgstr ""
+
+#: features/Colors/index.php:14
+msgid "Cor"
+msgstr "Cor"
+
+#: features/Colors/index.php:15 features/Gallerys/index.php:26
+#: features/Media/index.php:28
+msgid "Adicionar nova"
+msgstr "Adicionar nova"
+
+#: features/Colors/index.php:16
+msgid "Adicionar nova cor"
+msgstr "Adicionar nova cor"
+
+#: features/Colors/index.php:17
+msgid "Editar cor"
+msgstr "Editar cor"
+
+#: features/Colors/index.php:18
+msgid "Nova cor"
+msgstr ""
+
+#: features/Colors/index.php:19
+msgid "Ver cor"
+msgstr ""
+
+#: features/Colors/index.php:20
+msgid "Buscar cores"
+msgstr "Buscar cores"
+
+#: features/Colors/index.php:21
+msgid "Nenhuma cor encontrada"
+msgstr ""
+
+#: features/Colors/index.php:22
+msgid "Nenhuma cor na lixeira"
+msgstr ""
+
+#: features/Colors/index.php:23
+msgid "Cor mãe"
+msgstr ""
+
+#: features/Comments/index.php:379
+msgid "O texto é inválido."
+msgstr ""
+
+#: features/Contact/index.php:71
+msgid "Send message"
+msgstr "Enviar mensagem"
+
+#: features/Contact/index.php:89 features/Fields/index.php:141
+msgid "Name"
+msgstr "Nome"
+
+#: features/Contact/index.php:93
+msgid "Type your name"
+msgstr "Digite seu nome"
+
+#: features/Contact/index.php:101
+msgid "Type your email"
+msgstr "Digite seu email"
+
+#: features/Contact/index.php:103
+msgid "E-mail is required"
+msgstr "O email é obrigatório"
+
+#: features/Contact/index.php:104
+msgid "Please enter a valid email"
+msgstr "Informe um email válido"
+
+#: features/Contact/index.php:105
+msgid "Enter a valid email"
+msgstr "Informe um email válido"
+
+#: features/Contact/index.php:109
+msgid "Telephone"
+msgstr "Telefone"
+
+#: features/Contact/index.php:115
+msgid "Subject"
+msgstr "Assunto"
+
+#: features/Contact/index.php:119
+msgid "Enter subject "
+msgstr "Digite o assunto "
+
+#: features/Contact/index.php:123
+msgid "Message"
+msgstr "Mensagem"
+
+#: features/Contact/index.php:127
+msgid "Type your message"
+msgstr "Digite sua mensagem"
+
+#: features/Fields/admin.php:8
+msgid "Fields group"
+msgstr "Grupo de campos"
+
+#: features/Fields/admin.php:9
+msgid "Fields groups"
+msgstr "Grupos de campos"
+
+#: features/Fields/admin.php:13 features/Slides/index.php:129
+msgid "Title"
+msgstr "Título"
+
+#: features/Fields/admin.php:14
+msgid "Description"
+msgstr "Descrição"
+
+#: features/Fields/index.php:144
+msgid "Type a name"
+msgstr "Digite um nome"
+
+#: features/Fields/index.php:150
+msgid "Label within the field"
+msgstr "Rótulo dentro do campo"
+
+#: features/Fields/index.php:163
+msgid "Type a description"
+msgstr "Descrição uma descrição"
+
+#: features/Fields/index.php:169
+msgid "Enter the classname of an icon"
+msgstr "Digite o nome da classe de um ícone"
+
+#: features/Fields/index.php:175
+msgid "Field Notes"
+msgstr "Observações sobre o campo"
+
+#: features/Fields/index.php:178
+msgid "Minimum number of characters"
+msgstr "Número mínimo de caracteres"
+
+#: features/Fields/index.php:184
+msgid "Maximum number of characters"
+msgstr "Número máximo de caracteres"
+
+#: features/Fields/index.php:200
+msgid "One value per line, in the format key|Value"
+msgstr "Um valor por linha, no formato chave|Valor"
+
+#: features/Fields/index.php:203
+msgid "Hide label"
+msgstr "Ocultar rótulo"
+
+#: features/Fields/index.php:209
+msgid "Required"
+msgstr "Obrigatório"
+
+#: features/Fields/index.php:215
+msgid "Unique value"
+msgstr "Valor Único"
+
+#: features/Fields/index.php:220
+msgid "Multiple"
+msgstr "Múltiplo"
+
+#: features/Fields/index.php:225
+msgid "Maximum items"
+msgstr "Máximo de ítens"
+
+#: features/Fields/index.php:231
+msgid "Confirm field?"
+msgstr ""
+
+#: features/Fields/index.php:249
+msgid "Valor fixo na edição"
+msgstr ""
+
+#: features/Fields/index.php:1127
+msgid "Required field"
+msgstr "Campo obrigatório"
+
+#: features/Fields/index.php:1128
+msgid "Maximum of {MAXLENGTH} characters"
+msgstr "Máximo de {MAXLENGTH} caractéres"
+
+#: features/Fields/index.php:1129
+msgid "Minimum of {MINLENGTH} characters"
+msgstr "Mínimo de {MINLENGTH} caractéres"
+
+#: features/Fields/index.php:1130
+msgid "format: '{FORMAT}'"
+msgstr "formato: ’{FORMAT}’"
+
+#: features/Fields/index.php:1131 features/Fields/index.php:1132
+msgid "Invalid value"
+msgstr "Valor inválido"
+
+#: features/Fields/index.php:1133
+msgid "Value already registered"
+msgstr "Dados registrados com sucesso"
+
+#: features/Fields/index.php:1134
+msgid "Only numbers"
+msgstr "Somente números"
+
+#: features/Fields/index.php:1135
+msgid "Required selection"
+msgstr "Seleção obrigatória"
+
+#: features/Fields/index.php:1136
+msgid "Value do not match"
+msgstr ""
+
+#: features/Fields/index.php:1137
+msgid "Maximum of {SIZE}"
+msgstr ""
+
+#: features/Fields/index.php:1144
+msgid "'{LABEL}' field is required"
+msgstr "O campo ‘{LABEL}’ é obrigatório"
+
+#: features/Fields/index.php:1145
+#, php-format
+msgid "{OVALOR} %s in the `{LABEL}` field must be max {MAXLENGTH} characters."
+msgstr ""
+"{OVALOR} %s no campo `{LABEL}` deve ter no máximo {MAXLENGTH} caractéres."
+
+#: features/Fields/index.php:1145 features/Fields/index.php:1147
+#: features/Fields/index.php:1148 features/Fields/index.php:1150
+#: features/Fields/index.php:1151 features/Fields/index.php:1152
+msgid "entered"
+msgstr "informado"
+
+#: features/Fields/index.php:1146
+#, php-format
+msgid "{OVALOR} %s in the `{LABEL}` field must be min {MINLENGTH} characters"
+msgstr ""
+"{OVALOR} %s no campo `{LABEL}` deve ter no mínimo {MINLENGTH} caractéres"
+
+#: features/Fields/index.php:1148
+#, php-format
+msgid "{OVALOR} %s in the `{LABEL}` field must have {FORMAT} format."
+msgstr "{OVALOR} %s no campo `{LABEL}` de ter o formato {FORMAT}."
+
+#: features/Fields/index.php:1149 features/Fields/index.php:1151
+#, php-format
+msgid "{OVALOR} %s1 in the `{LABEL}` field is %s2"
+msgstr "{OVALOR} %s1 no campo `{LABEL}` é %s2"
+
+#: features/Fields/index.php:1150 features/Fields/index.php:1151
+msgid "invalid"
+msgstr "inválido"
+
+#: features/Fields/index.php:1152
+#, php-format
+msgid "{OVALOR} %s1 in the `{LABEL}` field already %s2"
+msgstr "{OVALOR} %s1 no campo `{LABEL}` já foi %s2"
+
+#: features/Fields/index.php:1152
+msgid "registered"
+msgstr "registrado"
+
+#: features/Fields/index.php:1153
+msgid "The `{LABEL}` field only accept numbers"
+msgstr "O campo `{LABEL}` aceita somente números"
+
+#: features/Fields/index.php:1154
+msgid "Select {UMVALOR} in the `{LABEL}` field"
+msgstr "Selecione {UMVALOR} no campo `{LABEL}`"
+
+#: features/Fields/index.php:1155
+msgid "The `{LABEL}` field value do not match"
+msgstr "A confirmação do campo `{LABEL}` está incorreta"
+
+#: features/Fields/index.php:1156
+msgid "The file in the field `{LABEL}` should have a maximum of {SIZE}"
+msgstr "O arquivo do campo `{LABEL}` deve ter no máximo {SIZE}"
+
+#: features/Fields/index.php:1181
+msgid "a value"
+msgstr "um valor"
+
+#: features/Fields/index.php:1182
+msgid "the value"
+msgstr "o valor"
+
+#: features/Fields/index.php:1293
+#, php-format
+msgid "Confirm the %s"
+msgstr ""
+
+#: features/Flickr/scb/AdminPage.php:163
+msgid "Settings <strong>saved</strong>."
+msgstr "Configurações <strong>salvas</strong>."
+
+#: features/Flickr/scb/AdminPage.php:175 features/Flickr/scb/AdminPage.php:185
+msgid "Save Changes"
+msgstr "Salvar alterações"
+
+#: features/Flickr/scb/AdminPage.php:367
+msgid "Settings"
+msgstr "Configurações"
+
+#: features/Forms/forms-ctype.php:11
+msgid "Piki Forms"
+msgstr "Piki Forms"
+
+#: features/Forms/forms-ctype.php:12
+msgid "Piki Form"
+msgstr "Piki Form"
+
+#: features/Forms/forms-ctype.php:13 features/Taxonomy/admin.php:124
+msgid "Add new"
+msgstr "Adicionar novo"
+
+#: features/Forms/forms-ctype.php:14
+msgid "Add new Piki Form"
+msgstr "Adicionar novo Piki Form"
+
+#: features/Forms/forms-ctype.php:15
+msgid "Edit Piki Form"
+msgstr "Editar Piki Form"
+
+#: features/Forms/forms-ctype.php:16
+msgid "New Piki Form"
+msgstr "Novo Piki Form"
+
+#: features/Forms/forms-ctype.php:17
+msgid "View Piki Form"
+msgstr "Ver Piki Form"
+
+#: features/Forms/forms-ctype.php:18
+msgid "Search Piki Forms"
+msgstr "Buscar Piki Froms"
+
+#: features/Forms/forms-ctype.php:19
+msgid "No Piki Form found"
+msgstr "Nenhum Piki Form encontrado"
+
+#: features/Forms/forms-ctype.php:20
+msgid "No Piki Form in the trash"
+msgstr "Nenhum Piki Form na lixeira"
+
+#: features/Forms/forms-ctype.php:21 features/Gallerys/index.php:34
+msgid " Parent item colon"
+msgstr " Artigo pai"
+
+#: features/Forms/forms-ctype.php:286
+msgid "Form title:"
+msgstr "Título de origem:"
+
+#: features/Forms/forms-ctype.php:287
+msgid "Whill be show on page form"
+msgstr "Será exibido na página do formulário"
+
+#: features/Forms/forms-ctype.php:292
+msgid "Form description:"
+msgstr "Descrição do formulário:"
+
+#: features/Forms/forms-ctype.php:293
+msgid "A little description of this form"
+msgstr "Uma breve descrição deste formulário"
+
+#: features/Forms/forms-ctype.php:298 features/Forms/forms-ctype.php:436
+#: features/Taxonomy/index.php:208 features/Taxonomy/index.php:209
+msgid "Public?"
+msgstr "Público(a)?"
+
+#: features/Forms/forms-ctype.php:299 features/Forms/forms-ctype.php:307
+#: features/Forms/forms-ctype.php:366 features/Forms/forms-ctype.php:399
+#: features/Forms/forms-ctype.php:424 features/Forms/forms-ctype.php:437
+#: features/Forms/forms-ctype.php:444 features/Forms/forms-ctype.php:451
+#: features/Forms/forms-ctype.php:459 features/Forms/forms-ctype.php:467
+#: features/Forms/forms-ctype.php:475 features/Forms/forms-ctype.php:483
+#: features/Forms/forms-ctype.php:525 features/Forms/forms-ctype.php:542
+#: features/Forms/forms-ctype.php:550 features/Forms/forms-ctype.php:557
+msgid "Yes"
+msgstr "Sim"
+
+#: features/Forms/forms-ctype.php:306
+msgid "Preview?"
+msgstr "Pré-visualizar?"
+
+#: features/Forms/forms-ctype.php:308
+msgid "If checked, user will preview the form content."
+msgstr "Se marcado, o usuário pré-visualizará o conteúdo do form."
+
+#: features/Forms/forms-ctype.php:313
+msgid "Callback URL after insert:"
+msgstr "URL de retorno após a inserção:"
+
+#: features/Forms/forms-ctype.php:318
+msgid "Callback URL after edit:"
+msgstr "URL de retorno após a edição:"
+
+#: features/Forms/forms-ctype.php:323
+msgid "Callback URL after delete:"
+msgstr "URL de retorno após a remoção:"
+
+#: features/Forms/forms-ctype.php:328
+msgid "Add Classes (css):"
+msgstr "Classes adicionais (css):"
+
+#: features/Forms/forms-ctype.php:329
+msgid "Aditional classes to the tag <form>."
+msgstr "Classes adicionais para a tag <form>."
+
+#: features/Forms/forms-ctype.php:334
+msgid "Attributes (html):"
+msgstr "Atributos (html):"
+
+#: features/Forms/forms-ctype.php:335
+msgid "Aditional attributes to the tag <form>."
+msgstr "Atributos adicionais para a tag <form>."
+
+#: features/Forms/forms-ctype.php:340
+msgid "Success message ( insert ):"
+msgstr "Mensagem de sucesso ( inserção ):"
+
+#: features/Forms/forms-ctype.php:345
+msgid "Success message ( edit ):"
+msgstr "Mensagem de sucesso ( edição ):"
+
+#: features/Forms/forms-ctype.php:350
+msgid "Default error message:"
+msgstr "Mensagem de erro padrão:"
+
+#: features/Forms/forms-ctype.php:355
+msgid "Errors massages types:"
+msgstr "Tipos de mensagens de erro:"
+
+#: features/Forms/forms-ctype.php:359
+msgid "Tooltips"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:360
+msgid "Inline"
+msgstr "Em linha"
+
+#: features/Forms/forms-ctype.php:361
+msgid "Modal"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:365
+msgid "Use placeholders?"
+msgstr "Usar placeholders?"
+
+#: features/Forms/forms-ctype.php:367
+msgid "If checked, the fields labels will shoing inside."
+msgstr "Se marcado, os rótulos dos campos serão mostrados dentro dos mesmos."
+
+#: features/Forms/forms-ctype.php:372
+msgid "Submit button label:"
+msgstr "Rótulo do botão de submissão:"
+
+#: features/Forms/forms-ctype.php:377
+msgid "Edit button label:"
+msgstr "Rótulo do botão de edição:"
+
+#: features/Forms/forms-ctype.php:391
+#, fuzzy
+#| msgid "Post types"
+msgid "Post type"
+msgstr "Tipo de post"
+
+#: features/Forms/forms-ctype.php:398
+msgid "Activate post type?"
+msgstr "Ativar tipo de post?"
+
+#: features/Forms/forms-ctype.php:400
+msgid "Enable or disable this post type"
+msgstr "Habilitar ou desabilitar este tipo de post"
+
+#: features/Forms/forms-ctype.php:405
+msgid "Post type:"
+msgstr "Tipo de post:"
+
+#: features/Forms/forms-ctype.php:406
+msgid "Just letters, a to z, and hifens(singular)"
+msgstr "Apenas letras, de a à z e hifens(singular)"
+
+#: features/Forms/forms-ctype.php:411 features/Taxonomy/index.php:192
+msgid "Slug:"
+msgstr "Slug:"
+
+#: features/Forms/forms-ctype.php:412
+msgid "The name of post type in URL. Ex: slug/name-of-tye-item(plural)"
+msgstr "O nome do tipo de post na URL. Ex: slug/nome-do-tipo-de-post(plural)"
+
+#: features/Forms/forms-ctype.php:417
+msgid "Taxonomy on slug:"
+msgstr "Tadonomia na URL:"
+
+#: features/Forms/forms-ctype.php:418
+msgid "The taxonomy to be used on post slug"
+msgstr "A taxonomia que será usada nas URLs dos posts"
+
+#: features/Forms/forms-ctype.php:423 features/Taxonomy/index.php:288
+#: features/Taxonomy/index.php:289
+msgid "Disable query var?"
+msgstr "Desabilitar acesso por query var?"
+
+#: features/Forms/forms-ctype.php:425 features/Taxonomy/index.php:290
+msgid "A post type cannot be loaded at /?{query_var}={single_post_slug}"
+msgstr ""
+"O tipo de post não poderá ser carregado por /?{query_var}={single_post_slug}"
+
+#: features/Forms/forms-ctype.php:430 features/Taxonomy/index.php:216
+msgid "Description:"
+msgstr "Descrição:"
+
+#: features/Forms/forms-ctype.php:431
+msgid "A short descriptive summary of what the post type is."
+msgstr "Um breve resumo descritivo do tipo de postagem."
+
+#: features/Forms/forms-ctype.php:438
+msgid ""
+"Controls how the type is visible to authors (show_in_nav_menus, show_ui) and "
+"readers (exclude_from_search, publicly_queryable)."
+msgstr ""
+"Controla como o tipo é visível para os autores (show_in_nav_menus, show_ui) "
+"e leitores (exclude_from_search, publicly_queryable)."
+
+#: features/Forms/forms-ctype.php:443
+msgid "Exclude from search?"
+msgstr "Excluir da busca?"
+
+#: features/Forms/forms-ctype.php:445
+msgid ""
+"Whether to exclude posts with this post type from front end search results."
+msgstr ""
+"Excluir postagens com esse tipo de postagem nos resultados de pesquisa do "
+"front-end."
+
+#: features/Forms/forms-ctype.php:450
+msgid "Publicly queryable?"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:452
+msgid ""
+"Whether queries can be performed on the front end as part of parse_request()."
+msgstr ""
+"Se as consultas podem ser realizadas no frontend como parte de "
+"parse_request()."
+
+#: features/Forms/forms-ctype.php:458 features/Taxonomy/index.php:222
+#: features/Taxonomy/index.php:223
+msgid "Show UI?"
+msgstr "Mostra IU?"
+
+#: features/Forms/forms-ctype.php:460
+msgid ""
+"Whether to generate a default UI for managing this post type in the admin."
+msgstr ""
+"Se deverá ser gerada uma interface do usuário padrão para gerenciar esse "
+"tipo de postagem no admin."
+
+#: features/Forms/forms-ctype.php:466 features/Taxonomy/index.php:238
+#: features/Taxonomy/index.php:239
+msgid "Show in nav menus?"
+msgstr "Mostrar nos menus de navegação?"
+
+#: features/Forms/forms-ctype.php:468
+msgid "Whether post_type is available for selection in navigation menus."
+msgstr "Se post_type estará disponível para seleção nos menus de navegação."
+
+#: features/Forms/forms-ctype.php:474 features/Taxonomy/index.php:230
+#: features/Taxonomy/index.php:231
+msgid "Show in menu?"
+msgstr "Mostrar no menu?"
+
+#: features/Forms/forms-ctype.php:476
+msgid "Where to show the post type in the admin menu. show_ui must be true."
+msgstr ""
+"Onde mostrar o tipo de postagem no menu do administrador. show_ui deve ser "
+"verdadeiro."
+
+#: features/Forms/forms-ctype.php:482
+msgid "Show in admin bar?"
+msgstr "Mostrar na barra de aministração?"
+
+#: features/Forms/forms-ctype.php:484
+msgid "Whether to make this post type available in the WordPress admin bar."
+msgstr ""
+"Disponibilizar esse tipo de postagem na barra de administração do WordPress."
+
+#: features/Forms/forms-ctype.php:489
+msgid "Menu position"
+msgstr "Posição no menu"
+
+#: features/Forms/forms-ctype.php:490
+msgid ""
+"The position in the menu order the post type should appear. show_in_menu "
+"must be true."
+msgstr ""
+"A posição na ordem do menu em que o tipo de postagem deve aparecer. "
+"show_in_menu deve ser verdadeiro."
+
+#: features/Forms/forms-ctype.php:496
+msgid "Menu icon name:"
+msgstr "Nome do ícone do menu:"
+
+#: features/Forms/forms-ctype.php:497
+#, php-format
+msgid "The name of the icon from the %s"
+msgstr "O nome do ícone para %s"
+
+#: features/Forms/forms-ctype.php:502
+msgid "Menu ícon image"
+msgstr "Imagem de ícone no menu"
+
+#: features/Forms/forms-ctype.php:503
+msgid "The icon image to be used for this menu"
+msgstr "A imagem de ícone que será usada no menu"
+
+#: features/Forms/forms-ctype.php:508
+msgid "Supports:"
+msgstr "Suportes:"
+
+#: features/Forms/forms-ctype.php:511
+msgid "Editor"
+msgstr "Editor"
+
+#: features/Forms/forms-ctype.php:512
+msgid "Autor"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:513
+msgid "Thumbnail"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:514 features/Slides/index.php:134
+msgid "Excerpt"
+msgstr "Resumo"
+
+#: features/Forms/forms-ctype.php:515
+msgid "Trackbacks"
+msgstr ""
+
+#: features/Forms/forms-ctype.php:516
+msgid "Revisions"
+msgstr "Revisões"
+
+#: features/Forms/forms-ctype.php:517
+msgid "Page attributes"
+msgstr "Atributos de página"
+
+#: features/Forms/forms-ctype.php:518
+msgid "Comments"
+msgstr "Comentários"
+
+#: features/Forms/forms-ctype.php:519
+msgid "Post formats"
+msgstr "Formato de post"
+
+#: features/Forms/forms-ctype.php:524
+msgid "Has archive?"
+msgstr "Terá arquivo?"
+
+#: features/Forms/forms-ctype.php:526
+msgid ""
+"Enables post type archives. Will use $post_type as archive slug by default."
+msgstr ""
+"Habilita a listagem dos posts deste tipo. Será usado $post_type como slug "
+"padrão."
+
+#: features/Forms/forms-ctype.php:532
+msgid "Taxonomys:"
+msgstr "Taxonomias:"
+
+#: features/Forms/forms-ctype.php:536
+msgid "Tags"
+msgstr "Tags"
+
+#: features/Forms/forms-ctype.php:537
+msgid "Category"
+msgstr "Categoria"
+
+#: features/Forms/forms-ctype.php:541
+msgid "Can export?"
+msgstr "Exportável?"
+
+#: features/Forms/forms-ctype.php:543
+msgid "Can this post_type be exported."
+msgstr "Se esse tipo de post pode ser exportado."
+
+#: features/Forms/forms-ctype.php:549
+msgid "Moderate?"
+msgstr "Moderar?"
+
+#: features/Forms/forms-ctype.php:551
+msgid "Save public submissions as Draft"
+msgstr "Salvar inserções públicas como Rascunho"
+
+#: features/Forms/forms-ctype.php:556
+msgid "Allways edit?"
+msgstr "Sempre editar?"
+
+#: features/Forms/forms-ctype.php:558
+msgid ""
+"If check, a new post will be created on start the form, and the right fields "
+"will be saved on each submission."
+msgstr ""
+"If you check, a new post will be created on start the form, and the right "
+"fields will be saved on each submission."
+
+#: features/Forms/forms-ctype.php:563 features/Taxonomy/index.php:302
+msgid "Labels:"
+msgstr "Rótulos:"
+
+#: features/Forms/forms-ctype.php:564
+msgid ""
+"Labels for this post type. By default, post labels are used for non-"
+"hierarchical post types and page labels for hierarchical ones."
+msgstr ""
+"Rótulos para este tipo de post. Por padrão, os rótulos de postagem são "
+"usados para tipos de post não hierárquicos e os rótulos de página para os "
+"hierárquicos."
+
+#: features/Forms/forms-ctype.php:591
+msgid "Permissions"
+msgstr "Permissões"
+
+#: features/Forms/index.php:35 features/Forms/index.php:491
+msgid "Revise os campos destacados e corrija os erros"
+msgstr ""
+
+#: features/Forms/index.php:38 features/Forms/index.php:493
+msgid "Dados cadastrados com sucesso"
+msgstr ""
+
+#: features/Forms/index.php:45 features/Forms/index.php:498
+msgid "Dados atualizados com sucesso."
+msgstr ""
+
+#: features/Forms/index.php:54
+msgid "Submit"
+msgstr "Enviar"
+
+#: features/Forms/index.php:55 features/Groups/admin.php:130
+#: features/Taxonomy/admin.php:124 includes/admin-settings.php:154
+msgid "Edit"
+msgstr "Editar"
+
+#: features/Forms/index.php:56
+msgid "Salvar e voltar"
+msgstr ""
+
+#: features/Forms/index.php:60
+msgid "Form data from "
+msgstr "Dados do formulário de "
+
+#: features/Forum/piki-forum.php:32
+msgid "Tópicos"
+msgstr ""
+
+#: features/Forum/piki-forum.php:33
+msgid "Tópico"
+msgstr ""
+
+#: features/Forum/piki-forum.php:34
+msgid "Adicionar História"
+msgstr "Adicionar história"
+
+#: features/Forum/piki-forum.php:35
+msgid "Adicionar Novo Tópico"
+msgstr "Adicionar novo Tópico"
+
+#: features/Forum/piki-forum.php:36
+msgid "Editar Tópico"
+msgstr "Editar Tópico"
+
+#: features/Forum/piki-forum.php:37
+msgid "Novo Tópico"
+msgstr ""
+
+#: features/Forum/piki-forum.php:38
+msgid "Ver Tópico"
+msgstr ""
+
+#: features/Forum/piki-forum.php:39
+msgid "Buscar Tópico"
+msgstr ""
+
+#: features/Forum/piki-forum.php:40
+msgid "Nenhum tópico encontrado"
+msgstr ""
+
+#: features/Forum/piki-forum.php:41
+msgid "Nenhum tópico na lixeira"
+msgstr ""
+
+#: features/Gallerys/index.php:24
+msgid "Galerias"
+msgstr ""
+
+#: features/Gallerys/index.php:25
+msgid "Galeria"
+msgstr ""
+
+#: features/Gallerys/index.php:27
+msgid "Adicionar nova Galeria"
+msgstr "Adicionar nova galeria"
+
+#: features/Gallerys/index.php:28
+msgid "Editar Galeria"
+msgstr "Editar galeria"
+
+#: features/Gallerys/index.php:29
+msgid "Nova Galeria"
+msgstr ""
+
+#: features/Gallerys/index.php:30
+msgid "Ver Galeria"
+msgstr ""
+
+#: features/Gallerys/index.php:31
+msgid "Busacar Galerias"
+msgstr "Buscar Galerias"
+
+#: features/Gallerys/index.php:32
+msgid "Nada encontrado"
+msgstr ""
+
+#: features/Gallerys/index.php:33
+msgid "Nada encontrado na lixeira"
+msgstr ""
+
+#: features/Groups/admin.php:84
+msgid "Grupos"
+msgstr ""
+
+#: features/Groups/admin.php:130 features/Media/index.php:58
+#: features/Media/index.php:88 features/Slides/index.php:38
+#: includes/admin-settings.php:154
+msgid "Adicionar novo"
+msgstr "Adicionar novo"
+
+#: features/Groups/index.php:179
+msgid "Nome:"
+msgstr ""
+
+#: features/Groups/index.php:180
+msgid "Nome do grupo."
+msgstr ""
+
+#: features/Groups/index.php:188
+msgid "Descrição:"
+msgstr "Descrição:"
+
+#: features/Groups/index.php:189
+msgid "Descrição do grupo."
+msgstr "Descrição do grupo."
+
+#: features/Groups/index.php:196
+msgid "Usuários:"
+msgstr ""
+
+#: features/Groups/index.php:197
+msgid "Digite o nome do usuário que deseja adicionar."
+msgstr ""
+
+#: features/Instagram/index.php:71
+msgid "&laquo;"
+msgstr ""
+
+#: features/Instagram/index.php:72
+msgid "&raquo;"
+msgstr ""
+
+#: features/Media/index.php:26
+msgid "Fotos"
+msgstr "Fotos"
+
+#: features/Media/index.php:27
+msgid "Foto"
+msgstr ""
+
+#: features/Media/index.php:29
+msgid "Adicionar nova foto"
+msgstr "Adicionar nova foto"
+
+#: features/Media/index.php:30
+msgid "Editar foto"
+msgstr "Editar foto"
+
+#: features/Media/index.php:31
+msgid "Nova foto"
+msgstr ""
+
+#: features/Media/index.php:32
+msgid "Ver foto"
+msgstr ""
+
+#: features/Media/index.php:33
+msgid "Procurar fotos"
+msgstr ""
+
+#: features/Media/index.php:34
+msgid "Nenhuma foto encontrada"
+msgstr ""
+
+#: features/Media/index.php:35
+msgid "Nenhuma foto na lixeira"
+msgstr ""
+
+#: features/Media/index.php:37
+msgid "todas"
+msgstr ""
+
+#: features/Media/index.php:56
+msgid "Vídeos"
+msgstr ""
+
+#: features/Media/index.php:57
+msgid "Vídeo"
+msgstr ""
+
+#: features/Media/index.php:59
+msgid "Adicionar novo vídeo"
+msgstr "Adicionar novo vídeo"
+
+#: features/Media/index.php:60
+msgid "Editar vídeo"
+msgstr "Editar  vídeo"
+
+#: features/Media/index.php:61
+msgid "Novo vídeo"
+msgstr "Novo vídeo"
+
+#: features/Media/index.php:62
+msgid "Ver vídeo"
+msgstr "Ver vídeo"
+
+#: features/Media/index.php:63
+msgid "Procurar vídeos"
+msgstr "Procurar vídeos"
+
+#: features/Media/index.php:64
+msgid "Nenhum vídeo encontrado"
+msgstr ""
+
+#: features/Media/index.php:65
+msgid "Nenhum vídeo na lixeira"
+msgstr ""
+
+#: features/Media/index.php:67 features/Media/index.php:97
+msgid "todos"
+msgstr ""
+
+#: features/Media/index.php:86
+msgid "Áudios"
+msgstr ""
+
+#: features/Media/index.php:87
+msgid "Áudio"
+msgstr ""
+
+#: features/Media/index.php:89
+msgid "Adicionar novo áudio"
+msgstr "Adicionar novo áudio"
+
+#: features/Media/index.php:90
+msgid "Editar áudio"
+msgstr "Editar  áudio"
+
+#: features/Media/index.php:91
+msgid "Novo áudio"
+msgstr ""
+
+#: features/Media/index.php:92
+msgid "Ver áudio"
+msgstr ""
+
+#: features/Media/index.php:93
+msgid "Procurar áudios"
+msgstr ""
+
+#: features/Media/index.php:94
+msgid "Nenhum áudio encontrado"
+msgstr ""
+
+#: features/Media/index.php:95
+msgid "Nenhum áudio na lixeira"
+msgstr ""
+
+#: features/Pager/index.php:43
+msgid "See more"
+msgstr "Ver mais"
+
+#: features/Pager/index.php:48
+msgid "Navigation"
+msgstr "Navegação"
+
+#: features/Pager/index.php:51
+msgid "Previous"
+msgstr "Anterior"
+
+#: features/Profile/index.php:310
+msgid ""
+"You have not verified your email address, please check your email and click "
+"on verification link we sent you."
+msgstr ""
+"Você não verificou seu endereço de e-mail, por favor, abra seu e-mail e "
+"clique no link de verificação que mandamos pra você."
+
+#: features/Profile/index.php:432
+msgid "Email não cadastrado"
+msgstr ""
+
+#: features/Profile/index.php:441
+msgid "Senha inválida"
+msgstr ""
+
+#: features/Profile/index.php:583
+msgid "E-mail already registered"
+msgstr "E-mail já registrado"
+
+#: features/Profile/index.php:600
+msgid "The username already exists"
+msgstr "O nome de usuário já existe"
+
+#: features/Profile/index.php:669
+msgid "Someone has requested a password reset for the following account:"
+msgstr ""
+
+#: features/Profile/index.php:670
+#, fuzzy, php-format
+#| msgid "Username: %s"
+msgid "Site Name: %s"
+msgstr "Nome de usuário: %s"
+
+#: features/Profile/index.php:671 features/Profile/index.php:1398
+#, php-format
+msgid "Username: %s"
+msgstr "Nome de usuário: %s"
+
+#: features/Profile/index.php:672
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+
+#: features/Profile/index.php:673
+msgid "To reset your password, visit the following address:"
+msgstr ""
+
+#: features/Profile/index.php:681
+#, fuzzy
+#| msgid "Password: %s"
+msgid "Password Reset"
+msgstr "Senha: %s"
+
+#: features/Profile/index.php:1148
+msgid "Login"
+msgstr ""
+
+#: features/Profile/index.php:1159 features/Profile/index.php:1592
+msgid "Recover Password"
+msgstr "Recuperar senha"
+
+#: features/Profile/index.php:1185
+msgid "Entrar"
+msgstr ""
+
+#: features/Profile/index.php:1200 features/Profile/index.php:1291
+#, fuzzy
+#| msgid "E-mail"
+msgid "E-mail Sebrae"
+msgstr "E-mail"
+
+#: features/Profile/index.php:1214
+msgid "Senha"
+msgstr ""
+
+#: features/Profile/index.php:1232
+msgid "Esqueci minha senha"
+msgstr ""
+
+#: features/Profile/index.php:1262
+msgid "Enviar"
+msgstr ""
+
+#: features/Profile/index.php:1269
+#, fuzzy
+#| msgid "I forgot my password"
+msgid "Forgot my password"
+msgstr "Esqueci minha senha"
+
+#: features/Profile/index.php:1307
+#, fuzzy
+#| msgid "Enter your password"
+msgid "Create new password"
+msgstr "Digite sua senha"
+
+#: features/Profile/index.php:1333
+msgid "Salvar"
+msgstr ""
+
+#: features/Profile/index.php:1397
+#, php-format
+msgid "New user registration on your site %s:"
+msgstr "Novo registro de usuário em seu site %s:"
+
+#: features/Profile/index.php:1399
+#, php-format
+msgid "E-mail: %s"
+msgstr "E-mail: %s"
+
+#: features/Profile/index.php:1415
+msgid "<h1>Confirme seu e-mail e participe do movimento!</h1>"
+msgstr ""
+
+#: features/Profile/index.php:1416
+msgid ""
+"Confirme seu e-mail para finalizar o cadastro e comece agora mesmo a "
+"registrar as suas fornecedores no site da #Sebrae. Vamos nessa!</p>"
+msgstr ""
+
+#: features/Profile/index.php:1417
+msgid "<a href=\""
+msgstr ""
+
+#: features/Profile/index.php:1572
+msgid "Perfil - Login"
+msgstr "Perfil - Login"
+
+#: features/Profile/index.php:1573
+msgid "Box de login do usuário"
+msgstr ""
+
+#: features/Profile/templates/perfil-cadastrar-senha.tpl.php:4
+msgid "Criar nova senha"
+msgstr ""
+
+#: features/Roles/index.php:58
+msgid "User Roles"
+msgstr "Papéis de usuário"
+
+#: features/Roles/index.php:62 features/Roles/index.php:138
+msgid "Roles"
+msgstr "Papéis"
+
+#: features/Schedule/includes/events.php:18
+#: features/Schedule/includes/events.php:20
+#: features/Schedule/includes/events.php:33
+msgid "Events"
+msgstr "Eventos"
+
+#: features/Schedule/includes/events.php:19
+#: features/Schedule/includes/events.php:21
+msgid "Event"
+msgstr "Evento"
+
+#: features/Schedule/includes/events.php:22 features/Schedule/index.php:24
+#: features/Shop/includes/products.php:24
+#: features/Shop/includes/services.php:22
+msgid "Add New"
+msgstr "Adicionar novo"
+
+#: features/Schedule/includes/events.php:23
+msgid "Add New Event"
+msgstr "Adicionar novo Evento"
+
+#: features/Schedule/includes/events.php:24
+msgid "New Event"
+msgstr "Novo evento"
+
+#: features/Schedule/includes/events.php:25
+msgid "Edit Event"
+msgstr "Editar Evento"
+
+#: features/Schedule/includes/events.php:26
+msgid "View Event"
+msgstr "Ver Evento"
+
+#: features/Schedule/includes/events.php:27
+msgid "All Events"
+msgstr "Todos os eventos"
+
+#: features/Schedule/includes/events.php:28
+msgid "Search Events"
+msgstr "Buscar Eventos"
+
+#: features/Schedule/includes/events.php:29
+msgid "Parent Events:"
+msgstr "Eventos pais:"
+
+#: features/Schedule/includes/events.php:30
+msgid "No Events found."
+msgstr "Nenhum evento encontrado."
+
+#: features/Schedule/includes/events.php:31
+msgid "No Events found in Trash."
+msgstr "Nenhum Evento na lixeira."
+
+#: features/Schedule/index.php:20 features/Schedule/index.php:22
+msgid "Schedules"
+msgstr "Agendas"
+
+#: features/Schedule/index.php:21 features/Schedule/index.php:23
+msgid "Schedule"
+msgstr "Agenda"
+
+#: features/Schedule/index.php:25
+msgid "Add New Schedule"
+msgstr "Adicionar nova Agenda"
+
+#: features/Schedule/index.php:26
+msgid "New Schedule"
+msgstr "Nova Agenda"
+
+#: features/Schedule/index.php:27
+msgid "Edit Schedule"
+msgstr "Editar Agenda"
+
+#: features/Schedule/index.php:28
+msgid "View Schedule"
+msgstr "Ver Avenda"
+
+#: features/Schedule/index.php:29
+msgid "All Schedules"
+msgstr "Todas as agendas"
+
+#: features/Schedule/index.php:30
+msgid "Search Schedules"
+msgstr "Buscar Agendas"
+
+#: features/Schedule/index.php:31
+msgid "Parent Schedules:"
+msgstr "Agendas mães:"
+
+#: features/Schedule/index.php:32
+msgid "No Schedules found."
+msgstr "Nenhuma agenda encontrada."
+
+#: features/Schedule/index.php:33
+msgid "No Schedules found in Trash."
+msgstr "Nenhuma agenda na lixeira."
+
+#: features/Schedule/index.php:35
+msgid "Inteligent schedules."
+msgstr "Agendas inteligentes."
+
+#: features/Schedule/index.php:214
+msgid "Type"
+msgstr "Tipo"
+
+#: features/Schedule/index.php:215
+msgid "Type with user will select on schedule."
+msgstr "Tipo que o usuário irá selecionar na agenda."
+
+#: features/Schedule/index.php:219
+msgid "Day"
+msgstr "Dia"
+
+#: features/Schedule/index.php:220
+msgid "Interval of days"
+msgstr "Itervalo de dias"
+
+#: features/Schedule/index.php:221
+msgid "Period"
+msgstr "Período"
+
+#: features/Schedule/index.php:226
+msgid "Period size"
+msgstr "Tamanho do período"
+
+#: features/Schedule/index.php:234
+msgid "Office ours"
+msgstr "Horário de funcionamento"
+
+#: features/Schedule/index.php:242
+msgid "Vacancies by period"
+msgstr "Vagas para o período"
+
+#: features/Schedule/index.php:249
+msgid "Multiple selection"
+msgstr "Seleção múltipla"
+
+#: features/Schedule/index.php:256
+msgid "Calendar"
+msgstr "Calendário"
+
+#: features/Shop/includes/products.php:20
+#: features/Shop/includes/products.php:22
+msgid "Products"
+msgstr "Produtos"
+
+#: features/Shop/includes/products.php:21
+#: features/Shop/includes/products.php:23
+msgid "Product"
+msgstr "Produto"
+
+#: features/Shop/includes/products.php:25
+msgid "Add New Product"
+msgstr "Adicionar novo Produto"
+
+#: features/Shop/includes/products.php:26
+#, fuzzy
+#| msgid "New Product"
+msgid "New Product"
+msgstr "Novo Produto"
+
+#: features/Shop/includes/products.php:27
+msgid "Edit Product"
+msgstr "Editar Produto"
+
+#: features/Shop/includes/products.php:28
+msgid "View Product"
+msgstr "Ver Produto"
+
+#: features/Shop/includes/products.php:29
+msgid "All Products"
+msgstr "Todos os Produtos"
+
+#: features/Shop/includes/products.php:30
+msgid "Search Products"
+msgstr "Buscar Produtos"
+
+#: features/Shop/includes/products.php:31
+msgid "Parent Products:"
+msgstr "Produtos pais:"
+
+#: features/Shop/includes/products.php:32
+msgid "No Products found."
+msgstr "Nenhum Produto encontrado."
+
+#: features/Shop/includes/products.php:33
+msgid "No Products found in Trash."
+msgstr "Nenhum Produto na lixeira."
+
+#: features/Shop/includes/products.php:35
+msgid "Store products."
+msgstr "Produtos da loja."
+
+#: features/Shop/includes/products.php:130
+#: features/Shop/includes/services.php:128
+msgid "Price"
+msgstr "Preço"
+
+#: features/Shop/includes/products.php:137
+#: features/Shop/includes/services.php:135
+#, fuzzy
+#| msgid "Fotos"
+msgid "Photos"
+msgstr "Fotos"
+
+#: features/Shop/includes/products.php:138
+msgid "Photos and Images of the product"
+msgstr "Fotos e imagens do produto"
+
+#: features/Shop/includes/services.php:18
+#: features/Shop/includes/services.php:20
+msgid "Services"
+msgstr "Serviços"
+
+#: features/Shop/includes/services.php:19
+#: features/Shop/includes/services.php:21
+msgid "Service"
+msgstr "Serviço"
+
+#: features/Shop/includes/services.php:23
+msgid "Add New Service"
+msgstr "Adicionar novo Serviço"
+
+#: features/Shop/includes/services.php:24
+msgid "New Service"
+msgstr "Novo Serviço"
+
+#: features/Shop/includes/services.php:25
+msgid "Edit Service"
+msgstr "Editar Serviço"
+
+#: features/Shop/includes/services.php:26
+msgid "View Service"
+msgstr "Ver Serviço"
+
+#: features/Shop/includes/services.php:27
+msgid "All Services"
+msgstr "Todos os serviços"
+
+#: features/Shop/includes/services.php:28
+msgid "Search Services"
+msgstr "Buscar Serviços"
+
+#: features/Shop/includes/services.php:29
+msgid "Parent Services:"
+msgstr "Serviço pai:"
+
+#: features/Shop/includes/services.php:30
+msgid "No Services found."
+msgstr "Nenhum Serviço encontrado."
+
+#: features/Shop/includes/services.php:31
+msgid "No Services found in Trash."
+msgstr "Nenhum serviço na lixeira."
+
+#: features/Shop/includes/services.php:33
+msgid "Store services."
+msgstr "Serviços da loja."
+
+#: features/Shop/includes/services.php:136
+msgid "Photos and Images of the service"
+msgstr "Fotos e imagens do serviço"
+
+#: features/Shop/includes/services.php:144
+msgid "Duration (minuts)"
+msgstr "Duração (minutos)"
+
+#: features/Shop/includes/services.php:145
+msgid "Duration of the service (in minuts)"
+msgstr "Duração do serviço (em minutos)"
+
+#: features/Shop/includes/services.php:151
+msgid "Is an offer?"
+msgstr "Esta é uma fornecedor?"
+
+#: features/Shop/includes/services.php:152
+msgid "If is checked, this service appear on Offers list."
+msgstr "Se marcado, este serviço aparecerá em uma lista de fornecedores."
+
+#: features/Slides/index.php:36
+msgid "Slides"
+msgstr "Slides"
+
+#: features/Slides/index.php:37
+msgid "Slide"
+msgstr "Slide"
+
+#: features/Slides/index.php:39
+msgid "Adicionar novo Slide"
+msgstr "Adicionar novo Slide"
+
+#: features/Slides/index.php:40
+msgid "Editar Slide"
+msgstr "Editar Slide"
+
+#: features/Slides/index.php:41
+msgid "Novo Slide"
+msgstr "Novo Slide"
+
+#: features/Slides/index.php:42
+msgid "Ver Slide"
+msgstr "Ver Slide"
+
+#: features/Slides/index.php:43
+msgid "Buscar Slides"
+msgstr "Buscar slides"
+
+#: features/Slides/index.php:44
+msgid "Nenhum Slide encontrado"
+msgstr ""
+
+#: features/Slides/index.php:45
+msgid "Nenhum slide na lixeira"
+msgstr "Nenhum Slide na lixeira"
+
+#: features/Slides/index.php:76
+#, fuzzy
+#| msgid "Public place"
+msgid "Slides places"
+msgstr "Lugar público"
+
+#: features/Slides/index.php:77
+#, fuzzy
+#| msgid "Public place"
+msgid "Slide place"
+msgstr "Lugar público"
+
+#: features/Slides/index.php:78
+#, fuzzy
+#| msgid "All Services"
+msgid "All palces"
+msgstr "Todos os serviços"
+
+#: features/Slides/index.php:79
+#, fuzzy
+#| msgid "Public place"
+msgid "Edit place"
+msgstr "Lugar público"
+
+#: features/Slides/index.php:80
+#, fuzzy
+#| msgid "Public place"
+msgid "View place"
+msgstr "Lugar público"
+
+#: features/Slides/index.php:81
+#, fuzzy
+#| msgid "Actualize %s"
+msgid "Actualize palce"
+msgstr "Atualizar %s"
+
+#: features/Slides/index.php:82
+#, fuzzy
+#| msgid "New Slide"
+msgid "New place"
+msgstr "Ver Slide"
+
+#: features/Slides/index.php:83
+#, fuzzy
+#| msgid "New %s name"
+msgid "New place name"
+msgstr "Novo nome de %s"
+
+#: features/Slides/index.php:84 features/Slides/index.php:85
+#, fuzzy
+#| msgid "Parent %s"
+msgid "Parent place"
+msgstr "%s pai"
+
+#: features/Slides/index.php:86
+#, fuzzy
+#| msgid "Search Slides"
+msgid "Search places"
+msgstr "Buscar slides"
+
+#: features/Slides/index.php:87
+#, fuzzy
+#| msgid "Public place"
+msgid "Popular places"
+msgstr "Lugar público"
+
+#: features/Slides/index.php:88
+msgid "Separate places with commas"
+msgstr ""
+
+#: features/Slides/index.php:89
+msgid "Insert or remove places"
+msgstr ""
+
+#: features/Slides/index.php:90
+msgid "Choose in more used loales"
+msgstr ""
+
+#: features/Slides/index.php:91
+#, fuzzy
+#| msgid "No %s founded"
+msgid "No locale founded"
+msgstr "Nenhum %s encontrado"
+
+#: features/Slides/index.php:92
+msgid "Locales"
+msgstr ""
+
+#: features/Taxonomy/admin.php:72
+msgid "Taxonomy"
+msgstr "Taxonomias"
+
+#: features/Taxonomy/index.php:183
+msgid "Taxonomia:"
+msgstr "Taxonomia:"
+
+#: features/Taxonomy/index.php:184
+msgid ""
+"The name of the taxonomy. Name should only contain lowercase letters and the "
+"underscore character, and not be more than 32 characters long (database "
+"structure restriction)."
+msgstr ""
+"O nome da taxinomia. Deve conter apenas letras minúsculas, underline e não "
+"pode ter mais do que 32 caracteres (instruções de restrição da base de "
+"dados)."
+
+#: features/Taxonomy/index.php:193
+msgid "The name of taxonomy in URL. Ex: slug/name-of-tye-item(plural)"
+msgstr "O nome da taxonimia na URL. Ex: slug/nome-do-tipo-de-item(plural)"
+
+#: features/Taxonomy/index.php:200
+msgid "Post types:"
+msgstr "Tipo de post:"
+
+#: features/Taxonomy/index.php:201
+msgid ""
+"Name of the object type for the taxonomy object. Object-types can be built-"
+"in Post Type or any Custom Post Type that may be registered."
+msgstr ""
+"Nome do tipo de objeto para o objeto de taxonomia. Os tipos de objeto podem "
+"ser do Tipo de postagem ou qualquer tipo de postagem personalizado que possa "
+"ser registrado."
+
+#: features/Taxonomy/index.php:210
+msgid "If the taxonomy should be publicly queryable."
+msgstr "Se a taxonomia deve ser publicamente acessada."
+
+#: features/Taxonomy/index.php:217
+msgid "Include a description of the taxonomy."
+msgstr "Uma breve descrição deste formulário."
+
+#: features/Taxonomy/index.php:224
+msgid "Whether to generate a default UI for managing this taxonomy."
+msgstr ""
+"Se deve gerar uma interface do usuário padrão para gerenciar essa taxonomia."
+
+#: features/Taxonomy/index.php:232
+msgid "Where to show the taxonomy in the admin menu. show_ui must be true."
+msgstr "Onde mostrar a taxonomia no menu admin. show_ui deve ser verdadeiro."
+
+#: features/Taxonomy/index.php:240
+msgid "true makes this taxonomy available for selection in navigation menus."
+msgstr ""
+"se marcado disponibiliza esta taxonomia para seleção nos menus de navegação."
+
+#: features/Taxonomy/index.php:246 features/Taxonomy/index.php:247
+msgid "Show tag cloud?"
+msgstr "Mostrar nuvem de tags?"
+
+#: features/Taxonomy/index.php:248
+msgid "Whether to allow the Tag Cloud widget to use this taxonomy."
+msgstr "Se permite que o widget Tag Cloud use essa taxonomia."
+
+#: features/Taxonomy/index.php:254 features/Taxonomy/index.php:255
+msgid "Show in quick edit?"
+msgstr "Mostrar na edição rápida?"
+
+#: features/Taxonomy/index.php:256
+msgid "Whether to show the taxonomy in the quick/bulk edit panel."
+msgstr "Se deve mostrar a taxonomia no painel de edição rápida/em massa."
+
+#: features/Taxonomy/index.php:262
+msgid "Metabox CB"
+msgstr ""
+
+#: features/Taxonomy/index.php:263
+msgid "Provide a callback function name for the meta box display."
+msgstr ""
+"Forneça um nome de função de retorno de chamada para a exibição da caixa "
+"meta."
+
+#: features/Taxonomy/index.php:268 features/Taxonomy/index.php:269
+msgid "Show admin column?"
+msgstr "Mostrar coluna no amdin?"
+
+#: features/Taxonomy/index.php:270
+msgid ""
+"Whether to allow automatic creation of taxonomy columns on associated post-"
+"types table."
+msgstr ""
+"Permitir a criação automática de colunas de taxonomia na tabela de pós-tipos "
+"associada."
+
+#: features/Taxonomy/index.php:275 features/Taxonomy/index.php:276
+msgid "Hierarchical?"
+msgstr "Hierárquico?"
+
+#: features/Taxonomy/index.php:277
+msgid ""
+"Is this taxonomy hierarchical (have descendants) like categories or not "
+"hierarchical like tags."
+msgstr ""
+"Essa taxonomia é hierárquica (tem descendentes) como categorias ou não como "
+"tags hierárquicas."
+
+#: features/Taxonomy/index.php:282
+msgid "Update count callback:"
+msgstr "Retorno de contagem de atualizações:"
+
+#: features/Taxonomy/index.php:283
+msgid ""
+"A function name that will be called when the count of an associated "
+"$object_type, such as post, is updated. Works much like a hook."
+msgstr ""
+"Um nome de função que será chamado quando a contagem de um $object_type "
+"associado, como postagem, for atualizada. Funciona muito parecido com um "
+"gancho."
+
+#: features/Taxonomy/index.php:295 features/Taxonomy/index.php:296
+msgid "Sort?"
+msgstr "Ordenar?"
+
+#: features/Taxonomy/index.php:297
+msgid ""
+" Whether this taxonomy should remember the order in which terms are added to "
+"objects."
+msgstr ""
+" Se essa taxonomia deve lembrar a ordem em que os termos são adicionados aos "
+"objetos."
+
+#: features/Taxonomy/index.php:303
+msgid ""
+"An array of labels for this taxonomy. By default tag labels are used for non-"
+"hierarchical types and category labels for hierarchical ones."
+msgstr ""
+"Um array de rótulos para esta taxonomia. Por default, rótulos de tags são "
+"usados para posts não hierárquicos e rótulos de categorias para hierárquicos."
+
+#: includes/admin-features.php:129
+msgid "No "
+msgstr "Não "
+
+#: libraries/jquery-ui/_jquery-ui.js:8
+msgid "'"
+msgstr ""
+
+#: piki.php:369
+msgid "O método usado não é permitido neste caso"
+msgstr ""
+
+#~ msgid "slide"
+#~ msgstr "slide"
+
+#~ msgid "Data successfully inserted"
+#~ msgstr "Dados registrados com sucesso"
+
+#~ msgid "Data edited successfully"
+#~ msgstr "Dados editados com sucesso"
+
+#~ msgid "Invalid username"
+#~ msgstr "Login inválido"
+
+#~ msgid "Click to login"
+#~ msgstr "Clique para se logar"
+
+#~ msgid "Back to login"
+#~ msgstr "Fazer login"
+
+#~ msgid "Click to recover your password"
+#~ msgstr "Clique para recuperar sua senha"
+
+#~ msgid "None"
+#~ msgstr "Nada"
+
+#~ msgid "january"
+#~ msgstr "janeiro"
+
+#~ msgid "february"
+#~ msgstr "fevereiro"
+
+#~ msgid "march"
+#~ msgstr "março"
+
+#~ msgid "april"
+#~ msgstr "abril"
+
+#~ msgid "may"
+#~ msgstr "maio"
+
+#~ msgid "june"
+#~ msgstr "junho"
+
+#~ msgid "july"
+#~ msgstr "julho"
+
+#~ msgid "august"
+#~ msgstr "agosto"
+
+#~ msgid "september"
+#~ msgstr "setembro"
+
+#~ msgid "october"
+#~ msgstr "outubro"
+
+#~ msgid "november"
+#~ msgstr "novembro"
+
+#~ msgid "december"
+#~ msgstr "dezembro"
+
+#~ msgid "monday"
+#~ msgstr "segunda"
+
+#~ msgid "tuesday"
+#~ msgstr "terça"
+
+#~ msgid "wednesday"
+#~ msgstr "quarta"
+
+#~ msgid "thursday"
+#~ msgstr "quinta"
+
+#~ msgid "friday"
+#~ msgstr "sexta"
+
+#~ msgid "saturday"
+#~ msgstr "sábado"
+
+#~ msgid "sunday"
+#~ msgstr "domingo"
+
+#~ msgid "Noon"
+#~ msgstr "Meio-dia"
+
+#~ msgid "Last month"
+#~ msgstr "Mês anterior"
+
+#~ msgid "Next month"
+#~ msgstr "Próximo mês"
+
+#~ msgid "Today"
+#~ msgstr "Hoje"
+
+#~ msgid "Colors"
+#~ msgstr "Cores"
+
+#~ msgid "Add new %s"
+#~ msgstr "Adicionar novo %s"
+
+#~ msgid "Edit %s"
+#~ msgstr "Editar %s"
+
+#~ msgid "New %s"
+#~ msgstr "Novo %s"
+
+#~ msgid "View %s"
+#~ msgstr "Ver %s"
+
+#~ msgid "Search %s"
+#~ msgstr "Buscar %s"
+
+#~ msgid "No %s in the bin"
+#~ msgstr "Nenhum %s na lixeira"
+
+#~ msgid "Enter your name"
+#~ msgstr "Digite seu nome"
+
+#~ msgid "Enter your email"
+#~ msgstr "Digite seu email"
+
+#~ msgid "General settings"
+#~ msgstr "Configurações gerais"
+
+#~ msgid "Address"
+#~ msgstr "Endereço"
+
+#~ msgid "Show map with contact form?"
+#~ msgstr "Exibir mapa com formulário de contato?"
+
+#~ msgid "No list available for selection"
+#~ msgstr "Nenhuma lista disponível para seleção"
+
+#~ msgid "You need configure an Google Mpas API Key"
+#~ msgstr "Você precisa configurar uma API Key do Goole Maps"
+
+#~ msgid "Thank you for contacting us!"
+#~ msgstr "Obrigado por entrar em contato!"
+
+#~ msgid "Send"
+#~ msgstr "Enviar"
+
+#~ msgid "Contact through the website."
+#~ msgstr "Contato através do site."
+
+#~ msgid "Your name"
+#~ msgstr "Seu nome"
+
+#~ msgid "Parent item colon"
+#~ msgstr "Artigo pai"
+
+#~ msgid "Add new field"
+#~ msgstr "Adicionar novo campo"
+
+#~ msgid "Unique ID"
+#~ msgstr "ID Único"
+
+#~ msgid "Field type"
+#~ msgstr "Tipo de campo"
+
+#~ msgid "In the form root"
+#~ msgstr "Na raiz do form"
+
+#~ msgid "Use captcha?"
+#~ msgstr "Usar captcha?"
+
+#~ msgid "Site key:"
+#~ msgstr "Chave do site:"
+
+#~ msgid "Secret key:"
+#~ msgstr "Secret key:"
+
+#~ msgid "Send by email"
+#~ msgstr "Enviar por email"
+
+#~ msgid "Send email?"
+#~ msgstr "Enviar email?"
+
+#~ msgid ""
+#~ "By checking this item, the data submitted in the form will be sent by "
+#~ "email"
+#~ msgstr ""
+#~ "Ao marcar este item, os dados enviados no formulário serão enviados por "
+#~ "email"
+
+#~ msgid "Email subject to be sent"
+#~ msgstr "Assunto do email a ser enviado"
+
+#~ msgid "Origin email:"
+#~ msgstr "Email de origem:"
+
+#~ msgid "Email sender. Must be a valid email from the same site domain"
+#~ msgstr ""
+#~ "Remetente de e-mail. Deve ser um email válido do mesmo domínio do site"
+
+#~ msgid "Email destination:"
+#~ msgstr "Email de destino:"
+
+#~ msgid ""
+#~ "Email(s) to which the data will be sent. For more than one email, "
+#~ "separate with `; ."
+#~ msgstr ""
+#~ "E-mail (s) para o qual os dados serão enviados. Para mais de um email, "
+#~ "separe com `;` ."
+
+#~ msgid "Reply Email (reply to):"
+#~ msgstr "E-mail de resposta (reply to):"
+
+#~ msgid "Address to which the email will be sent in case of an answer"
+#~ msgstr "Endereço para o qual o email será enviado em caso de resposta"
+
+#~ msgid "Show only the following user roles:"
+#~ msgstr "Mostrar apenas para esses papéis de usuários:"
+
+#~ msgid "If no role is chosen, everyone can view the field"
+#~ msgstr ""
+#~ "Se nenhum papel de usuário for escolhido, todos poderão ver este campo"
+
+#~ msgid "No albums available."
+#~ msgstr "Nenhum álbum disponível."
+
+#~ msgid "Add new field:"
+#~ msgstr "Adicionar novo campo:"
+
+#~ msgid "The form with "
+#~ msgstr "O formulário com "
+
+#~ msgid "Sorry, your token did not verify. Try reloading the page."
+#~ msgstr "Desculpe, seu token não foi verificado. Tente recarregar a página."
+
+#~ msgid "Content was successfully removed."
+#~ msgstr "O conteúdo foi removido com sucesso."
+
+#~ msgid "All"
+#~ msgstr "Todos"
+
+#~ msgid "Topic Reply"
+#~ msgstr "Responder tópico"
+
+#~ msgid "Create topic"
+#~ msgstr "Criar tópico"
+
+#~ msgid "Gallery"
+#~ msgstr "Galeria"
+
+#~ msgid "Gallery description"
+#~ msgstr "Descrição da galeria"
+
+#~ msgid "Images"
+#~ msgstr "Imagens"
+
+#~ msgid "Groups"
+#~ msgstr "Grupos"
+
+#~ msgid "Group"
+#~ msgstr "Grupo"
+
+#~ msgid "Delete"
+#~ msgstr "Remover"
+
+#~ msgid "Create Group"
+#~ msgstr "Criar grupo"
+
+#~ msgid "No group registered."
+#~ msgstr "Nenhum grupo registrado."
+
+#~ msgid "Group that the user will be part of"
+#~ msgstr "Grupo do qual o usuário fará parte"
+
+#~ msgid ""
+#~ "To mark more than one group, or uncheck one already marked, hold down the "
+#~ "\"Control\" key."
+#~ msgstr ""
+#~ "Para marcar mais de um grupo ou desmarcar um já marcado, mantenha "
+#~ "pressionada a tecla “Control”."
+
+#~ msgid "Successfully created group"
+#~ msgstr "Grupo criado com sucesso"
+
+#~ msgid "Group edited successfully"
+#~ msgstr "Grupo editado com sucesso"
+
+#~ msgid "Create"
+#~ msgstr "Criar"
+
+#~ msgid "Save"
+#~ msgstr "Salvar"
+
+#~ msgid "Name:"
+#~ msgstr "Nome:"
+
+#~ msgid "Group name."
+#~ msgstr "Nome do grupo."
+
+#~ msgid "Group description."
+#~ msgstr "Descrição do grupo."
+
+#~ msgid "Users:"
+#~ msgstr "Usuários:"
+
+#~ msgid "Enter the name of the user you want to add."
+#~ msgstr "Digite o nome do usuário que você deseja adicionar."
+
+#~ msgid "No posts to Review."
+#~ msgstr "Nenhum post para revisar."
+
+#~ msgid "No image posted with hashtag #"
+#~ msgstr "Nenhuma imagem publicada com hashtag #"
+
+#~ msgid "Instagram settings"
+#~ msgstr "Opções do Instagram"
+
+#~ msgid "Select images"
+#~ msgstr "Selecionar imagens"
+
+#~ msgid "Instagram options:"
+#~ msgstr "Opções do Instagram:"
+
+#~ msgid "No image founded with hashtag #"
+#~ msgstr "Nenhuma imagem encontrada com a hashtag #"
+
+#~ msgid "Load more pictures"
+#~ msgstr "Carregar mais imagens"
+
+#~ msgid "You do not have permission to perform this operation."
+#~ msgstr "Você não tem permissão para realizar esta operação."
+
+#~ msgid "Approve"
+#~ msgstr "Aprovar"
+
+#~ msgid "Disapprove"
+#~ msgstr "Desaprovar"
+
+#~ msgid "Enlarge"
+#~ msgstr "Prolongar"
+
+#~ msgid "About the picture"
+#~ msgstr "Sobre a imagem"
+
+#~ msgid "About the video"
+#~ msgstr "Sobre o vídeo"
+
+#~ msgid "Video URL"
+#~ msgstr "URL do vídeo"
+
+#~ msgid "About the audio"
+#~ msgstr "Sobre o áudio"
+
+#~ msgid "Audio file"
+#~ msgstr "Arquivo de áudio"
+
+#~ msgid "The Slide must have the vertical or horizontal size provided."
+#~ msgstr "O Slide deve ter o tamanho vertical ou horizontal fornecido."
+
+#~ msgid "Newsletter Settings"
+#~ msgstr "Configurações de Newsletter"
+
+#~ msgid "Newsletter"
+#~ msgstr "Newsletter"
+
+#~ msgid "Newsletter Settings:"
+#~ msgstr "Configurações de Newsletter:"
+
+#~ msgid "General"
+#~ msgstr "Geral"
+
+#~ msgid "Show \"Name\" field?"
+#~ msgstr "Mostrar campo “Nome”?"
+
+#~ msgid "Integrate with mailchimp?"
+#~ msgstr "Integrar com Mailchimp?"
+
+#~ msgid "Integrate with Sendpress?"
+#~ msgstr "Integrar com Sendpress?"
+
+#~ msgid "Joinlist:"
+#~ msgstr "Lista de inscrição:"
+
+#~ msgid "Ops! You need to fill in your email correctly."
+#~ msgstr "Ops! Você precisa informar um email válido."
+
+#~ msgid "Thank you for subscribing!"
+#~ msgstr "Obrigado por se inscrever!"
+
+#~ msgid "Ops! Enter your email"
+#~ msgstr "Ops! Informe seu email"
+
+#~ msgid "Next"
+#~ msgstr "Próximo"
+
+#~ msgid "Nov"
+#~ msgstr "Nov"
+
+#~ msgid "The %s file could not be created."
+#~ msgstr "O arquivo %s não pôde ser criado."
+
+#~ msgid ""
+#~ "The name of the post type. max. 20 characters, cannot contain capital "
+#~ "letters or spaces."
+#~ msgstr ""
+#~ "O nome do tipo de postagem. max. 20 caracteres, não podem conter letras "
+#~ "maiúsculas ou espaços."
+
+#~ msgid "Genre:"
+#~ msgstr "Gênero:"
+
+#~ msgid "Genre of the post type."
+#~ msgstr "Gênero deste tipo de post."
+
+#~ msgid "Plural label:"
+#~ msgstr "Rótulo no plural:"
+
+#~ msgid "A plural descriptive name for the post type marked for translation."
+#~ msgstr ""
+#~ "Um nome descritivo plural para o tipo de postagem marcado para tradução."
+
+#~ msgid "Singular label:"
+#~ msgstr "Rótulo no singular:"
+
+#~ msgid ""
+#~ "A singular descriptive name for the post type marked for translation."
+#~ msgstr ""
+#~ "Um nome descritivo singular para o tipo de postagem marcado para tradução."
+
+#~ msgid "Public"
+#~ msgstr "Público"
+
+#~ msgid "Show on the front"
+#~ msgstr "Mostrar no front"
+
+#~ msgid "Show User Interface"
+#~ msgstr "Mostrar Interface de Usuário"
+
+#~ msgid "Show in the navigation menus"
+#~ msgstr "Mostrar nos menus de navegação"
+
+#~ msgid "Show in menu"
+#~ msgstr "Mostrar no menu"
+
+#~ msgid "Position where the button will be displayed in the menu."
+#~ msgstr "Posição onde o botão será exibido no menu."
+
+#~ msgid "Hierarchical Posts."
+#~ msgstr "Posts hierarquicos."
+
+#~ msgid ""
+#~ "Whether the post type is hierarchical (e.g. page). Allows Parent to be "
+#~ "specified. The 'supports' parameter should contain 'page-attributes' to "
+#~ "show the parent select box on the editor page."
+#~ msgstr ""
+#~ "Se o tipo de postagem é hierárquico (por exemplo, página). Permite que o "
+#~ "pai seja especificado. O parâmetro ‘supports’ deve conter ‘page-"
+#~ "attributes’ para mostrar a caixa de seleção pai na página do editor."
+
+#~ msgid ""
+#~ "An alias for calling add_post_type_support() directly. As of 3.5, boolean "
+#~ "false can be passed as value instead of an array to prevent default "
+#~ "(title and editor) behavior."
+#~ msgstr ""
+#~ "Uma alias para chamar add_post_type_support() diretamente. A partir de "
+#~ "3.5, boolean false pode ser passado como valor em vez de um array para "
+#~ "evitar o comportamento padrão (título e editor)."
+
+#~ msgid "The terms that may be associated with posts."
+#~ msgstr "Os termos que podem estar associados a postagens."
+
+#~ msgid "View site post listing."
+#~ msgstr "Ver listagem de postagens do site."
+
+#~ msgid "Disable query var"
+#~ msgstr "Desabilitar acesso por query var"
+
+#~ msgid "Delete with user"
+#~ msgstr "Deletar com o usuário"
+
+#~ msgid ""
+#~ "Whether to delete posts of this type when deleting a user. If true, posts "
+#~ "of this type belonging to the user will be moved to trash when then user "
+#~ "is deleted. If false, posts of this type belonging to the user will not "
+#~ "be trashed or deleted. If not set (the default), posts are trashed if "
+#~ "post_type_supports('author'). Otherwise posts are not trashed or deleted."
+#~ msgstr ""
+#~ "Se deseja excluir postagens desse tipo ao excluir um usuário. Se marcado, "
+#~ "postagens desse tipo pertencentes ao usuário serão movidas para a lixeira "
+#~ "quando o usuário for excluído. Se desmarcado, as mensagens desse tipo "
+#~ "pertencentes ao usuário não serão descartadas ou excluídas. Se não for "
+#~ "definido (o padrão), as postagens serão descartadas se post_type_supports "
+#~ "(‘author’). Caso contrário, as postagens não serão descartadas ou "
+#~ "excluídas."
+
+#~ msgid "Show in rest"
+#~ msgstr "Mostrar em Rest"
+
+#~ msgid "Whether to expose this post type in the REST API."
+#~ msgstr "Seja para expor este tipo de postagem na API REST."
+
+#~ msgid "Rest slug:"
+#~ msgstr "Slug rest:"
+
+#~ msgid ""
+#~ "The base slug that this post type will use when accessed using the REST "
+#~ "API."
+#~ msgstr ""
+#~ "O slug base que esse tipo de postagem usará quando acessado usando a API "
+#~ "REST."
+
+#~ msgid "Rest controller:"
+#~ msgstr "Controlador de Rest:"
+
+#~ msgid ""
+#~ "An optional custom controller to use instead of WP_REST_Posts_Controller. "
+#~ "Must be a subclass of WP_REST_Controller."
+#~ msgstr ""
+#~ "Um controlador personalizado opcional para usar em vez de "
+#~ "WP_REST_Posts_Controller. Deve ser uma subclasse de WP_REST_Controller."
+
+#~ msgid "Permissões"
+#~ msgstr "Permissões"
+
+#~ msgid "Capabilities for this post type."
+#~ msgstr "Habilitar ou desabilitar este tipo de post."
+
+#~ msgid "Stopped liking "
+#~ msgstr "Deixou de curtir "
+
+#~ msgid "Disliked "
+#~ msgstr "Descurtido "
+
+#~ msgid "No longer dislike "
+#~ msgstr "Deixou de discutir "
+
+#~ msgid "Liked "
+#~ msgstr "Curtido "
+
+#~ msgid "The comment "
+#~ msgstr "O comentário "
+
+#~ msgid "You must be logged in to vote."
+#~ msgstr "Você precisa estar logado para votar."
+
+#~ msgid "PostLike: The object type is required."
+#~ msgstr "PostLike: O tipo de objeto é obrigatório."
+
+#~ msgid "PostLike: The "
+#~ msgstr "PostLike: O(a) "
+
+#~ msgid "PostLike: The reaction type is required."
+#~ msgstr "PostLike: O tipo de reação é obrigatório."
+
+#~ msgid "No informed object."
+#~ msgstr "Nenhum objeto informado."
+
+#~ msgid ""
+#~ "An email to retrieve your password has been sent to the <strong>%s</ "
+#~ "strong> address."
+#~ msgstr ""
+#~ "Um email para recuperar sua senha foi enviado para o email <strong>%s</ "
+#~ "strong>."
+
+#~ msgid "Invalid email address or not registered"
+#~ msgstr "Email inválido ou não cadastrado"
+
+#~ msgid "Invalid password"
+#~ msgstr "Senha inválida"
+
+#~ msgid "User profile"
+#~ msgstr "Perfil de usuário"
+
+#~ msgid "Enable profile?"
+#~ msgstr "Habilitar perfil?"
+
+#~ msgid "Assigned role"
+#~ msgstr "Papel de usuário associado"
+
+#~ msgid "Destination URL in the register"
+#~ msgstr "URL de destino após o registro"
+
+#~ msgid "Destination URL in login"
+#~ msgstr "URL de destino após o login"
+
+#~ msgid "Instructions:"
+#~ msgstr "Instruções:"
+
+#~ msgid ""
+#~ "To use the form as a profile, you need to have the following fields in "
+#~ "the form:"
+#~ msgstr ""
+#~ "Para usar o formulário como um perfil, você precisa ter os seguintes "
+#~ "campos no formulário:"
+
+#~ msgid "Full user name"
+#~ msgstr "Nome completo"
+
+#~ msgid "User login"
+#~ msgstr "Nome de usuário"
+
+#~ msgid "User e-mail"
+#~ msgstr "Email do usuário"
+
+#~ msgid "User password"
+#~ msgstr "Senha do usuário"
+
+#~ msgid "The following fields are optional"
+#~ msgstr "Os campos a seguir são opcionais"
+
+#~ msgid "User avatar"
+#~ msgstr "Avatar do usuário"
+
+#~ msgid "URL to user's site"
+#~ msgstr "URL para o site do usuário"
+
+#~ msgid "Terms of use acceptance checkbox"
+#~ msgstr "Checkbox de aceite dos termos de uso"
+
+#~ msgid "Sign up"
+#~ msgstr "Cadastrar"
+
+#~ msgid "Your email"
+#~ msgstr "Seu email"
+
+#~ msgid "Password"
+#~ msgstr "Senha"
+
+#~ msgid "Log in"
+#~ msgstr "Entrar"
+
+#~ msgid "Your Password"
+#~ msgstr "Sua senha"
+
+#~ msgid "[%s] New User Registration"
+#~ msgstr "[%s] Novo registro de usuário"
+
+#~ msgid "Welcome!"
+#~ msgstr "Seja bem vindo(a)!"
+
+#~ msgid "Here are your login details:"
+#~ msgstr "Aqui estão seus detalhes de Login:"
+
+#~ msgid "We look forward to your visit"
+#~ msgstr "Estamos ansiosos por sua visita"
+
+#~ msgid "Login Information"
+#~ msgstr "Informações de Login"
+
+#~ msgid "User login box"
+#~ msgstr "Boxe de login do usuário"
+
+#~ msgid "Logout"
+#~ msgstr "Sair"
+
+#~ msgid ""
+#~ "<h2>Your resume has been sent successfully<h2> <p>We is keen to interest "
+#~ "you.</p>"
+#~ msgstr ""
+#~ "<h2>Seu currículo foi enviado com sucesso<h2> <p>Gostaríamos de lhe "
+#~ "interessar.</ p>"
+
+#~ msgid "Submit Resume"
+#~ msgstr "Enviar currículo"
+
+#~ msgid "Save Resume"
+#~ msgstr "Salvar currículo"
+
+#~ msgid "Resume Registration"
+#~ msgstr "Registro de currículo"
+
+#~ msgid "Personal data"
+#~ msgstr "Dados pessoais"
+
+#~ msgid "Date of birth"
+#~ msgstr "Data de nascimento"
+
+#~ msgid "Genre"
+#~ msgstr "Gênero"
+
+#~ msgid "Male"
+#~ msgstr "Masculino"
+
+#~ msgid "Female"
+#~ msgstr "Feminino"
+
+#~ msgid "ASNl from"
+#~ msgstr "ASNl de"
+
+#~ msgid "Contact"
+#~ msgstr "Contato"
+
+#~ msgid "Fixed phone"
+#~ msgstr "Telefone fixo"
+
+#~ msgid "Mobile phone"
+#~ msgstr "Telefone celular"
+
+#~ msgid "Number"
+#~ msgstr "Número"
+
+#~ msgid "Neighborhood"
+#~ msgstr "Bairro"
+
+#~ msgid "Zip code"
+#~ msgstr "CEP"
+
+#~ msgid "State City"
+#~ msgstr "Cidade Estado"
+
+#~ msgid "Academic education"
+#~ msgstr "Formação acadêmica"
+
+#~ msgid "Level of education"
+#~ msgstr "Nível de ensino"
+
+#~ msgid "Incomplete Fundamental "
+#~ msgstr "Fundamental incompleto "
+
+#~ msgid "Complete Fundamental"
+#~ msgstr "Fundamental completo"
+
+#~ msgid "Incomplete Middle"
+#~ msgstr "Médio incompleto"
+
+#~ msgid "Complete Middle"
+#~ msgstr "Médio completo"
+
+#~ msgid "Higher level"
+#~ msgstr "Nível superior"
+
+#~ msgid "Top level status"
+#~ msgstr "Status de nível superior"
+
+#~ msgid "Complete"
+#~ msgstr "Completo"
+
+#~ msgid "Incomplete"
+#~ msgstr "Incompleto"
+
+#~ msgid "Master"
+#~ msgstr "Mestrado"
+
+#~ msgid "Doctorate degree"
+#~ msgstr "Doutorado"
+
+#~ msgid "Complementary courses"
+#~ msgstr "Cursos complementares"
+
+#~ msgid "Name of course"
+#~ msgstr "Nome do curso"
+
+#~ msgid "Duration"
+#~ msgstr "Duração"
+
+#~ msgid "Date of the conclusion"
+#~ msgstr "Data de conclusão"
+
+#~ msgid "Course description"
+#~ msgstr "Descrição do curso"
+
+#~ msgid "Languages"
+#~ msgstr "Linguagesn"
+
+#~ msgid "Language"
+#~ msgstr "Linguagem"
+
+#~ msgid "German"
+#~ msgstr "Alemão"
+
+#~ msgid "Arabic"
+#~ msgstr "Árabe"
+
+#~ msgid "Spanish"
+#~ msgstr "Espanhol"
+
+#~ msgid "French"
+#~ msgstr "Francês"
+
+#~ msgid "Hindu"
+#~ msgstr "Hindu"
+
+#~ msgid "English"
+#~ msgstr "Inglês"
+
+#~ msgid "Italian"
+#~ msgstr "Italiano"
+
+#~ msgid "Japanese"
+#~ msgstr "Japonês"
+
+#~ msgid "Mandarin"
+#~ msgstr "Mandarin"
+
+#~ msgid "Russian"
+#~ msgstr "Russo"
+
+#~ msgid "Knowledge level"
+#~ msgstr "Nível de conhecimento"
+
+#~ msgid "Professional Experiences"
+#~ msgstr "Experiências profissionais"
+
+#~ msgid "Company Name"
+#~ msgstr "Nome da colaborador"
+
+#~ msgid "Admission date"
+#~ msgstr "Data de admissão"
+
+#~ msgid "Date of dismissal"
+#~ msgstr "Data de nascimento"
+
+#~ msgid "Office"
+#~ msgstr "Horário de funcionamento"
+
+#~ msgid "Description of activities carried out"
+#~ msgstr "Descrição das atividades realizadas"
+
+#~ msgid "Share this"
+#~ msgstr "CompartilharC"
+
+#~ msgid "Shopping"
+#~ msgstr "Shopping"
+
+#~ msgid "General options"
+#~ msgstr "Opções gerais"
+
+#~ msgid "Enable services?"
+#~ msgstr "Habilitar serviços?"
+
+#~ msgid "Elements colors"
+#~ msgstr "Cores dos elementos"
+
+#~ msgid "Shipping options"
+#~ msgstr "Opções de entrega"
+
+#~ msgid "Postcode of origin"
+#~ msgstr "CEP de origem"
+
+#~ msgid "Minimum value for free shipping"
+#~ msgstr "Valor mínimo para entrega grátis"
+
+#~ msgid "Enable showcase?"
+#~ msgstr "Habilitar showcase?"
+
+#~ msgid "Resolution of images"
+#~ msgstr "Resolução das imagens"
+
+#~ msgid "Adresses"
+#~ msgstr "Endereços"
+
+#~ msgid "Add New %s"
+#~ msgstr "Adicionar novo %s"
+
+#~ msgid "All %s"
+#~ msgstr "Todos os %s"
+
+#~ msgid "Parent %s:"
+#~ msgstr "%s pai:"
+
+#~ msgid "No %s found."
+#~ msgstr "Nenhum %s encontrado."
+
+#~ msgid "No %s in Trash."
+#~ msgstr "Nenhum %s na lixeira."
+
+#~ msgid "Users adresses."
+#~ msgstr "Endereços do usuário."
+
+#~ msgid "Address created successfully."
+#~ msgstr "Endereço adicionado com sucesso."
+
+#~ msgid "Create address"
+#~ msgstr "Criar endereço"
+
+#~ msgid "Save address"
+#~ msgstr "Salvar endereço"
+
+#~ msgid "Address name"
+#~ msgstr "Nome do endereço"
+
+#~ msgid "Ítems"
+#~ msgstr "Ítens"
+
+#~ msgid "Can not deliver to CEP informed."
+#~ msgstr "Não é possível entregar no CEP informado."
+
+#~ msgid "Section"
+#~ msgstr "Sessão"
+
+#~ msgid "Sections"
+#~ msgstr "Sessões"
+
+#~ msgid "Item"
+#~ msgstr "Ítem"
+
+#~ msgid "Items"
+#~ msgstr "Ítens"
+
+#~ msgid "Products items."
+#~ msgstr "Ítens de produtos."
+
+#~ msgid "Product created successfully."
+#~ msgstr "Produto criado com sucesso."
+
+#~ msgid "Create product"
+#~ msgstr "Criar produto"
+
+#~ msgid "Save product"
+#~ msgstr "Salvar produto"
+
+#~ msgid "Product name"
+#~ msgstr "Nome do produto"
+
+#~ msgid "Item created successfully."
+#~ msgstr "Ítem criado com sucesso."
+
+#~ msgid "Create item"
+#~ msgstr "Criar ítem"
+
+#~ msgid "Save item"
+#~ msgstr "Salvar ítem"
+
+#~ msgid "Item name"
+#~ msgstr "Nome do ítem"
+
+#~ msgid "Item description"
+#~ msgstr "Descrição do item"
+
+#~ msgid "Aditional info"
+#~ msgstr "Informações adicionais"
+
+#~ msgid "Code"
+#~ msgstr "Código"
+
+#~ msgid "Weight"
+#~ msgstr "Peso"
+
+#~ msgid "In grams"
+#~ msgstr "Em gramas"
+
+#~ msgid "Select a color"
+#~ msgstr "Selecione uma cor"
+
+#~ msgid "Show as new"
+#~ msgstr "Mostrar como novo"
+
+#~ msgid "Will be labeled as new during this period"
+#~ msgstr "Será etiquetado como novo, durante este período"
+
+#~ msgid "Show as offer"
+#~ msgstr "Mostrar como fornecedor"
+
+#~ msgid "Will be labeled as offer during this period"
+#~ msgstr "Será etiquetado como fornecedor, durante este período"
+
+#~ msgid "List photo"
+#~ msgstr "Lista de fotos"
+
+#~ msgid "Stock"
+#~ msgstr "Estoque"
+
+#~ msgid "Size"
+#~ msgstr "Tamanho"
+
+#~ msgid "Amount"
+#~ msgstr "Total"
+
+#~ msgid "CEP"
+#~ msgstr "CEP"
+
+#~ msgid "Showcase"
+#~ msgstr "Showcase"
+
+#~ msgid "Showcases"
+#~ msgstr "Mostrar como novo"
+
+#~ msgid "Store showcases."
+#~ msgstr "Serviços da loja."
+
+#~ msgid "Showcase created successfully."
+#~ msgstr "Ítem criado com sucesso."
+
+#~ msgid "Create showcase"
+#~ msgstr "Criar tópico"
+
+#~ msgid "Save showcase"
+#~ msgstr "Salvar alterações"
+
+#~ msgid "Cover"
+#~ msgstr "Capa"
+
+#~ msgid "Button label"
+#~ msgstr "Rótulo do botão"
+
+#~ msgid "Target window"
+#~ msgstr "Janela de destino"
+
+#~ msgid "The product reported does not exist"
+#~ msgstr "O produto informado não existe"
+
+#~ msgid "%s was added to your cart."
+#~ msgstr "%s foi adicionado(a) ao seu carrinho."
+
+#~ msgid "There was a problem adding product"
+#~ msgstr "Ocorreu um erro ao adicionar o produto"
+
+#~ msgid "You are not allowed to do this"
+#~ msgstr "Você não tem permissão para fazer isso"
+
+#~ msgid "Item has been removed from your cart"
+#~ msgstr "O ítem foi removido do seu carrinho"
+
+#~ msgid "There was an error while trying to remove the item"
+#~ msgstr "Ocorreu um erro ao tentar remover o ítem"
+
+#~ msgid "Add to cart"
+#~ msgstr "Adicionar ao carrinho"
+
+#~ msgid "Shopping cart"
+#~ msgstr "Carrinho de compras"
+
+#~ msgid "Image for mobile gadgets?"
+#~ msgstr "Imagem para dispositivos móveis?"
+
+#~ msgid "Show videos?"
+#~ msgstr "Mostrar vídeos?"
+
+#~ msgid "Add new Slide"
+#~ msgstr "Adicionar novo Slide"
+
+#~ msgid "No Slides fonded"
+#~ msgstr "Nenhum slide encontrado"
+
+#~ msgid "hide"
+#~ msgstr "ocultar"
+
+#~ msgid "ERROR"
+#~ msgstr "ERRO"
+
+#~ msgid "SUCCESS"
+#~ msgstr "SUCESSO"
+
+#~ msgid "The file %s of %s library not exists."
+#~ msgstr "O arquivo %s da biblioteca %s não existe."
+
+#~ msgid "The method used is not allowed in this case."
+#~ msgstr "O método usado não é permitido neste caso."
+
+#~ msgid "No items found."
+#~ msgstr "Nenhum ítem encontrado."
+
+#~ msgid "before"
+#~ msgstr "antes"
+
+#~ msgid "Page"
+#~ msgstr "Página"
+
+#~ msgid "Estimate"
+#~ msgstr "Estimativa"
+
+#~ msgid "Sign in"
+#~ msgstr "Fazer login"
+
+#~ msgid "Default price"
+#~ msgstr "Preço padrão"
+
+#, fuzzy
+#~| msgid "Search %s"
+#~ msgid "Search $s"
+#~ msgstr "Buscar %s"
+
+#~ msgid "Total of items"
+#~ msgstr "Total de ítens"
+
+#~ msgid "Extra small"
+#~ msgstr "Muito pequeno"
+
+#~ msgid "Small"
+#~ msgstr "Pequeno"
+
+#~ msgid "Medium"
+#~ msgstr "Médio"
+
+#~ msgid "Extra Large"
+#~ msgstr "Extra grande"
+
+#~ msgid "Público"
+#~ msgstr "Público(a)"
+
+#~ msgid "Price of product"
+#~ msgstr "Preço do produto"
+
+#~ msgid "Sign up to our mailing list"
+#~ msgstr "Cadastre na nossa lista"
+
+#~ msgid "The Mailchimp Key API has not been defined"
+#~ msgstr "A API Key do Mailchip não foi definida"
+
+#~ msgid "Mailchimp list ID not set"
+#~ msgstr "O ID da Lista do Mailchimp não foi definida"
+
+#~ msgid "Ops! Errors occurred in validation."
+#~ msgstr "Ops! Ocorreram erros na validação."
+
+#~ msgid "Close"
+#~ msgstr "Fechar"
+
+#~ msgid "Nickname"
+#~ msgstr "Apelido"
+
+#~ msgid "City / State"
+#~ msgstr "Cidade / Estado"
+
+#~ msgid "Change my profile data"
+#~ msgstr "Mudar os dados do meu perfil"
+
+#~ msgid "Following:"
+#~ msgstr "Seguindo:"
+
+#~ msgid "Ops! Validation errors occurred."
+#~ msgstr "Ops! Ocorreram erros de validação."

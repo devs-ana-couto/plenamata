@@ -1,0 +1,78 @@
+.youtube-inline-widget {
+	display: block;
+	text-align: center;
+}
+.youtube-inline-box {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 57px;
+	background: #2f3844;
+}
+.youtube-inline-box .close-button {
+	position: absolute;
+	display: block;
+	right: 57px;
+	top: 20px;
+	line-height: 16px;
+	color: #f8d117;
+	font-weight: bold;
+	cursor: pointer;
+	letter-spacing: 0.03em;
+}
+.youtube-inline-box .close-button .icon {
+	position: relative;
+	float: right;
+	width: 16px;
+	height: 16px;
+	margin-left: 5px;
+	border: 1px solid #f8d117;
+	-webkit-border-radius: 51%;
+	-moz-border-radius: 51%;
+	border-radius: 51%;
+}
+.youtube-inline-box .close-button .icon::before,
+.youtube-inline-box .close-button .icon::after{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 6px;
+	top: 3px;
+	width: 2px;
+	height: 8px;
+	background: #f8d117;
+}
+.youtube-inline-box .close-button .icon::before {
+	-ms-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+}
+.youtube-inline-box .close-button .icon::after {
+	-ms-transform:rotate(135deg);
+	-moz-transform:rotate(135deg);
+	-webkit-transform:rotate(135deg);
+	-o-transform:rotate(135deg);
+}
+
+@media ( max-width : 640px ) {
+	.youtube-inline-box {
+		padding: 45px 16px 35px;
+	}
+	.youtube-inline-box .close-button {
+		line-height: 20px;
+		right: 16px;
+		top: 12px;
+		text-decoration: underline;
+	}
+	.youtube-inline-box .close-button .icon {
+		width: 20px;
+		height: 20px;
+	}
+	.youtube-inline-box .close-button .icon::before,
+	.youtube-inline-box .close-button .icon::after{
+		height: 10px;
+		left: 8px;
+		top: 4px;
+	}
+}

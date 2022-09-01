@@ -1,0 +1,278 @@
+.piki-calendar {
+	display: block;
+	position: relative;
+	width: 423px;
+    border: 0;
+	padding: 0;
+    background: #455060;
+}
+
+/* Navigation */
+
+.piki-calendar .navigation {
+	display: block;
+	padding: 14px 20px;
+	text-align: center;
+	border-bottom: #8a9fbe 1px solid;
+}
+.piki-calendar .center {
+	display: inline-table;
+}
+.piki-calendar .desc-date {
+	float: left;
+	width: 160px;
+	font-size: 160%;
+	color: #fff;
+	font-weight: bold;
+	line-height: 24px;
+}
+.piki-calendar .navigation .arrow {
+	float: left;
+	position: relative;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	text-indent: -99999px;
+}	
+.piki-calendar .navigation .arrow:before,
+.piki-calendar .navigation .arrow:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 8px;
+	width: 9px;
+	height: 3px;
+	background: #f5db12;
+	cursor: pointer;
+}	
+.piki-calendar .navigation .arrow.left:before,
+.piki-calendar .navigation .arrow.right:after {
+	-ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);		
+}
+.piki-calendar .navigation .arrow.left:after,
+.piki-calendar .navigation .arrow.right:before {
+	-ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);		
+}
+.piki-calendar .navigation .arrow.left:before,
+.piki-calendar .navigation .arrow.right:before {
+	top: 8px;
+}
+.piki-calendar .navigation .arrow.left:after,
+.piki-calendar .navigation .arrow.right:after {
+	bottom: 8px;
+}
+
+/* Days of week */
+
+.piki-calendar .week-days {
+	display: block;
+	list-style: none;
+	padding: 0 12px;
+	margin: 20px 0 8px;
+}
+.piki-calendar .week-days li {
+	float: left;
+	width: 57px;
+}
+.piki-calendar .week-days li span {
+	display: block;
+	line-height: 12px;
+	font-weight: normal;
+	font-size: 160%;
+	color: #8a9fbe;
+	text-align: center;
+}
+
+/* Grid days */
+
+.piki-calendar .grid-days {
+	display: block;
+	padding: 0 12px 20px;
+}
+.piki-calendar .grid-days span {
+	float: left;
+	display: block;
+	width: 57px;
+	height: 45px;
+}
+.piki-calendar .grid-days span a {
+	display: block;
+	margin: 2px auto;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	font-size: 140%;
+	color: #fff;
+	background-color: #37414e;
+	cursor: pointer;
+	-webkit-border-radius: 51%;
+	-moz-border-radius: 51%;
+	border-radius: 51%;
+}	
+.piki-calendar .grid-days span a:hover {
+	background-color: #57616e;
+}
+.piki-calendar .grid-days span.disabled a {
+	background: #3e4958;
+	cursor: default;
+	color: #7d838c;
+}
+.piki-calendar .grid-days span.active a {
+	width: 40px;
+	height: 40px;
+	margin-top: -2px;
+	background: #f5db12;
+	color: #455060;
+	line-height: 38px;
+	font-weight: bold;
+	font-size: 24px;
+	border: 2px solid #38424e;
+}
+
+/* Toogle button */
+.piki-calendar .toggle-button {
+	display: none;
+	padding: 12px 0;
+	margin: 0 20px;
+	border-top: 1px solid #5d6b7e;
+	text-align: center;
+}
+.piki-calendar .toggle-button span {
+	position: relative;
+	display: inline-table;
+	padding-left: 20px;
+	color: #8a9fbe;
+	font-size: 120%;
+	line-height: 9px;
+	cursor: pointer;
+}
+.piki-calendar .toggle-button span:before,
+.piki-calendar .toggle-button span:after {
+	position: absolute;
+	left: 0;
+	top: 2px;
+	content: '';
+	display: block;
+	width: 9px;
+	height: 3px;
+	background-color: #8a9fbe;
+}
+.piki-calendar .toggle-button span:before {
+	left: 5px;
+	-ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);		
+}
+.piki-calendar .toggle-button span:after {
+	-ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);		
+}
+
+/* Mobile */
+
+    .piki-calendar.mobile {
+        width: 320px;
+	}
+	.piki-calendar.mobile .week-days li,
+	.piki-calendar.mobile .grid-days span {
+	    width: 43px;
+	}
+    .piki-calendar.mobile .week-days {
+    	padding-top: 12px;
+    	margin-top: 0;
+    }
+    .piki-calendar.mobile .week-days li span {
+	    font-size: 120%;
+	}
+	.piki-calendar.mobile .grid-days {
+		margin-top: 7px;
+		padding-top: 0;
+		padding-bottom: 0;
+		overflow: hidden;
+	}
+	.piki-calendar.mobile .grid-days span {
+		height: 37px;
+	}
+	.piki-calendar.mobile .toggle-button {
+		display: block;
+	}
+	.piki-calendar.mobile .navigation {
+		display: none;
+	}
+	.piki-calendar.mobile .grid-days {
+		height: 37px;
+		-webkit-transition: height 500ms linear;
+	    -moz-transition: height 500ms linear;
+	    -o-transition: height 500ms linear;
+	    transition: height 500ms linear;
+	}
+
+	/* Opened */
+	.piki-calendar.mobile.opened .grid-days {
+		height: 225px;
+	}
+	.piki-calendar.mobile.opened .navigation {
+		display: block;
+	}
+
+@media( max-width: 1279px ){
+    .calendario {
+        width: 291px;
+    }
+    .calendario .navigation {
+        padding: 5px 9px;
+    }
+    .calendario .navigation .desc-date {
+    	font-size: 110%;
+    	letter-spacing: 0.03em;
+    }
+    .calendario .navigation .arrow::before,
+    .calendario .navigation .arrow::after {
+		width: 6px;
+		height: 2px;
+    }
+    .calendario .navigation .arrow.left::before,
+    .calendario .navigation .arrow.right::before {
+		top: 9px;
+    }
+    .calendario .navigation .arrow.left::after,
+    .calendario .navigation .arrow.right::after {
+		bottom: 9px;
+    }
+    .calendario .week-days {
+		padding: 0 9px;
+		margin: 13px 0 0;
+    }
+    .calendario .week-days li {
+		width: 39px;
+    }
+    .calendario .week-days li span {
+		font-size: 110%;
+    }
+    .calendario .grid-days {
+		padding: 9px;
+    }
+    .calendario .grid-days span {
+		width: 39px;
+		height: 31px;
+    }
+    .calendario .grid-days span a {
+		width: 26px;
+		height: 26px;
+		line-height: 26px;
+		font-size: 10px;
+    }
+    .calendario .grid-days span.active a {
+		margin: 0 auto;
+		width: 29px;
+		height: 29px;
+		line-height: 25px;
+		font-size: 16px;
+    }
+}

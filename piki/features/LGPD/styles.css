@@ -1,0 +1,87 @@
+#pklgpd-box {
+  padding: 32px 0;
+  color: #fff;
+  display: none;
+  transition: all 600ms; }
+  #pklgpd-box > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    padding: 0 40px;
+    margin: 0 auto; }
+    #pklgpd-box > div > div {
+      max-width: 647px;
+      margin-right: 40px; }
+  #pklgpd-box .title {
+    font-style: normal;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700; }
+  #pklgpd-box p {
+    margin: 8px 0 0;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff; }
+  #pklgpd-box button.close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0IDEuNDEwMDZMMTIuNTkgNi4xMDM1MmUtMDVMNyA1LjU5MDA2TDEuNDEgNi4xMDM1MmUtMDVMMCAxLjQxMDA2TDUuNTkgNy4wMDAwNkwwIDEyLjU5MDFMMS40MSAxNC4wMDAxTDcgOC40MTAwNkwxMi41OSAxNC4wMDAxTDE0IDEyLjU5MDFMOC40MSA3LjAwMDA2TDE0IDEuNDEwMDZaIiBmaWxsPSIjRjJGMkYyIi8+Cjwvc3ZnPgo=) no-repeat center center; }
+  #pklgpd-box nav {
+    display: flex; }
+    #pklgpd-box nav button,
+    #pklgpd-box nav a {
+      height: 40px;
+      margin: 0 8px;
+      line-height: 38px;
+      text-align: center;
+      border: transparent solid 2px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer; }
+      #pklgpd-box nav button:first-child,
+      #pklgpd-box nav a:first-child {
+        margin-left: 0; }
+      #pklgpd-box nav button:last-child,
+      #pklgpd-box nav a:last-child {
+        margin-right: 0; }
+    #pklgpd-box nav button {
+      width: 208px;
+      background-color: #005EB8;
+      color: #ffffff; }
+    #pklgpd-box nav a {
+      padding: 0 20px;
+      border-color: #fff; }
+  #pklgpd-box.floating {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background: #009AFF; }
+  #pklgpd-box.hide {
+    opacity: 0;
+    transform: translateY(110%); }
+
+@media (max-width: 1024px) {
+  #pklgpd-box > div {
+    flex-direction: column; }
+  #pklgpd-box nav {
+    margin-top: 21px; } }
+@media (max-width: 520px) {
+  #pklgpd-box {
+    padding: 16px 0 25px; }
+    #pklgpd-box > div {
+      padding: 0 24px; }
+    #pklgpd-box nav button,
+    #pklgpd-box nav a {
+      width: 50%;
+      padding: 8px 24px;
+      margin: 0 4px;
+      height: auto;
+      line-height: 19px; } }
+
+/*# sourceMappingURL=styles.css.map */

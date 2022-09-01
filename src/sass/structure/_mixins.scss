@@ -1,0 +1,195 @@
+$tablet-width: 830px;
+$desktop-width: 1025px;
+$large-width: 1600px;
+$medium-width: 1200px;
+$tablet-up-width: 782px;
+
+
+@mixin mobile {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin mobile-up {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet-up {
+    @media (min-width: #{$tablet-up-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: #{$large-width}) {
+        @content;
+    }
+}
+
+//  Function to create an optimized svg url
+@function svg-url($svg) {
+
+    @if not str-index( $svg, xmlns ){
+        $svg: str-replace( $svg, '<svg', '<svg xmlns="http://www.w3.org/2000/svg"' );
+    }
+
+    $encoded: '';
+    $slice: 2000;
+    $index: 0;
+    $loops: ceil( str-length( $svg ) / $slice );
+    @for $i from 1 through $loops {
+        $chunk: str-slice($svg, $index, $index + $slice - 1);
+        //
+        //   Encode
+        //
+        $chunk: str-replace( $chunk, '"', "'" );
+        $chunk: str-replace( $chunk, '%', '%25' );
+        $chunk: str-replace( $chunk, ':', '%3A' );
+        $chunk: str-replace( $chunk, '&', '%26' );
+        $chunk: str-replace( $chunk, '#', '%23' );
+        $chunk: str-replace( $chunk, '{', '%7B' );
+        $chunk: str-replace( $chunk, '}', '%7D' );
+        $chunk: str-replace( $chunk, '<', '%3C' );
+        $chunk: str-replace( $chunk, '>', '%3E' );
+
+        $encoded: #{$encoded}#{$chunk};
+        $index: $index + $slice;
+    }
+    
+    @return url( 'data:image/svg+xml,#{$encoded}' );
+
+}
+
+//  Transition
+@mixin trans-anima( $time : 600ms, $delay : 1ms ){
+    transition: all $time ease-in-out $delay;
+    opacity: 0;
+}
+
+//  Background svg mixin
+@mixin bg-image( $class, $bg-color : transparent ){
+    background-color: $bg-color;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    @extend .#{$class};
+}
+
+// Imagens de BG - BG Replacement
+@mixin bg(
+    $bg,
+    $color: #ffffff,
+    $size: contain,
+    $bgColor: transparent,
+    $repeat: no-repeat,
+    $position: center center
+){
+
+    @debug $bg; // string
+ 
+    $svgReplaced: str-replace( $bg, '#000000', $color );
+
+    background: none;
+    background-image: svg-url( $svgReplaced );
+    background-size: $size;
+    background-color: $bgColor;
+    background-repeat: $repeat;
+    background-position: $position;
+
+}
+
+//  Helper function to replace characters in a string
+@function str-replace( $string, $search, $replace: '' ){
+    $index: str-index($string, $search);
+    @return if(
+        $index,
+        str-slice($string, 1, $index - 1) + $replace +
+        str-replace(
+            str-slice($string, $index + str-length($search)),
+            $search,
+            $replace
+        ),
+        $string
+    );
+}
+
+@function calc-mobo( $number, $orientation: vw ){
+    $myCalc: ( $number * 100 ) / 360;
+    @return #{$myCalc}#{$orientation};
+}
+
+@mixin trans( $type: all, $delay: 0s ){
+    transition: $type $time-trans ease-in-out $delay;
+}
+
+@mixin anim-hover( $type: opacity ){
+    
+    transition: $type $time-trans ease 0s;
+    opacity: 1;
+
+    &:hover {
+        opacity: 0.75;
+    }
+
+}
+
+@mixin remove-anim-hover($type: opacity) {
+
+    transition: $type $time-trans ease 0s;
+    opacity: 1;
+
+    &:hover {
+        opacity: 1;
+    }
+
+}
+
+// Link
+@mixin link {
+    text-decoration: none;
+    cursor: pointer;
+    @include anim-hover(all);
+}
+
+// Hidding text
+@mixin imgrpc {
+    text-indent: -999em;
+    overflow: hidden;
+}
+
+// Reseting
+@mixin reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+// Responsive media query
+@mixin responsive( $break-point: $media-tablet-max ){
+    @media only screen and ( max-width: $break-point ){
+        @content;
+    }
+}

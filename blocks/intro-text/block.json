@@ -1,0 +1,8 @@
+{
+    "apiVersion": 2,
+    "title": "Introdução + texto",
+    "name": "gutenberg-examples/example-01-basic-esnext",
+    "category": "layout",
+    "icon": "universal-access-alt",
+    "editorScript": "file:./build/index.js"
+}

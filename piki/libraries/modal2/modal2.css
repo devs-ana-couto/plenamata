@@ -1,0 +1,59 @@
+.piki-modal {
+  margin: !important;
+  display: none;
+  position: fixed !important;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  .piki-modal .modal-scroller {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto; }
+  .piki-modal .modal-inner {
+    display: none;
+    position: relative;
+    padding: 68px 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; }
+    .piki-modal .modal-inner .modal-close-button {
+      position: absolute;
+      right: 20px;
+      color: #fff;
+      font-size: 2.2em;
+      color: #fff;
+      line-height: 32px;
+      cursor: pointer;
+      transition: all 300ms; }
+      .piki-modal .modal-inner .modal-close-button.top {
+        top: 16px; }
+      .piki-modal .modal-inner .modal-close-button.bottom {
+        bottom: 16px; }
+      .piki-modal .modal-inner .modal-close-button .icone {
+        float: right;
+        width: 32px;
+        height: 32px;
+        margin-left: 9px;
+        border-radius: 50%;
+        background: #fff;
+        position: relative; }
+        .piki-modal .modal-inner .modal-close-button .icone:before, .piki-modal .modal-inner .modal-close-button .icone:after {
+          position: absolute;
+          content: '';
+          display: block;
+          width: 20px;
+          height: 3px;
+          background: #747484;
+          left: 6px;
+          top: 14px; }
+        .piki-modal .modal-inner .modal-close-button .icone:before {
+          transform: rotate(45deg); }
+        .piki-modal .modal-inner .modal-close-button .icone:after {
+          transform: rotate(135deg); }
+
+/*# sourceMappingURL=modal2.css.map */

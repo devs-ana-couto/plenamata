@@ -1,0 +1,1 @@
+!function($){window.pikiforms_contact_submit=function(i,s){var n=i.parent(".contact-form-content").first();n.slideUp("1200",function(){n.addClass("success").html('<div class="finish-form clearfix">'+s.message+"</div>").slideDown("1200")})}}(jQuery);

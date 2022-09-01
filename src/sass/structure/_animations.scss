@@ -1,0 +1,40 @@
+// Vertical line
+@keyframes monFrame {
+    0%   { top: 0px; bottom: 100%; opacity: 0; }
+    25%  { top: 0px; bottom: 0; opacity: 1; }
+    40%  { top: 0px; bottom: 0; opacity: 1; }
+    65%  { top: 90%; bottom: 0; opacity: 1; }
+    90% { top: 90%; bottom: 0; opacity: 0; }
+    100% { top: 90%; bottom: 0; opacity: 0; }
+}
+
+// Sound
+@keyframes sound {
+    0% {
+        opacity: .35;
+        height: 2px; 
+    }
+    100% {
+        opacity: 1;       
+        height: 18px;        
+    }
+}
+
+// Blink
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(235, 102, 25, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 5px rgba(235, 102, 25, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(235, 102, 25, 0);
+    }
+}

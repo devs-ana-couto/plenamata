@@ -1,0 +1,84 @@
+section.convite-hashtag {
+
+	padding: 44px 0 12px;
+	text-align: center;
+	background: linear-gradient(0deg, #FFFFFF 0%, #C7DD8B 68.59%);
+
+	em {
+		display: block;
+		max-width: 1035px;
+		margin: 0 auto;
+		font-style: normal;
+		font-weight: 200;
+		font-size: 26px;
+		line-height: 38px;
+		color: #1A2C31;
+	}
+
+	div.hash {
+		
+		margin-top: 6px;
+   		background-image: url('../images/bg-hashtag.png');
+   		background-position: center center;
+   		background-size: cover;
+   		background-repeat: no-repeat;
+	   -webkit-background-clip: text;
+	   -webkit-text-fill-color: transparent;
+		
+		p {
+			font-size: 213.46px;
+			line-height: 216px;
+			color: tranparent;
+		}
+
+	}
+
+	.pikishare {
+		display: table;
+		margin: 35px auto 0;
+	}
+
+}
+
+@media( max-width: 1220px ){
+	section.convite-hashtag {
+
+		em {
+			max-width: 610px;
+			font-size: 20px;
+			line-height: 25px;
+		}
+
+		div.hash p {
+			font-size: 113.46px;
+			line-height: 116px;
+		}
+
+	}
+
+}
+
+@media( max-width: 650px ){
+	section.convite-hashtag {
+
+		em {
+			max-width: 610px;
+			padding: 0 20px;
+			font-size: 20px;
+			line-height: 25px;
+		}
+
+		div.hash p {
+			margin: 40px 0 0;
+			font-weight: 300;
+			font-size: 60.452px;
+			line-height: 55px;
+		}
+
+		.pikishare {
+			margin-top: 18px;
+		}
+
+	}
+
+}

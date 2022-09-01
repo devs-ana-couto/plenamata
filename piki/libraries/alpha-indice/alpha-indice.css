@@ -1,0 +1,32 @@
+.alpha-indice {
+	width: 352px;
+	border-left: #cccccc 1px solid;
+	border-bottom: #cccccc 1px solid;
+}
+.alpha-indice li {
+	float: left;
+	width: 27px;
+	height: 27px;
+	text-align: center;
+	line-height: 26px;
+	border-top: #cccccc 1px solid;
+	border-right: #cccccc 1px solid;
+}
+.alpha-indice li a {
+	display: block;
+	text-decoration: none;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.alpha-indice li a.off {
+	color: #cccccc;
+}
+.alpha-indice li a.on:hover {
+	background: #fe6033;
+	color: #fff;
+}
+.alpha-indice li a.on.active {
+	background: #CC4E26;
+	color: #fff;
+}

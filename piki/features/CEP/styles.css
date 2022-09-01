@@ -1,0 +1,34 @@
+.linha-field.ftype-cidade .preloader {
+  display: none;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 19px;
+  top: 24px;
+  overflow: hidden;
+  text-indent: -99999px;
+  background: url("images/ajax-loader.svg") no-repeat center center;
+  background-size: contain;
+  z-index: 20; }
+.linha-field.ftype-cidade.loading .preloader {
+  display: block; }
+.linha-field.ftype-cidade.loading .j-custom-select-holder .picker {
+  display: none; }
+.linha-field.ftype-cep .field-item {
+  position: relative; }
+  .linha-field.ftype-cep .field-item:after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 19px;
+    top: 24px;
+    background: url("images/ajax-loader.svg") no-repeat center center;
+    background-size: contain;
+    z-index: 20;
+    display: none; }
+.linha-field.ftype-cep.loading:after .field-item {
+  display: block; }
+
+/*# sourceMappingURL=styles.css.map */

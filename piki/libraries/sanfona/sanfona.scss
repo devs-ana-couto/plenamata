@@ -1,0 +1,45 @@
+.piki-sanfona {
+	
+	display: table;
+	margin: 0 auto;
+	
+	.sanfona-controls {
+	
+		display: block;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		background: #fff;
+		
+		li {
+			float: left;
+			padding: 5px 10px;
+			border: grey 1px solid;
+		}
+	
+	}
+
+	.main-slider-wrapper,
+	.sanfona-item {
+		background: #fff;
+		display: block;
+	}
+
+	.sanfona-item {
+
+		> button {
+			display: block;
+			width: 100%;
+			text-align: center;
+			display: none;
+		}
+
+	}
+
+}
+
+@media( max-width: 768px ){
+	.piki-sanfona .sanfona-item > .trigger {
+		display: block;
+	}
+}

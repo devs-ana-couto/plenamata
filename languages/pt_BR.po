@@ -1,0 +1,837 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2022-08-23 10:38-0300\n"
+"PO-Revision-Date: 2022-08-23 11:29-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: languages\n"
+"X-Poedit-SearchPathExcluded-2: src\n"
+"X-Poedit-SearchPathExcluded-3: .\n"
+"X-Poedit-SearchPathExcluded-4: piki\n"
+"X-Poedit-SearchPathExcluded-5: assets\n"
+
+#: blocks/04-controls/block.js:15
+msgid "Example: Controls"
+msgstr ""
+
+#: blocks/04-controls/block.js:33
+msgid "Hello world"
+msgstr ""
+
+#: components/content-single.php:20
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: components/content-single.php:34
+msgid "Sorry, we said wrong"
+msgstr ""
+
+#: components/content-single.php:44
+msgid "Pages:"
+msgstr ""
+
+#: components/content-single.php:57
+msgid "Access project page"
+msgstr ""
+
+#: components/historias-reais.php:56
+msgid "Next history"
+msgstr ""
+
+#: components/historias-reais.php:58
+msgid "Previous history"
+msgstr ""
+
+#: components/historias-reais.php:59
+msgid "Close"
+msgstr ""
+
+#: components/newsletter.php:29
+msgid "Oferecido por"
+msgstr ""
+
+#: contents/glossario.php:43
+msgid "Sections"
+msgstr ""
+
+#: contents/single-noticia.php:35
+msgid "Good Initiatives"
+msgstr ""
+
+#: contents/single-noticia.php:85 page-artigos.php:10 page-inicio.php:144
+msgid "News"
+msgstr ""
+
+#: footer.php:24 includes/partners.php:22 includes/partners.php:24
+#: includes/partners.php:25 includes/partners.php:40
+msgid "Parceiros"
+msgstr ""
+
+#: footer.php:31
+msgid "Privacy Statement"
+msgstr ""
+
+#: functions.php:43
+msgid "Main menu"
+msgstr ""
+
+#: functions.php:80
+msgid "Small"
+msgstr ""
+
+#: functions.php:81
+msgid "S"
+msgstr ""
+
+#: functions.php:86
+msgid "Normal"
+msgstr ""
+
+#: functions.php:87
+msgid "M"
+msgstr ""
+
+#: functions.php:92
+msgid "Large"
+msgstr ""
+
+#: functions.php:93
+msgid "L"
+msgstr ""
+
+#: functions.php:98
+msgid "Huge"
+msgstr ""
+
+#: functions.php:99
+msgid "XL"
+msgstr ""
+
+#: header.php:63
+msgid "Offered by"
+msgstr ""
+
+#: header.php:80
+msgid "dashboard"
+msgstr ""
+
+#: header.php:80
+msgid "Access our dashboard"
+msgstr ""
+
+#: header.php:87
+msgid "Buscar"
+msgstr ""
+
+#: inc/template-tags.php:24 inc/template-tags.php:36
+msgid "j F Y \\a\\t G:i"
+msgstr ""
+
+#: inc/template-tags.php:36
+msgid "Updated on"
+msgstr ""
+
+#: inc/template-tags.php:45
+msgid "We made a mistake. This content has been changed"
+msgstr ""
+
+#: inc/template-tags.php:344
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: includes/campanhas.php:222 includes/campanhas.php:232
+msgid "Categorias"
+msgstr ""
+
+#: includes/campanhas.php:223
+msgid "Categoria"
+msgstr ""
+
+#: includes/campanhas.php:224
+msgid "Buscar categorias"
+msgstr ""
+
+#: includes/campanhas.php:225
+msgid "Todas as Catagorias"
+msgstr ""
+
+#: includes/campanhas.php:226
+msgid "Categoria mãe"
+msgstr ""
+
+#: includes/campanhas.php:227
+msgid "Categoria mãe:"
+msgstr ""
+
+#: includes/campanhas.php:228
+msgid "Editar Categoria"
+msgstr ""
+
+#: includes/campanhas.php:229
+msgid "Atualizar Categoria"
+msgstr ""
+
+#: includes/campanhas.php:230
+msgid "Adicionar nova categoria"
+msgstr ""
+
+#: includes/campanhas.php:231
+msgid "Novo nome de categoria"
+msgstr ""
+
+#: includes/campanhas.php:252
+msgid "Campanha"
+msgstr ""
+
+#: includes/campanhas.php:253 includes/campanhas.php:254
+#: includes/campanhas.php:255 includes/campanhas.php:270
+msgid "Campanhas"
+msgstr ""
+
+#: includes/campanhas.php:256 includes/capas.php:588 includes/contato.php:17
+#: includes/fale-conosco.php:35 includes/historias.php:26 includes/homes.php:17
+msgid "Adicionar nova"
+msgstr ""
+
+#: includes/campanhas.php:257
+msgid "Adicionar nova campanha"
+msgstr ""
+
+#: includes/campanhas.php:258
+msgid "Nova campanha"
+msgstr ""
+
+#: includes/campanhas.php:259
+msgid "Editar campanha"
+msgstr ""
+
+#: includes/campanhas.php:260
+msgid "Ver campanhas"
+msgstr ""
+
+#: includes/campanhas.php:261
+msgid "Todas as campanhas"
+msgstr ""
+
+#: includes/campanhas.php:262
+msgid "Procurar campanha"
+msgstr ""
+
+#: includes/campanhas.php:263 includes/contato.php:24
+#: includes/fale-conosco.php:42
+msgid "Mensagem mãe:"
+msgstr ""
+
+#: includes/campanhas.php:264
+msgid "Nenhuma campanha encontrada."
+msgstr ""
+
+#: includes/campanhas.php:265
+msgid "Nenhuma campanha na lixeira."
+msgstr ""
+
+#: includes/capas.php:584 includes/capas.php:586 includes/capas.php:587
+msgid "Capas"
+msgstr ""
+
+#: includes/capas.php:585
+msgid "Capa"
+msgstr ""
+
+#: includes/capas.php:589
+msgid "Adicionar nova capa"
+msgstr ""
+
+#: includes/capas.php:590
+msgid "Nova capa"
+msgstr ""
+
+#: includes/capas.php:591
+msgid "Editar capa"
+msgstr ""
+
+#: includes/capas.php:592
+msgid "Ver capas"
+msgstr ""
+
+#: includes/capas.php:593
+msgid "Todas as capas"
+msgstr ""
+
+#: includes/capas.php:594
+msgid "Procurar capa"
+msgstr ""
+
+#: includes/capas.php:595
+msgid "Capa mãe:"
+msgstr ""
+
+#: includes/capas.php:596
+msgid "Nenhuma capa encontrada."
+msgstr ""
+
+#: includes/capas.php:597
+msgid "Nenhuma capa na lixeira."
+msgstr ""
+
+#: includes/common.php:156
+msgid "Web stories"
+msgstr ""
+
+#: includes/common.php:1109 includes/common.php:1126
+msgid " as "
+msgstr ""
+
+#: includes/contato.php:13 includes/contato.php:14 includes/contato.php:15
+#: includes/contato.php:16 includes/contato.php:31
+msgid "Contato"
+msgstr ""
+
+#: includes/contato.php:18 includes/fale-conosco.php:36
+msgid "Adicionar nova mensagem"
+msgstr ""
+
+#: includes/contato.php:19 includes/fale-conosco.php:37
+msgid "Nova mensagem"
+msgstr ""
+
+#: includes/contato.php:20 includes/fale-conosco.php:38
+msgid "Editar mensagem"
+msgstr ""
+
+#: includes/contato.php:21 includes/fale-conosco.php:39
+msgid "Ver mensagens"
+msgstr ""
+
+#: includes/contato.php:22 includes/fale-conosco.php:40
+msgid "Todas as mensagens"
+msgstr ""
+
+#: includes/contato.php:23 includes/fale-conosco.php:41
+msgid "Procurar mensagem"
+msgstr ""
+
+#: includes/contato.php:25 includes/fale-conosco.php:43
+msgid "Nenhuma mensagem encontrada."
+msgstr ""
+
+#: includes/contato.php:26 includes/fale-conosco.php:44
+msgid "Nenhuma mensagem na lixeira."
+msgstr ""
+
+#: includes/fale-conosco.php:31 includes/fale-conosco.php:32
+#: includes/fale-conosco.php:33 includes/fale-conosco.php:34
+msgid "Fale conosco"
+msgstr ""
+
+#: includes/fale-conosco.php:49
+msgid "Fale Conosco"
+msgstr ""
+
+#: includes/glossario.php:36 includes/glossario.php:37
+msgid "Glossário"
+msgstr ""
+
+#: includes/glossario.php:38 includes/glossario.php:39
+#: includes/glossario.php:53
+msgid "Glossario"
+msgstr ""
+
+#: includes/glossario.php:40 includes/leads.php:21 includes/partners.php:26
+#: includes/projetos.php:17 includes/videos.php:26
+msgid "Adicionar novo"
+msgstr ""
+
+#: includes/glossario.php:41
+msgid "Adicionar novo verbete"
+msgstr ""
+
+#: includes/glossario.php:42
+msgid "Novo verbete"
+msgstr ""
+
+#: includes/glossario.php:43
+msgid "Editar verbete"
+msgstr ""
+
+#: includes/glossario.php:44
+msgid "Ver verbetes"
+msgstr ""
+
+#: includes/glossario.php:45
+msgid "Todos os verbete"
+msgstr ""
+
+#: includes/glossario.php:46
+msgid "Procurar verbete"
+msgstr ""
+
+#: includes/glossario.php:47 includes/projetos.php:24
+msgid "Projeto pai:"
+msgstr ""
+
+#: includes/glossario.php:48
+msgid "Nenhum verbete encontrado."
+msgstr ""
+
+#: includes/glossario.php:49
+msgid "Nenhum verbete na lixeira."
+msgstr ""
+
+#: includes/glossario.php:79
+msgid "Buscar seções"
+msgstr ""
+
+#: includes/glossario.php:80
+msgid "Todas as seções"
+msgstr ""
+
+#: includes/glossario.php:81
+msgid "Seção mãe"
+msgstr ""
+
+#: includes/glossario.php:82
+msgid "Seção mãe:"
+msgstr ""
+
+#: includes/glossario.php:83
+msgid "Editar seção"
+msgstr ""
+
+#: includes/glossario.php:84
+msgid "Atualiar seção"
+msgstr ""
+
+#: includes/glossario.php:85
+msgid "Adicionar nova seção"
+msgstr ""
+
+#: includes/glossario.php:86
+msgid "Novo nome de seção"
+msgstr ""
+
+#: includes/glossario.php:87
+msgid "Seções"
+msgstr ""
+
+#: includes/glossario.php:212
+msgid "Search for a term"
+msgstr ""
+
+#: includes/historias.php:22
+msgid "História"
+msgstr ""
+
+#: includes/historias.php:23 includes/historias.php:24
+#: includes/historias.php:25 includes/historias.php:40
+msgid "Histórias"
+msgstr ""
+
+#: includes/historias.php:27
+msgid "Adicionar nova história"
+msgstr ""
+
+#: includes/historias.php:28
+msgid "Nova história"
+msgstr ""
+
+#: includes/historias.php:29
+msgid "Editar história"
+msgstr ""
+
+#: includes/historias.php:30
+msgid "Ver histórias"
+msgstr ""
+
+#: includes/historias.php:31
+msgid "Todas as histórias"
+msgstr ""
+
+#: includes/historias.php:32
+msgid "Procurar história"
+msgstr ""
+
+#: includes/historias.php:33
+msgid "História mãe:"
+msgstr ""
+
+#: includes/historias.php:34
+msgid "Nenhuma história encontrada."
+msgstr ""
+
+#: includes/historias.php:35
+msgid "Nenhuma história na lixeira."
+msgstr ""
+
+#: includes/homes.php:13 includes/homes.php:15 includes/homes.php:16
+#: includes/homes.php:31
+msgid "Homes"
+msgstr ""
+
+#: includes/homes.php:14
+msgid "Home"
+msgstr ""
+
+#: includes/homes.php:18
+msgid "Adicionar nova home"
+msgstr ""
+
+#: includes/homes.php:19
+msgid "Nova home"
+msgstr ""
+
+#: includes/homes.php:20
+msgid "Editar home"
+msgstr ""
+
+#: includes/homes.php:21
+msgid "Ver homes"
+msgstr ""
+
+#: includes/homes.php:22
+msgid "Todas as homes"
+msgstr ""
+
+#: includes/homes.php:23
+msgid "Procurar home"
+msgstr ""
+
+#: includes/homes.php:24
+msgid "Home mãe:"
+msgstr ""
+
+#: includes/homes.php:25
+msgid "Nenhuma home encontrada."
+msgstr ""
+
+#: includes/homes.php:26
+msgid "Nenhuma home na lixeira."
+msgstr ""
+
+#: includes/leads.php:17 includes/leads.php:19 includes/leads.php:20
+#: includes/leads.php:35
+msgid "Leads"
+msgstr ""
+
+#: includes/leads.php:18
+msgid "Cadastro"
+msgstr ""
+
+#: includes/leads.php:22
+msgid "Adicionar novo lead"
+msgstr ""
+
+#: includes/leads.php:23
+msgid "Novo lead"
+msgstr ""
+
+#: includes/leads.php:24
+msgid "Editar lead"
+msgstr ""
+
+#: includes/leads.php:25
+msgid "Ver lead"
+msgstr ""
+
+#: includes/leads.php:26
+msgid "Todos os lead"
+msgstr ""
+
+#: includes/leads.php:27
+msgid "Procurar lead"
+msgstr ""
+
+#: includes/leads.php:28
+msgid "Cadastro pai:"
+msgstr ""
+
+#: includes/leads.php:29
+msgid "Nenhum lead encontrado."
+msgstr ""
+
+#: includes/leads.php:30
+msgid "Nenhum lead na lixeira."
+msgstr ""
+
+#: includes/partners.php:23
+msgid "Parceiro"
+msgstr ""
+
+#: includes/partners.php:27
+msgid "Adicionar novo parceiro"
+msgstr ""
+
+#: includes/partners.php:28
+msgid "Novo parceiro"
+msgstr ""
+
+#: includes/partners.php:29
+msgid "Editar parceiro"
+msgstr ""
+
+#: includes/partners.php:30
+msgid "Ver Parceiros"
+msgstr ""
+
+#: includes/partners.php:31
+msgid "Todos os Parceiros"
+msgstr ""
+
+#: includes/partners.php:32
+msgid "Procurar parceiro"
+msgstr ""
+
+#: includes/partners.php:33
+msgid "Parceiro pai:"
+msgstr ""
+
+#: includes/partners.php:34
+msgid "Nenhum parceiro encontrado."
+msgstr ""
+
+#: includes/partners.php:35
+msgid "Nenhum parceiro na lixeira."
+msgstr ""
+
+#: includes/projetos.php:13 includes/projetos.php:15 includes/projetos.php:16
+#: includes/projetos.php:31
+msgid "Projetos"
+msgstr ""
+
+#: includes/projetos.php:14
+msgid "Projeto"
+msgstr ""
+
+#: includes/projetos.php:18
+msgid "Adicionar novo projeto"
+msgstr ""
+
+#: includes/projetos.php:19
+msgid "Novo projeto"
+msgstr ""
+
+#: includes/projetos.php:20
+msgid "Editar projeto"
+msgstr ""
+
+#: includes/projetos.php:21
+msgid "Ver projetos"
+msgstr ""
+
+#: includes/projetos.php:22
+msgid "Todos os projeto"
+msgstr ""
+
+#: includes/projetos.php:23
+msgid "Procurar projeto"
+msgstr ""
+
+#: includes/projetos.php:25
+msgid "Nenhum projeto encontrado."
+msgstr ""
+
+#: includes/projetos.php:26
+msgid "Nenhum projeto na lixeira."
+msgstr ""
+
+#: includes/search.php:103
+msgid "Order by:"
+msgstr ""
+
+#: includes/search.php:108 includes/search.php:112
+msgid "Most Relevant"
+msgstr ""
+
+#: includes/search.php:109
+msgid "Most recent"
+msgstr ""
+
+#: includes/search.php:125
+msgid "All editorials"
+msgstr ""
+
+#: includes/search.php:134 includes/search.php:136
+msgid "Search"
+msgstr ""
+
+#: includes/search.php:135
+msgid "Clear"
+msgstr ""
+
+#: includes/search.php:144
+msgid "Todos os períodos"
+msgstr ""
+
+#: includes/search.php:145
+msgid "Last hour"
+msgstr ""
+
+#: includes/search.php:146
+msgid "Last 24 hours"
+msgstr ""
+
+#: includes/search.php:147
+msgid "Last week"
+msgstr ""
+
+#: includes/search.php:148 includes/search.php:149
+msgid "Last month"
+msgstr ""
+
+#: includes/search.php:152
+msgid "Period"
+msgstr ""
+
+#: includes/search.php:161
+msgid "Editorial"
+msgstr ""
+
+#: includes/videos.php:22 includes/videos.php:24 includes/videos.php:25
+#: includes/videos.php:40
+msgid "Vídeos"
+msgstr ""
+
+#: includes/videos.php:23
+msgid "Vídeo"
+msgstr ""
+
+#: includes/videos.php:27
+msgid "Adicionar novo vídeo"
+msgstr ""
+
+#: includes/videos.php:28
+msgid "Novo vídeo"
+msgstr ""
+
+#: includes/videos.php:29
+msgid "Editar vídeo"
+msgstr ""
+
+#: includes/videos.php:30
+msgid "Ver Vídeos"
+msgstr ""
+
+#: includes/videos.php:31
+msgid "Todos os Vídeos"
+msgstr ""
+
+#: includes/videos.php:32
+msgid "Procurar vídeo"
+msgstr ""
+
+#: includes/videos.php:33
+msgid "Vídeo pai:"
+msgstr ""
+
+#: includes/videos.php:34
+msgid "Nenhum vídeo encontrado."
+msgstr ""
+
+#: includes/videos.php:35
+msgid "Nenhum vídeo na lixeira."
+msgstr ""
+
+#: page-artigos.php:21
+msgid "Other news"
+msgstr ""
+
+#: page-inicio.php:33 page-inicio.php:69
+msgid "Trees felled"
+msgstr "Árvores derrubadas"
+
+#: page-inicio.php:40
+msgid "Devastated area"
+msgstr "Área devastada"
+
+#: page-inicio.php:48
+msgid "Deforestation in the Amazon in"
+msgstr "Desmatamento na Amazônia em"
+
+#: page-inicio.php:60 page-inicio.php:83
+msgid "daily average"
+msgstr "média diária"
+
+#: page-inicio.php:64 page-inicio.php:87
+msgid "Real-time estimate"
+msgstr "Estimativa em tempo real"
+
+#: page-inicio.php:92
+msgid "Football pitches"
+msgstr "Campos de futebol"
+
+#: page-inicio.php:106
+msgid "Acesse nosso monitor"
+msgstr ""
+
+#: page-inicio.php:109
+msgid "Saiba como manter a floresta em pé"
+msgstr ""
+
+#: page-inicio.php:125
+msgid "Conheça e participe de uma campanha"
+msgstr ""
+
+#: page-inicio.php:127
+msgid "Ver todas as campanhas"
+msgstr ""
+
+#: page-inicio.php:127
+msgid "See all campaigns"
+msgstr ""
+
+#: page-inicio.php:146
+msgid "See all news"
+msgstr ""
+
+#: page-inicio.php:164
+msgid "About us"
+msgstr ""
+
+#: page-inicio.php:184
+msgid "About"
+msgstr ""
+
+#: page-inicio.php:188
+msgid "Contact"
+msgstr ""
+
+#: page-inicio.php:192
+msgid "Glossary"
+msgstr "Glossário"
+
+#: search.php:9
+msgid "result"
+msgstr ""
+
+#: search.php:10
+msgid "results"
+msgstr ""
+
+#: search.php:16
+msgid "What are you looking for?"
+msgstr ""
+
+#: search.php:17
+msgid "No results found"
+msgstr ""
+
+#: search.php:18
+msgid "Please do the search again."
+msgstr ""
+
+#: search.php:34
+msgid "Search results"
+msgstr ""

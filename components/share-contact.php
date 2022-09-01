@@ -1,0 +1,2 @@
+<?php echo do_shortcode( '[pikishare services="whatsapp,twitter,facebook,linkedin" post_id="'. _array_get( $args, 'post_id', get_the_ID() ) .'" class="inline"]' ); ?>
+<?php get_template_part( 'components/text-contact' ); ?>

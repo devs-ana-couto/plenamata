@@ -1,0 +1,82 @@
+.matatips {
+
+	position: relative;
+
+	button {
+		padding: 0;
+		background: 0;
+		width: 16px;
+		height: 16px;
+		background: url('../images/icon-info.svg') no-repeat center center !important;
+		background-size: contain;
+		overflow: hidden;
+		text-indent: -1000vw;
+		@extend .filter-white;
+	}
+
+	em {
+		
+		display: table;
+		position: absolute;
+		width: 320px;
+		padding: 9px;
+		background: #F9EBA4;
+		box-shadow: 0px 8px 9px rgba(26, 44, 49, 0.17);
+		font-size: 12px;
+		line-height: 13px;
+		color: #1A2C31;
+		font-style: normal;
+		opacity: 0;
+		transition: 
+			opacity .4s ease-in-out,
+			transform 1ms ease .4s
+		;
+		
+		strong {
+			font-weight: 700;
+		}
+
+	}
+
+	&.opened em {
+		transition: opacity .4s ease-in-out;
+		opacity: 1;
+	}
+
+}
+
+@media( min-width: 769px ){
+
+	.matatips {
+
+		em {
+			top: 50%;
+			left: calc( 100% + 8px );
+			transform: translate( -200vw, -50%);
+		}
+
+		&.opened em {
+			transform: translateY(-50%);
+		}
+	
+	}
+
+}
+
+@media( max-width: 768px ){
+
+	.matatips {
+
+		em {
+			bottom: calc( 100% + 8px );
+			left: 50%;
+			transform: translateX( -200vw );
+		}
+
+		&.opened em {
+			transform: translateX( -50% );
+		}
+
+	}
+
+}

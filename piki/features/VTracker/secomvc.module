@@ -1,0 +1,1735 @@
+<?php
+define( 'SOURCE_RSS_ID', 2 );
+define( 'SOURCE_VTRACKER_ID', 3 );
+
+define( 'VTRACKER_SERVICE', 'https://developers.vtracker.com.br/api/rest/' );
+// Icom
+define( 'VTRACKER_TOKEN', '23c8f411-7c33-432b-b994-1237d12a720a' );
+define( 'VTRACKER_START_DATE', '20200401' );
+// Isobar
+//define( 'VTRACKER_TOKEN', '84c24450-1772-413e-9333-4ad46b519b39' );
+//define( 'VTRACKER_TOKEN', 'e66841f8-d383-4b45-9271-d9ae47de7114' );
+//define( 'VTRACKER_START_DATE', '20190822' );
+
+// Token to prevent unexpected calls
+define( 'REQUIRE_TOKEN', 'xm7SLaSVWtZOmtG9LJaxsrsRwCcODAJ' );
+
+require 'vendor/autoload.php';
+
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\BadResponseException;
+use GuzzleHttp\Exception\ClientErrorResponseException;
+
+Class SecomVC {
+
+    // Router
+    public static function menu(){
+        return array(
+            'filtros' => array(
+                'page callback' => 'secomvc_get_filters',
+                'access callback' => TRUE,
+                'type' => MENU_CALLBACK,
+            ),
+            'home' => array(
+                'page callback' => 'secomvc_get_home',
+                'access callback' => TRUE,
+                'type' => MENU_CALLBACK,
+            ),
+            'home/%page' => array(
+                'page callback' => 'secomvc_get_home',
+                'page arguments' => array( 1 ),
+                'access callback' => TRUE,
+                'type' => MENU_CALLBACK,
+            ),
+            'publicacao/%/publicacoes-relacionadas' => array(
+                'page callback' => 'secomvc_get_publicacoes_relacionadas',
+                'page arguments' => array( 1 ),
+                'access callback' => TRUE,
+                'type' => MENU_CALLBACK,
+            ),
+            'publicacao/%/open-graph' => array(
+                'page callback' => 'secomvc_get_publicacao_open_graph',
+                'page arguments' => array( 1 ),
+                'access callback' => TRUE,
+                'type' => MENU_CALLBACK,
+            ),
+            'publicacao/%' => array(
+                'page callback' => 'secomvc_get_publicacao',
+                'page arguments' => array( 1 ),
+                'access callback' => TRUE,
+                'type' => MENU_CALLBACK,
+            ),
+            'get-user-info' => array(
+                'page callback' => 'secomvc_get_user',
+                'access callback' => TRUE,
+                'type' => MENU_CALLBACK,
+            ),
+            // RSS
+            // Vtracker
+            'admin/config/services/vtracker' => array(
+                'title' => 'Vtracker',
+                'description' => 'Seleção dos monitoramentos buscados pela API do Vtracker',
+                'page callback' => 'drupal_get_form',
+                'page arguments' => array( 'vtracker_admin' ),
+                'access arguments' => array( 'administer' ),
+                'type' => MENU_NORMAL_ITEM,
+            ),
+            'require-vtracker' => array(
+                'page callback' => 'secomvc_require_vtracker',
+                'access callback' => TRUE,
+                'type' => MENU_CALLBACK,
+            ),
+            'require-rss' => array(
+                'page callback' => 'secomvc_require_rss',
+                'access callback' => TRUE,
+                'type' => MENU_CALLBACK,
+            ),
+            'check-doubles' => array(
+                'page callback' => 'secomvc_check_doubles',
+                'access callback' => TRUE,
+                'type' => MENU_CALLBACK,
+            ),
+            'download/%' => array(
+                'page callback' => 'secomvc_download',
+                'access callback' => TRUE,
+                'page arguments' => array( 1 ),
+                'type' => MENU_CALLBACK,
+            ),
+
+        );
+    }
+
+    public static function download( $fid ){
+
+        $fid = intVal( $fid );
+        if( empty( $fid ) ): 
+            die(); // Silence is golden
+        endif;
+
+        $file = file_load( $fid );
+
+        $mimes = array(
+            'application/zip',
+            'application/msword',
+            'application/vnd.ms-excel',
+            'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            'application/vnd.ms-powerpoint',
+            'application/pdf',
+            'application/vnd.oasis.opendocument.text',
+            'application/vnd.visio',
+            'application/zip',
+            'application/x-rar-compressed',
+            'image/gif',
+            'image/png',
+            'image/jpg',
+            'image/jpeg',
+            'image/png',
+            'image/svg+xml',
+            'image/tiff',
+            'image/webp',
+            'text/plain',
+            'audio/mpeg',
+            'audio/ogg',
+            'audio/aac',
+            'audio/midi',
+            'audio/*',
+            'audio/x-wav',
+            'audio/webm',
+            'audio/3gpp',
+            'audio/3gpp2',
+            'video/mp4',
+            'video/mpeg',
+            'video/x-msvideo',
+            'video/ogg',
+            'video/webm',
+            'video/3gpp',
+            'video/3gpp2',
+            'application/vnd.amazon.ebook',
+        );
+
+        if( !in_array( $file->filemime, $mimes ) ):
+            die(); // Silence is golden
+        endif;
+
+        // Filepath
+        $path = drupal_realpath( $file->uri );
+
+        // Force download
+        header( 'Content-Type: application/octet-stream' );
+        header( 'Content-Transfer-Encoding: Binary' ); 
+        header( 'Content-disposition: attachment; filename="' . basename( $path ) . '";' ); 
+        readfile( $path ); 
+        
+    }
+
+    // Busca publicações via RSS
+    public static function requireRss(){
+
+        // Token for scanner
+        if( _get( 'token' ) != REQUIRE_TOKEN ) exit(); // Silence is golden
+
+        // Clear all tags
+        //SecomVC::clearAllTags();
+
+        // Start time
+        $start = strtotime( '2020-04-01 00:00:00' );
+
+        // Prevent timeout
+        SecomVC::preventTimeout();
+
+        // Vocabulary
+        $vocabulary = taxonomy_vocabulary_machine_name_load( 'editorias' );
+
+        // Terms
+        $query = new EntityFieldQuery();
+        $terms = $query
+            ->entityCondition( 'entity_type', 'taxonomy_term' )
+            ->propertyCondition( 'vid', $vocabulary->vid )
+            ->fieldCondition( 'field_endpoint', 'value', 'NULL', '<>' )
+            ->execute()
+        ;
+        if( empty( $terms ) ):
+            exit( 'Nenhuma Editoria com RSS para importação' );
+        endif;
+        
+        $count = 1;
+
+        foreach( $terms[ 'taxonomy_term' ] as $term ):
+            
+            $term = taxonomy_term_load( $term->tid );
+            $endpoint = SecomVC::extractField( $term, 'field_endpoint' );
+            
+            // Last imported
+            $last = SecomVC::getLastImported( SOURCE_RSS_ID, $term->tid );
+            if( $last ):
+                $last_date = SecomVC::extractField( $last, 'field_data' );        
+                $last_date  = $last_date[ 'value' ];        
+            endif;
+
+            // Get content
+            $rss = SecomVC::request( $endpoint[ 'value' ] );
+
+            // No results
+            if( empty( $rss ) ):
+                
+                watchdog( 'SecomVC::requireRss', 'Erro ao recuperar RSS: ' . $endpoint[ 'value' ], array(), WATCHDOG_NOTICE, $endpoint[ 'value' ] );
+                continue;
+
+            // Serviço indisponível
+            elseif( $rss == '503' ):
+
+                watchdog( 'SecomVC::requireRss', 'Serviço indisponível: ' . $endpoint[ 'value' ], array(), WATCHDOG_NOTICE, $endpoint[ 'value' ] );
+                continue;
+            
+            endif;
+
+            // Each post
+            foreach( $rss->entry as $item ):
+
+                // Updated time
+                $_updated = strtotime( $item->updated );
+
+                // Limit by date
+                if( $_updated < $start ) continue;
+                
+                $_item = new stdClass();
+                $_item->source_type = SOURCE_RSS_ID;
+                $_item->title = $item->title->__toString();
+                $_item->summary = $item->summary->__toString();
+                $_item->content = $item->content->div->div->asXML();
+                $_item->url = $item->link->attributes()->href->__toString();
+                $_item->created = date( 'Y-m-d H:i:s', $_updated );
+                $_item->updated = date( 'Y-m-d H:i:s', $_updated );
+                $_item->editoria = $term->tid;
+                $_item->service_key = $item->id->__toString();
+
+                // Get tags
+                $_item->tags = array();
+                if( count( $item->category ) > 0 ):
+                    foreach( $item->category as $tag ):
+                        $_item->tags[] = $tag->attributes()->term->__toString();
+                    endforeach;
+                endif;
+
+                // Image
+                $_item->image = SecomVC::extractImage( $_item->url );              
+
+                // Create item
+                if( !$last || ( $_item->created >= date( 'Y-m-d H:i:s', $last->created ) ) ):
+                    SecomVC::nodeCreate( $_item );
+                endif;
+
+                $count++;
+            
+            endforeach;
+            
+        endforeach;
+
+        Die( 'Posts importados com sucesso (' . $count . ').' );
+
+    }
+
+    // Busca publicações via VTracker
+    public static function requireVtracker(){
+
+        // Token for scanner
+        if( _get( 'token' ) != REQUIRE_TOKEN ) exit(); // Silence is golden
+
+        // Prevent timeout
+        SecomVC::preventTimeout();
+
+        // Monitoramentos selecionados
+        $monits_ids = variable_get( 'vtracker_monitoramentos_ids' );
+        if( empty( $monits_ids ) ) exit( 'Nenhum monitoramento selecionado' );
+        $monits_ids = explode( ',', $monits_ids );
+
+        foreach( $monits_ids as $group_id ):
+            //variable_del( 'vtracker_' . $group_id . '_date' );
+            //variable_del( 'vtracker_' . $group_id . '_since_id' );
+            SecomVC::checkMonitoramento( $group_id );
+        endforeach;
+        
+        exit( 'Iportação finalizda!' );
+        
+    }
+
+    public static function checkMonitoramento( $group_id ){
+
+        // Date
+        $date = SecomVC::getVtrackerDate( $group_id );
+        
+        // Time
+        $time = strtotime( $date );
+        
+        // Today
+        $today = date( 'Ymd' );
+
+        // Since id
+        $sinceId = SecomVC::getVtrackerSinceId( $group_id );
+
+        // Request URL
+        $url = VTRACKER_SERVICE . 'ocorrencias/listar?key='. VTRACKER_TOKEN .'&monitoramentoId='. $group_id .'&dataInicio='. date( 'Ymd', $time ) .'-00:00:00&dataFim='. date( 'Ymd', strtotime( '+1 day', $time ) ) .'-00:00:00&somentePostagensPropria=true' . ( !empty( $sinceId ) ? '&sinceId=' . $sinceId : '' );
+
+        try {
+
+            $response = SecomVC::request( $url, 'json' );
+            if( $response->codigo != '200' ):
+            
+                watchdog( 'SecomVC::checkMonitoramento', 'Erro ao fazer requisição Vtracker: ' . $url, array(), WATCHDOG_NOTICE, $url );
+            
+                echo '<pre>';
+                echo( 'Erro!! <br>' );
+                var_dump( $response );
+                exit;
+            
+            endif;            
+
+            // Se há resultados
+            if( !empty( $response->ocorrencias ) ):
+
+                // Reverse order
+                $response->ocorrencias = array_reverse( $response->ocorrencias, true );
+
+                $counter = 0;
+                foreach( $response->ocorrencias as $item ):
+
+                    // Post type
+                    $type = SecomVC::getVtrackerItemType( $item->servico_id );
+
+                    // Check if is retweet
+                    $is_rt = ( $type == 'twitter' ) && strpos( $item->conteudo, 'RT @' ) === 0;
+                    
+                    // Just nível 1 and retweet
+                    if( $item->nivel > 2 || empty( $item->conteudo ) || ( $item->nivel == 2 && !$is_rt ) || !SecomVC::ping( $item->link ) ):
+                        continue;
+                    endif;
+
+                    $_item = new stdClass();
+                    $_item->source_type = SOURCE_VTRACKER_ID;
+                    $_item->title = truncate_utf8( $item->publicador_nomecompleto . ' - ' . $item->servico . ' - ' . $item->conteudo, '120', false, false );
+                    $_item->content = $item->conteudo;
+                    $_item->summary = $item->complemento;
+                    $_item->url = $item->link;
+                    $_item->service_key = $item->id;
+                    $_item->service_group = $group_id;
+
+                    // Dates
+                    $_item->created = SecomVC::normalizeDate( $item->data );
+                    $_item->updated = SecomVC::normalizeDate( $item->data_ultima_atualizacao );
+
+                    // Get tags
+                    $_item->tags = false;
+                    //$_item->tags = array();
+                    //if( !empty( $item->tags ) ):
+                    //    foreach( $item->tags as $tag ):
+                    //        if( !in_array( $tag->descricao, array( 'Ç - RT', 'G - Redes Proprietárias', 'G - Outros' ) ) ):
+                    //            $_item->tags[] = $tag->descricao;
+                    //        endif;
+                    //    endforeach;
+                    //endif;
+
+                    // Image
+                    if( !empty( $item->thumbnail ) ):
+                        $_item->image = $item->thumbnail;
+                    else:
+                        $_item->image = false;
+                    endif;
+
+                    // Create new ítem
+                    if( SecomVC::nodeCreate( $_item ) ):
+
+                        $counter++;
+
+                    endif;
+
+                    //die( 'Importou + 1!' );
+                        
+                endforeach;
+
+            endif;
+
+            // Se podemos ter paginação
+            if( !empty( $response->ocorrencias ) && count( $response->ocorrencias ) == 200  ):
+
+                // Setamos o sinceID
+                $last = end( $response->ocorrencias );
+
+                SecomVC::setVtrackerSinceId( $group_id, $last->id );
+                
+                SecomVC::checkMonitoramento( $group_id );
+
+                return true;
+
+            // Se tem menos de 200 registros, 
+            else:
+
+                // Se estamos em uma data anterior
+                if( $date < $today ):
+                    
+                    // Passamos para o próximo dia
+                    $nextdate = date( 'Ymd', strtotime( '+1 day', $time ) );
+                    SecomVC::setVtrackerDate( $group_id, $nextdate );
+                    
+                    // Zeramos o sinceID
+                    SecomVC::setVtrackerSinceId( $group_id, '' );
+                    
+                    // Retrieve posts again
+                    SecomVC::checkMonitoramento( $group_id );
+
+                else:
+
+                    return true;
+
+                endif;
+
+            endif;
+
+            //die( 'Importou '. $counter .' registro'. ( $counter > 1 ? 's' : '' ) .'!' );
+
+        }
+        catch( ClientException $e ){
+
+            echo Psr7\str( $e->getRequest() );
+            echo Psr7\str( $e->getResponse() );
+            die();
+        
+        }
+
+        return true;
+
+    }
+
+    public static function checkDoubles( $page = 1, $token = false ){
+
+        // Token for scanner
+        if( !$token ):
+            $token = _get( 'token' );
+        endif;
+
+        if( $token != REQUIRE_TOKEN ) exit(); // Silence is golden
+
+        // Prevent timeout
+        SecomVC::preventTimeout();
+
+        $source = SOURCE_VTRACKER_ID;
+        //$source = SOURCE_RSS_ID;
+
+        // Page minimum 1
+        $perPage = 10000;
+        $rangeStart = ( $page * $perPage ) - $perPage;
+
+        // Total results
+        $counter = db_select( 'node', 'ND' ); 
+        $counter->join( 'field_data_field_source', 'SO', 'SO.entity_id = ND.nid' );
+        $counter->join( 'field_data_field_service_key', 'SK', 'SK.entity_id = ND.nid' );
+        $counter->join( 'field_data_field_url_origem', 'UO', 'UO.entity_id = ND.nid' );
+        $counter->fields( NULL, array( 'field' ) );
+        $counter->condition( 'ND.type', 'publicacao' );
+        $counter->condition( 'SO.field_source_value', $source );
+        $total = $counter->countQuery()->execute()->fetchField();
+
+        // Results
+        $query = db_select( 'node', 'ND' ); 
+        $query->join( 'field_data_field_source', 'SO', 'SO.entity_id = ND.nid' );
+        $query->join( 'field_data_field_service_key', 'SK', 'SK.entity_id = ND.nid' );
+        $query->join( 'field_data_field_url_origem', 'UO', 'UO.entity_id = ND.nid' );
+        $query->fields( 'ND', array( 'nid' ) );
+        $query->addField( 'SO', 'field_source_value', 'source_id' );
+        $query->addField( 'SK', 'field_service_key_value', 'source_key' );
+        $query->addField( 'UO', 'field_url_origem_value', 'url_origem' );
+        $query->condition( 'ND.type', 'publicacao' );
+        $query->condition( 'SO.field_source_value', $source );
+        $query->orderBy( 'ND.nid', 'ASC' );
+        $query->range( $rangeStart, $perPage );
+
+        // Results
+        $keys = array();
+        $doubles = array();
+
+        $exists = $query->execute()->fetchAll();
+        
+        if( empty( $exists ) ):
+
+            exit( 'Checagem finalizada com sucesso.' );
+
+        else:
+        
+            foreach( $exists as $node ):
+
+                // Key
+                $key = _object_get( $node, 'source_key' );
+
+                // Group
+                $url = _object_get( $node, 'url_origem' );
+
+                // Complex key
+                $_key = md5( $key . '-' . $url );
+
+                if( isset( $keys[ $_key ] ) ):
+
+                    $keys[ $_key ]++;
+                    $doubles[] = $node->nid;
+                
+                else:
+                
+                    $keys[ $_key ] = $node->nid;
+                
+                endif;
+
+            endforeach;
+            
+            if( !empty( $doubles ) ):
+
+                try {
+                
+                    node_delete_multiple( $doubles );
+                
+                } 
+                catch( Exception $e ){
+                    
+                    echo 'SecomVC::checkDoubles - Erro ao remover nodes';
+                    echo '<pre>';
+                    echo '$e' . "\r\n";
+                    var_dump( $e );
+                    exit;
+                    
+                }
+
+            endif;
+
+            // Next page
+            if( count( $exists ) >= $perPage ):
+
+                $page++;
+                SecomVC::checkDoubles( $page, $token );
+
+            else:
+
+                exit( 'Checagem finalizada com sucesso.' );
+            
+            endif;
+
+        endif;        
+
+    }
+
+    public static function normalizeDate( $date ){
+        list( $date, $time ) = explode( ' ', $date );
+        return substr( $date, 6, 4 ) . '-' . substr( $date, 3, 2 ) . '-' . substr( $date, 0, 2 ) . ' ' . $time;
+    }
+
+    // Get Vtracker Date and ID
+    public static function getVtrackerDate( $group_id ){
+
+        // Return vars
+        $date = false;
+       
+        // Last date set on database
+        $db_date = variable_get( 'vtracker_' . $group_id . '_date' );
+        if( !empty( $db_date ) ):
+            $date = $db_date;
+        else:
+            $date = VTRACKER_START_DATE;
+        endif;
+
+        // Last importede item
+        $last_node = SecomVC::getLastImported( SOURCE_VTRACKER_ID, $group_id );
+        if( $last_node && date( 'Ymd', $last_node->created ) > $date ):
+            // Since date
+            $date = date( 'Ymd', $last_node->created );
+        endif;
+
+        // Keep data
+        SecomVC::setVtrackerDate( $group_id, $date );
+
+        return $date;
+
+    }
+
+    // Vtracker since ID
+    public static function setVtrackerSinceId( $group_id, $sinceID ){
+        variable_set( 'vtracker_' . $group_id . '_since_id', $sinceID );
+    }
+    public static function getVtrackerSinceId( $group_id ){
+        return variable_get( 'vtracker_' . $group_id . '_since_id' );
+    }
+
+    // Vtracker group date
+    public static function setVtrackerDate( $group_id, $date ){
+        variable_set( 'vtracker_' . $group_id . '_date', $date );
+    }
+
+    // Cria nova publicação
+    public static function nodeCreate( $data ){
+
+        // Verifica se a publicação já foi importada
+        if( SecomVC::hasImported( $data ) === false ):
+
+            // New node object
+            $node = new stdClass(); 
+            $node->type = 'publicacao';
+            $node->language = LANGUAGE_NONE;
+            $node->status = 0;
+            $node->promote = 0;
+            $node->sticky = 0;
+            node_object_prepare( $node );
+
+            // Title
+            $node->title = truncate_utf8( $data->title, '100', true, true );
+
+            // Chamada
+            $node->field_chamada[ LANGUAGE_NONE ][ 0 ][ 'value' ] = $data->summary;
+            
+            // Data
+            $node->field_data[ LANGUAGE_NONE ][ 0 ][ 'value' ] = $data->created;
+            
+            // URL de origem
+            $node->field_url_origem[ LANGUAGE_NONE ][ 0 ][ 'value' ] =  $data->url;
+            
+            // Sourece type
+            $node->field_source[ LANGUAGE_NONE ][ 0 ][ 'value' ] =  $data->source_type;
+            
+            // Origin key
+            $node->field_service_key[ LANGUAGE_NONE ][ 0 ][ 'value' ] = $data->service_key;
+
+            // Origin group
+            if( isset( $data->service_group ) ):
+                $node->field_service_group[ LANGUAGE_NONE ][ 0 ][ 'value' ] = $data->service_group;
+            endif;
+            
+            // Contente
+            $node->field_conteudo[ LANGUAGE_NONE ][ 0 ] = array(
+                'value' => $data->content,
+                'format' => 'full_html'
+            );
+
+            // Taxonomy
+            $_editoria = _object_get( $data, 'editoria' );
+            if( $_editoria ):
+                 $node->field_editoria[ LANGUAGE_NONE ][ 0 ] = array( 'tid' => $_editoria );
+            endif;
+            
+            // Tags
+            $node->field_tags = SecomVC::normalizeTags( $data );
+
+            // Image        
+            if( $data->image ):
+
+                $_image_info = SecomVC::getImage( $data->image );
+
+                if( !empty( $_image_info ) ):
+                    $node->field_image[ LANGUAGE_NONE ] = array( $_image_info );
+                endif;
+
+            endif;
+
+            // Updated
+            $node->created = strtotime( $data->created );
+
+            try {
+
+                // Save node
+                node_save( $node );
+                
+                // URL
+                $url = url( 'node/' . $node->nid, array( 'absolute' => TRUE ) );
+                
+                // Report
+                watchdog( 'SecomVC::nodeCreate', 'A publicação ' . $node->title . ' foi importada com sucesso. <a href="'. $url .'" target="_blank">Acessar publicação</a>', array(), WATCHDOG_INFO, $data->url );
+
+                return true;
+
+            }
+            catch( Exception $e ){
+
+                // Report error
+                watchdog( 'SecomVC::nodeCreate', $message, array(), WATCHDOG_NOTICE, $data->url );
+                return false;
+
+            }
+
+        else:
+
+            return false;
+
+        endif;
+
+    }
+
+    public static function getImage( $url ){
+
+        $file_data = @file_get_contents( $url );
+        if( empty( $file_data ) ):
+
+            // Ping
+            if( !SecomVC::ping( $url ) ):
+                return false;
+            endif;
+
+            // New client
+            $client = new Client(array(
+                'headers' => array(
+                    'User-Agent' => 'Mozilla/5.0 (Linux; U; Android 4.3; EN; C6502 Build/10.4.1.B.0.101) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30 PlayStation App/1.60.5/EN/EN'
+                ),
+                'curl' => array( 
+                    CURLOPT_SSL_VERIFYPEER => false,
+                    CURLOPT_SSL_VERIFYHOST => false,
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_CONNECTTIMEOUT => 0,
+                    CURLOPT_TIMEOUT        => 0, 
+                    CURLOPT_FAILONERROR    => false
+                )
+            ));
+
+            try {
+
+                $response = $client->get( $url );
+                $file_data = $response->getBody()->getContents();
+
+            }
+            catch( ClientErrorResponseException $e ){
+            
+                // Report error
+                watchdog( 'SecomVC::nodeCreate', 'Erro ao tentar capturar imagem: '. $url .'. ' . $e->getMessage(), array(), WATCHDOG_NOTICE, $url );
+                return false;
+            
+            }
+
+        endif;
+
+        if( !empty( $file_data ) ):
+
+            $mimes = array( 
+                'image/png' => 'png',
+                'image/jpeg' => 'jpg',
+                'image/webp' => 'webp',
+                'image/gif' => 'gif'
+            );
+
+            $file_info = new finfo( FILEINFO_MIME_TYPE );
+            $mime_type = $file_info->buffer( $file_data );
+
+            if( !empty( $file_data ) && isset( $mimes[ $mime_type  ] ) ):
+
+                $better_token = md5(uniqid(rand(), true));
+                $file_name = 'imported_image_'. $better_token .'.' . $mimes[ $mime_type  ];
+                $file_temp = file_save_data( $file_data, 'public://' . $file_name, FILE_EXISTS_RENAME );
+
+                return array(
+                    'fid' => $file_temp->fid,
+                    'filename' => $file_temp->filename,
+                    'filemime' => $file_temp->filemime,
+                    'uid' => 1,
+                    'uri' => $file_temp->uri,
+                    'status' => 1
+                );
+
+            endif;
+
+            return false;
+
+        endif;
+
+        return false;
+
+
+    }
+
+    public static function extractImage( $url, $filter = false ){
+
+        // Get content image
+        $origem = SecomVC::request( $url, 'text' );
+        preg_match_all( '/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $origem, $images );
+
+        // Sources
+        $srcs = _array_get( $images, 'src' );
+        if( !$srcs ) return false;
+
+        $return = reset( $srcs );
+        if( $filter ):
+
+            // Each image
+            foreach( $srcs as $src ):
+
+                if( strpos( $src, $filter ) !== false ):
+                    $return = $src;
+                    break;
+                endif;
+
+            endforeach;
+
+        endif;
+
+        $return = str_replace( '.jpg:small', '.jpg', $return );
+
+        return $return;
+    
+    }
+
+    public static function getVtrackerItemType( $sid ){
+
+        if( in_array( $sid, array( '59', '9', '65', '67', '70' ) ) ):
+        
+            return 'twitter';
+
+        elseif( in_array( $sid, array( '58', '41', '47', '51', '68', '69', '76', '89' ) ) ):
+        
+            return 'facebook';
+
+        elseif( in_array( $sid, array( '42', '48', '79', '83', '84', '90', '91', '56', '57', '66', '80', '81', '82', '85' ) ) ):
+
+            return 'instagram';
+
+        endif;
+
+        return false;
+
+    }
+
+    // Limpar tabela de Tags
+    public static function clearAllTags(){
+
+        $vocabulary = taxonomy_vocabulary_machine_name_load( 'tags' );
+
+        $tree = taxonomy_get_tree( $vocabulary->vid );
+
+        foreach( $tree as $key => $term ):
+            taxonomy_term_delete( $term->tid );
+        endforeach;
+
+        exit( 'Todas as tags foram removidas.' );
+    
+    }
+
+    // Normaliza tags para se importar
+    public static function normalizeTags( $data ){
+        
+        // Tags
+        $_tags = _object_get( $data, 'tags' );
+        if( empty( $_tags ) ) return array();
+            
+        // Taxonomy
+        $tax = taxonomy_vocabulary_machine_name_load( 'tags' );
+
+        $field_tags = array( LANGUAGE_NONE => array() );
+        
+        foreach( $data->tags as $tag ):
+
+            $possibilities = taxonomy_term_load_multiple( 
+                array(), 
+                array( 
+                    'name' => trim( $tag ), 
+                    'vid' => array( $tax->vid )
+                )
+            );
+
+            // Exists
+            if( $possibilities ):
+
+                $_last_term = array_pop( $possibilities );
+                $field_tags[ LANGUAGE_NONE ][] = array(
+                    'tid' => $_last_term->tid,
+                    'vid' => $tax->vid,
+                    'name' => $_last_term->name,
+                );
+
+            // New tag
+            else:
+
+                $field_tags[ LANGUAGE_NONE ][] = array(
+                    'tid' => 'autocreate',
+                    'vid' => $tax->vid,
+                    'name' => $tag,
+                    'vocabulary_machine_name' => $tax->machine_name,
+                );
+            
+            endif;
+        
+        endforeach;
+
+        return $field_tags;
+    
+    }
+
+    // Se o node já foi importado
+    public static function hasImported( $data ){
+
+        // Source type
+        $source_id = _object_get( $data, 'source_type' );
+        
+        // Source key
+        $source_key = _object_get( $data, 'service_key' );
+        if( empty( $source_key ) ) return false;
+        
+        // Total results
+        $counter = db_select( 'node', 'ND' ); 
+        $counter->join( 'field_data_field_source', 'SO', 'SO.entity_id = ND.nid' );
+        $counter->join( 'field_data_field_service_key', 'SK', 'SK.entity_id = ND.nid' );
+        $counter->fields( NULL, array( 'field' ) );
+        $counter->condition( 'ND.type', 'publicacao' );
+        $counter->condition( 'SO.field_source_value', $source_id );
+        $counter->condition( 'SK.field_service_key_value', $source_key );
+        $total = $counter->countQuery()->execute()->fetchField();
+
+        return intVal( $total ) > 0 ? true : false;
+ 
+    }
+
+    // Recupera a última publicação importada
+    public static function getLastImported( $source = '2', $filter = false ){
+        
+        // Last imported by rss
+        $qlast = new EntityFieldQuery();
+        $qlast
+            ->entityCondition( 'entity_type', 'node' )
+            ->entityCondition( 'bundle', 'publicacao' )
+            ->fieldCondition( 'field_source', 'value', $source )
+        ;
+
+        // Filter results
+        if( $filter ):
+        
+            if( $source == SOURCE_RSS_ID ):
+                
+                $qlast
+                    ->fieldCondition( 'field_editoria', 'tid', array( $filter ), 'IN' )
+                    ->fieldOrderBy( 'field_data', 'value', 'DESC' )
+                ;
+            
+            elseif( $source == SOURCE_VTRACKER_ID ):
+                
+                $qlast
+                    ->fieldCondition( 'field_service_group', 'value', $filter )
+                    ->fieldOrderBy( 'field_service_key', 'value', 'DESC' )
+                ;
+            
+            endif;
+        
+        endif;
+        
+        $last = $qlast
+            ->range( 0, 1 )
+            ->execute()
+        ;
+        if( empty( $last ) ) return false;
+
+        // Extract node
+        $nids = array_keys( $last[ 'node' ] );
+        $node = node_load( reset( $nids ) );
+
+        if( empty( $node ) ) return false;
+
+        return $node;
+
+    }
+
+    // Make request call
+    public static function request( $url, $format = 'xml' ){
+
+        // New client
+        $client = new Client(array(
+            //'headers' => array(
+            //    'User-Agent' => 'Mozilla/5.0 (Linux; U; Android 4.3; EN; C6502 Build/10.4.1.B.0.101) AppleWebKit/534.30 (KHTML, //like Gecko) Version/4.0 Mobile Safari/534.30 PlayStation App/1.60.5/EN/EN'
+            //),
+            'curl' => array( 
+                CURLOPT_SSL_VERIFYPEER => false,
+                CURLOPT_SSL_VERIFYHOST => false,
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_CONNECTTIMEOUT => 0,
+                CURLOPT_TIMEOUT        => 0, 
+            )
+        ));
+
+        try {
+
+            $response = $client->get( $url );
+            $content = $response->getBody()->getContents();
+            
+            // XML format
+            if( $format == 'xml' ):
+            
+                try {
+                    $xml = @simplexml_load_string( $content );
+                    return empty( $xml ) ? false : $xml;
+                } 
+                catch( Exception $e ){
+                    watchdog( 'SecomVC::request', 'Erro no parser do XML: ' . $e->getMessage(), array(), WATCHDOG_NOTICE, $url );
+                }
+
+            elseif( $format == 'json' ):
+                
+                return json_decode( $content );
+            
+            else:
+               
+                return $content;
+            
+            endif;
+
+            return false;
+
+        }
+        catch( Exception $e ){
+
+            $response = $e->getResponse();
+
+            if( $response->getStatusCode() == '404' ):
+
+                watchdog( 'SecomVC::request', 'Endereço não encontrado: ' . $url, array(), WATCHDOG_NOTICE, $url );
+            
+            elseif( $response->getStatusCode() == '503' ):
+            
+                watchdog( 'SecomVC::request', 'Serviço indisponível: ' . $url, array(), WATCHDOG_NOTICE, $url );
+                return '503';
+            
+            else:
+            
+                watchdog( 'SecomVC::request', 'Problema ao acessar conteúdo: ' . $e->getMessage(), array(), WATCHDOG_WARNING, $url );
+            
+            endif;
+
+            return false;
+
+        }
+
+        return false;
+
+    }
+
+    public static function ping( $url ){
+
+        // Empty URL
+        if( empty( $url ) || strpos( $url, 'http' ) !== 0 ) return false;
+
+        $client = new Client(array(
+            'curl' => array( 
+                CURLOPT_SSL_VERIFYPEER => false,
+                CURLOPT_SSL_VERIFYHOST => false,
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_CONNECTTIMEOUT => 0,
+                CURLOPT_TIMEOUT        => 0, 
+            )
+        ));
+
+        try {
+            $client->head( $url );
+            return true;
+        } 
+        catch( GuzzleHttp\Exception\ClientException $e ){
+            return false;
+        }
+
+    }
+
+    // Ger filters
+    public static function getFilters(){
+
+        $tags = SecomVC::getTaxonomy( 'tags', true );
+        $stickedsTags = SecomVC::stickedsTags();
+        $editorias = SecomVC::getTaxonomy( 'editorias', true );
+
+        SecomVC::returnJson(array(
+            'status' => 'success',
+            'editorias' => empty( $editorias ) ? false : $editorias,
+            'tags' => empty( $tags ) ? false : $tags,
+            'stickeds' => $stickedsTags
+        ));
+        
+    }
+
+    // Stickeds tags
+    public static function stickedsTags(){
+
+        $time = strtotime( '-15 days' );
+
+        $result = db_query("
+            SELECT COUNT( FT.field_tags_tid ) AS total, FT.field_tags_tid as tid, TD.name
+            FROM field_data_field_tags FT
+            LEFT JOIN node ND ON ND.nid = FT.entity_id 
+            LEFT JOIN taxonomy_term_data TD ON TD.tid = FT.field_tags_tid
+            WHERE 
+                FT.bundle = 'publicacao'
+                AND
+                ND.status = 1
+                AND
+                ND.changed >= $time
+            GROUP BY FT.field_tags_tid, TD.name
+            ORDER BY total DESC
+            LIMIT 5
+        ")->fetchAll();
+        
+        return empty( $result ) ? false : $result;
+        
+    }
+
+    // Notícias da home
+    public static function getRelacionadas( $slug ){
+        
+        global $base_url;
+
+        // Translating
+        $node = SecomVC::getNodeBySlug( $slug, 'publicacoes' );
+        $tags = SecomVC::getTermsValues( $node, 'tags', 'tags' );
+
+        $query = new EntityFieldQuery();
+        $result = $query
+            ->entityCondition( 'entity_type', 'node' )
+            ->entityCondition( 'bundle', 'publicacao' )
+            ->propertyCondition('status', NODE_PUBLISHED )
+            ->propertyOrderBy( 'created', 'DESC' )
+            ->fieldCondition( 'field_tags', 'tid', array_keys( $tags ), 'IN' )
+            ->propertyCondition( 'nid', $node->nid, '<>' )
+            ->range( 0, 3 )
+            ->execute()
+        ;
+
+        if( empty( $result[ 'node' ] ) ):
+
+            SecomVC::returnJson(array(
+                'status' => 'success',
+                'items' => false,
+            ));
+        
+        endif;
+
+        $nodes = node_load_multiple( array_keys( $result[ 'node' ] ) );
+        foreach( $nodes as &$node ):
+            $node = SecomVC::getPublicacaoTeaser( $node );
+        endforeach;
+
+        SecomVC::returnJson(array(
+            'status' => 'success',
+            'items' => $nodes
+        ));
+    
+    }
+
+    // Get list of news
+    public static function getPublicacoes( $page = false ){
+
+        global $base_url;
+
+        // Page minimum 1
+        empty( $page ) && $page = '1';
+        
+        $perPage = 24;
+        $rangeStart = ( $page * $perPage ) - $perPage;
+   
+        $query = new EntityFieldQuery();
+        $query
+            ->entityCondition( 'entity_type', 'node' )
+            ->entityCondition( 'bundle', 'publicacao' )
+            ->propertyCondition( 'status', NODE_PUBLISHED )
+            ->propertyOrderBy( 'sticky', 'DESC' )
+            ->fieldOrderBy( 'field_data', 'value', 'DESC' )
+        ;
+
+        // Keyword
+        $keyword = _get( 'palavra-chave' );
+        if( $keyword ):
+            $query->addTag( 'search' );
+            $query->addMetaData( 'terms', $keyword );
+        endif;
+
+        // Tags
+        $tags = _get( 'tags' );
+        if( $tags ):
+            $tags = explode( ',', $tags );
+            $_all_tags = SecomVC::getTaxonomy( 'tags', true, $tags );
+            $_tags = array();
+            foreach( $_all_tags as $tag ):
+                $_tags[] = $tag[ 'id' ];
+            endforeach;
+            $query->fieldCondition( 'field_tags', 'tid', $_tags, 'IN' );
+        
+        endif;
+
+        // Editoria
+        $editoria = _get( 'editoria' );       
+        if( $editoria ):
+            $_editoria = SecomVC::getTaxonomy( 'editorias', true, array( $editoria ) );
+            $_editoria = reset( $_editoria );
+            $query->fieldCondition( 'field_editoria', 'tid', $_editoria[ 'id' ] );
+        endif;
+
+        // Data início
+        $inicio = _get( 'inicio' );
+        if( $inicio ):
+            $_ipeaces = explode( '/', $inicio );
+            $_ipeaces = array_reverse( $_ipeaces );
+            $_inicio = implode( '-', $_ipeaces ) . ' 00:00:00';            
+            $query->fieldCondition( 'field_data', 'value', $_inicio, '>=' );
+        endif;
+
+        // Data fim
+        $fim = _get( 'fim' );
+        if( $fim ):
+            $_fpeaces = explode( '/', $fim );
+            $_fpeaces = array_reverse( $_fpeaces );
+            $_fim = implode( '-', $_fpeaces ) . ' 00:00:00';
+            $query->fieldCondition( 'field_data', 'value', $_fim, '<=' );
+        endif;
+
+        // Data fim
+        $fim = _get( 'fim' );
+        if( $fim ):
+            $_fpeaces = explode( '/', $fim );
+            $_fpeaces = array_reverse( $_fpeaces );
+            $_fim = implode( '-', $_fpeaces ) . ' 00:00:00';
+            $query->fieldCondition( 'field_data', 'value', $_fim, '<=' );
+        endif;
+
+
+        // Total
+        $totalQuery = clone $query;
+        $totalQuery->count();
+        $total = $totalQuery->execute();
+
+        // Quering
+        $result = $query
+            ->range( $rangeStart, $perPage )
+            ->execute()
+        ;
+      
+        $nodes = node_load_multiple( array_keys( $result[ 'node' ] ) );    
+        foreach( $nodes as &$node ):
+            $node = SecomVC::getPublicacaoTeaser( $node );
+        endforeach;
+
+        // Total pages
+        $total_pages = ceil( $total / $perPage );
+        
+        // Next page
+        $_next = ( $page + 1 ) > $total_pages ? false : ( $page + 1 );
+
+        SecomVC::returnJson(array(
+            'status' => 'success',
+            'items' => empty( $nodes ) ? false : array_values( $nodes ),
+            'total' => $total,
+            'next' => $_next,
+            'tag' => $tag ? $term->name : false
+        ));
+
+    }
+
+    public static function getPublicacaoOpenGraph( $slug ){
+
+        // Translating
+        $node = SecomVC::getNodeBySlug( $slug, 'publicacoes' );
+
+        $excerpt = SecomVC::extractField( $node, 'field_chamada' );
+        $excerpt = truncate_utf8( strip_tags( $excerpt[ 'value' ] ), 244, TRUE, true );
+        $cover = SecomVC::extractField( $node, 'field_image' );
+
+        SecomVC::returnJson(array(
+            'status' => 'success',
+            'ID' => $node->nid,
+            'title' => $node->title,
+            'excerpt' => $excerpt,
+            'cover' => !empty( $cover ) ? file_create_url( $cover[ 'uri' ] ) : false,
+        ));
+        
+    }
+
+    public static function getPublicacaoTeaser( $node ){
+        
+        $slug = drupal_get_path_alias( 'node/' . $node->nid );
+
+        $excerpt = SecomVC::extractField( $node, 'field_chamada' );
+        $excerpt = truncate_utf8( strip_tags( $excerpt[ 'value' ] ), 244, TRUE, true );
+
+        $hide_title = SecomVC::extractField( $node, 'field_hide_title' );                
+        $hide_title = _array_get( $hide_title, 'value' );                
+        
+        $editoria = SecomVC::getTermsValues( $node, 'editorias', 'editoria', true );
+        
+        // Cover
+        $video = SecomVC::extractField( $node, 'field_video_header' );        
+        if( $video ):
+            $cover = '//img.youtube.com/vi/'. _array_get( $video, 'video_id' ) .'/hqdefault.jpg';
+        else:
+            $cover = SecomVC::extractField( $node, 'field_image' );
+            if( $cover ):
+                $cover = file_create_url( $cover[ 'uri' ] );
+            endif;
+        endif;
+        
+        return array(
+            'ID' => $node->nid,
+            'title' => $node->title,
+            'hide_title' => !empty( $hide_title ),
+            'excerpt' => $excerpt,
+            'editoria' => empty( $editoria ) ? false : reset( $editoria ),
+            'cover' => !empty( $cover ) ? $cover : false,
+            'video' => $video,
+            'slug' => str_replace( 'publicacoes/', '', $slug ),
+            'date' => format_date( $node->changed, 'custom', t( 'M/y', array(), array( 'context' => 'php date format' ) ) ),
+            'destaque' => $node->sticky,
+        );
+
+    }
+
+    // Publicação
+    public static function getPublicacao( $slug ){
+
+        // Translating
+        $node = SecomVC::getNodeBySlug( $slug, 'publicacoes' );
+        
+        // Header
+        $data = SecomVC::extractField( $node, 'field_data' );
+        $cover = SecomVC::extractField( $node, 'field_image' );
+        $video = SecomVC::extractField( $node, 'field_video_header' );
+
+        // Footer
+        $foot_cover = SecomVC::extractField( $node, 'field_foto_destaque' );
+        $foot_video = SecomVC::extractField( $node, 'field_video_destaque' );
+        $foot_legenda = SecomVC::extractField( $node, 'field_legenda' );
+
+        // Content
+        $content = SecomVC::getContent( $node );
+
+        // Links
+        $saiba_mais = SecomVC::extractField( $node, 'field_saiba_mais' );
+        $url_origem = SecomVC::extractField( $node, 'field_url_origem' );
+
+        // Taxonomy
+        $editoria = SecomVC::getTermsValues( $node, 'editorias', 'editoria', true );
+        $tags = SecomVC::getTermsValues( $node, 'tags', 'tags', true );
+
+        // Chamada
+        $excerpt = SecomVC::extractField( $node, 'field_chamada' );
+        $excerpt = truncate_utf8( strip_tags( $excerpt[ 'value' ] ), 244, TRUE, true );
+
+        // Ocultar título
+        $hide_title = SecomVC::extractField( $node, 'field_hide_title' );                
+        $hide_title = _array_get( $hide_title, 'value' );                
+
+
+        $result = array(
+            'ID' => $node->nid,
+            'title' => $node->title,
+            'header' => array(
+                'photo' => $cover ? file_create_url( $cover[ 'uri' ] ) : false,
+                'video' => empty( $video ) ? false : $video,
+                'date' => $data[ 'value' ],
+            ),
+            'footer' => array(
+                'photo' => $foot_cover ? file_create_url( $foot_cover[ 'uri' ] ) : false,
+                'video' => empty( $foot_video ) ? false : $foot_video,
+                'legend' => empty( $foot_legenda ) ? false : reset( $foot_legenda ),
+            ),
+            'content' => SecomVC::getContent( $node ),
+            'excerpt' => $excerpt,
+            'hide_title' => !empty( $hide_title ),
+            'tags' => empty( $tags ) ? false : array_values( $tags ),
+            'editoria' => empty( $editoria ) ? false : reset( $editoria ),
+            'know_more' => empty( $saiba_mais ) ? false : reset( $saiba_mais ),
+            'url_origem' => empty( $url_origem ) ? false : reset( $url_origem ),
+            'slug' => drupal_get_path_alias( 'node/' . $node->nid ),
+            'downloads' => array(),
+            'created' => date( 'd/m/Y h\hi', $node->created ),
+            'changed' => date( 'd/m/Y h\hi', $node->changed ),
+        );
+
+        // Download
+        foreach( array( 'file_download', 'audio', 'video' ) as $fdown ):
+       
+            $_file = SecomVC::extractField( $node, 'field_' . $fdown );
+            $_key = ( $fdown == 'file_download' ) ? 'archive' : $fdown;
+            if( !empty( $_file ) ):
+
+                $_file_peaces = explode( '.', $_file[ 'filename' ] );
+            
+                $result[ 'downloads' ][ $_key ] = array(
+                    'url' => file_create_url( $_file[ 'uri' ] ),
+                    'size' => $_file[ 'filesize' ],
+                    'type' => end( $_file_peaces ),
+                    'desc' => $_file[ 'description' ],
+                    'fid' => $_file[ 'fid' ]
+                );
+            
+            else:
+            
+                $result[ 'downloads' ][ $_key ] = false;
+            
+            endif;
+       
+        endforeach;
+
+        SecomVC::returnJson(array(
+            'status' => 'success',
+            'publicacao' => $result,
+        ));
+
+    }
+
+    public static function getPage( $nid ){
+
+        // Get context page
+        $lpages = translation_path_get_translations( 'node/' . $nid );
+        $path = 'node/' . $nid;
+        return menu_get_object( 'node', 1, $path );
+
+    }
+
+    // Get body node field
+    public static function getContent( $node, $strip = false ){
+        $value = SecomVC::extractField( $node, 'field_conteudo' );
+        $value = SecomVC::covertVideos( $value[ 'value' ] );
+        $value = SecomVC::covertImages( $value );
+        return $strip ? strip_tags( $value ) : $value;
+    }
+
+    // Transform youtube URLs to iframe
+    public static function covertVideos( $string ){
+
+        $return = preg_replace( "/\s*[a-zA-Z\/\/:\.]*youtube.com\/watch\?v=([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i","<div class=\"video-wrapper\"><iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/$1\" frameborder=\"0\" allowfullscreen></iframe></div>", $string );
+
+        $return = str_replace( '<p><div class="video-wrapper">', '<div class="video-wrapper">', $return );
+        $return = str_replace( '</div></p>', '</div>', $return );
+
+        return $return;
+    
+    }
+
+    // Fix images url´s
+    public static function covertImages( $string ){
+        
+        global $base_url;
+        
+        $string = str_replace( '/ckfinder/', $base_url .'/ckfinder/', $string );
+        return preg_replace( '/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $string );
+
+    }
+
+
+    public static function removeLinkTagsOfDomain( $html, $domain ){
+        // Escape all regex special characters
+        $domain = preg_quote( $domain );
+        // Search for <a> tags with a href attribute containing the specified domain
+        $pattern = '/<a .*href=".*' . $domain . '.*".*>(.+)<\/a>/';
+        // Final replacement (should be the text node of <a> tags)
+        $replacer = '$1';
+        return preg_replace( $pattern, '$1', $html );
+    }
+
+    // Retorna um array como json
+    public static function returnJson( $array ){
+
+        header( 'X-Frame-Options: GOFORIT' ); 
+        header( 'Access-Control-Allow-Origin: \*' );
+        header( 'Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept' );
+        header( 'Access-Control-Allow-Methods: GET, POST, PUT, DELETE' );
+        header( 'HTTP/1.1 200 OK' );
+        header( 'Content-type: application/json; charset=utf-8' );
+        echo json_encode( $array );
+        exit();
+    
+    }
+
+    // Extract single field value
+    public static function extractField( $entity, $field_name, $just_first_item = TRUE ){
+        $type = isset( $entity->tid ) ? 'taxonomy_term' : 'node';
+        $field_items = field_get_items( $type, $entity, $field_name );
+        if( is_array($field_items) && count($field_items) > 0 ):
+            if( $just_first_item ):
+                return $field_items[0];
+            else:
+                return $field_items;
+            endif;
+        endif;
+        return false;
+    }
+
+    public static function getTermsValues( $node, $tax, $fieldname = 'tax', $complete = false ){
+
+        $_fname = $fieldname == 'tax' ? $tax : $fieldname;
+        
+        $values = SecomVC::extractField( $node, 'field_' . $_fname, false );
+        if( empty( $values ) ) return false;
+
+        $terms = SecomVC::getTaxonomy( $tax, true );
+
+        $return = array();
+        foreach( $values as $value ):
+            $tid = reset( $value );
+            if( isset( $terms[ $tid ] ) ):
+                $return[ $tid ] = ( $complete ? $terms[ $tid ] : $terms[ $tid ][ 'name' ] );
+            endif; 
+        endforeach;
+
+        return $return;
+
+    }
+
+    // Get taxonomy
+    public static function getTaxonomy( $name, $complete = false, $filter = false ){
+
+        $termsTax = taxonomy_vocabulary_machine_name_load( $name );
+        
+        $query = db_select( 'taxonomy_index', 'ti' );
+        $query->join( 'taxonomy_term_data', 'td', 'td.tid = ti.tid' );
+        $query->fields( 'ti', array( 'tid' ) );
+        $query->fields( 'td', array( 'name' ) );
+        $query->condition( 'td.vid', $termsTax->vid, '=' );
+        $query->groupBy( 'ti.tid' );
+        $query->groupBy( 'td.name' );
+        $query->orderBy( 'td.name', 'ASC' );
+        $result = $query->execute()->fetchAll();
+        
+        $_terms = array();
+        foreach( $result as $term ):
+            
+            $slug = drupal_lookup_path( 'alias', 'taxonomy/term/' . $term->tid );
+            if( $filter && !in_array( basename( $slug ), $filter ) ):
+                continue;
+            endif;
+
+            if( $complete ):
+
+                $_terms[ $term->tid ] = array(
+                    'slug' => $slug,
+                    'name' => $term->name,
+                    'id' => $term->tid,
+                );
+
+            else:
+
+                $_terms[ $term->tid ] = $term->name;
+
+            endif;
+        
+        endforeach;
+        
+        return $_terms;
+    
+    }
+
+    public static function getNodeBySlug( $slug, $type = 'pagina', $translate = true ){
+    
+        $path = drupal_lookup_path( 'source', $type . '/' . $slug );
+        $node = menu_get_object( 'node', 1, $path );
+
+        // Not found
+        if( empty( $node ) ) return false;
+
+        // PT BR
+        return $node;
+    }
+
+    public static function getNodeByNid( $nid, $translate = true ){
+
+        $node = node_load( $nid );
+
+        // Not found
+        if( empty( $node ) ) return false;
+
+        // PT BR
+        if( LANG == 'pt-br' || $translate === false ) return $node;
+
+        // Search for translation
+        $translations = translation_node_get_translations( $node->nid );
+        if( isset( $translations[ LANG ] ) ):
+            $_node = $translations[ LANG ];
+            $node = node_load( $_node->nid );
+        endif;
+        
+        return $node;
+
+    }
+
+    public static function preventTimeout(){
+        ini_set( 'memory_limit', '-1' );
+        set_time_limit( 0 );
+        ignore_user_abort( TRUE );
+    }
+
+}
+$SecomVC = new SecomVC();
+
+// Search by keyword
+function secomvc_query_search_alter( QueryAlterableInterface $query ){
+    $terms = _get( 'palavra-chave' );
+    $words = "%" . db_like( $terms ) . "%";
+    $query->leftJoin( 'field_data_field_conteudo', 's', 'node.nid = s.entity_id' );
+    $or = db_or()
+        ->condition( 's.field_conteudo_value', $words, 'LIKE' )
+        ->condition( 'title', $words, 'LIKE' )
+    ;
+    $query->condition( $or );
+}
+
+// Vtracker
+function vtracker_monitoramentos_submit(){
+
+    if( empty( $_POST ) ) return;
+
+    // Monitoramentos
+    $items = array();
+    foreach( $_POST as $key => $value ):
+        if( strpos( $key, 'vtracker_monitoramento_' ) === 0 ):
+            $pcs = explode( '_', $key );
+            $items[] = end( $pcs );
+        endif;
+    endforeach;
+
+    variable_set( 'vtracker_monitoramentos_ids', implode( ',', $items ) );
+    
+}
+function vtracker_admin(){
+    
+    $json = json_decode( file_get_contents( VTRACKER_SERVICE . 'monitoramentos/listar?key=' . VTRACKER_TOKEN ) );
+
+    $form = array( 
+        '#prefix' => '<h2>Selecione os monitoramentos</h2>',
+        '#submit' => array( 'vtracker_monitoramentos_submit' )
+    );
+    foreach( $json->monitoramentos as $item ):
+
+        $name = 'vtracker_monitoramento_' . $item->id;
+
+        $form[ $name ] = array(
+            '#type' => 'checkboxes',
+            '#title' => false,
+            '#options' => array(
+                'active' => '<strong>'. $item->nome .'</strong>'
+            ),
+            '#default_value' => variable_get( $name, 0 )
+        );
+
+    endforeach;
+
+    return system_settings_form( $form );
+
+}
+
+//function secomvc_file_presave( $file ){
+//    $parts = pathinfo( $file->filename );
+//    $file->filename = 'image_' . $file->uid . '_' . $file->timestamp . '.' . $parts[ 'extension' ];
+//}
+//function secomvc_file_insert( $file ){
+//    $parts = pathinfo( $file->filename );
+//    $uri = 'public://' . 'image_' . $file->uid .'_'. $file->timestamp . '.' . $parts[ 'extension' ];
+//    $file = file_move( $file, $uri );
+//}
+
+function secomvc_get_user() {
+
+    global $user;
+    if( empty( $user->uid ) ):
+        $_user = false;
+    else:
+        $userinfo = user_load( $user->uid );
+        $picture = file_create_url( $userinfo->picture->uri );
+        $_user = array( 
+            'id' => $user->uid,
+            'name' => $user->name,
+            'email' => $user->mail,
+            'picture' => $picture 
+        );
+    endif;
+
+    SecomVC::returnJson(array(
+        'status' => 'success',
+        'user' => $_user,
+    ));
+
+}
+function secomvc_get_filters() {
+    return SecomVC::getFilters();
+}
+function secomvc_menu() {
+    return SecomVC::menu();
+}
+function secomvc_get_home( $page = false ){
+    return SecomVC::getPublicacoes( $page );
+}
+function secomvc_get_noticias_home(){
+    return SecomVC::getNoticiasHome();
+}
+function secomvc_get_publicacoes_relacionadas( $slug ){
+    return SecomVC::getRelacionadas( $slug );
+}
+function secomvc_get_noticias( $page = false ){
+    return SecomVC::getNoticias( $page );
+}
+function secomvc_get_noticias_tagged( $tag, $page = false ){
+    return SecomVC::getNoticias( $page, $tag );
+}
+function secomvc_get_publicacao( $slug ){
+    return SecomVC::getPublicacao( $slug );
+}
+function secomvc_get_publicacao_open_graph( $slug ){
+    return SecomVC::getPublicacaoOpenGraph( $slug );
+}
+function secomvc_require_rss(){
+    return SecomVC::requireRss();
+}
+function secomvc_require_vtracker(){
+    return SecomVC::requireVtracker();
+}
+function secomvc_check_doubles(){
+    return SecomVC::checkDoubles();
+}
+function secomvc_download( $fid ){
+    return SecomVC::download( $fid );
+}
+
+// Utilities
+function _get( $var, $default = false ){
+    return isset( $_GET[ $var ] ) && !empty( $_GET[ $var ] ) ? $_GET[ $var ] : ( $default === false ? false : $default );
+}
+function _post( $var, $default = false ){
+    return isset( $_POST[ $var ] ) && !empty( $_POST[ $var ] ) ? $_POST[ $var ] : ( $default === false ? false : $default );
+}
+function _request( $var, $default = false ){
+    return isset( $_REQUEST[ $var ] ) && !empty( $_REQUEST[ $var ] ) ? $_REQUEST[ $var ] : ( $default === false ? false : $default );
+}
+function _array_get( $arr, $key, $default = false ){
+    return isset( $arr[ $key ] ) && !empty( $arr[ $key ] ) ? $arr[ $key ] : $default;
+}
+function _object_get( $object, $key, $default = false ){
+    return isset( $object->{$key} ) && !empty( $object->{$key} ) ? $object->{$key} : $default;
+}

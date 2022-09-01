@@ -1,0 +1,45 @@
+.five-stars-box {
+  display: flex;
+  align-items: center; }
+  .five-stars-box ul {
+    display: flex; }
+    .five-stars-box ul li {
+      margin-right: 5px; }
+      .five-stars-box ul li:last-child {
+        margin-right: 0; }
+  .five-stars-box .star {
+    display: block;
+    width: 19px;
+    height: 17px;
+    padding: 0;
+    margin: 1px 0 1px 6px;
+    border: 0;
+    line-height: 17px;
+    overflow: hidden;
+    cursor: pointer;
+    background: transparent url("images/stars.png") no-repeat;
+    background-size: 100%; }
+    .five-stars-box .star:first-child {
+      margin-left: 0; }
+    .five-stars-box .star.active {
+      background-position: 0 100%; }
+  .five-stars-box.locked .star {
+    cursor: default; }
+  .five-stars-box em {
+    display: none;
+    padding-left: 8px;
+    color: #617385;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px; }
+    .five-stars-box em strong {
+      font-weight: normal; }
+
+@media (max-width: 640px) {
+  .five-stars-box .star {
+    width: 12px;
+    height: 11px;
+    line-height: 11px;
+    margin-left: 1px; } }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,24 @@
+#pikiforms_dummys_build .post-type-selection,
+#pikiforms_dummys_build .total-items {
+  display: block;
+  margin-bottom: 10px; }
+#pikiforms_dummys_build .status {
+  display: none;
+  margin: 10px 0;
+  padding: 10px 12px 10px 38px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04); }
+#pikiforms_dummys_build .status.loading {
+  background-image: url(images/loader.gif); }
+#pikiforms_dummys_build .status.success {
+  background-image: url(images/success.png); }
+#pikiforms_dummys_build .status.error {
+  background-image: url(images/error.png); }
+
+body.piki_page_piki-dummys form .form-table tbody tr > th:first-child {
+  display: none; }
+
+/*# sourceMappingURL=dummy.css.map */

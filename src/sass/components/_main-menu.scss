@@ -1,0 +1,21 @@
+.main-menu {
+
+	display: flex;
+	list-style: none;
+
+	li {
+		&:not(:last-of-type){
+			margin-right: 30px;
+		}
+	}
+
+	a {
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+
+}

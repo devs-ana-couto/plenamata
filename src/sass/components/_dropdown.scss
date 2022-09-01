@@ -1,0 +1,346 @@
+div.dropdown {
+
+	display: block;
+	position: relative;
+
+	.label,
+	button span,
+	button strong {
+		font-size: 14px;
+		line-height: 21px;
+	}
+
+	button {
+
+		@include reset;
+		width: 100%;
+		text-align: left;
+		cursor: pointer;
+
+		strong {
+			font-weight: normal;
+		}
+	
+	}
+
+	.label {
+
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		padding: 0 0 4px 0;
+		border-bottom: 1px solid #DADADA;
+		cursor: pointer;
+		z-index: 30;
+
+		> div {
+			display: block;
+			position: relative;
+			transition: all 600ms;
+		}
+
+		strong {
+
+			display: block;
+			font-weight: 400;
+			transition: all 800ms;
+
+			&.out {
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: 0;
+			}
+
+			&.in {
+				opacity: 1;
+			}
+		
+		}
+
+		i {
+
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: flex-end;
+			height: 21px;
+			width: 22px;
+			margin-left: 10px;
+
+			&:after {
+				content: '';
+				display: block;
+				width: 14px;
+				height: 8px;
+				transition: all 400ms ease-in-out;
+				//background-image: inline( 'arrow-grey.svg' );
+			}
+		
+		}
+
+	}
+
+	li {
+
+		padding: 16px 0;
+
+		&:not(:first-child){
+			border-top: 1px solid $light-surface;
+		}
+	
+	}
+
+	ul {
+	
+		@include reset;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		max-height: 0;
+		padding: 0 14px;
+		list-style: none;
+		background: #F6F6F6;
+		box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.24);
+		opacity: 0;
+		transform: translateY(-50px);
+		transition: all 700ms;
+		z-index: 9999;
+		overflow-y: scroll;
+  		-ms-overflow-style: none;  /* IE and Edge */
+  		scrollbar-width: none;  /* Firefox */
+		
+		&::-webkit-scrollbar {
+  			display: none;
+		}
+
+	}
+
+	&.opened ul {
+		opacity: 1;
+		max-height: 45vh;
+		transform: translateY(0);
+	}
+
+	&.iconed {
+
+		.thumb {
+			display: block;
+			width: 14px;
+			height: 14px;
+			margin-right: 5px;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		button {
+
+			display: flex;
+
+			.thumb {
+				transform: translateY(4px);
+			}
+		
+		}
+
+		.label {
+
+			strong.out {
+				left: 18px;
+			}
+
+			> div {
+
+				padding-left: 18px;
+				
+				.thumb {
+					position: absolute;
+					left: 0;
+					transform: translateY(3px);
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media( min-width: 768px ){
+
+	div.dropdown.desktop-thumbs {
+
+		min-width: 295px;
+		padding-right: 48px;
+
+		.label {
+			display: none !important;
+		}
+
+		&.iconed button .thumb {
+			margin: 0;
+			transform: translateY(0);
+		}
+
+        ul {
+
+        	@include reset;
+        	position: relative;
+            top: initial;
+			display: grid;
+			grid-auto-flow: column;
+			grid-template-rows: repeat( 6, auto );
+			justify-content: flex-start;
+            width: auto;
+            background: transparent;
+            opacity: 1;
+            box-shadow: none;
+            transform: none;
+            overflow-y: initial;
+
+
+            li {
+	            width: 49px;
+            	padding: 0;
+                margin: 0 3px 3px 0;
+            }
+
+        }
+
+        button {
+        
+            @include reset;
+            position: relative;
+            width: 49px;
+            height: 49px;
+            cursor: pointer;
+            transition: all 300ms ease-in-out;
+
+            .thumb {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                transition: all 300ms ease-in-out;
+            }
+
+            strong {
+                display: none;
+            }
+
+            picture {
+
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &.active {
+                border: 2px solid #7BB9B3;        
+            }
+
+        }
+
+        &.hide-texts button {
+            @include imgrpc;
+        }
+
+        &.with-picker {
+
+            button {
+
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 14px;
+                    height: 14px;
+                    transform: translate(-50%,-50%);
+                    transition: all 300ms ease-in-out;
+                    opacity: 0;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    //background-image: inline('ico-colorize.svg');
+                }
+
+                &.active:after {
+                    opacity: 1;
+                }
+
+                &.dark:after {
+                    //background-image: inline('picker-preto.svg');
+                }
+                &.light:after {
+                   	//background-image: inline('picker-branco.svg');
+                }
+
+            }
+
+        }
+
+        &.bigs {
+
+            li {
+                width: 71px;
+                margin: 0;
+            }
+
+            button {
+                width: 71px;
+                height: 71px;
+            }
+
+            &.with-space {
+                li {
+                    margin: 0 24px 24px 0;
+                }
+            }
+
+            &.with-picker {
+                button:after {
+                    width: 18px;
+                    height: 18px;
+                    //picker-branco.svg
+                }
+            }
+
+        }
+
+        &.with-opacity {
+
+            button {
+            
+                opacity: 0.5;
+
+                &:hover {
+                    opacity: 0.65;
+                }
+                &.active {
+                    opacity: 1;
+                    border: 0;
+                }
+            
+            }
+
+		}
+
+	}
+
+}

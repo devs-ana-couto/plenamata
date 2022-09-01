@@ -1,0 +1,87 @@
+body.page-template-page-inicio {
+
+	.site-header:not(.clone){
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		transition: background .4s ease-in-out;
+	}
+
+	&:not(.menu-opened) .site-header:not(.clone){
+		background: transparent;
+	}
+
+	&:not(.menu-initial) {
+		.site-header.clone {
+			opacity: 1;
+			transition: transform .3s ease-in-out !important;
+		}
+	}
+
+	&.menu-initial .site-header.clone {
+		transition: opacity .3s ease-in-out, transform 1ms ease-in-out .3s !important;
+		opacity: 0;
+	}
+
+	.ordered-blocks {
+
+		display: block;
+		width: 100%;
+
+		.home-order-control {
+
+			position: absolute;
+			left: 20px;
+			z-index: 999;
+			opacity: 0;
+			transform: translateX(-50vw);
+
+			&.to-up {
+				top: 20px;
+			}
+			&.to-down {
+				bottom: 20px;
+			}
+
+		}
+
+		> section {	
+
+			position: relative;
+
+			&:first-child .home-order-control.to-up,
+			&:last-child .home-order-control.to-down {
+				display: none !important;
+			}
+			
+			&:hover .home-order-control {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		
+		}
+
+	}
+
+}
+
+@media( max-width: 640px ){
+
+	body.page-template-page-inicio > .site-header:not(.clone) .lista-parceiros {
+
+	  	display: block;
+	  	position: absolute;
+	  	top: 59px;
+	  	left: 20px;
+	  	padding-left: 0;
+	  	margin-left: 0;
+	  	border-left: 0;
+
+	  	> div {
+	  		margin-top: 10px;
+	  	}
+	
+	}
+
+}

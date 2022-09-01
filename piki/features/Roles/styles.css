@@ -1,0 +1,35 @@
+#pikiroles, #pikiroles * {
+  box-sizing: border-box; }
+#pikiroles .piki-sanfona {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-top: 30px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #ffffff; }
+  #pikiroles .piki-sanfona .sanfona-item:not(:first-child) {
+    margin-top: 10px; }
+  #pikiroles .piki-sanfona .sanfona-item.opened header a {
+    background: #2271b1; }
+  #pikiroles .piki-sanfona header a {
+    display: block;
+    padding: 10px;
+    background: #2271b1;
+    background: #8e8e8e;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease-in-out; }
+  #pikiroles .piki-sanfona header h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.1em; }
+  #pikiroles .piki-sanfona .item-content ul {
+    padding: 20px 0 12px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; }
+  #pikiroles .piki-sanfona .item-content li {
+    margin: 0 8px 8px 0; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,30 @@
+.ftype-gmap .gmap-map-area {
+	width: 100%;
+	height: 300px;
+	clear: both;
+	background: #fff;
+	border: 1px solid #DBD5C1;
+}
+.ftype-gmap .gmap-field.ftype-text {
+	display: block;
+	margin-top: 10px;
+}
+.ftype-gmap .search-box {
+	margin-bottom: 10px;
+}
+.ftype-gmap .search-box .search-typing {
+	float: left;
+	height: 28px;
+	margin-right: -85px;
+	padding-right: 85px;
+}
+.ftype-gmap .search-box .button {
+	float: left;
+	margin: 1px 0 0 10px;
+}
+
+.gmap-map-box {
+	display: block;
+	width: 100%;
+	min-height: 100px;
+}

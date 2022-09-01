@@ -1,0 +1,15 @@
+body.wp-admin .field-ufcidade select {
+	width: auto !important;
+}
+.field-ufcidade .field {
+	float: left;
+	margin-right: 8px;
+}
+.field-ufcidade .preloader {
+	display: none;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	text-indent: -99999px;
+	background: url("images/ajax-loader.gif") no-repeat center center;
+}

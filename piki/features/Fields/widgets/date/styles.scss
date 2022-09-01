@@ -1,0 +1,104 @@
+.field-date-modal {
+
+	display: none;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.85);
+	z-index: 999;
+
+	> div {
+
+		background-color: #FFFFFF;
+		border: 2px solid rgba(216, 216, 216, 0.4);
+		border-radius: 4px;
+		width: 424px;
+		padding: 28px 32px;
+
+	}
+
+	.status {
+		display: none;
+		padding: 4px 0 0 25px;
+		color: #BF303C;
+		font-size: 14px;
+		line-height: 17px;
+		font-style: italic;
+	}
+
+	fieldset {
+
+		display: flex;
+		align-items: center;
+		padding: 0;
+		margin: 22px 0 0;
+		border: 0;
+
+		span {
+			color: #2B4866;
+			font-size: 16px;
+			font-weight: 700;
+		}
+	
+	}
+
+	input {
+
+		width: 140px;
+		margin: 0 5px;
+
+		&.error {
+			color: #BF303C;
+		}
+	
+	}
+
+	h2 {
+		margin-bottom: 16px;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 29px;
+		color: #005EB8;
+	}
+
+	em {
+		display: block;
+		color: #2B4866;
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	nav {
+
+		display: flex;
+		justify-content: center;
+		margin-top: 24px;
+
+		button {
+			border: 0;
+			height: 40px;
+			padding: 0 24px;
+			line-height: 40px;
+			font-size: 16px;
+			font-weight: 700;
+		}
+
+		.cancel {
+			background: none;
+  			color: #005EB8;
+  			text-decoration: underline;
+		}
+
+		.submit {
+			background-color: #005EB8;
+			border-radius: 4px;
+			color: #fff;
+		}
+	
+	}
+
+}

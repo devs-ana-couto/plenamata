@@ -1,0 +1,71 @@
+.piki-pager {
+
+	&.default .paginationjs-pages ul {
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		li {
+			margin: 0 5px;
+		}
+
+		a {
+			display: block;
+			text-align: center;
+			transition: all 400ms;
+		}
+
+		.active a {
+			background: grey;
+			cursor: default;
+			color: #fff;
+		}
+
+		.paginationjs-prev,
+		.paginationjs-next {
+			&.disabled a {
+				cursor: default !important;
+				opacity: 0.5
+			}
+		}
+	
+	}
+
+	&.modern {
+
+		&,
+		& a {
+			display: table;
+		}
+
+		a {
+			margin: 0 auto;
+			text-align: center;
+		}
+
+	}
+
+}
+
+.piki-pager-list .pager-item {
+	
+	&.removing,
+	&.inserted {
+		transform: scale(0);
+		opacity: 0;
+	}
+	&.removing {
+		transition: all .5s ease-in-out;
+	}
+	&.inserted {
+		transition: none;
+	}
+	&.show {
+		transition: all .4s ease-in-out;
+		transform: scale(1);
+		opacity: 1;
+	}
+
+}
+

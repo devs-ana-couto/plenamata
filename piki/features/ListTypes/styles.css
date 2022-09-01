@@ -1,0 +1,52 @@
+.list-type-switcher a {
+	display: inline-table;
+	width: 32px;
+	height: 32px;
+	margin-left: 8px;
+	cursor: pointer;
+	background-image: url( images/list-type-switcher.png );
+	overflow: hidden;
+	text-indent: -99999px;
+	-webkit-border-radius: 51%;
+	-moz-border-radius: 51%;
+	border-radius: 51%;
+	-webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}
+.list-type-switcher a:first-child {
+	margin-left: 0;
+}
+.list-type-switcher a:hover {
+	background-color: #fff;
+}
+.list-type-switcher a.list {
+	background-position: left bottom;
+}
+.list-type-switcher.grid a.grid {
+	cursor: default;
+	background-color: #535353;
+	background-position: right top;
+}
+.list-type-switcher.grid a.list {
+	background-position: left bottom;
+}
+.list-type-switcher.list a.grid {
+	background-position: left top;
+}
+.list-type-switcher.list a.list {
+	cursor: default;
+	background-color: #535353;
+	background-position: right bottom;
+}
+@media( max-width: 1279px ){
+	.list-type-switcher a {
+		width: 28px;
+		height: 28px;
+		-webkit-background-size: 56px auto;
+		-moz-background-size: 56px auto;
+		-o-background-size: 56px auto;
+		background-size: 56px auto;
+	}
+}

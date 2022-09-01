@@ -1,0 +1,28 @@
+.field-ufcidade {
+	display: flex;
+	justify-content: flex-start;
+}
+.field-ufcidade select {
+	width: 100%;
+}
+.field-ufcidade .field.estado {
+	width:  60px;
+	margin-right:  14px;
+}
+.field-ufcidade .field.cidade {
+	width:  220px;
+}
+.field-ufcidade .preloader {
+	display: none;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	text-indent: -99999px;
+	background: url('images/ajax-loader.gif') no-repeat center center;
+	background-size:  contain;
+}
+
+// In admin
+body.wp-admin .field-ufcidade select {
+	width: auto !important;
+}

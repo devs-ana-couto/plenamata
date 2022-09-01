@@ -1,0 +1,61 @@
+.to-engage {
+
+	display: flex;
+	height: 263px;
+	max-width: 1297px;
+
+	h3 {
+		display: flex;
+		align-items: center;
+		width: 35.5020080321%;
+		padding: 40px 40px 40px 55px;
+		font-weight: 700;
+		font-size: 40.0732px;
+		line-height: 47px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #C7DD8B;
+		background: #263F30;
+	}
+
+	div, 
+	ul {
+		display: flex;
+	}
+
+	ul {
+		flex: 1;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	li {
+
+		display: flex;
+		flex: 1 1 0px;
+		align-items: flex-end;
+		padding: 0 0 22px 30px;
+		font-weight: 700;
+		font-size: 23.6796px;
+		line-height: 28px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		background-repeat: no-repeat;
+		background-size: 102% auto;
+		background-position: center center;
+		color: #FFFFFF;
+
+		&.descaso {
+			background-image: url('../images/square-descaso.png')
+		}
+		&.urgencia {
+			background-image: url('../images/square-urgencia.png')
+		}
+		&.especies {
+			background-image: url('../images/square-especies.png')
+		}
+
+	}
+
+}
