@@ -107,7 +107,15 @@
       align-items: center;
       padding: 14px 18px;
       cursor: pointer;
-      transition: all 300ms; }
+      transition: all 300ms;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .posts-field-selection .posts-list li strong {
+        font-size: 12px; }
       .posts-field-selection .posts-list li span {
         margin: -10px 10px -10px -14px;
         width: 40px;
@@ -115,12 +123,15 @@
         background: no-repeat center center;
         background-size: cover;
         transition: all 300ms; }
-      .posts-field-selection .posts-list li:hover {
+      .posts-field-selection .posts-list li:not(.disabled):not(.selected):hover {
         background: #b9cfee; }
-      .posts-field-selection .posts-list li.selected, .posts-field-selection .posts-list li.selected:hover {
+      .posts-field-selection .posts-list li.selected {
         background-color: #01ad62;
         border-color: #01ad62;
         color: #fff; }
+      .posts-field-selection .posts-list li.disabled {
+        opacity: 0.5;
+        cursor: default; }
   .posts-field-selection footer {
     display: flex;
     flex-wrap: wrap;

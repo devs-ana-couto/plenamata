@@ -46,14 +46,14 @@ if( !$meta->empty( 'cover' ) ):
 						
 						<div class="info-item arvores active" rel="arvores">
 
-					       	<em data-deter="treesEstimative">256.441.876</em>
+					       	<em data-deter="treesEstimative"></em>
 					        
 					        <div>
 
 					        	<div>
 					        		<div class="media">
 					        			<em><?php _e( 'média diária', 'amazonia' ); ?></em>
-					        			<strong data-deter="treesPerDay">1.395.360</strong>
+					        			<strong data-deter="treesPerDay"></strong>
 					        		</div>
 					        		<div class="estimativa"><?php 
 					        			_e( 'Estimativa em tempo real', 'amazonia' ); ?>
@@ -72,14 +72,14 @@ if( !$meta->empty( 'cover' ) ):
 
 						<div class="info-item area" rel="area">
 
-					       	<em data-deter="hectaresThisYear">484.054</em>
+					       	<em data-deter="hectaresThisYear"></em>
 					        
 					        <div>
 
 					        	<div>
 					        		<div class="media">
 					        			<em><?php _e( 'média diária', 'amazonia' ); ?></em>
-					        			<strong data-deter="hectaresPerDay">2.470</strong>
+					        			<strong data-deter="hectaresPerDay"></strong>
 					        		</div>
 					        		<div class="estimativa"><?php 
 					        			_e( 'Estimativa em tempo real', 'amazonia' ); ?>
@@ -108,9 +108,11 @@ if( !$meta->empty( 'cover' ) ):
 		    		<strong><?php _e( 'Saiba como manter a floresta em pé', 'amazonia' ); ?></strong>
 		    		<span><span></span></span>
 		    	</button><?php 
-		    	endif;
+		    	endif; ?>
 
-				echo do_shortcode( '[pikishare services="twitter,linkedin,facebook,whatsapp" widget_title="' . __( 'Compartilhe nas redes', 'amazonia' ) . '" style="2"]' ) ?>
+		    	<button type="button" class="ico-share ico-right inline" data-action="share" data-context="estimatives-area" data-url="<?php echo get_site_url( null, 'estimativas' ); ?>" title="<?php _e( 'Compartilhe nas redes', 'amazonia' ); ?>" data-share-description="<?php _e( 'Saiba como manter a floresta em pé', 'amazonia' ); ?>" data-share-title="<?php _e( 'Compartilhe nas redes', 'amazonia' ); ?> - Plenamata">
+		    		<span><?php _e( 'Compartilhe nas redes', 'amazonia' ); ?></span>
+		    	</button>
 		    	
 		    </footer>
 			

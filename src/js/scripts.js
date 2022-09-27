@@ -155,6 +155,15 @@ var plenamata_FN = function(){
         // Funções gerais de todo o site
         general: function (){
 
+            // do-scroll
+            $( '.do-scroll' ).on( 'click', function(e){
+                e.preventDefault();
+                var vpHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+                $( 'html, body' ).animate({
+                    scrollTop: vpHeight
+                }, 450, 'easeOutQuad' );      
+            });
+
             // Binds
             $( 'body' )
                 .on( 'mouseenter', '.item,.teaser', function(e){

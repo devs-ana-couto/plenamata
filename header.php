@@ -1,7 +1,8 @@
 <?php 
 $assets = get_template_directory_uri() . '/assets/'; 
 $context = _array_get( $args, 'context', 'site' ); 
-$body_class = 'menu-initial plnmt-wrapper' . ( $context == 'embed' ? ' is-embed' : '' ); ?>
+$preview = _array_get( $args, 'preview' );
+$body_class = 'menu-initial plnmt-wrapper ' . ( $preview ? 'preview' : '' ); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
   	<head>
@@ -28,16 +29,14 @@ $body_class = 'menu-initial plnmt-wrapper' . ( $context == 'embed' ? ' is-embed'
  		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-	    <script type="application/ld+json">
-	    {
+	    <script type="application/ld+json">{
 	        "@context": "http://schema.org",
 	        "@type": "WebPage",
 	        "name": "Plenamata",
 	        "description": "",
 	        "image": "<?php echo $assets; ?>images/img-share.png",
 	        "URL": "<?php echo get_site_url(); ?>"
-	    }
-	    </script>
+	    }</script>
 
     	<title><?php wp_title( ' | ' ); ?></title>
 
@@ -59,7 +58,7 @@ $body_class = 'menu-initial plnmt-wrapper' . ( $context == 'embed' ? ' is-embed'
 	  			<div><?php
 
 	  				// Logo
-	  				echo plenamata_logo();
+	  				echo plenamata_logo( $context );
 	  			
 	  				// Partners
 	  				echo plenamata_partners([ 

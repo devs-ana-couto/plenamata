@@ -132,7 +132,7 @@ class Search {
         <fieldset class="search <?php echo( $keyword ? 'filled' : 'empty' ); ?>">
             <input type="text" name="s" value="<?php echo _get( 's', '' ); ?>" placeholder="<?php _e( 'Buscar', 'amazonia' ); ?>...">
             <button type="button" class="clear" data-action="clear" title="<?php _e( 'Limpar', 'amazonia' ); ?>"></button>
-            <button type="submit" class="lupa-esq" <?php echo( !$keyword ? 'disabled="disabled"' : '' ); ?>><strong><?php _e( 'Search', 'amazonia' ); ?></strong></button>
+            <button type="submit" class="lupa-esq" <?php echo( !$keyword ? 'disabled="disabled"' : '' ); ?>><strong><?php _e( 'Buscar', 'amazonia' ); ?></strong></button>
         </fieldset>
         <fieldset class="filters" style="<?php echo( !$keyword ? 'style="display:none"' : '' ); ?>">
             <em>Filtros</em>

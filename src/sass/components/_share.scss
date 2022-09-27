@@ -241,71 +241,50 @@
 .piki-social-links {
 
     display: flex;
+    align-items: center;
+    margin-top: 42px;
 
-    li {
-        margin: 0 5px;
+    em {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 12px;
+        color: #FFFFFF;
     }
 
     i.icon {
 
-        display: block;
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         margin: 0;
         background-repeat: no-repeat;
         background-position: center center;
-        transition: transform .3s ease-in-out;
+        background-size: initial;
+        @extend .filter-white;
+
+        &-instagram {
+            @extend .icon-instagram;
+        }
+        &-twitter {
+            @extend .icon-twitter;
+        }
+        &-linkedin {
+            @extend .icon-linkedin;
+        }
+        &-facebook {
+            @extend .icon-facebook;
+        }
+        &-whatsapp {
+            @extend .icon-whatsapp;
+        }
 
     }
 
-    a {
-    
-        @include trans;
+    ul {
+        padding: 0;
         margin: 0;
-    
-        &:hover i {
-            transform: scale(1.1);
-        }
-    
-    }
-
-    &.light {
-        i.icon {
-            &-twitter {
-            }
-            &-instagram {
-            }
-            &-youtube {
-            }
-            &-facebook {
-            }
-            &-flickr {
-            }
-            &-linkedin {
-            }
-        }
-    }
-
-    &.small {
-
-        li {
-
-            margin: 0 10px;
-
-            &:first-child {
-                margin-left: 0;
-            }
-            &:last-child {
-                margin-right: 0;
-            }
-
-        }
-
-        i {
-            width: 20px;
-            height: 20px;
-        }
-
+        list-style: none;
+        display: flex;
+        margin-right: 8px;
     }
 
 }

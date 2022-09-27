@@ -202,6 +202,45 @@ function custom_class( $classes ){
 }
 add_filter( 'body_class', 'custom_class' );
 
+ /**
+ * Returns an array of 'acceptable' avatar tags, to use with wp_kses().
+ */
+function newspack_sanitize_avatars() {
+	$avatar_args = array(
+		'img' => array(
+			'class'  => true,
+			'src'    => true,
+			'alt'    => true,
+			'width'  => true,
+			'height' => true,
+			'data-*' => true,
+			'srcset' => true,
+		),
+		'noscript' => array(),
+	);
+
+	return $avatar_args;
+}
+
+/**
+ * Truncates text to a specific character length, without breaking a character.
+ */
+function newspack_truncate_text( $content, $length, $after = '...' ) {
+	// If content is already shorter than the truncate length, return it.
+	if ( strlen( $content ) <= $length ) {
+		return $content;
+	}
+
+	// Find the first space after the desired length:
+	$breakpoint = strpos( $content, ' ', $length );
+
+	// Make sure $breakpoint isn't returning false, and is less than length of content:
+	if ( false !== $breakpoint && $breakpoint < strlen( $content ) - 1 ) {
+		$content = substr( $content, 0, $breakpoint ) . $after;
+	}
+	return $content;
+}
+
 // Vídeo wrapper
 add_filter( 'the_content', 'plenamata_content_filter' );
 function plenamata_content_filter( $content ){

@@ -93,6 +93,22 @@ class Partners {
                     'key' => 'apoiador',
                     'value' => 'on',
             ];
+        else:
+            $meta_query[] = [
+                'relation' => 'OR',
+                [
+                    'key' => 'apoiador',
+                    'value' => 'off',
+                ],
+                [
+                    'key' => 'apoiador',
+                    'value' => '',
+                ],
+                [
+                    'key' => 'apoiador',
+                    'compare' => 'NOT EXISTS'
+                ],
+            ];
         endif;
 
         // Adding meta

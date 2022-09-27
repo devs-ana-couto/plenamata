@@ -4,12 +4,14 @@ extract($args);
 // Title tag
 $ttag = _array_get( $args, 'title_tag', 'h4' );
 // Teaser data
-$data = plenamata_get_teaser_data( $item, $args ); ?>
+$data = plenamata_get_teaser_data( $item, $args ); 
+// Editoria
+$editoria = plenamata_get_editoria( $item ); ?>
 <div class="teaser post pager-item <?php echo _array_get( $args, 'class' ) . ' ' . ( $data->editoria ? $data->editoria->slug : '' ) . ( !$data->remove_image ? ' with-image' : ' no-image' ); ?>"><?php 
 
 	// Editoria
-	if( $data->editoria ):
-		echo plenamata_single_category( $data->meta, true, _array_get( $args, 'editoria' ) );
+	if( $data->editoria ): ?>
+		<a href="<?php echo plenamata_editoria_url( $editoria ); ?>" class="editoria-crumb <?php echo $editoria->slug; ?>"><?php echo $editoria->name; ?></a><?php
 	endif; ?>
 
 	<a href="<?php echo $data->url; ?>" title="<?php echo strip_tags( $data->title ); ?>" <?php echo $data->target; ?>><?php

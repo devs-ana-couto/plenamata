@@ -40,6 +40,8 @@ var PostField;
 				items : $( '.posts-list', field.$ ).first(),
 				// Model
 				itemModel: $( '.posts-list .model', field.$ ),
+				// Max
+				maxItems : field.$.data( 'max-items' ),
 				// Header and footer
 				header : field.$.children( 'header' ),
 				footer : field.$.children( 'footer' ),
@@ -55,6 +57,10 @@ var PostField;
 			};
 			field.$.data( 'PostField', data );
 
+			// Max items
+			PostField.Select.checkTotal( data );
+
+			// Bind insert click
 			data.insert.off( 'click' ).on( 'click', function( event ){
 				event.preventDefault();
 				PostField.openModalForm( data );
@@ -101,6 +107,10 @@ var PostField;
 			
 		},
 
+		getTotalItems : function( data ){
+			return data.items.find( '.post-item' ).length;
+		},
+
 		// Set IDs order
 		setOrder : function( data ){
 
@@ -122,7 +132,7 @@ var PostField;
 			if( el.$.hasClass( 'selected' ) ){
 				el.$.removeClass( 'selected' );
 			}
-			else {
+			else if( !el.$.hasClass( 'disabled' ) ) {
 				el.$.addClass( 'selected' );
 			}
 
@@ -130,11 +140,18 @@ var PostField;
 			var items = $( '.piki-modal.postsfield .posts-list li.selected' );
 			var button = $( '.piki-modal.postsfield button[data-action="do-select"]' );
 
-			if( items.length ){
-				button.prop( 'disabled', false );
-			}
-			else {
-				button.prop( 'disabled', true );
+			// Control select button
+			button.prop( 'disabled', !items.length );
+
+			// Max items
+			if( data.maxItems ){
+				var others = $( '.piki-modal.postsfield .posts-list li:not(.selected)' );
+				if( items.length >= data.maxItems ){
+					others.addClass( 'disabled' );
+				}
+				else {
+					others.removeClass( 'disabled' );
+				}
 			}
 
 		},
@@ -150,6 +167,9 @@ var PostField;
 				data.footer.hide();
 				data.items.hide();
 			}
+
+			PostField.Select.checkTotal( data );
+
 		},
 
 		// Abre o modal do formulário do post
@@ -305,8 +325,19 @@ var PostField;
 	  		init : function( data ){
 
 				data.select.off( 'click.psbind' ).on( 'click.psbind', function( event ){
+				
 					event.preventDefault();
-					PostField.Select.open( data );
+				
+					// Max items
+					var total = PostField.getTotalItems( data );
+					if( !data.maxItems || total < data.maxItems ){
+						PostField.Select.enable( data );
+						PostField.Select.open( data );
+					}
+					else {
+						PostField.Select.disable( data );
+					}
+
 				});
 
 				// Selection
@@ -337,6 +368,29 @@ var PostField;
 
 	  		},
 
+	  		// Check total ítems
+	  		checkTotal : function( data ){
+				
+				const totalItems = PostField.getTotalItems( data );
+				if( data.maxItems && totalItems >= data.maxItems ){
+					PostField.Select.disable( data );
+				}
+				else {
+					PostField.Select.enable( data );
+				}
+	  		
+	  		},
+
+	  		disable : function( data ){
+	  			data.select.prop( 'disabled', true );
+	  			data.$.addClass( 'selection-disabled' );
+	  		},
+
+	  		enable : function( data ){
+	  			data.select.prop( 'disabled', false );
+	  			data.$.removeClass( 'selection-disabled' );
+	  		},
+
 		  	selectItems : function( data ){
 
 		  		var selecteds = $( '.posts-field-selection li.selected' );
@@ -345,11 +399,6 @@ var PostField;
 		  		selecteds.each(function(){
 
 		  			this.$ = this.$ || $( this );
-
-
-		  			console.info( "data.selectbox" );
-		  			console.log( data.selectbox );
-		  			
 
 					// Feacha a modal
 					data.selectbox.$.Modal( 'close' );
@@ -429,7 +478,7 @@ var PostField;
 				data.selectbox.$footer = data.selectbox.$.children( 'footer' ).first();
 
 				// Filter
-				PostField.Select.initFilters( data );
+				//PostField.Select.initFilters( data );
 
 				// Pager
 				PostField.Select.checkPager( data );
@@ -461,7 +510,7 @@ var PostField;
 		  		data.selectbox.filters.$fields = data.selectbox.filters.$.children( '.linha-field' ).find( 'input,select' );
 
 		  		// Last filter
-		  		data.selectbox.filters.lastFilter = data.selectbox.filters.$.find( 'input,select' ).serialize()
+		  		data.selectbox.filters.lastFilter = data.selectbox.filters.$.find( 'input,select' ).serialize();
 
 		  		// Enter on search field
 		  		data.selectbox.filters.$.find( 'input#nome' ).off( 'keypress.psbind' ).on( 'keypress.psbind', function(e){
@@ -522,7 +571,6 @@ var PostField;
 		  			totalItems = data.selectbox.$.data( 'total-items' ),
 		  			itensPerPage = data.selectbox.$.data( 'items-per-page' )
 		  		;
-
 		  		if( totalItems <= itensPerPage ) return;
 
 	            // Locator for pager
@@ -551,6 +599,8 @@ var PostField;
 
 	  		requireItems : function( data, page, resetPager ){
 
+	  			Loader();
+
 				$.ajax({
 					method: 'POST', 
 					url : ajaxurl,
@@ -561,7 +611,7 @@ var PostField;
 						form_key : data.parentType,
 						field_name : data.name,
 						actual_ids : data.target.val(),
-						filters : PostField.Select.getFilters( data ),
+						//filters : PostField.Select.getFilters( data ),
 						page : page
 					}
 				})
@@ -611,11 +661,18 @@ var PostField;
 						}
 
 					}
+
+					Loader( 'close' );
 				
 				})
 				.fail(function( jqXHR, textStatus ){
-					$.fn.pikiLoader( 'close' );
+
+					Loader( 'close' );
 				  	Message.open( 'Problema ao recuperar ítems: ' + textStatus );
+
+				  	console.info( "jqXHR" );
+				  	console.log( jqXHR );
+				  	
 				});
 
 	  		}
@@ -633,8 +690,6 @@ var PostField;
 			}
 
 			$editors_wrapers.each(function(){
-
-				
 
 			});
 			

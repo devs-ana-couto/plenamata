@@ -36,16 +36,13 @@ class PikiShare {
         // Redes informadas no admin
         $social_settings = get_option( 'pikishare_options' );
         
-        // Opções gerais
-        $options = array(
-            'services' => $PIKISHARE_NETWORKS
-        );
         // Extrai os parametros
-        shortcode_atts( array(
-            'services' => false,
+        shortcode_atts([
+            'services' => $PIKISHARE_NETWORKS,
             'target' => false,
-            'class' => false
-        ), $atts );
+            'class' => false,
+            'widget_title' => false
+        ], $atts );
 
         // Services
         $_services = _array_get( $atts, 'services' );
@@ -53,22 +50,22 @@ class PikiShare {
 
             $_services = explode( ',', $_services );
             
-            $options[ 'services' ] = array();
+            $atts[ 'services' ] = [];
             foreach( $_services as $_s ):
                 if( isset( $PIKISHARE_NETWORKS[ $_s ] ) ):
-                    $options[ 'services' ][ $_s ] = $PIKISHARE_NETWORKS[ $_s ];
+                    $atts[ 'services' ][ $_s ] = $PIKISHARE_NETWORKS[ $_s ];
                 endif;
             endforeach;
             
         endif;
 
         // Target
-        $options[ 'target' ] = _array_get( $atts, 'target', _array_get( $social_settings, 'target' ) );
+        $atts[ 'target' ] = _array_get( $atts, 'target', _array_get( $social_settings, 'target' ) );
         unset( $social_settings[ 'target' ] );
         
         // Constrói os links
         $html = '';
-        foreach( $options[ 'services' ] as $key => $label ):
+        foreach( $atts[ 'services' ] as $key => $label ):
        
             if( isset( $social_settings[ $key ] ) && $social_settings[ $key ] != '' ):
 
@@ -77,7 +74,7 @@ class PikiShare {
                 //     $url = 'https://wa.me/' . ( strpos( $url, '+' ) !== 0 ? '+55' : '' ) . $social_settings[ $key ];
                 // endif;
 
-                $html .= '<li class="'. $key .'"><a href="'. $url .'" title="'. $label .'" class="'. $key .'" '. ( $options[ 'target' ] == '_blank' ? ' target="_blank"' : '' ) .'><i class="icon icon-'. $key .'" aria-hidden="true"></i></a></li>';
+                $html .= '<li class="'. $key .'"><a href="'. $url .'" title="'. $label .'" class="'. $key .'" '. ( $atts[ 'target' ] == '_blank' ? ' target="_blank"' : '' ) .'><i class="icon icon-'. $key .'" aria-hidden="true"></i></a></li>';
        
             endif;
        
@@ -85,7 +82,13 @@ class PikiShare {
 
         if( $html == '' ) return '';
 
-        return '<ul class="piki-social-links '. _array_get( $atts, 'class' ) .'">'. $html .'</ul>';
+        $title = _array_get( $atts, 'widget_title' );
+
+        return '
+        <div class="piki-social-links '. _array_get( $atts, 'class' ) .'">
+            '. ( $title ? '<em>'. $title .'</em>' : '' ) .'
+            <ul>'. $html .'</ul>
+        </div>';
 
     }
 

@@ -17,7 +17,7 @@ $meta = new PostMeta(); ?>
 	<span><?php 
   		echo plenamata_logo();  ?>
 		<em><?php echo sprintf( __( 'Use a hashtag %s e compartilhe nas redes', 'amazonia' ), '<strong>#PlenaMata</strong>' ); ?>  </em><?php 
-		echo do_shortcode( '[pikishare services="twitter,linkedin,facebook,whatsapp" widget_title="' . __( 'Acesse nossas redes e compartilhe', 'amazonia' ) . '"]' ) ?>
+		echo do_shortcode( '[networks_links services="instagram,twitter,linkedin,facebook,whatsapp" widget_title="' . __( 'Acesse nossas redes sociais', 'amazonia' ) . '" target="_blank"]' ) ?>
 	</span>
 </div><?php
 // Footer

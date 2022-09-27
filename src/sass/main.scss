@@ -22,6 +22,7 @@
 @import './components/maptips';
 @import './components/do-scroll';
 @import './components/swiper';
+@import './components/sharebox';
 @import './components/footer-buttons';
 @import './components/icon';
 @import './components/authors';
@@ -58,11 +59,9 @@
 
 // Pages
 @import './pages/common';
-//@import './pages/signup';
 @import './pages/page';
 @import './pages/home';
 @import './pages/archive';
-//@import './pages/home-editoria';
 @import './pages/dashboard';
 @import './pages/single';
 @import './pages/single-noticia';
@@ -70,4 +69,5 @@
 @import './pages/glossario';
 @import './pages/historia-real';
 @import './pages/search';
+@import './pages/embed-share';
 @import './pages/error';

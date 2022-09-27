@@ -238,6 +238,7 @@ class Campanhas {
             'show_ui'           => true,
             'show_admin_column' => true,
             'query_var'         => true,
+            'show_in_rest'      => true,
             'rewrite'           => [ 'slug' => false ],
         ];
      
@@ -272,9 +273,9 @@ class Campanhas {
             'publicly_queryable' => true,
             'show_ui'            => true,
             'show_in_menu'       => true,
+            'show_in_rest'       => true,
             'query_var'          => true,
             'rewrite'            => [ 'slug' => 'campanhas' ],
-            'show_in_rest'       => true,
             'capability_type'    => 'post',
             'has_archive'        => true,
             'hierarchical'       => false,
@@ -711,7 +712,7 @@ class Campanhas {
         $fields[] = '<div class="filter-item region">' . $field_region . '</div>';
 
         if( !empty( $fields ) ):
-            return '<form action="./#conteudos" id="filter-noticias" class="filter">
+            return '<form action="./#outras-campanhas" id="filter-noticias" class="filter">
                 <fieldset>
                     '. implode( '', $fields ) . '
                 </fieldset>

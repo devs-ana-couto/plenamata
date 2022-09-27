@@ -28,6 +28,18 @@ define( 'PIKI_FEATURES_FILE', Piki::path( __FILE__, 'features.php' ) );
 // Piki
 class Piki {
 
+    public static function init(){
+
+        if( isset( $_GET[ 'piki-empty-cache' ] ) ):
+            self::cache_clear();
+        endif;
+  
+        show_admin_bar( is_user_logged_in() );
+
+        Piki::add_library( 'jquery-ui' );
+
+    }
+
     // Load features by database
     public static function loadFeatures(){
 
@@ -136,20 +148,6 @@ class Piki {
  
         return get_permalink( empty( $transl_id ) ? $post_ID : $transl_id );
     
-    }
-
-    public static function init(){
-
-        if( isset( $_GET[ 'piki-empty-cache' ] ) ):
-            self::cache_clear();
-        endif;
-  
-        if( !is_admin() ):
-            show_admin_bar( false );
-        endif;
-
-        Piki::add_library( 'jquery-ui' );
-
     }
 
     public static function thumbnail( $postID, $width, $height=null, $zc=1 ){
@@ -680,8 +678,8 @@ class Piki {
     public static function wp_head(){
 
         global $post;
-        
-        if( is_admin() ) return;
+
+        if( is_admin() || defined( 'WPSEO_PATH' ) ) return;
 
         $ogdata = new stdClass(); 
 
@@ -762,12 +760,13 @@ class Piki {
         
         // Filter
         $ogdata = apply_filters( 'piki_graph_tags', $ogdata, $post );
-        
+
         // Open Graph Tags
-        echo '<link rel="canonical" href="' . $ogdata->url . '">
+        echo '
+        <link rel="canonical" href="' . $ogdata->url . '">
         <meta name="description" content="'. $ogdata->description .'">
         <meta property="og:locale" content="pt_BR">
-        <meta property="og:type" content="article">
+        <meta property="og:type" content="website">
         <meta property="og:title" content="' . $ogdata->title . '">
         <meta property="og:description" content="' . $ogdata->description . '">
         <meta property="og:url" content="' . $ogdata->url . '/">

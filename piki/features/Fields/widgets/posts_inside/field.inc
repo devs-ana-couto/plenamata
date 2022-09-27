@@ -24,6 +24,17 @@ class posts_inside extends PikiField {
 
 		global $post;
 
+		// Require post type
+		if( !isset( $field[ 'post_type' ] ) ):
+			return 'O campo ' . $field[ 'label' ] . ' precisa ter um tipo de post especificado.';
+		endif;
+
+		// Tipo de post
+		$post_type = get_post_type_object( $field[ 'post_type' ] );
+		if( empty( $post_type ) ):
+			return 'O tipo de post ' . $field[ 'post_type' ] . ' não existe.';
+		endif;
+
 		$value = _array_get( $field, 'value' );
 		if( $value ):
 			$value = implode( ',', $value );
@@ -46,12 +57,12 @@ class posts_inside extends PikiField {
 			case 'select':
 			case 'checkboxes':
 
-				$all_posts = get_posts(array( 
+				$all_posts = get_posts([
 					'numberposts' => -1,
 					'post_type' => $post_type->name,
 					'orderby' => 'post_title',
 					'order' => 'ASC',
-				));
+				]);
 				$all_options = array_combine(
 					array_column( $all_posts, 'ID' ),
 					array_column( $all_posts, 'post_title' )
@@ -60,13 +71,13 @@ class posts_inside extends PikiField {
 				$include = _array_get( $field, 'include' );
 				if( $include ):
 
-					$to_include = get_posts(array( 
+					$to_include = get_posts([
 						'numberposts' => -1,
 						'post_type' => 'any',
 						'include' => $include,
 						'orderby' => 'post_title',
 						'order' => 'ASC',
-					));
+					]);
 					if( !empty( $to_include ) ):
 						$all_options = array_combine(
 							array_column( $to_include, 'ID' ),
@@ -90,12 +101,14 @@ class posts_inside extends PikiField {
 			default:
 
 				$mode = _array_get( $field, 'mode', 'default' );
+				$maxItems = _array_get( $field, 'max_items' );
+				$disableSelection = $maxItems && $childs && count( $childs ) >= $maxItems;
 
-				$controls = '<nav>' . ( $mode != 'select' ? '<button type="button" class="button button-primary add" data-action="insert" title="Cadastrar post">Cadastrar</button>' : '' ) . '<button type="button" class="button button-primary add" data-action="select" title="Selecionar posts">Selecionar</button></nav>';
+				$controls = '<nav>' . ( $mode != 'select' ? '<button type="button" class="button button-primary add" data-action="insert" title="Cadastrar post">Cadastrar</button>' : '' ) . '<button type="button" class="button button-primary add" data-action="select" title="Selecionar posts"'. ( $disableSelection ? 'disabled="disabled"' : '' ) .'>Selecionar</button></nav>';
 				
 				ob_start(); ?>
 				
-				<div class="field-posts-wrapper">
+				<div class="field-posts-wrapper <?php echo( $disableSelection ? 'selection-disabled' : '' ); ?>" data-max-items="<?php echo( $maxItems ? $maxItems : 'false' ); ?>">
 
 					<header class="clearfix">
 						<?php echo $controls; ?>
@@ -106,52 +119,55 @@ class posts_inside extends PikiField {
 						<li class="model clearfix" style="display:none;">
 							<span class="title" class="title"></span>
 							<div class="actions"><?php 
-								if( $mode != 'select' ):?>
+								if( $mode != 'select' ): ?>
 								<button type="button" data-action="edit-post-inside" class="edit button" title="Editar post">Editar</button><?php 
 								endif; ?>
 								<button type="button" data-action="remove-post-inside" class="remove button" title="Remover post desta lista">Remover</button><?php 
-								if( $mode != 'select' ):?>
+								if( $mode != 'select' ): ?>
 								<button type="button" data-action="delete-post-inside" class="delete button" title="Apagar post no sistema">Apagar</button><?php 
 								endif; ?>
 							</div>
-							<input type="hidden" class="type-hidden item-id" value="" name="<?php echo $field[ 'name_html' ]; ?>[]" />
-						</li>
-						
-						<?php 
+							<input type="hidden" class="type-hidden item-id" value="" name="<?php echo $field[ 'name' ]; ?>[]" />
+						</li><?php 
+
 						if( $childs ):
+
 							foreach( $childs as $child ):
-								if( empty( $child ) || !is_object( $child ) ) continue;
-								?>
+							
+								if( empty( $child ) || !is_object( $child ) ) continue; ?>
+
 								<li class="post-item clearfix">
+									
 									<span class="title" class="title"><?php echo $child->post_title; ?></span>
 									<div class="actions"><?php 
-										if( $mode != 'select' ):?>
+										if( $mode != 'select' ): ?>
 										<button type="button" data-action="edit-post-inside" class="edit button" title="Editar post">Editar</button><?php 
 										endif; ?>
 										<button type="button" data-action="remove-post-inside" class="remove button" title="Remover post desta lista">Remover</button><?php 
-										if( $mode != 'select' ):?> ?>
+										if( $mode != 'select' ): ?>
 										<button type="button" data-action="delete-post-inside" class="delete button" title="Apagar post no sistema">Apagar</button><?php 
 										endif; ?>
 									</div>
-									<input type="hidden" class="type-hidden item-id" value="<?php echo $child->ID; ?>" name="<?php echo $field[ 'name_html' ]; ?>[]" />
-								</li>
-								<?php 
+									<input type="hidden" class="type-hidden item-id" value="<?php echo $child->ID; ?>" name="<?php echo $field[ 'name' ]; ?>[]" />
+								
+								</li><?php 
+							
 							endforeach; 
-						endif;
-						?>
+						
+						endif; ?>
 
 					</ul>
 
 					<footer style="display:none;">
+						
+						<?php /*<em class="overview" data-label-singular="" data-label-plural=""><?php echo( $childs ? count( $childs ) : 'nehuma' ); ?></em>*/ ?>
+						
 						<?php echo $controls; ?>
 						<input type="hidden" value="<?php echo $field[ 'machine_name' ]; ?>" class="field-name" />
 						<input type="hidden" value="<?php echo $form_key; ?>" class="field-form-key" />
-					</footer>
-
-					<?php 
+					</footer><?php 
 					$field[ 'value' ] = $value;
-					echo hidden::get_field( $field ); 
-					?>
+					echo hidden::get_field( $field ); ?>
 				
 				</div>
 
@@ -226,7 +242,7 @@ class posts_inside extends PikiField {
 			foreach ( $fields as $key => $field ):
 
 				if( method_exists( $field[ 'ftype' ], 'add_files' ) ):
-					call_user_func( array( $field[ 'ftype' ], 'add_files'  ), $field );
+					call_user_func( [ $field[ 'ftype' ], 'add_files'  ], $field );
 				endif;
 			
 			endforeach;
@@ -292,10 +308,10 @@ class posts_inside extends PikiField {
 			// Updata no banco
 			$wpdb->update( 
 				$wpdb->posts, 
-				array( 'post_date' => $new_date ), 
-				array( 'ID' => $item_id ), 
-				array( '%s' ), 
-				array( '%d' ) 
+				[ 'post_date' => $new_date ], 
+				[ 'ID' => $item_id ], 
+				[ '%s' ], 
+				[ '%d' ]
 			);
 		
 		endforeach;
@@ -362,11 +378,11 @@ class posts_inside extends PikiField {
 		$filters = posts_inside::getFilters( $field );
 
 		// Ítems
-		$items = posts_inside::get_items(array(
+		$items = posts_inside::get_items([
 			'form_key' => $form_key,
 			'field_name' => $field_name,
 			'pager' => 1
-		));
+		]);
 		
 		$HTML = '<div class="posts-field-selection" data-field-name="' . $field_name . '" data-items-per-page="' . posts_inside::$PerPage . '" data-total-items="' . ( $items ? $items[ 'total_items' ] : '0' ) . '" data-next-page="">';
 		
@@ -421,13 +437,13 @@ class posts_inside extends PikiField {
 		$post_type = _array_get( $field, 'post_type' );
 
 		// Arguments
-		$query = array(
+		$query = [
 			'post_type' => $post_type,
 			'posts_per_page' => posts_inside::$PerPage,
-			'orderby' => 'post_title',
-			'order' => 'ASC',
+			'orderby' => 'post_modified',
+			'order' => 'DESC',
 			'paged' => $pager
-		);
+		];
 		
 		// Outs
 		$outs = _post( 'actual_ids' );
@@ -445,9 +461,9 @@ class posts_inside extends PikiField {
 			if( $settings ):
 				return false;
 			else:
-				Piki::success(array(
+				Piki::success([
 					'content' => false
-				));
+				]);
 			endif;
 		endif;
 
@@ -478,11 +494,11 @@ class posts_inside extends PikiField {
 
 		$post_type = _array_get( $field, 'post_type' );
 
-		$Filter = new PikiFilter(array(
+		$Filter = new PikiFilter([
 			'post_type' => $post_type,
 			'fields' => $filters,
 			'onChange' => false
-		));
+		]);
 
 		return $Filter->getFields();
 
@@ -501,8 +517,8 @@ class posts_inside extends PikiField {
 			$form_settings = PikiForms::get_form_settings( $post_type  );
 
 			// Queries conditions
-			$meta_query = array();
-			$tax_query = array();
+			$meta_query = [];
+			$tax_query = [];
 			
 			foreach( $filters as $field_name => $value ):
 
@@ -512,26 +528,25 @@ class posts_inside extends PikiField {
 					$field = PikiFields::extract_field( $form_settings[ 'fields' ], $field_name );
 
 					// Likes
-					if( in_array( $field[ 'ftype' ], array( 'title', 'excerpt', 'body', 'textarea' ) ) ):
+					if( in_array( $field[ 'ftype' ], [ 'title', 'excerpt', 'body', 'textarea' ] ) ):
 
 						$query[ 's' ] = $value;
 
 					elseif( $field[ 'ftype' ] == 'taxonomy' ):
 
-						//'tax_query' => array(
-						$tax_query[] = array(
+						$tax_query[] = [
 				            'taxonomy' => _array_get( $field, 'taxonomy' ),
 				            'term_id' => $value,
 				            'terms' => $value,
-					    );
+					    ];
 
 					else:
 
-						$meta_query[] = array(
+						$meta_query[] = [
 					        'key'     => $field_name,
 					        'value'   => explode( ',', $value ),
 					        'compare' => 'IN',
-						);
+						];
 					
 					endif;
 
@@ -621,10 +636,10 @@ class posts_inside extends PikiField {
 		
 		// Passa pelos filhos e muda seu status
 		foreach( $childs as $key => $ID ):
-			$child = array(
+			$child = [
 				'ID' => $ID,
 				'post_status' => $new_status,
-			);
+			];
 			wp_update_post( $child );
 		endforeach;
 
@@ -654,7 +669,7 @@ class posts_inside extends PikiField {
 	    $posts_fields = PikiFields::extract_field( $form_settings[ 'fields' ], 'posts', 'ftype', false );
 
 		// Post childs
-		$post_childs = array();
+		$post_childs = [];
 
 		// Se não existe nenhum campo do tipo posts
 		if( !$posts_fields ) return;
@@ -678,30 +693,30 @@ class posts_inside extends PikiField {
 	public static function get_settings_fields( $values ){
 
 		// Post types
-		$post_types = get_post_types( array( '_builtin' => false ) );
+		$post_types = get_post_types( [ '_builtin' => false ] );
 		unset( $post_types[ 'pikiform' ] );
 
-		$fields = PikiFields::get_comum_fields( array( 'required', 'hide_label' ) );
-		$fields[ 'set_childs' ] = array(
+		$fields = PikiFields::get_comum_fields( [ 'required', 'hide_label' ] );
+		$fields[ 'set_childs' ] = [
 			'label' => 'Definir posts como filhos',
 			'machine_name' => 'set_childs',
 			'ftype' => 'boolean',
-		);
-		$fields[ 'post_type' ] = array(
+		];
+		$fields[ 'post_type' ] = [
 			'label' => 'Tipo de post',
 			'machine_name' => 'post_type',
 			'ftype' => 'select',
 			'options' => $post_types,
-		);
-		$fields[ 'widget' ] = array(
+		];
+		$fields[ 'widget' ] = [
 			'machine_name' => 'widget',
 			'label' => 'Tipo de seleção',
 			'ftype' => 'select',
-			'options' => array(
+			'options' => [
 				'complete' => 'Interface completa',
 				'select' => 'Selectbox',
-			)
-		);
+			],
+		];
 
 		PikiFields::set_fields_values( $fields, $values );
 

@@ -2,6 +2,9 @@
 	
 		</main><?php 
 
+		// Share
+		get_template_part( 'components/sharebox' );
+
 		// Not embed footer components
 		if( $context == 'site' ):
 
@@ -24,7 +27,7 @@
 		    		</div><?php 
 		  			// Partners
 	  				echo plenamata_partners([ 
-	  					'title' => __( 'Parceiros', 'amazonia' ),
+	  					'title' => __( 'Realizadores', 'amazonia' ),
 	  					'image_field' => 'logo_footer',
 	  					'total' => 6,
 	  				]);
@@ -32,7 +35,6 @@
 		    		<div class="copy-terms">
 		    			<em>Copyright © <?php echo date( 'Y' ); ?> PlenaMata</em>
 		    			<a href="#" title="<?php _e( 'Declaração de Privacidade', 'amazonia' ); ?>"><?php _e( 'Declaração de privacidade', 'amazonia' ); ?></a>
-		    			<a href="https://www.anacouto.com.br/" title="Acessar o site" target="_blank" class="builder">Criado por ANA COUTO</a>
 		    		</div>
 		    	</div>
 		    </footer><?php 

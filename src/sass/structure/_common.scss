@@ -100,10 +100,6 @@ h5 {
 h6 {
 }
 
-em {
-    display: block;
-}
-
 p {
 
     margin: 0 0 20px;
@@ -300,6 +296,59 @@ strong {
 picture {
     display: block;
     font-size: 0;
+}
+
+.author-bio {
+
+    display: block;
+    margin-top: 48px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(123, 185, 179, 0.8);
+
+    .author-introduce-title {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 24px;
+        color: #1A2C31;
+    }
+
+    .author-bio-header {
+
+        display: flex;
+        align-items: center;
+        margin-top: 26px;
+
+        img {
+            width: 42px;
+            height: 42px;
+            margin-right: 14px;
+            border-radius: 50%;
+        }
+
+        .accent-header {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            color: #1A2C31;
+        }
+    
+    }
+
+    .author-description {
+
+        margin-top: 14px;
+
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            color: #1A2C31;
+        }
+        a {
+            color: #206837;
+        }
+    }
+
 }
 
 .slider-nav.compact {

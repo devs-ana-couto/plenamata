@@ -21,5 +21,7 @@ require_once( Piki::path( __FILE__, 'features/PostViews/index.php' ) );
 require_once( Piki::path( __FILE__, 'features/Relateds/index.php' ) );
 // SMTP
 require_once( Piki::path( __FILE__, 'features/SMTP/index.php' ) );
+// SVG
+require_once( Piki::path( __FILE__, 'features/SVG/index.php' ) );
 // Share
 require_once( Piki::path( __FILE__, 'features/Share/index.php' ) );

@@ -31,10 +31,19 @@ section.page-archive {
 
     .anothers {
 
-        margin-top: 100px;
+        padding-top: 50px;
+        margin-top: 50px;
 
-        header > div {
-            margin-bottom: 48px;
+        header {
+
+            h2 {
+                margin-bottom: 48px;
+            }
+
+            > div {
+                margin-bottom: 40px;
+            }
+            
         }
 
     }
@@ -211,7 +220,8 @@ section.page-archive {
 
         .anothers {
 
-            margin-top: 41px;
+            padding-top: 22px;
+            margin-top: 22px;
 
             header {
                 

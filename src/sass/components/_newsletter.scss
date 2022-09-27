@@ -248,6 +248,10 @@
 			margin-right: 30px;
 		}
 
+		img {
+			filter: brightness(0) invert(1);
+		}
+
 		em {
 			margin-right: 25px;
 			font-size: 8px;

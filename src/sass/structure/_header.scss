@@ -41,6 +41,10 @@ body {
 			padding-left: 20px;
 			margin-left: 20px;
 
+			img {
+				filter: brightness(0) invert(1);
+			}
+
 			em {
 				margin-right: 20px;
 				font-size: 8.60291px;

@@ -101,13 +101,11 @@ class Posts {
 
     }
     public function editoriaSaveFields( $term_id ) {
-
         update_term_meta(
             $term_id,
             'order',
             $_POST[ 'order' ]
         );
-
     }
 
     // Change dashboard Posts to News
@@ -275,110 +273,45 @@ class Posts {
 
         // Return object
         $return = new stdClass();
+
+        // Home ID
+        $home_id = apply_filters( 'wpml_object_id', get_option( 'page_on_front' ) );
         
         // Destaque maior, com foto
-        $return->sticky = false;
-
-        // Destaque menor, com foto
-        $return->seconds = [];
-
-        // Key
-        $meta_key = 'destaque_position';
-        
-        // Sticky post
-        $args_sticky = [
-            'post_type' => 'post',
-            'posts_per_page' => 1,
-            'post__not_in' => Posts::getPostsOut(),
-            'meta_query' => [
-                'sticky' => [
-                    'key' => $meta_key,
-                    'value' => '50'
-                ],
-                'cover' => [
-                    'key' => 'destaque_image',
-                    'compare' => 'EXISTS',
-                ],
-            ],
-        ];
-        $sticky = new WP_Query( $args_sticky );
-        
-        // Exclude sticky from list, if fouded
-        if( $sticky->have_posts() ):
-
-            // Sticky post
-            $sticky = reset( $sticky->posts );
-
-            // Sticky data
-            $return->sticky = $sticky;
-
+        $sticky_id = get_post_meta( $home_id, 'news_sticky' );
+        if( !empty( $sticky_id ) ):
+            // Get sticky post
+            $return->sticky = get_post( reset( $sticky_id ) );
             // Insere no array de posts já mostrados
-            array_push( $this->postsOut, $sticky->ID );
-
-        // Empty post for selection
-        elseif( is_admin() ):
-        
-            $return->sticky = Posts::getEmptyCapaItem();
-        
+            if( $return->sticky ):
+                array_push( $this->postsOut, $return->sticky->ID );
+            endif;
+        else:
+            $return->sticky = false;
         endif;
-
+        
         // Anothers
-        foreach( [ 40, 30, 20, 10 ] as $weight ):
+        $seconds_ids = get_post_meta( $home_id, 'news_seconds' );
+        if( !empty( $seconds_ids ) ):
 
-            $args_sticky[ 'meta_query' ][ 'sticky' ][ 'value' ] = $weight;
-            $args_sticky[ 'meta_query' ][ 'cover' ][ 'key' ] = 'thumb';
-            $args_sticky[ 'post__not_in' ] = Posts::getPostsOut();
-
-            $another = new WP_Query( $args_sticky );
-
-            if( $another->have_posts() ):
-
-                // Sticky post
-                $another = reset( $another->posts );
-
-                // Sticky data
-                $return->seconds[] = $another;
-
-                // Insere no array de posts já mostrados
-                array_push( $this->postsOut, $another->ID );
-
-            // Empty post for selection
-            elseif( is_admin() ):
-
-               $return->seconds[] = Posts::getEmptyCapaItem();
+            $return->seconds = get_posts([ 'post__in' => $seconds_ids ]);
+            if( empty( $return->seconds ) ):
             
-            endif;
+                $return->seconds = false;
             
-        endforeach;
+            else:
 
-        // Complete if has no enough
-        $total_seconds = count( $return->seconds );
-        if( !is_admin() && $total_seconds < 4 ):
-            $tocomplete = new WP_Query([
-                'post_type' => 'post',
-                'posts_per_page' => ( 4 - $total_seconds ),
-                'post__not_in' => Posts::getPostsOut(),
-                'meta_query' => [
-                    'cover' => [
-                        'key' => 'destaque_image',
-                        'compare' => 'EXISTS',
-                    ],
-                ],
-            ]);
-            if( $tocomplete->have_posts() ):
-                foreach( $tocomplete->posts as $comp_item ):
-                    // Sticky data
-                    $return->seconds[] = $comp_item;
-                    // Insere no array de posts já mostrados
-                    array_push( $this->postsOut, $comp_item->ID );
+                $keyeds = array_combine( array_column( $return->seconds, 'ID' ), $return->seconds );
+                $return->seconds = array_flip( $seconds_ids );
+                foreach( $return->seconds as $post_id => &$post ):
+                    $post = $keyeds[ $post_id ];
                 endforeach;
+            
+                array_push( $this->postsOut, array_column( $return->seconds, 'ID' ) );
+            
             endif;
+            
         endif;
-        // Empty seconds
-        if( empty( $return->seconds ) ) $return->seconds = false;
-
-        // Reset query
-        wp_reset_query();
 
         return ( ( !$return->sticky && empty( $return->seconds ) ) ? false : $return );
 
@@ -473,7 +406,7 @@ class Posts {
         </div>';
 
         if( !empty( $fields ) ):
-            return '<form action="./#conteudos" id="filter-noticias" class="filter">
+            return '<form action="./#outras-noticias" id="filter-noticias" class="filter">
                 <button type="button" class="close" data-action="close" title="' . __( 'Fechar', 'amazonia' ) . '"></button>
                 <fieldset>
                     '. implode( '', $fields ) . '
@@ -638,19 +571,6 @@ class Posts {
                 'ftype' => 'fieldset',
                 'label' => 'Dados para destaque',
                 'subfields' => [
-                    'destaque_position' => [
-                        'machine_name' => 'destaque_position',
-                        'ftype' => 'select',
-                        'label' => 'Posição de destaque',
-                        'options' => [
-                            '0' => 'Sem destaque',
-                            '50' => 'Destaque principal',
-                            '40' => 'Destaque secundário (posição 1)',
-                            '30' => 'Destaque secundário (posição 2)',
-                            '20' => 'Destaque secundário (posição 3)',
-                            '10' => 'Destaque secundário (posição 4)',
-                        ],
-                    ],
                     'destaque_image' => [
                         'machine_name' => 'destaque_image',
                         'ftype' => 'imagewp',
@@ -694,7 +614,7 @@ function pikiform_post_settings(){
     global $Posts;
     return $Posts->formSettings();
 }
-function pikiform_post_fields( $settings ){
+function pikiform_post_fields(){
     global $Posts;
     return $Posts->getFields( $settings );
 }

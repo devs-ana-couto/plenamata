@@ -126,6 +126,23 @@ class Pages {
                 ],
 
             ];
+            
+            $fields[ 'news_sticky' ] = [
+                'machine_name' => 'news_sticky',
+                'ftype' => 'posts_inside',
+                'label' => 'Notícia principal',
+                'post_type' => 'post',
+                'max_items' => 1,
+                'mode' => 'select',
+            ];
+            $fields[ 'news_seconds' ] = [
+                'machine_name' => 'news_seconds',
+                'ftype' => 'posts_inside',
+                'label' => 'Notícias secundárias',
+                'post_type' => 'post',
+                'max_items' => 4,
+                'mode' => 'select',
+            ];
 
         endif;
 

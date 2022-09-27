@@ -43,6 +43,11 @@ class Common {
 
     }
 
+    public static function getActualLang(){
+    	$my_current_lang = apply_filters( 'wpml_current_language', NULL );
+    	return $my_current_lang;
+    }
+
     // Languages menu
     public static function menuLangs(){
 
@@ -122,7 +127,25 @@ class Common {
     	return in_array( $post->post_type, [ 'post', 'campanha', 'map', 'map-layer' ] );
     }
 
+    public static function normalizeContent(){
+
+    	global $wpdb;
+
+    	if( is_super_admin() && _get( 'normalize-content' ) == 'true' ):
+
+    		//$wpdb->query( "UPDATE {$wpdb->prefix}posts SET post_content = REPLACE( post_content, 'plenamata.eco/', 'pikiweb.com/' )" );
+	    
+	    	$wpdb->query( "UPDATE {$wpdb->prefix}posts SET post_content = REPLACE( post_content, 'pikiweb.com/', 'plenamata.eco/' )" );
+	    	$wpdb->query( "UPDATE {$wpdb->prefix}posts SET post_content = REPLACE( post_content, 'staged.anacouto.com.br/plenamata/', 'plenamata.eco/' )" );
+
+	    	exit( 'Conteúdo normalizado com sucesso.' );
+	    
+	    endif;
+
+    }
+
 }
+add_action( 'init', [ 'Common', 'normalizeContent' ] );
 add_filter( 'piki_graph_tags', [ 'Common', 'openGraph' ], 10, 2 );
 add_filter( 'use_block_editor_for_post', [ 'Common', 'showEditor' ], 10, 2 );
 
@@ -134,8 +157,8 @@ function plenamata_home_link(){
 	return apply_filters( 'wpml_home_url', get_option('home') );
 }
 
-function plenamata_logo(){
-	return '<a href="' . plenamata_home_link() . '" title="Plenamata"><img src="'. get_template_directory_uri() .'/assets/images/logo-white.svg" class="site-logo" alt="Plenamata"></a>';
+function plenamata_logo( $context = 'site' ){
+	return '<a href="' . plenamata_home_link() . '" title="Plenamata"><img src="'. get_template_directory_uri() .'/assets/images/logo' . ( $context == 'embed' ? '' : '-white' ) . '.svg" class="site-logo" alt="Plenamata"></a>';
 }
 
 // Webstories in home
@@ -991,7 +1014,8 @@ function plenamata_get_teaser_data( $item, $opts = [], $debug = false ){
 
 	// Cover as thumb
 	if( empty( $data->image ) ):
-		$cover = Piki::get_cover( $meta->ID, 'medium' );
+		$size = $data->image_field == 'thumb' ? 'medium' : 'full';
+		$cover = Piki::get_cover( $meta->ID, $size );
 		if( $cover ) $data->image = '<img src="' . $cover . '" alt="'. strip_tags( $data->title ) .'">';
 	endif;
 
@@ -1084,7 +1108,15 @@ function plenamata_get_author( $ID, $prefix = '' ){
 	// Internal authors
 	if( !empty( $authors ) ):
 
-		$names = array_column( array_column( $authors, 'data' ), 'display_name' );
+		// Get names
+		$names = [];
+		foreach( $authors as $author ):
+			if( isset( $author->display_name ) ):
+				$names[] = $author->display_name;
+			elseif( isset( $author->data ) ):
+				$names[] = $author->data->display_name;
+			endif;
+		endforeach;
 		
 		// First
 		$first = array_shift( $names );
@@ -1223,7 +1255,7 @@ function plenamata_get_menu(){
 
 // Editoria url
 function plenamata_editoria_url( $editoria ){
-	return get_site_url( null, '/artigos/?editoria=' ) . $editoria->slug;
+	return get_site_url( null, '/artigos/?categoria=' ) . $editoria->slug . '#outras-noticias';
 }
 
 // Label da editoria

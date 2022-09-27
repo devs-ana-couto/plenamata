@@ -25,55 +25,78 @@ endif;
 $is_opinion = ( $category->slug == "_newspack_opinion" || $category->slug == 'opiniao' || $category->slug == 'opinion' ) ? true : false;
 $is_initiative = ( $category->slug === 'boas-iniciativas' || $category->slug === 'good-initiatives' ) ? true : false;
 
+$cover = Piki::get_cover();
+
 // Header
-if ($is_initiative): ?>
+if( $cover ): ?>
 
     <div class="initiative-header">
         <div>
             <div class="initiative-header__category">
-                <a href="<?= get_category_link(get_category_by_slug('good-initiatives')) ?>">
-                    <?= __('Good Initiatives', 'plenamata') ?>
-                </a>
-                <?php if (!empty($subcategory)): ?>
+
+                <a href="<?php echo get_category_link( $category->cat_ID ); ?>"><?php echo $category->name; ?></a><?php
+
+                if( !empty( $subcategory ) ): ?>
                     <span>/</span>
-                    <a href="<?= get_category_link($subcategory->cat_ID) ?>">
-                        <?= $subcategory->name ?>
-                    </a>
-                <?php endif; ?>
+                    <a href="<?php echo get_category_link( $subcategory->cat_ID ); ?>">
+                        <?php echo $subcategory->name ?>
+                    </a><?php 
+                endif; ?>
+            
             </div>
-            <h1 class="initiative-header__title"><?= wp_kses_post(get_the_title()) ?></h1>
+            <h1 class="initiative-header__title"><?php echo wp_kses_post( get_the_title() ); ?></h1>
         </div>
         <div class="initiative-header__thumbnail credited-image-block">
-            <div class="image-wrapper">
-                <?php the_post_thumbnail() ?>
-                <?php if ((class_exists('Newspack_Image_Credits') && !empty(Newspack_Image_Credits::get_media_credit(get_post_thumbnail_id())['credit'])) || !empty(get_post(get_post_thumbnail_id())->post_content)): ?>
+            
+            <div class="image-wrapper"><?php 
+                
+                // Post thumbnail
+                the_post_thumbnail();
+                
+                // Image
+                if( ( class_exists( 'Newspack_Image_Credits' ) && !empty( Newspack_Image_Credits::get_media_credit( get_post_thumbnail_id() )[ 'credit' ] ) ) || !empty( get_post(get_post_thumbnail_id() )->post_content ) ): ?>
+                    
                     <div class="image-info-wrapper">
-                        <div class="image-meta">
-                            <?php if (class_exists('Newspack_Image_Credits')): ?>
-                                <p class="description"><?= get_the_post_thumbnail_caption() ?></p>
-                                <?php $image_meta = Newspack_Image_Credits::get_media_credit(get_post_thumbnail_id()); ?>
-                                <?php if (isset($image_meta['credit_url']) && !empty($image_meta['credit_url'])): ?>
-                                    <a href="<?= $image_meta['credit_url'] ?>">
-                                <?php endif; ?>
-                                <span class="credit">
-                                    <?= $image_meta['credit'] ?>
-                                    <?php if (isset($image_meta['organization']) && !empty($image_meta['organization'])): ?>
-                                        / <?= $image_meta['organization'] ?>
-                                    <?php endif; ?>
-                                </span>
-                                <?php if (isset($image_meta['credit_url']) && !empty($image_meta['credit_url'])): ?>
-                                    </a>
-                                <?php endif; ?>
-                            <?php endif; ?>
+
+                        <div class="image-meta"><?php 
+
+                            if( class_exists( 'Newspack_Image_Credits' ) ): ?>
+                            
+                                <p class="description"><?php echo get_the_post_thumbnail_caption(); ?></p><?php 
+
+                                $image_meta = Newspack_Image_Credits::get_media_credit(get_post_thumbnail_id());
+                                if( isset( $image_meta[ 'credit_url' ] ) && !empty( $image_meta[ 'credit_url' ] ) ): ?>
+                                    <a href="<?php echo $image_meta[ 'credit_url' ]; ?>"><?php 
+                                endif; ?>
+                            
+                                <span class="credit"><?php 
+                                    echo $image_meta[ 'credit' ];
+                                    if( isset( $image_meta[ 'organization' ] ) && !empty( $image_meta[ 'organization' ] ) ): ?>
+                                        / <?php echo $image_meta[ 'organization' ];
+                                    endif; ?>
+                                </span><?php 
+                            
+                                if( isset( $image_meta[ 'credit_url' ] ) && !empty( $image_meta[ 'credit_url' ] ) ): ?>
+                                </a><?php 
+                                endif;
+
+                            endif; ?>
+
                         </div>
+    
                         <span class="image-description-toggle">
                             <i class="fas fa-camera"></i>
                             <i class="fas fa-times"></i>
                         </span>
-                    </div>
-                <?php endif; ?>
+    
+                    </div><?php 
+
+                endif; ?>
+            
             </div>
+        
         </div>
+    
     </div><?php 
 
 else: ?>
@@ -81,9 +104,9 @@ else: ?>
     <div class="opinion-header"><?php 
         if( $is_opinion): ?>
         <div class="breadcrumb">
-            <a href="<?= site_url(); ?>">Home</a> /
-            <a href="<?= get_post_type_archive_link('post'); ?>"><?=  __('News', 'plenamata') ?></a> /
-            <a href="<?= get_category_link($category->cat_ID); ?>"><?= $category->name ?></a> /
+            <a href="<?php echo site_url(); ?>">Home</a> /
+            <a href="<?php echo get_post_type_archive_link( 'post' ); ?>"><?php echo  __( 'Notícias', 'amazonia' ); ?></a> /
+            <a href="<?php echo get_category_link( $category->cat_ID ); ?>"><?php echo $category->name; ?></a> /
         </div><?php 
         endif; ?>
         <div class="container">

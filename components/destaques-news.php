@@ -13,7 +13,7 @@ if( $destaques ): ?>
 				endif; ?>
 				<a  href="<?php echo $smeta->url; ?>"class="content" title="<?php echo $smeta->title; ?>">
 					<span>
-						<em class="date"><?php the_date( 'd/m/Y' ); ?></em>
+						<em class="date"><?php echo get_the_date( 'd/m/Y', $smeta->post_id ); ?></em>
 						<h2><?php echo $smeta->title; ?></h2><?php 
 						if( !empty( $smeta->subtitle ) ): ?>
 						<p><?php echo $smeta->subtitle; ?></p><?php 
