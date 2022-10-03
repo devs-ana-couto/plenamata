@@ -192,10 +192,9 @@ section.historias-reais {
 
 	.scroll-to-view {
 
-		display: none;
+		display: flex;
 		align-items: center;
 		width: 200px;
-		margin: 68px 0 0 20px;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 18px;
@@ -328,6 +327,14 @@ section.historias-reais {
 
 }
 
+@media( min-width: 1331px ){
+	section.historias-reais .scroll-to-view {
+		position: absolute;
+		bottom: 80px;
+		left: calc( 50% - 620px );
+	}
+}
+
 @media( max-width: 1330px ){
 
 	section.historias-reais {
@@ -362,7 +369,7 @@ section.historias-reais {
 		}
 
 		.scroll-to-view {
-				display: flex;
+			margin: 68px 0 0 20px;
 		}
 	
 	}

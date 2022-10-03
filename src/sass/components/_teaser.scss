@@ -76,8 +76,20 @@
 			font-weight: 300;
 			color: #22271B;
 
+			.authors-list {
+				margin-right: 10px;
+			}
+
 			strong {
 				font-weight: 700;
+			}
+
+			em {
+				font-style: normal;
+				font-weight: 500;
+				font-size: 12px;
+				line-height: 16px;
+				color: #1A2C31;
 			}
 			
 		}

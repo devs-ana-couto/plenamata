@@ -3,7 +3,9 @@ extract( $args );
 $context = _array_get( $args, 'context' );
 // Cover
 if( !$meta->empty( 'cover' ) ): 
+	
 	$cover = $meta->getFirst( 'cover' ); ?>
+
 	<section class="estimatives-area" id="estimatives-area"><?php
 
 		// Image or video
@@ -83,7 +85,10 @@ if( !$meta->empty( 'cover' ) ):
 					        		</div>
 					        		<div class="estimativa"><?php 
 					        			_e( 'Estimativa em tempo real', 'amazonia' ); ?>
-					        			<div class="tooltip"></div>
+					        			<div class="matatips">
+					        				<button type="button" data-action="open-matatip"><?php _e( 'Abrir', 'amazonia' ); ?></button>
+					        				<em><?php _e( '<strong>Fonte</strong>: MapBiomas com base na média do desmatamento diário detectado pelo INPE em 2022.' ) ?></em>
+					        			</div>
 					        		</div>
 					        	</div>
 					        	

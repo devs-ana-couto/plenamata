@@ -1155,7 +1155,7 @@ function plenamata_get_author( $ID, $prefix = '' ){
 			$last2 = array_pop( $names2 );
 			
 			if( !empty( $names2 ) ):
-				$HTML .= ' <strong class="external"><span>' . implode( '</span>,</strong> <strong class="external"><span>', $names2 ) . '<span>,</strong>';
+				$HTML .= ' <strong class="external"><span>' . implode( '</span>,</strong> <strong class="external"><span>', $names2 ) . '</span>,</strong>';
 			endif;
 
 			$HTML .= ' e <strong class="external"><span>' . $last2 . '</span></strong>';
@@ -1932,6 +1932,7 @@ function plenamata_the_content( $content ){
 		]
 	);
 
+	/*
 	// Blockquote
 	$blocks = explode( '<blockquote>', $content );	
 	if( count( $blocks ) == 1 ) return $content;
@@ -1959,6 +1960,9 @@ function plenamata_the_content( $content ){
 
 	array_unshift( $blocks, $init );
 	return implode( '<blockquote>', $blocks );
+	*/
+
+	return $content;
 	
 }
 

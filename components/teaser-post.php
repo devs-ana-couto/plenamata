@@ -33,7 +33,7 @@ $editoria = plenamata_get_editoria( $item ); ?>
 		endif; ?>
 
 		<span class="author-date">
-			<div class="authors-list">Por <strong><?php echo $data->author; ?></strong></div>
+			<div class="authors-list">Por <?php echo $data->author; ?></div>
 			<em><?php the_date( 'd/m/Y' ); ?></em>
 		</span><?php
 

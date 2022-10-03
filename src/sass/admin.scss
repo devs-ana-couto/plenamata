@@ -1004,7 +1004,63 @@ body.wp-editor {
         margin-bottom: 0.75rem;
         padding: 0 0 0.33rem;
     }
+        
+    .wp-block-pullquote {
 
+        padding: 38px 0;
+        border: 2px solid #206837;
+        border-width: 2px 0;
+        text-align: left;
+        margin: 52px -107px 43px;
+
+        > span {
+            display: none;
+        }
+    
+        blockquote {
+
+            margin: 0;
+
+            p {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;
+                color: #1A2C31;
+                font-style: italic;
+            }
+
+        }
+
+        &.alignleft {
+
+            float: left;
+            margin: 52px 30px 30px 0;
+
+            + p {
+                margin-top: 67px;
+            }
+        
+        }
+
+        &.is-style-jeo {
+
+            margin-left: 0;
+            margin-right: 0;
+
+            &:before {
+                content: '“';
+                display: block;
+                height: 40px;
+                margin-bottom: 20px;
+                font-size: 140px;
+                line-height: 128px;
+                overflow: hidden;
+                color: #206837;
+            }
+
+        }
+
+    }
     form {
 
         &[data-post-type="podcast"],

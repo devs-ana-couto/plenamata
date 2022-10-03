@@ -1,4 +1,6 @@
-<?php extract( $args ); ?>
+<?php 
+extract( $args ); 
+$wrapLink = in_array( $style, [ 'default', 'list' ] ); ?>
 <div class="lista-parceiros <?php echo $position, ' ', $style; ?>">
 
 	<em><?php echo $title; ?></em>
@@ -18,7 +20,7 @@
 					<div><?php
 
 						// Open link
-						if( $site && $style == 'default' ):
+						if( $site && $wrapLink ):
 							echo '<a href="' . $site . '" target="_blank" rel="noreferrer" title="'. $title .'">';
 						endif;
 						
@@ -32,7 +34,7 @@
 						
 						// Close link or button
 						if( $site ):
-							if( $style == 'default' ): ?>
+							if( $wrapLink ): ?>
 								</a><?php
 							elseif( $style == 'slider' ): ?>
 								<a href="<?php echo $site; ?>" class="button ico-external ico-right" title="Conheça o site" target="_blank" rel="noreferrer noopener">
